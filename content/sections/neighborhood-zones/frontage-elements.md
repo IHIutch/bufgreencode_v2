@@ -28,7 +28,7 @@ toc: true
 
 ## 3.3.2 Arcade
 
-<FigureImg src="/images/3-3/3-3-2.png" alt="Arcade" />
+![Arcade](../../../assets/images/3-3/3-3-2.png "Arcade")
 
 **Description**
 
@@ -56,7 +56,7 @@ An arcade is a passage located along the exterior walls of a building and covere
 
 ## 3.3.3 Awning
 
-<FigureImg src="/images/3-3/3-3-3.png" alt="Awning" />
+![Awning](../../../assets/images/3-3/3-3-3.png "Awning")
 
 **Description**
 
@@ -84,7 +84,7 @@ An awning is a wall-mounted, pitched cover extending from a building and providi
 
 ## 3.3.4 Balcony
 
-<FigureImg src="/images/3-3/3-3-4.png" alt="Balcony" />
+![Balcony](../../../assets/images/3-3/3-3-4.png "Balcony")
 
 **Description**
 
@@ -110,7 +110,7 @@ A balcony is a platform projecting from, or recessed within, the upper floors of
 
 ## 3.3.5 Canopy
 
-<FigureImg src="/images/3-3/3-3-5.png" alt="Canopy" />
+![Canopy](../../../assets/images/3-3/3-3-5.png "Canopy")
 
 **Description**
 
@@ -133,7 +133,7 @@ A canopy is a horizontal cover, extending outward from a building, providing pro
 
 ## 3.3.6 Forecourt
 
-<FigureImg src="/images/3-3/3-3-6.png" alt="Forecourt" />
+![Forecourt](../../../assets/images/3-3/3-3-6.png "Forecourt")
 
 **Description**
 
@@ -159,7 +159,7 @@ A forecourt is a semi-public space, open to the sky, formed by a recess in the c
 
 ## 3.3.7 Plaza
 
-<FigureImg src="/images/3-3/3-3-7.png" alt="Plaza" />
+![Plaza](../../../assets/images/3-3/3-3-7.png "Plaza")
 
 **Description**
 
@@ -191,7 +191,7 @@ A plaza is a public space that is formed by a building setback, open to the sky,
 
 ## 3.3.8 Porch
 
-<FigureImg src="/images/3-3/3-3-8.png" alt="Porch" />
+![Porch](../../../assets/images/3-3/3-3-8.png "Porch")
 
 **Description**
 
@@ -218,7 +218,7 @@ A porch is a raised, roofed platform attached to a building forming an articulat
 
 ## 3.3.9 Stoop
 
-<FigureImg src="/images/3-3/3-3-9.png" alt="Stoop" />
+![Stoop](../../../assets/images/3-3/3-3-9.png "Stoop")
 
 **Description**
 

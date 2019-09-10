@@ -6,7 +6,7 @@ section: 1
 toc: true
 ---
 
-<FigureImg src="/images/4-1/4-1.png" alt="D-R Residential Campus" />
+![D-R Residential Campus](../../../assets/images/4-1/4-1.png "D-R Residential Campus")
 
 ## 4.1.1 Purpose
 
