@@ -10,7 +10,7 @@ const purgecss = require("@fullhuman/postcss-purgecss");
 if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
-  siteName: "Gridsome",
+  siteName: "BufGreenCode",
   transformers: {
     remark: {}
   },

@@ -1,33 +1,28 @@
 <template>
   <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
+    <h1 class="text-4xl mb-6 font-medium">Welcome</h1>
+    <p class="text-xl font-light mb-4">
+      The Buffalo Green Code Unified Development Ordinance Becomes Effective
+      Citywide.
+    </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      With the Unified Development Ordinance now effective citywide, April 3,
+      2017 marks the culmination of a nearly seven-year effort that involved
+      thousands of community members in neighborhoods throughout our city. Since
+      Mayor Byron W. Brown initially announced the Buffalo Green Code, on Earth
+      Day of 2010, the effort has been a community-driven process aimed at
+      ensuring the Green Code reflects the values of our residents. Thank you to
+      all of you who have dedicated so much of your time and passion during this
+      historic initiative!
     </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
   </Layout>
 </template>
 
 <script>
 export default {
+  name: "IndexPage",
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Hello, world!"
   }
-}
+};
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
