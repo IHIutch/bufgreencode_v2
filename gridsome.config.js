@@ -4,6 +4,12 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const tailwind = require("tailwindcss");
+const autoprefixer = require("autoprefixer");
+const purgecss = require("@fullhuman/postcss-purgecss");
+
+const postcssPlugins = [tailwind(), autoprefixer()];
+
+if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: "BufGreenCode",
@@ -23,7 +29,7 @@ module.exports = {
   css: {
     loaderOptions: {
       postcss: {
-        plugins: [tailwind()]
+        plugins: postcssPlugins
       }
     }
   }

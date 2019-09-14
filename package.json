@@ -3,8 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "test": "gridsome develop && npm run postcss -c postcss.config.js",
-    "develop": "gridsome develop && npm run postcss -c postcss.config.js",
+    "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
