@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Transition Rules
 article: introductory-provisions
 article_number: 1
 section_number: 3
-toc: true
 ---
 
 ## 1.3.1 Illegal Structures and Uses

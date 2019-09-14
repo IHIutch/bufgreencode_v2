@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Landscape
 article: site-development
 article_number: 7
 section_number: 1
-toc: true
 ---
 
 ## 7.1.1 General

@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Off-Premise Signs
 article: signs
 article_number: 9
 section_number: 3
-toc: true
 ---
 
 An off-premise sign is a permanent sign erected, maintained, or used for the purpose of the display of messages not related to the use of, products sold on, or the sale or lease of, the property on which it is displayed. A highway-oriented off- premise sign is an off-premise sign that is oriented to and within 660 feet of a highway.

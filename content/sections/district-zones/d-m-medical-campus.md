@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: D-M Medical Campus
 article: district-zones
 article_number: 4
 section_number: 2
-toc: true
 ---
 
 ## 4.2.1 Purpose

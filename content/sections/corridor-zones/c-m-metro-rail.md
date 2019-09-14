@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: C-M Metro Rail
 article: corridor-zones
 article_number: 5
 section_number: 1
-toc: true
 ---
 
 ## 5.1.1 Purpose

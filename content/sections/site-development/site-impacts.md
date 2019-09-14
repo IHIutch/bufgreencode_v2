@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Site Impacts
 article: site-development
 article_number: 7
 section_number: 6
-toc: true
 ---
 
 ## 7.6.1 Dust and Air Pollution

@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Signs
 article: signs
 article_number: 9
 section_number: 1
-toc: true
 ---
 
 All new, reconstructed, altered, or relocated signs must comply with the standards of this section.

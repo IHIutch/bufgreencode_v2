@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Fences and Walls
 article: site-development
 article_number: 7
 section_number: 2
-toc: true
 ---
 
 ## 7.2.1 General

@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Temporary Uses
 article: uses
 article_number: 6
 section_number: 3
-toc: true
 ---
 
 ## 6.3.1 General

@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: C-W Waterfront
 article: corridor-zones
 article_number: 5
 section_number: 3
-toc: true
 ---
 
 ## 5.3.1 Purpose

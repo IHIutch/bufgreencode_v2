@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Building Types
 article: neighborhood-zones
 article_number: 3
 section_number: 2
-toc: true
 ---
 
 All principal buildings in the neighborhood zones must comply with the standards of this section.

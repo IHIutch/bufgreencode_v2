@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Nonconformities
 article: nonconformities-enforcement
 article_number: 12
 section_number: 1
-toc: true
 ---
 
 ## 12.1.1 General

@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Measures and Exceptions
 article: definitions-measurements
 article_number: 2
 section_number: 3
-toc: true
 ---
 
 ## 2.3.1 Lot Dimensions

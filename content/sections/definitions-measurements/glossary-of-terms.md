@@ -1,5 +1,4 @@
 ---
-layout: GlossaryLayout
 title: Glossary of Terms
 article: definitions-measurements
 article_number: 2

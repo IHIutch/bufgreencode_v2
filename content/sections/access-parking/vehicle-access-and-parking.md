@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Vehicle Access and Parking
 article: access-parking
 article_number: 8
 section_number: 3
-toc: true
 ---
 
 ## 8.3.1 General

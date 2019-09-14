@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Review Bodies and Administration
 article: administration-approvals
 article_number: 11
 section_number: 1
-toc: true
 ---
 
 This section describes the powers and duties of the review bodies and ordinance administrators. A review body is a body of the City of Buffalo that exercises decision-making authority or makes recommendations, pursuant to this Ordinance. An ordinance administrator is an official of the City of Buffalo that exercises regulatory authority, makes recommendations, provides staff support, and/or has duties, pursuant to this Ordinance.

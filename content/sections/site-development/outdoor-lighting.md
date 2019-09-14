@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Outdoor Lighting
 article: site-development
 article_number: 7
 section_number: 4
-toc: true
 ---
 
 ## 7.4.1 General

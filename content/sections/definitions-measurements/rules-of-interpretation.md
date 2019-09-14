@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Rules of Interpretation
 article: definitions-measurements
 article_number: 2
 section_number: 1
-toc: true
 ---
 
 ## 2.1.1 Definitions

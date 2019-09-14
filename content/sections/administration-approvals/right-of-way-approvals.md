@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Right-of-Way Approvals
 article: administration-approvals
 article_number: 11
 section_number: 4
-toc: true
 ---
 
 ## 11.4.1 Encroachment Permit

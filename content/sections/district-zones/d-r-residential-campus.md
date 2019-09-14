@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: D-R Residential Campus
 article: district-zones
 article_number: 4
 section_number: 1
-toc: true
 ---
 
 ![D-R Residential Campus](../../../assets/images/4-1/4-1.png "D-R Residential Campus")

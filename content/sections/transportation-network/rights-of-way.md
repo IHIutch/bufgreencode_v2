@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Rights-of-Way
 article: transportation-network
 article_number: 10
 section_number: 2
-toc: true
 ---
 
 All new construction, reconstruction, and reconfiguration of rights-of-way must comply with this section. All new construction, reconstruction, and reconfiguration of rights-of-way require submission of a thoroughfare plan per Section 11.4.5. This section does not apply to limited access expressways.

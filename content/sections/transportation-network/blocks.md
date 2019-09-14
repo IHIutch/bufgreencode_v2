@@ -1,10 +1,8 @@
 ---
-layout: GlossaryLayout
 title: Blocks
 article: transportation-network
 article_number: 10
 section_number: 1
-toc: true
 ---
 
 ## 10.1.1 Block Dimensions
