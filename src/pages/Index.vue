@@ -27,7 +27,7 @@ query {
 </static-query>
 
 <script>
-import Layout from "~/layouts/Sidebar";
+import Layout from "~/layouts/SidebarLayout";
 
 export default {
   name: "IndexPage",

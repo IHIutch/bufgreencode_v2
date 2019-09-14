@@ -1,20 +1,19 @@
 <template>
   <div>
-    <div v-for="post in $page.allPost.edges" :key="post.node.id">
-      <h1 v-html="post.node.title"></h1>
-      <g-link :to="post.node.path">{{ post.node.title }}</g-link>
-    </div>
+    <div v-for="page in $page.allPost.edges" :key="page.node.id"></div>
   </div>
 </template>
 
 <page-query>
 query {
-  allPost {
-    totalCount
+  allPost(sort: [{ by: "article_number", order: ASC }, { by: "section_number", order: ASC }]) {
     edges {
       node {
-          id
+        id
         title
+        article
+        article_number
+        section_number
         path
       }
     }

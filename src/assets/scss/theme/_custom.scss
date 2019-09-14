@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .page-content {
   h1 {
     @apply .text-4xl;
