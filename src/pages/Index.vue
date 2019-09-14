@@ -18,11 +18,24 @@
   </Layout>
 </template>
 
+<static-query>
+query {
+  metaData {
+    siteName
+  }
+}
+</static-query>
+
 <script>
+import Layout from "~/layouts/Sidebar";
+
 export default {
   name: "IndexPage",
   metaInfo: {
     title: "Hello, world!"
+  },
+  components: {
+    Layout
   }
 };
 </script>

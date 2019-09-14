@@ -15,11 +15,17 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+import Layout from "~/layouts/Sidebar";
+
 export default {
+  name: "PostTemplate",
   metaInfo() {
     return {
       title: this.$page.post.title
     };
+  },
+  components: {
+    Layout
   }
 };
 </script>
