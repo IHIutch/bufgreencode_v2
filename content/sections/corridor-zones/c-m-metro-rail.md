@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: C-M Metro Rail
 article: corridor-zones
-section: 1
+section_number: 1
 toc: true
 ---
 

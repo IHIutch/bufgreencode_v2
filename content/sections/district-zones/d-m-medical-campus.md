@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: D-M Medical Campus
 article: district-zones
-section: 2
+section_number: 2
 toc: true
 ---
 

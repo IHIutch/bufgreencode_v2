@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Accessory Uses
 article: uses
-section: 2
+section_number: 2
 toc: true
 ---
 

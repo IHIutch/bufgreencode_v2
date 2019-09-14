@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Common Procedures
 article: administration-approvals
-section: 2
+section_number: 2
 toc: true
 ---
 

@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Building Types
 article: neighborhood-zones
-section: 2
+section_number: 2
 toc: true
 ---
 

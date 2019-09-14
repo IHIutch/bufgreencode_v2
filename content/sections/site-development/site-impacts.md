@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Site Impacts
 article: site-development
-section: 6
+section_number: 6
 toc: true
 ---
 

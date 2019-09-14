@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Bicycle Access and Parking
 article: access-parking
-section: 2
+section_number: 2
 toc: true
 ---
 

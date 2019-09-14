@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Principal Uses
 article: uses
-section: 1
+section_number: 1
 toc: true
 ---
 

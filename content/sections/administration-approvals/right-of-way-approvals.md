@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Right-of-Way Approvals
 article: administration-approvals
-section: 4
+section_number: 4
 toc: true
 ---
 

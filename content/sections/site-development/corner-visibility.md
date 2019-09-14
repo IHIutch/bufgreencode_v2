@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Corner Visibility
 article: site-development
-section: 5
+section_number: 5
 toc: true
 ---
 

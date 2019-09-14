@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Overlays
 article: neighborhood-zones
-section: 4
+section_number: 4
 toc: true
 lead: Overlay zones are applied over one or more neighborhood zones, establishing additional or stricter standards and criteria for covered properties in addition to those of the underlying zone. These overlay zones are introduced to address special situations or achieve specific goals.
 ---

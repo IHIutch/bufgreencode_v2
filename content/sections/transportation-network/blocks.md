@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Blocks
 article: transportation-network
-section: 1
+section_number: 1
 toc: true
 ---
 

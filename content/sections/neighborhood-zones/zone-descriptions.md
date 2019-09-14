@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Zone Descriptions
 article: neighborhood-zones
-section: 1
+section_number: 1
 toc: true
 ---
 

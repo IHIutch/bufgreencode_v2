@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Temporary Uses
 article: uses
-section: 3
+section_number: 3
 toc: true
 ---
 

@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Title, Purpose, and Applicability
 article: introductory-provisions
-section: 1
+section_number: 1
 toc: true
 ---
 

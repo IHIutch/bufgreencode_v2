@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Rules of Interpretation
 article: definitions-measurements
-section: 1
+section_number: 1
 toc: true
 ---
 

@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Rights-of-Way
 article: transportation-network
-section: 2
+section_number: 2
 toc: true
 ---
 

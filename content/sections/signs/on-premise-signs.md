@@ -2,6 +2,6 @@
 layout: GlossaryLayout
 title: On-Premise Signs
 article: signs
-section: 2
+section_number: 2
 toc: true
 ---

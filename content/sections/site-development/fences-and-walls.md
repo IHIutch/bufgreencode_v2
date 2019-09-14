@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Fences and Walls
 article: site-development
-section: 2
+section_number: 2
 toc: true
 ---
 

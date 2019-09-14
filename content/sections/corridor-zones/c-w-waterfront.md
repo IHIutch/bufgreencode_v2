@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: C-W Waterfront
 article: corridor-zones
-section: 3
+section_number: 3
 toc: true
 ---
 

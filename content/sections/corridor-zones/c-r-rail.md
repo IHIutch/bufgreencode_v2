@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: C-R Rail
 article: corridor-zones
-section: 2
+section_number: 2
 toc: true
 ---
 

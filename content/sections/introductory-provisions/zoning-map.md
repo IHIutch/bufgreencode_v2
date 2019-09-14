@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Zoning Map
 article: introductory-provisions
-section: 2
+section_number: 2
 toc: true
 ---
 

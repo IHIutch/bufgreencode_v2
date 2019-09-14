@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Review Bodies and Administration
 article: administration-approvals
-section: 1
+section_number: 1
 toc: true
 ---
 

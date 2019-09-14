@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Exempt Signs
 article: signs
-section: 4
+section_number: 4
 toc: true
 ---
 

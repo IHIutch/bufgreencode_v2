@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Measures and Exceptions
 article: definitions-measurements
-section: 3
+section_number: 3
 toc: true
 ---
 

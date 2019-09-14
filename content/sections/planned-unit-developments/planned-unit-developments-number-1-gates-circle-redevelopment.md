@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Planned Unit Development Number 1&#58; Gates Circle Redevelopment
 article: planned-unit-developments
-section: 1
+section_number: 1
 toc: true
 ---
 

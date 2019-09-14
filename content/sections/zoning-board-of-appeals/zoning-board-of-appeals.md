@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Zoning Board of Appeals
 article: zoning-board-of-appeals
-section: 1
+section_number: 1
 toc: true
 ---
 

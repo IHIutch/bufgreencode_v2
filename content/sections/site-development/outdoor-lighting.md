@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Outdoor Lighting
 article: site-development
-section: 4
+section_number: 4
 toc: true
 ---
 

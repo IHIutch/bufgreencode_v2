@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Nonconformities
 article: nonconformities-enforcement
-section: 1
+section_number: 1
 toc: true
 ---
 

@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Transition Rules
 article: introductory-provisions
-section: 3
+section_number: 3
 toc: true
 ---
 

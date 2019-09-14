@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Landscape
 article: site-development
-section: 1
+section_number: 1
 toc: true
 ---
 

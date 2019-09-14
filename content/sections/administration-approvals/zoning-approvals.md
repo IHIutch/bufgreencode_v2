@@ -2,7 +2,7 @@
 layout: GlossaryLayout
 title: Zoning Approvals
 article: administration-approvals
-section: 3
+section_number: 3
 toc: true
 ---
 
