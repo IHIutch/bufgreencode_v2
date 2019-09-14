@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Pedestrian Access
 article: access-parking
+article_number: 8
 section_number: 1
 toc: true
 ---

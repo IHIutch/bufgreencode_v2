@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Zoning Board of Appeals
 article: zoning-board-of-appeals
+article_number: 13
 section_number: 1
 toc: true
 ---

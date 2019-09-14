@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Frontage Elements
 article: neighborhood-zones
+article_number: 3
 section_number: 3
 slug: frontage-elements
 toc: true

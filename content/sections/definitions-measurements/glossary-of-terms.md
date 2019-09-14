@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Glossary of Terms
 article: definitions-measurements
+article_number: 2
 section_number: 2
 lead: For the purposes of this Ordinance, the following terms have the following meanings
 ---

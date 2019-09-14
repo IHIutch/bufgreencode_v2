@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Common Procedures
 article: administration-approvals
+article_number: 11
 section_number: 2
 toc: true
 ---

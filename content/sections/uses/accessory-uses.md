@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Accessory Uses
 article: uses
+article_number: 6
 section_number: 2
 toc: true
 ---

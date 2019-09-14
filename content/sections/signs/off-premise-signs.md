@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Off-Premise Signs
 article: signs
+article_number: 9
 section_number: 3
 toc: true
 ---

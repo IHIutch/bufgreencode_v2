@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: D-R Residential Campus
 article: district-zones
+article_number: 4
 section_number: 1
 toc: true
 ---

@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Signs
 article: signs
+article_number: 9
 section_number: 1
 toc: true
 ---

@@ -2,6 +2,7 @@
 layout: GlossaryLayout
 title: Subdivision Approvals
 article: administration-approvals
+article_number: 11
 section_number: 5
 toc: true
 ---
