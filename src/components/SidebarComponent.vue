@@ -1,30 +1,32 @@
 <template>
   <div>
-    <ul>
-      <li v-for="(article, index) in articles" :key="index">
-        {{ article.article }}. {{ article.title }}
-        <ul>
-          <li v-for="(page, index) in $static.allPost.edges" :key="index">
-            <g-link
-              :to="page.node.path"
-              v-if="page.node.article_number == article.article"
-              class="text-blue-500 max-w-full block truncate"
-            >
-              <span
-                class="truncate"
-                v-html="
-                  article.article +
-                    '-' +
-                    page.node.section_number +
-                    '. ' +
-                    page.node.title
-                "
-              />
-            </g-link>
-          </li>
-        </ul>
-      </li>
-    </ul>
+    <div class="h-full overflow-y-scroll px-4 sticky">
+      <ul class="mt-8 pb-8">
+        <li v-for="(article, index) in articles" :key="index">
+          {{ article.article }}. {{ article.title }}
+          <ul>
+            <li v-for="(page, index) in $static.allPost.edges" :key="index">
+              <g-link
+                :to="page.node.path"
+                v-if="page.node.article_number == article.article"
+                class="text-blue-500 max-w-full block truncate"
+              >
+                <span
+                  class="truncate"
+                  v-html="
+                    article.article +
+                      '-' +
+                      page.node.section_number +
+                      '. ' +
+                      page.node.title
+                  "
+                />
+              </g-link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
