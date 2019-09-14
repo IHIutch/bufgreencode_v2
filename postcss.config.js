@@ -1,7 +1,9 @@
+const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
   plugins: [
+    autoprefixer(),
     purgecss({
       content: ["src/**/*.vue"],
       whitelist: [
@@ -23,10 +25,7 @@ module.exports = {
         "td",
         "th",
         "tbody",
-        "thead",
-        "ul",
-        "ol",
-        "li"
+        "thead"
       ]
     })
   ]
