@@ -2,9 +2,18 @@
   <div>
     <div class="h-full overflow-y-scroll px-4 sticky">
       <ul class="mt-8 pb-8">
-        <li v-for="(article, index) in articles" :key="index">
-          {{ article.article }}. {{ article.title }}
-          <ul>
+        <li
+          v-for="(article, index) in articles"
+          :key="index"
+          class="text-red-500"
+        >
+          <span
+            :class="{
+              'text-green-500': $page.post.article_number == article.article
+            }"
+            >{{ article.article }}. {{ article.title }}</span
+          >
+          <ul v-if="$page.post.article_number == article.article">
             <li v-for="(page, index) in $static.allPost.edges" :key="index">
               <g-link
                 :to="page.node.path"
@@ -31,7 +40,7 @@
 </template>
 
 <static-query>
-query {
+query{
   allPost(sort: [{ by: "article_number", order: ASC }, { by: "section_number", order: ASC }]) {
     edges {
       node {

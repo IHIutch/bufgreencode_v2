@@ -10,6 +10,7 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     content
+    article_number
     headings{anchor, value}
   }
 }
@@ -27,9 +28,6 @@ export default {
   },
   components: {
     Layout
-  },
-  created() {
-    console.log(this.$page.post.headings);
   }
 };
 </script>
