@@ -15,6 +15,28 @@
             </g-link>
           </div>
         </div>
+        <div class="lg:w-1/2 xl:w-3/5 px-4 h-full">
+          <div class="py-2 h-full">
+            <input
+              class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
+              type="text"
+              placeholder="Search the docs..."
+            />
+          </div>
+        </div>
+        <div
+          class="lg:w-1/4 xl:w-1/5 px-6 h-full flex items-center justify-end text-sm font-medium"
+        >
+          <g-link class="py-1 pr-2 text-gray-600 hover:text-gray-900"
+            >About</g-link
+          >
+          <g-link class="py-1 px-2 text-gray-600 hover:text-gray-900"
+            >Disclaimer</g-link
+          >
+          <a class="py-1 px-2 text-gray-600 hover:text-gray-900" href="#"
+            >Github</a
+          >
+        </div>
       </div>
     </div>
   </nav>
