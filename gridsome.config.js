@@ -22,19 +22,11 @@ module.exports = {
       options: {
         typeName: "Post",
         path: "content/**/*.md",
-        route: "/content/sections/:article/:slug"
+        route: "/:article/:slug"
       }
     },
     {
       use: "@gridsome/plugin-sitemap"
-      // options: {
-      //   config: {
-      //     '/articles/*': {
-      //       changefreq: 'monthly',
-      //       priority: 0.5
-      //     },
-      //   }
-      // }
     },
     // {
     //   use: "@gridsome/plugin-google-analytics",
