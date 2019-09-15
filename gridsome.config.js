@@ -20,9 +20,58 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "content/**/*.md",
         typeName: "Post",
+        path: "content/**/*.md",
         route: "/content/sections/:article/:slug"
+      }
+    },
+    {
+      use: "@gridsome/plugin-sitemap"
+      // options: {
+      //   config: {
+      //     '/articles/*': {
+      //       changefreq: 'monthly',
+      //       priority: 0.5
+      //     },
+      //   }
+      // }
+    },
+    // {
+    //   use: "@gridsome/plugin-google-analytics",
+    //   options: {
+    //     id: process.env.GOOGLE_ANALYTICS
+    //   }
+    // },
+    // {
+    //   use: "gridsome-plugin-gtm",
+    //   options: {
+    //     id: process.env.GOOGLE_TAG_MANAGER,
+    //     enabled: true,
+    //     debug: true
+    //   }
+    // },
+    // {
+    //   use: "gridsome-plugin-algolia",
+    //   options: {
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     collections,
+    //     enablePartialUpdates: true // default: false
+    //   }
+    // },
+    {
+      use: "gridsome-plugin-pwa",
+      options: {
+        title: "BufGreenCode",
+        startUrl: "/",
+        display: "standalone",
+        statusBarStyle: "default",
+        manifestPath: "manifest.json",
+        serviceWorkerPath: "service-worker.js",
+        shortName: "Gridsome",
+        themeColor: "#666600",
+        backgroundColor: "#ffffff",
+        icon: "" // must be supplied!
       }
     }
   ],
