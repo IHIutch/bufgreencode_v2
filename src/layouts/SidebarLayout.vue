@@ -3,21 +3,36 @@
     <Navbar />
     <div class="flex">
       <Sidebar class="hidden md:block md:w-1/6 lg:w-1/6 fixed h-full pt-16" />
-      <div
-        class="md:ml-auto xl:mx-auto w-full md:w-5/6 xl:w-4/6 px-16 flex flex-col pt-16 mt-8"
-      >
-        <slot />
-      </div>
-      <div
-        v-if="toc"
-        class="hidden xl:block xl:w-1/6 h-full fixed right-0 pt-16"
-      >
-        <div class="sticky h-full overflow-y-scroll">
-          <ul class="mt-8 pb-8">
-            <li v-for="(anchor, index) in tocContent" :key="index">
-              <a :href="anchor.anchor">{{ anchor.value }}</a>
-            </li>
-          </ul>
+      <div class="md:ml-auto w-full md:w-5/6 lg:w-5/6 flex">
+        <div class="w-full lg:w-5/6 xl:w-9/12 lg:mr-auto px-16 pt-16">
+          <div class="my-12">
+            <slot />
+          </div>
+        </div>
+        <div v-if="toc" class="hidden lg:block lg:w-1/6 xl:w-3/12 relative">
+          <div class="fixed top-0 pt-16">
+            <div class="sticky h-full overflow-y-scroll">
+              <div class="mt-8 pb-8">
+                <div class="mb-2">
+                  <span
+                    class="uppercase font-bold text-gray-500 text-sm tracking-wider"
+                    >On this Page</span
+                  >
+                </div>
+                <ul>
+                  <li
+                    v-for="(anchor, index) in tocContent"
+                    :key="index"
+                    class="text-sm font-medium text-gray-600 hover:text-gray-900"
+                  >
+                    <a :href="anchor.anchor" class="py-1 block">
+                      {{ anchor.value }}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
