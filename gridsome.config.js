@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: "BufGreenCode",
+  siteUrl: "https://gridsome.bufgreencode.com",
   transformers: {
     remark: {}
   },
