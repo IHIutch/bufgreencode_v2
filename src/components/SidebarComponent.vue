@@ -1,15 +1,23 @@
 <template>
   <div>
-    <nav class="h-full overflow-y-scroll px-4 sticky text-sm font-medium">
-      <ul class="mt-8 pb-8">
-        <li v-for="(article, index) in articles" :key="index">
+    <nav class="h-full overflow-y-scroll sticky border-r">
+      <ul class="mt-8 pb-8 text-sm">
+        <li
+          v-for="(article, index) in articles"
+          :key="index"
+          class="px-4"
+          :class="{
+            'my-2 py-4 bg-gray-200':
+              $page && $page.post.article_number == article.article
+          }"
+        >
           <g-link
             :to="sectionStarts[article.article].path"
             class="text-gray-600 hover:text-gray-900 px-2 py-1 block"
           >
             <span
               :class="{
-                'text-gray-900':
+                'text-gray-900 font-medium':
                   $page && $page.post.article_number == article.article
               }"
               >{{ article.article }}. {{ article.title }}</span
@@ -28,7 +36,7 @@
                 <span
                   class="truncate"
                   :class="{
-                    'text-gray-900':
+                    'text-gray-900 font-medium':
                       $page && $page.post.title == section.node.title
                   }"
                   v-html="

@@ -4,7 +4,7 @@
     <div class="flex">
       <Sidebar class="hidden md:block md:w-1/6 lg:w-1/6 fixed h-full pt-16" />
       <div
-        class="md:ml-auto xl:mx-auto w-full md:w-5/6 xl:w-4/6 px-8 flex flex-col pt-16 mt-8"
+        class="md:ml-auto xl:mx-auto w-full md:w-5/6 xl:w-4/6 px-16 flex flex-col pt-16 mt-8"
       >
         <slot />
       </div>
