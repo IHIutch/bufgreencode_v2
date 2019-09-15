@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="antialiased">
     <Navbar />
     <div class="flex">
       <Sidebar class="hidden md:block md:w-1/6 lg:w-1/6 fixed h-full pt-16" />

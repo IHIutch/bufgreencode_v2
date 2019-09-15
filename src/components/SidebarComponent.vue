@@ -1,33 +1,42 @@
 <template>
   <div>
-    <div class="h-full overflow-y-scroll px-4 sticky">
+    <nav class="h-full overflow-y-scroll px-4 sticky text-sm font-medium">
       <ul class="mt-8 pb-8">
-        <li
-          v-for="(article, index) in articles"
-          :key="index"
-          class="text-red-500"
-        >
-          <span
-            :class="{
-              'text-green-500': $page.post.article_number == article.article
-            }"
-            >{{ article.article }}. {{ article.title }}</span
+        <li v-for="(article, index) in articles" :key="index">
+          <g-link
+            :to="sectionStarts[article.article].path"
+            class="text-gray-600 hover:text-gray-900 px-2 py-1 block"
           >
-          <ul v-if="$page.post.article_number == article.article">
-            <li v-for="(page, index) in $static.allPost.edges" :key="index">
+            <span
+              :class="{
+                'text-gray-900':
+                  $page && $page.post.article_number == article.article
+              }"
+              >{{ article.article }}. {{ article.title }}</span
+            >
+          </g-link>
+          <ul
+            v-if="$page && $page.post.article_number == article.article"
+            class="pl-2"
+          >
+            <li v-for="(section, index) in $static.allPost.edges" :key="index">
               <g-link
-                :to="page.node.path"
-                v-if="page.node.article_number == article.article"
-                class="text-blue-500 max-w-full block truncate"
+                :to="section.node.path"
+                v-if="section.node.article_number == article.article"
+                class="text-gray-600 hover:text-gray-900 max-w-full block truncate px-2 py-1"
               >
                 <span
                   class="truncate"
+                  :class="{
+                    'text-gray-900':
+                      $page && $page.post.title == section.node.title
+                  }"
                   v-html="
                     article.article +
                       '-' +
-                      page.node.section_number +
+                      section.node.section_number +
                       '. ' +
-                      page.node.title
+                      section.node.title
                   "
                 />
               </g-link>
@@ -35,7 +44,7 @@
           </ul>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -64,6 +73,17 @@ export default {
     return {
       articles: articleList
     };
+  },
+  computed: {
+    sectionStarts() {
+      let obj = {};
+      this.$static.allPost.edges.forEach(page => {
+        if (page.node.section_number == 1) {
+          obj[page.node.article_number] = page.node;
+        }
+      });
+      return obj;
+    }
   }
 };
 </script>
