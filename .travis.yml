@@ -1,23 +1,25 @@
 language: node_js
 node_js:
-  - node
+- node
 jobs:
   include:
-    - stage: Deploy
-      if: branch = master
-      cache: npm
-      script:
-        - npm i
-        - npm build
-      deploy:
-        provider: pages
-        local_dir: dist/
-        target-branch: gh-pages
-        name: Travis Deployment Bot
-        skip_cleanup: true
-        github_token: "$GITHUB_TOKEN"
-        fqdn: gridsome.bufgreencode.com
-        on:
-          branch: master
+  - stage: Deploy
+    if: branch = master
+    cache: npm
+    script:
+    - npm i
+    - npm build
+    deploy:
+      provider: pages
+      local_dir: dist/
+      target-branch: gh-pages
+      name: Travis Deployment Bot
+      skip_cleanup: true
+      github_token: "$GITHUB_TOKEN"
+      fqdn: gridsome.bufgreencode.com
+      on:
+        branch: master
 notifications:
   email: false
+env:
+  secure: AKnNqhg02nzADfz7e8TDuTxOgqZkikgWlDaQltswIUwSzYxqeP0EGKFV8X4bNa2xKmuw37teUnQmJA3VYsEAYG0jJvo50+PlzyxvdZf+WZkxEKrHho/JJSg2AquCO6ITmgxbmAzecEAkf29/WJfMxjrHKtKOOUA+G60t0YqH/5aKzjNc2vxqe+9PBPaqkfFSCE81cdcAknfIfDUmDB3xcrMWk+1dCC3gYtk4MIzz7/QLer6t7kzDUExlaOQctJQNEFotfGUac2AXqjLS+j1MUo5bhGVtFftXIM5dyB/fyUbZ90cxPrCl1oPngIVRuLDutr1bDfkwvVITaWRbYY/eDYQu1oU5DyG8iyF3ZlNYNoURqK1Jc6li+/JiD4Dh/ZKtl4ufXUVs6nK7F0Yi9WKOq1msI7FIspYQ2c+Q0uS8d1ML2EHIq2AbnRxg8kZNb0SoeHYYYXbRSS8oFI16oFDMseXgDLnc0RuhGWwo3lqZSkouuKRh7d9xIz5quhJsj1UAL5zLeC0UrLuccivooxsbo8rfxO4qLOJa2ssDJhMVdv8QLMtBJdT+/RBIr37v3kDGe2ODPjnMTBagTgYIdtOo21uTmod9b1c5tPNvs1et+bONmgh97EMC8XMa2JMqCWQ9HmRCxR8KcXOfyS/KQudNR3COMV/T9NWDW272ii2fn+E=
