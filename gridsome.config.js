@@ -36,15 +36,15 @@ module.exports = {
         debug: true
       }
     },
-    {
-      use: "gridsome-plugin-algolia",
-      options: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        collections,
-        enablePartialUpdates: true // default: false
-      }
-    },
+    // {
+    //   use: "gridsome-plugin-algolia",
+    //   options: {
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     collections,
+    //     enablePartialUpdates: true // default: false
+    //   }
+    // },
     {
       use: "gridsome-plugin-pwa",
       options: {
