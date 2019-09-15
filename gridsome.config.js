@@ -29,20 +29,20 @@ module.exports = {
     {
       use: "@gridsome/plugin-sitemap"
     },
-    {
-      use: "gridsome-plugin-gtm",
-      options: {
-        id: process.env.GOOGLE_TAG_MANAGER,
-        enabled: true,
-        debug: true
-      }
-    },
-    {
-      use: "@gridsome/plugin-google-analytics",
-      options: {
-        id: process.env.GOOGLE_ANALYTICS
-      }
-    },
+    // {
+    //   use: "gridsome-plugin-gtm",
+    //   options: {
+    //     id: process.env.GOOGLE_TAG_MANAGER,
+    //     enabled: true,
+    //     debug: true
+    //   }
+    // },
+    // {
+    //   use: "@gridsome/plugin-google-analytics",
+    //   options: {
+    //     id: process.env.GOOGLE_ANALYTICS
+    //   }
+    // },
     // {
     //   use: "gridsome-plugin-algolia",
     //   options: {

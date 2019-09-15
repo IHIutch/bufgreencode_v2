@@ -17,8 +17,7 @@
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.7",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.1.2",
-    "vue-gtm": "^2.2.0"
+    "tailwindcss": "^1.1.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.2.0",
