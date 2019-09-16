@@ -38,12 +38,6 @@ module.exports = {
       }
     },
     // {
-    //   use: "@gridsome/plugin-google-analytics",
-    //   options: {
-    //     id: process.env.GOOGLE_ANALYTICS
-    //   }
-    // },
-    // {
     //   use: "gridsome-plugin-algolia",
     //   options: {
     //     appId: process.env.ALGOLIA_APP_ID,
@@ -61,7 +55,7 @@ module.exports = {
         statusBarStyle: "default",
         manifestPath: "manifest.json",
         serviceWorkerPath: "service-worker.js",
-        shortName: "Gridsome",
+        shortName: "BufGreenCode",
         themeColor: "#666600",
         backgroundColor: "#ffffff",
         icon: "./assets/images/meta/favicon.png" // must be supplied!
