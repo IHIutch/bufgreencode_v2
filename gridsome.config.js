@@ -29,14 +29,14 @@ module.exports = {
     {
       use: "@gridsome/plugin-sitemap"
     },
-    // {
-    //   use: "gridsome-plugin-gtm",
-    //   options: {
-    //     id: process.env.GOOGLE_TAG_MANAGER,
-    //     enabled: true,
-    //     debug: true
-    //   }
-    // },
+    {
+      use: "gridsome-plugin-gtm",
+      options: {
+        id: "GTM-KNPMJGD",
+        enabled: true,
+        debug: false
+      }
+    },
     // {
     //   use: "@gridsome/plugin-google-analytics",
     //   options: {
