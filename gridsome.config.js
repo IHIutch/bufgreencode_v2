@@ -14,6 +14,10 @@ if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 module.exports = {
   siteName: "BufGreenCode",
   siteUrl: "https://gridsome.bufgreencode.com",
+  icon: {
+    favicon: "./assets/images/meta/favicon.png",
+    touchicon: "./assets/images/meta/favicon.png"
+  },
   transformers: {
     remark: {}
   },
