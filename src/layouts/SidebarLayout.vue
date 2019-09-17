@@ -12,10 +12,10 @@
               </main>
             </div>
           </div>
-          <aside v-if="toc" class="hidden lg:block lg:w-1/6 xl:w-3/12 relative">
+          <aside v-if="toc" class="hidden lg:block lg:w-1/6 xl:w-3/12">
             <div class="fixed top-0 pt-16">
               <div class="sticky h-full overflow-y-scroll">
-                <div class="mt-8 pb-8">
+                <div class="mt-8 pb-8 pr-6">
                   <div class="mb-2">
                     <span
                       class="uppercase font-bold text-gray-500 text-sm tracking-wider"
