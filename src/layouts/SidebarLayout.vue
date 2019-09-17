@@ -13,27 +13,25 @@
             </div>
           </div>
           <aside v-if="toc" class="hidden lg:block lg:w-1/6 xl:w-3/12">
-            <div class="fixed top-0 pt-16">
-              <div class="sticky h-full overflow-y-scroll">
-                <div class="mt-8 pb-8 pr-6">
-                  <div class="mb-2">
-                    <span
-                      class="uppercase font-bold text-gray-500 text-sm tracking-wider"
-                      >On this Page</span
-                    >
-                  </div>
-                  <ul>
-                    <li
-                      v-for="(anchor, index) in tocContent"
-                      :key="index"
-                      class="text-sm font-medium text-gray-600 hover:text-gray-900"
-                    >
-                      <a :href="anchor.anchor" class="py-1 block">
-                        {{ anchor.value }}
-                      </a>
-                    </li>
-                  </ul>
+            <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
+              <div class="mt-8 pb-8 pr-6">
+                <div class="mb-2">
+                  <span
+                    class="uppercase font-bold text-gray-500 text-sm tracking-wider"
+                    >On this Page</span
+                  >
                 </div>
+                <ul>
+                  <li
+                    v-for="(anchor, index) in tocContent"
+                    :key="index"
+                    class="text-sm font-medium text-gray-600 hover:text-gray-900"
+                  >
+                    <a :href="anchor.anchor" class="py-1 block">
+                      {{ anchor.value }}
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </aside>
