@@ -2,7 +2,7 @@
   <div class="m-auto w-1/2">
     <header class="flex justify-between mb-5 h-20 items-center">
       <strong>
-        <g-link class="py-1" to="/">{{ $static.metaData.siteName }}</g-link>
+        <g-link class="py-1" to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
         <g-link class="py-1 pr-4" to="/">Home</g-link>
@@ -15,7 +15,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }
