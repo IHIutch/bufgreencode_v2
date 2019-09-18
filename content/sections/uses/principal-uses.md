@@ -5,6 +5,8 @@ article_number: 6
 section_number: 1
 ---
 
+import TableResponsive from '~/components/TableResponsive.vue'
+
 ## 6.1.1 General
 
 1. All principal uses must comply with the standards of this section.
