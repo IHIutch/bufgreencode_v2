@@ -18,16 +18,24 @@ module.exports = {
     favicon: "./assets/images/meta/favicon.png",
     touchicon: "./assets/images/meta/favicon.png"
   },
-  transformers: {
-    remark: {}
+  templates: {
+    Post: "/:article/:title"
   },
   plugins: [
+    // {
+    //   use: "@gridsome/vue-remark",
+    //   options: {
+    //     typeName: "Post",
+    //     baseDir: "./content/**/*.md",
+    //     route: "/:article/:title"
+    //   }
+    // },
     {
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "Post",
         path: "./content/**/*.md",
-        route: "/:article/:slug"
+        route: "/:article/:title"
       }
     },
     {
@@ -57,8 +65,8 @@ module.exports = {
         startUrl: "/",
         display: "standalone",
         statusBarStyle: "default",
-        manifestPath: "manifest.json",
-        serviceWorkerPath: "service-worker.js",
+        manifestPath: "./manifest.json",
+        serviceWorkerPath: "./service-worker.js",
         shortName: "BufGreenCode",
         themeColor: "#666600",
         backgroundColor: "#ffffff",
