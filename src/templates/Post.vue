@@ -6,7 +6,8 @@
         {{ $page.post.lead }}
       </p>
     </div>
-    <div class="page-content" v-html="$page.post.content" />
+    <!-- <div class="page-content" v-html="$page.post.content" /> -->
+    <VueRemarkContent />
   </Layout>
 </template>
 

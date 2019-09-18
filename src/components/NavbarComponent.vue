@@ -8,7 +8,7 @@
           <div class="flex items-center h-full">
             <g-link to="/" class="block lg:mr-4 h-full"
               ><img
-                src="../../assets/images/meta/meta-img.png"
+                src="../../assets/images/meta/favicon.png"
                 alt="Buffalo Green Code"
                 class="h-full w-auto"
               />

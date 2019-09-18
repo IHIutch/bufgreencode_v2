@@ -18,26 +18,27 @@ module.exports = {
     favicon: "./assets/images/meta/favicon.png",
     touchicon: "./assets/images/meta/favicon.png"
   },
-  templates: {
-    Post: "/:article/:title"
-  },
+  // templates: {
+  //   Post: "/:article/:title"
+  // },
   plugins: [
+    {
+      use: "@gridsome/vue-remark",
+      options: {
+        typeName: "Post",
+        baseDir: "./content/sections",
+        route: "/:article/:title",
+        template: "./src/templates/Post.vue"
+      }
+    },
     // {
-    //   use: "@gridsome/vue-remark",
+    //   use: "@gridsome/source-filesystem",
     //   options: {
     //     typeName: "Post",
-    //     baseDir: "./content/**/*.md",
+    //     path: "./content/**/*.md",
     //     route: "/:article/:title"
     //   }
     // },
-    {
-      use: "@gridsome/source-filesystem",
-      options: {
-        typeName: "Post",
-        path: "./content/**/*.md",
-        route: "/:article/:title"
-      }
-    },
     {
       use: "@gridsome/plugin-sitemap"
     },
