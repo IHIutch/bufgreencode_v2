@@ -84,7 +84,7 @@ All development in the D-R zone must comply with the form standards of this sect
 
 **Supplemental Standards**
 
-1 The maximum height may be increased to up to 1 times the height of the widest adjacent thoroughfare, plus 1’ for each 1’ of upper story stepback, only with approval of City Planning Board as part of major site plan review.
+<sup>1</sup> The maximum height may be increased to up to 1 times the height of the widest adjacent thoroughfare, plus 1’ for each 1’ of upper story stepback, only with approval of City Planning Board as part of major site plan review.
 
 **Story Height**
 
