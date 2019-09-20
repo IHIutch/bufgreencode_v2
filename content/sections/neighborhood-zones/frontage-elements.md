@@ -6,6 +6,9 @@ section_number: 3
 slug: frontage-elements
 ---
 
+import TableResponsive from '~/components/TableResponsive.vue'
+import TableSmall from '~/components/TableSmall.vue'
+
 ## 3.3.1 General
 
 1. This section describes the standards applicable to the development of frontages, which are the optional elements of a building or site that help provide a transition and interface between the public realm (street and sidewalk) and the private realm (yard or building). These standards work in combination with the standards for building types found in Section 3.2 and are applicable to all frontages in the neighborhood zones.

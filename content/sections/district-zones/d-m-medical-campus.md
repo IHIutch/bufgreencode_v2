@@ -60,7 +60,7 @@ All development in the D-M zone must comply with the form standards of this sect
 
 **Supplemental Standards**
 
-<sup>1</sup> Up to 16 stories may be allowed only with approval of City Planning Board as part of major site plan review.
+1 Up to 16 stories may be allowed only with approval of City Planning Board as part of major site plan review.
 
 **Story Height**
 

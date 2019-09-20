@@ -5,6 +5,8 @@ article_number: 3
 section_number: 1
 ---
 
+import TableSmall from '~/components/TableSmall.vue'
+
 ## 3.1.1 N-1D Downtown/Regional Hub
 
 1. Purpose

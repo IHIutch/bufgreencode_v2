@@ -9,9 +9,9 @@
   "dependencies": {
     "@gridsome/plugin-sitemap": "^0.2.2",
     "@gridsome/source-filesystem": "^0.6.0",
-    "@gridsome/transformer-remark": "^0.3.3",
-    "@gridsome/vue-remark": "^0.1.1",
-    "gridsome": "^0.7.3",
+    "@gridsome/transformer-remark": "^0.3.4",
+    "@gridsome/vue-remark": "^0.1.2",
+    "gridsome": "^0.7.4",
     "gridsome-plugin-algolia": "^2.1.1",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.7",
