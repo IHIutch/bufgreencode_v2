@@ -18,25 +18,27 @@ The D-R zone addresses residential campuses, sometimes comprised of garden apart
 All development in the D-R zone must comply with the form standards of this section, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
-| --- | --- |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+
+|                                  |              |
+| -------------------------------- | ------------ |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 4.1.3 Lot
@@ -44,19 +46,23 @@ All development in the D-R zone must comply with the form standards of this sect
 **Lot Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Lot area (min) | N/A |
-| | Lot width (min) | N/A |
+
+|       |                 |     |
+| ----- | --------------- | --- |
+| **A** | Lot area (min)  | N/A |
+|       | Lot width (min) | N/A |
+
 </TableSmall>
 
 **Lot Coverage**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **B** | Building coverage (max) | 80% |
+
+|       |                           |     |
+| ----- | ------------------------- | --- |
+| **B** | Building coverage (max)   | 80% |
 | **C** | Impervious coverage (max) | 90% |
+
 </TableSmall>
 
 ## 4.1.4 Siting
@@ -64,12 +70,14 @@ All development in the D-R zone must comply with the form standards of this sect
 **Building Setbacks**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Front yard (min) | 0’ |
-| **B** | Corner side yard (min) | 0’ |
-| **C** | Interior side yard (min) | 0’ |
-| **D** | Rear yard (min) | 0’ |
+
+|       |                          |     |
+| ----- | ------------------------ | --- |
+| **A** | Front yard (min)         | 0’  |
+| **B** | Corner side yard (min)   | 0’  |
+| **C** | Interior side yard (min) | 0’  |
+| **D** | Rear yard (min)          | 0’  |
+
 </TableSmall>
 
 ## 4.1.5 Height
@@ -77,9 +85,11 @@ All development in the D-R zone must comply with the form standards of this sect
 **Building Height**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
+
+|       |                       |                       |
+| ----- | --------------------- | --------------------- |
 | **A** | Building height (max) | 3 stories<sup>1</sup> |
+
 </TableSmall>
 
 **Supplemental Standards**
@@ -89,9 +99,11 @@ All development in the D-R zone must comply with the form standards of this sect
 **Story Height**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
+
+|       |                                       |       |
+| ----- | ------------------------------------- | ----- |
 | **B** | Finished ground floor level (min/max) | 0’/4’ |
+
 </TableSmall>
 
 ## 4.1.6 Activation
@@ -99,19 +111,23 @@ All development in the D-R zone must comply with the form standards of this sect
 **Transparency**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Ground floor transparency, front facade (min) | 20% for residential uses; 70% for retail & service uses; 40% for all other uses |
-| **B** | Ground floor transparency, corner side facade (min) | 20% for residential uses; 40% for all other uses |
-| **C** | Upper floor transparency, front and corner side facades (min) | 20% |
+
+|       |                                                               |                                                                                 |
+| ----- | ------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **A** | Ground floor transparency, front facade (min)                 | 20% for residential uses; 70% for retail & service uses; 40% for all other uses |
+| **B** | Ground floor transparency, corner side facade (min)           | 20% for residential uses; 40% for all other uses                                |
+| **C** | Upper floor transparency, front and corner side facades (min) | 20%                                                                             |
+
 </TableSmall>
 
 **Pedestrian Access**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
+
+|       |                                    |              |
+| ----- | ---------------------------------- | ------------ |
 | **D** | Main entrance location (preferred) | Front facade |
+
 </TableSmall>
 
 ## 4.1.7 Specific Standards

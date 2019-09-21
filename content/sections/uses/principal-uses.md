@@ -72,6 +72,7 @@ import TableResponsive from '~/components/TableResponsive.vue'
 ### Residential
 
 <TableResponsive>
+
 |                           | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | ------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | Dormitory                 | 4    | 4    | 4    | 4    |      |      | 4    |      |      |        |        | 4   | 4   | 4   | 4   | 4   |      |      |      |      |      |     | Sec. 6.1.2.A |
@@ -85,6 +86,7 @@ import TableResponsive from '~/components/TableResponsive.vue'
 | Group Home                | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4      | 4      | 4   | 4   | 4   | 4   | 4   |      |      |      |      |      |     | Sec. 6.1.2.I |
 | Halfway House             | 2    | 2    | 2    |      |      |      |      |      |      |        |        |     | 2   |     |     |     | 2    |      |      |      |      |     | Sec. 6.1.2.J |
 | Residential Care Facility | 4    | 4    | 4    | 4    | 4    |      | 4    | 4    |      |        |        | 4   | 4   | 4   | 4   | 4   |      |      |      |      |      |     | Sec. 6.1.2.K |
+
 </TableResponsive>
 
 ### Civic
@@ -110,16 +112,19 @@ import TableResponsive from '~/components/TableResponsive.vue'
 ### Lodging
 
 <TableResponsive>
+
 |                      | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | -------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | Bed & Breakfast      | 4    | 4    | 4    | 4    | 4    | 2    | 4    | 4    | 2    |        |        | 2   | 4   | 4   | 4   | 4   |      |      |      |      |      |     | Sec. 6.1.4.A |
 | Hotel/Hostel         | 4    | 4    | 4    | 4    | 4    |      | 4    | 4    |      |        |        |     | 4   | 4   | 4   | 4   | 2    |      |      |      |      |     | Sec. 6.1.4.B |
 | Rooming House/S.R.O. | 4    | 4    | 4    | 2    | 2    |      | 2    | 2    |      |        |        |     | 2   | 2   | 2   | 2   |      |      |      |      |      |     | Sec. 6.1.4.C |
+
 </TableResponsive>
 
 ### Retail & Service
 
 <TableResponsive>
+
 |                             | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions   |
 | --------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------- |
 | Adult Establishment         |      |      |      |      |      |      |      |      |      |        |        |     |     |     |     |     | 2    | 2    |      |      |      |     | Sec. 6.1.5.A  |
@@ -150,11 +155,13 @@ import TableResponsive from '~/components/TableResponsive.vue'
 | Vehicle Rental or Sales     | 4    | 4    | 4    | 4    | 4    |      | 4    | 4    |      |        |        |     |     |     | 4   | 4   | 4    |      |      |      |      |     | Sec. 6.1.5.Z  |
 | Vehicle Repair, Major       |      | 2    | 4    | 2    | 2    |      | 2    | 2    |      |        |        |     |     |     | 4   | 4   | 4    | 4    |      |      |      |     | Sec. 6.1.5.AA |
 | Vehicle Repair, Minor       |      | 2    | 4    | 2    | 2    |      | 2    | 2    |      |        |        |     |     |     | 4   | 4   | 4    |      |      |      |      |     | Sec. 6.1.5.AB |
+
 </TableResponsive>
 
 ### Employment
 
 <TableResponsive>
+
 |                              | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | ---------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | Industrial, Artisan          | 4    | 4    | 4    | 2    | 2    |      | 2    | 2    |      |        |        |     | 4   | 4   | 4   | 4   | 4    | 4    |      |      |      |     | Sec. 6.1.6.A |
@@ -167,20 +174,24 @@ import TableResponsive from '~/components/TableResponsive.vue'
 | Storage Yard                 |      |      | 2    |      |      |      |      |      |      |        |        |     |     |     |     | 2   | 4    | 4    |      |      |      |     | Sec. 6.1.6.H |
 | Warehouse/Distribution       |      | 2    | 4    |      |      |      |      |      |      |        |        |     | 2   |     |     | 2   | 4    | 4    |      |      |      |     | Sec. 6.1.6.I |
 | Waste Transfer Station       |      |      |      |      |      |      |      |      |      |        |        |     |     |     |     |     |      | 2    |      |      |      |     | Sec. 6.1.6.J |
+
 </TableResponsive>
 
 ### Agriculture
 
 <TableResponsive>
+
 |                  | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | ---------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | Community Garden | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4      | 4      | 4   | 4   | 4   | 4   | 4   | 4    |      | 4    | 4    | 4    |     | Sec. 6.1.7.A |
 | Market Garden    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 2      | 2      | 4   | 4   | 4   | 4   | 4   | 4    |      |      |      |      |     | Sec. 6.1.7.B |
+
 </TableResponsive>
 
 ### Transportation
 
 <TableResponsive>
+
 |                            | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | -------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | Bicycle Parking Station    | 4    | 4    | 4    | 4    | 4    |      | 4    | 4    |      |        |        | 4   | 4   | 4   | 4   | 4   | 4    |      | 4    | 4    | 2    |     | Sec. 6.1.8.A |
@@ -198,11 +209,13 @@ import TableResponsive from '~/components/TableResponsive.vue'
 | Pedestrian or Bicycle Path | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4    | 4      | 4      | 4   | 4   | 4   | 4   | 4   | 4    | 2    | 4    | 4    | 4    | 4   | Sec. 6.1.8.M |
 | Railway Facilities         |      |      | 4    |      |      |      |      |      |      |        |        |     |     |     |     | 2   | 4    | 4    |      |      |      | 4   | Sec. 6.1.8.N |
 | Truck Stop                 |      |      |      |      |      |      |      |      |      |        |        |     |     |     |     |     | 4    | 4    |      |      |      |     | Sec. 6.1.8.O |
+
 </TableResponsive>
 
 ### Infrastructure
 
 <TableResponsive>
+
 |                             | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C | N-3E | N-3R | N-4-30 | N-4-50 | D-R | D-M | D-E | D-S | D-C | D-IL | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | --------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ------ | --- | --- | --- | --- | --- | ---- | ---- | ---- | ---- | ---- | --- | ------------ |
 | District Energy System      | 4    | 4    | 4    | 4    | 4    | 2    | 4    | 4    | 2    | 2      | 2      | 4   | 4   | 4   | 4   | 4   | 4    | 4    | 2    | 2    |      | 4   | Sec. 6.1.9.A |
@@ -211,6 +224,7 @@ import TableResponsive from '~/components/TableResponsive.vue'
 | Utilities & Services, Minor | 4    | 4    | 4    | 4    | 4    | 2    | 4    | 4    | 2    | 2      | 2      | 4   | 4   | 4   | 4   | 4   | 4    | 4    | 2    | 2    | 2    | 4   | Sec. 6.1.9.D |
 | Wind Farm                   |      |      |      |      |      |      |      |      |      |        |        |     |     |     |     |     | 2    | 2    |      |      |      |     | Sec. 6.1.9.E |
 | Wireless Communications     | 2    | 2    | 2    | 2    | 2    | 2    | 2    | 2    | 2    | 2      | 2      | 2   | 2   | 2   | 4   | 4   | 4    | 4    |      |      |      | 4   | Sec. 6.1.9.F |
+
 </TableResponsive>
 
 ## 6.1.2 Residential

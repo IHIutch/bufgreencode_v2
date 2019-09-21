@@ -1,5 +1,5 @@
 <template>
-  <div class="table-responsive">
+  <div class="table-scroll table-bordered w-full overflow-x-scroll">
     <slot />
   </div>
 </template>

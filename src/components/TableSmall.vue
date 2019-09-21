@@ -1,5 +1,5 @@
 <template>
-  <div class="table-responsive">
+  <div class="table-bordered table-hidden-thead">
     <slot />
   </div>
 </template>

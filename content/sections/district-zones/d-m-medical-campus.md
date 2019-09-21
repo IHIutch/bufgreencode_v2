@@ -13,50 +13,60 @@ The D-M zone addresses medical campuses, which are either primarily single-use o
 
 All development in the D-M zone must comply with the form standards of this section, as well as any applicable standards in other sections, including the following:
 
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+|                                  |              |
+| -------------------------------- | ------------ |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
 
 ## 4.2.3 Lot
 
 **Lot Dimensions**
 
-| A | Lot area (min) | 1,800 SF |
-| B | Lot width (min) | 30’ |
+|     |                 |          |
+| --- | --------------- | -------- |
+| A   | Lot area (min)  | 1,800 SF |
+| B   | Lot width (min) | 30’      |
 
 **Lot Coverage**
 
-| C | Building coverage (max) | 90% |
-| D | Impervious coverage (max) | 100% |
+|     |                           |      |
+| --- | ------------------------- | ---- |
+| C   | Building coverage (max)   | 90%  |
+| D   | Impervious coverage (max) | 100% |
 
 ## 4.2.4 Siting
 
 **Building Setbacks**
 
-| A | Front yard (min) | 0’ |
-| B | Corner side yard (min) | 0’ |
-| C | Interior side yard (min) | 0’ |
-| D | Rear yard (min) | 0’ |
+|     |                          |     |
+| --- | ------------------------ | --- |
+| A   | Front yard (min)         | 0’  |
+| B   | Corner side yard (min)   | 0’  |
+| C   | Interior side yard (min) | 0’  |
+| D   | Rear yard (min)          | 0’  |
 
 ## 4.2.5 Height
 
 **Building Height**
 
-| A | Building height (max) | 6 stories<sup>1</sup> |
+|     |                       |                       |
+| --- | --------------------- | --------------------- |
+| A   | Building height (max) | 6 stories<sup>1</sup> |
 
 **Supplemental Standards**
 
@@ -64,19 +74,25 @@ All development in the D-M zone must comply with the form standards of this sect
 
 **Story Height**
 
+|                                       |     |
+| ------------------------------------- | --- |
 | Finished ground floor level (min/max) | N/A |
 
 ## 4.2.6 Activation
 
 **Transparency**
 
-| A | Ground floor transparency, front facade (min) | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
-| B | Ground floor transparency, corner side facade (min) | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
-| C | Upper floor transparency, front and corner side facades (min) | 20% |
+|     |                                                               |                                                                                                |
+| --- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| A   | Ground floor transparency, front facade (min)                 | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
+| B   | Ground floor transparency, corner side facade (min)           | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
+| C   | Upper floor transparency, front and corner side facades (min) | 20%                                                                                            |
 
 **Pedestrian Access**
 
-| D | Main entrance location (required) | Front facade |
+|     |                                   |              |
+| --- | --------------------------------- | ------------ |
+| D   | Main entrance location (required) | Front facade |
 
 ## 4.2.7 Specific Standards
 

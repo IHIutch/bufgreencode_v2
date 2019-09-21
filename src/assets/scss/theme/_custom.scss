@@ -5,6 +5,7 @@
 .page-content {
   h1 {
     @apply .text-4xl;
+    @apply .font-medium;
     @apply .mb-2;
 
     &[id]::before {
@@ -17,7 +18,9 @@
 
   h2 {
     @apply .text-3xl;
+    @apply .font-medium;
     @apply .mb-2;
+    @apply .mt-8;
 
     &[id]::before {
       content: "";
@@ -29,7 +32,9 @@
 
   h3 {
     @apply .text-2xl;
+    @apply .font-medium;
     @apply .mb-2;
+    @apply .mt-8;
 
     &[id]::before {
       content: "";
@@ -41,7 +46,9 @@
 
   h4 {
     @apply .text-xl;
+    @apply .font-medium;
     @apply .mb-2;
+    @apply .mt-8;
 
     &[id]::before {
       content: "";
@@ -53,7 +60,9 @@
 
   h5 {
     @apply .text-lg;
+    @apply .font-medium;
     @apply .mb-2;
+    @apply .mt-8;
 
     &[id]::before {
       content: "";
@@ -65,7 +74,9 @@
 
   h6 {
     @apply .text-base;
+    @apply .font-medium;
     @apply .mb-2;
+    @apply .mt-8;
 
     &[id]::before {
       content: "";
@@ -99,6 +110,34 @@
   }
 }
 
-.table-responsive {
-  @apply .text-blue-500;
+table {
+  th,
+  td {
+    @apply .p-1;
+  }
+}
+
+.table-bordered {
+  th {
+    @apply .border-b-2;
+  }
+  td {
+    @apply .border-t;
+  }
+}
+
+.table-scroll {
+  table {
+    @apply .w-full;
+  }
+  th,
+  td {
+    @apply .whitespace-no-wrap;
+  }
+}
+
+.table-hidden-thead {
+  thead {
+    @apply .hidden;
+  }
 }
