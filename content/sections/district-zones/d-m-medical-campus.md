@@ -114,7 +114,7 @@ All development in the D-M zone must comply with the form standards of this sect
 | ----- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | **A** | Ground floor transparency, front facade (min)                 | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
 | **B** | Ground floor transparency, corner side facade (min)           | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
-| **C** | Upper floor transparency, front and corner side facades (min) | 20% \*\* \*\*                                                                                  |
+| **C** | Upper floor transparency, front and corner side facades (min) | 20%                                                                                            |
 
 </TableSmall>
 

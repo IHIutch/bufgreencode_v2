@@ -1,5 +1,5 @@
 <template>
-  <div class="table-scroll table-bordered w-full overflow-x-scroll">
+  <div class="table-scroll table-bordered w-full overflow-x-scroll mb-4 -mt-2">
     <slot />
   </div>
 </template>
