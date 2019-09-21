@@ -16,16 +16,18 @@ import TableSmall from '~/components/TableSmall.vue'
 3. Any frontage element, as described in Sections 3.3.2 to 3.3.9, that encroaches upon a public right- of-way requires an encroachment permit per Section 11.4.1.
 
 <TableResponsive>
-| | Attached House | Carriage House | Civic Building | Commercial Block | Detached House | Flex Building | Loft Building | Shopfront | Shopfront House | Stacked Units | Tower | Standards |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Arcade | | | 4 | 4 | | | | | | | 4 | Section 3.3.2 |
-| Awning | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | Section 3.3.3 |
-| Balcony | 4 | 4 | 4 | 4 | 4 | | 4 | | 4 | 4 | 4 | Section 3.3.4 |
-| Canopy | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | 4 | Section 3.3.5 |
-| Forecourt | | | 4 | 4 | | 4 | 4 | 4 | | 4 | 4 | Section 3.3.6 |
-| Plaza | | | 2 | 2 | | 2 | 2 | | | 2 | 2 | Section 3.3.7 |
-| Porch | 4 | 4 | 4 | | 4 | | | | | | 4 | Section 3.3.8 |
-| Stoop | 4 | 4 | 4 | | 4 | | | | | 4 | 4 | Section 3.3.9 |
+
+|           | Attached House | Carriage House | Civic Building | Commercial Block | Detached House | Flex Building | Loft Building | Shopfront | Shopfront House | Stacked Units | Tower | Standards     |
+| --------- | -------------- | -------------- | -------------- | ---------------- | -------------- | ------------- | ------------- | --------- | --------------- | ------------- | ----- | ------------- |
+| Arcade    |                |                | 4              | 4                |                |               |               |           |                 |               | 4     | Section 3.3.2 |
+| Awning    | 4              | 4              | 4              | 4                | 4              | 4             | 4             | 4         | 4               | 4             | 4     | Section 3.3.3 |
+| Balcony   | 4              | 4              | 4              | 4                | 4              |               | 4             |           | 4               | 4             | 4     | Section 3.3.4 |
+| Canopy    | 4              | 4              | 4              | 4                | 4              | 4             | 4             | 4         | 4               | 4             | 4     | Section 3.3.5 |
+| Forecourt |                |                | 4              | 4                |                | 4             | 4             | 4         |                 | 4             | 4     | Section 3.3.6 |
+| Plaza     |                |                | 2              | 2                |                | 2             | 2             |           |                 | 2             | 2     | Section 3.3.7 |
+| Porch     | 4              | 4              | 4              |                  | 4              |               |               |           |                 |               | 4     | Section 3.3.8 |
+| Stoop     | 4              | 4              | 4              |                  | 4              |               |               |           |                 | 4             | 4     | Section 3.3.9 |
+
 </TableResponsive>
 
 ## 3.3.2 Arcade
@@ -39,12 +41,14 @@ An arcade is a passage located along the exterior walls of a building and covere
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Recess from the building facade (min/max) | 12'/20' |
-| **B** | Interior vertical clearance (min) | At least the depth of the arcade recess |
-| **C** | Column or pier spacing, on-center (min) | At least half the width of the height of the first story |
-| **D** | Column or pier width (min/max) | 1.5’/4’ |
+
+|       |                                           |                                                          |
+| ----- | ----------------------------------------- | -------------------------------------------------------- |
+| **A** | Recess from the building facade (min/max) | 12'/20'                                                  |
+| **B** | Interior vertical clearance (min)         | At least the depth of the arcade recess                  |
+| **C** | Column or pier spacing, on-center (min)   | At least half the width of the height of the first story |
+| **D** | Column or pier width (min/max)            | 1.5’/4’                                                  |
+
 </TableSmall>
 
 **Specific Standards**
@@ -67,13 +71,15 @@ An awning is a wall-mounted, pitched cover extending from a building and providi
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Projection from building facade (min) | 3’ |
+
+|       |                                                                 |      |
+| ----- | --------------------------------------------------------------- | ---- |
+| **A** | Projection from building facade (min)                           | 3’   |
 | **B** | Vertical clearance from sidewalk level, excluding valance (min) | 7.5’ |
-| **C** | Setback from curb line (min) | 1.5’ |
-| **D** | Valance height (max) | 6” |
-| | Separation between support posts, if applicable (min) | 5’ |
+| **C** | Setback from curb line (min)                                    | 1.5’ |
+| **D** | Valance height (max)                                            | 6”   |
+|       | Separation between support posts, if applicable (min)           | 5’   |
+
 </TableSmall>
 
 **Specific Standards**
@@ -95,13 +101,15 @@ A balcony is a platform projecting from, or recessed within, the upper floors of
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Width (min) | 4’ |
-| **B** | Projection from building facade (max) | 8’ |
-| **C** | Railing height (max) | 5’ |
-| **D** | Vertical clearance from sidewalk level (min) | 9’ |
-| **E** | Setback from curb line (min) | 1.5’ |
+
+|       |                                              |      |
+| ----- | -------------------------------------------- | ---- |
+| **A** | Width (min)                                  | 4’   |
+| **B** | Projection from building facade (max)        | 8’   |
+| **C** | Railing height (max)                         | 5’   |
+| **D** | Vertical clearance from sidewalk level (min) | 9’   |
+| **E** | Setback from curb line (min)                 | 1.5’ |
+
 </TableSmall>
 
 **Specific Standards**
@@ -121,11 +129,13 @@ A canopy is a horizontal cover, extending outward from a building, providing pro
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Vertical clearance from sidewalk level (min) | 7.5’ |
-| **B** | Setback from curb line (min) | 1.5’ |
-| **C** | Separation between posts, if applicable (min) | 5’ |
+
+|       |                                               |      |
+| ----- | --------------------------------------------- | ---- |
+| **A** | Vertical clearance from sidewalk level (min)  | 7.5’ |
+| **B** | Setback from curb line (min)                  | 1.5’ |
+| **C** | Separation between posts, if applicable (min) | 5’   |
+
 </TableSmall>
 
 **Specific Standards**
@@ -144,9 +154,11 @@ A forecourt is a semi-public space, open to the sky, formed by a recess in the c
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
+
+|       |                 |                                                                                                        |
+| ----- | --------------- | ------------------------------------------------------------------------------------------------------ |
 | **A** | Width (min/max) | At least half the height of the enclosing walls / No more than twice the height of the enclosing walls |
+
 </TableSmall>
 
 **Specific Standards**
@@ -170,9 +182,11 @@ A plaza is a public space that is formed by a building setback, open to the sky,
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
+
+|            |                                  |     |
+| ---------- | -------------------------------- | --- |
 | Area (max) | No more than 25% of the lot area |
+
 </TableSmall>
 
 **Specific Standards**
@@ -202,12 +216,14 @@ A porch is a raised, roofed platform attached to a building forming an articulat
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Width (min) | 10’ |
+
+|       |                                           |        |
+| ----- | ----------------------------------------- | ------ |
+| **A** | Width (min)                               | 10’    |
 | **B** | Projection from building facade (min/max) | 6’/12’ |
-| **C** | Interior vertical clearance (min) | 8’ |
-| **D** | Railing height (max) | 4’ |
+| **C** | Interior vertical clearance (min)         | 8’     |
+| **D** | Railing height (max)                      | 4’     |
+
 </TableSmall>
 
 **Specific Standards**
@@ -229,11 +245,13 @@ A stoop is a small raised platform that serves as an entryway to a building.
 **Dimensions**
 
 <TableSmall>
-| | | |
-| --- | --- | --- |
-| **A** | Width (min) | 4’ |
+
+|       |                                           |        |
+| ----- | ----------------------------------------- | ------ |
+| **A** | Width (min)                               | 4’     |
 | **B** | Projection from building facade (min/max) | 4’/10’ |
-| **C** | Railing height (max) | 4’ |
+| **C** | Railing height (max)                      | 4’     |
+
 </TableSmall>
 
 **Specific Standards**

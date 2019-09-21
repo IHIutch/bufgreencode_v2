@@ -5,13 +5,17 @@ article_number: 4
 section_number: 2
 ---
 
+import TableSmall from '~/components/TableSmall.vue'
+
 ## 4.2.1 Purpose
 
-The D-M zone addresses medical campuses, which are either primarily single-use or mixed-use, and whose design and layout are based on their special function.
+The D-M zone addresses medical campuses, which are either primarily single-use or mixed-use, and whose design and layout are based on their special function**.**
 
 ## 4.2.2 General
 
 All development in the D-M zone must comply with the form standards of this section, as well as any applicable standards in other sections, including the following:
+
+<TableSmall>
 
 |                                  |              |
 | -------------------------------- | ------------ |
@@ -33,40 +37,58 @@ All development in the D-M zone must comply with the form standards of this sect
 | Rights-of-Way                    | Section 10.2 |
 | Nonconformities                  | Section 12.1 |
 
+</TableSmall>
+
 ## 4.2.3 Lot
 
 **Lot Dimensions**
 
-|     |                 |          |
-| --- | --------------- | -------- |
-| A   | Lot area (min)  | 1,800 SF |
-| B   | Lot width (min) | 30’      |
+<TableSmall>
+
+|       |                 |          |
+| ----- | --------------- | -------- |
+| **A** | Lot area (min)  | 1,800 SF |
+| **B** | Lot width (min) | 30’      |
+
+</TableSmall>
 
 **Lot Coverage**
 
-|     |                           |      |
-| --- | ------------------------- | ---- |
-| C   | Building coverage (max)   | 90%  |
-| D   | Impervious coverage (max) | 100% |
+<TableSmall>
+
+|       |                           |      |
+| ----- | ------------------------- | ---- |
+| **C** | Building coverage (max)   | 90%  |
+| **D** | Impervious coverage (max) | 100% |
+
+</TableSmall>
 
 ## 4.2.4 Siting
 
 **Building Setbacks**
 
-|     |                          |     |
-| --- | ------------------------ | --- |
-| A   | Front yard (min)         | 0’  |
-| B   | Corner side yard (min)   | 0’  |
-| C   | Interior side yard (min) | 0’  |
-| D   | Rear yard (min)          | 0’  |
+<TableSmall>
+
+|       |                          |     |
+| ----- | ------------------------ | --- |
+| **A** | Front yard (min)         | 0’  |
+| **B** | Corner side yard (min)   | 0’  |
+| **C** | Interior side yard (min) | 0’  |
+| **D** | Rear yard (min)          | 0’  |
+
+</TableSmall>
 
 ## 4.2.5 Height
 
 **Building Height**
 
-|     |                       |                       |
-| --- | --------------------- | --------------------- |
-| A   | Building height (max) | 6 stories<sup>1</sup> |
+<TableSmall>
+
+|       |                       |                       |
+| ----- | --------------------- | --------------------- |
+| **A** | Building height (max) | 6 stories<sup>1</sup> |
+
+</TableSmall>
 
 **Supplemental Standards**
 
@@ -74,25 +96,37 @@ All development in the D-M zone must comply with the form standards of this sect
 
 **Story Height**
 
+<TableSmall>
+
 |                                       |     |
 | ------------------------------------- | --- |
 | Finished ground floor level (min/max) | N/A |
+
+</TableSmall>
 
 ## 4.2.6 Activation
 
 **Transparency**
 
-|     |                                                               |                                                                                                |
-| --- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| A   | Ground floor transparency, front facade (min)                 | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
-| B   | Ground floor transparency, corner side facade (min)           | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
-| C   | Upper floor transparency, front and corner side facades (min) | 20%                                                                                            |
+<TableSmall>
+
+|       |                                                               |                                                                                                |
+| ----- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **A** | Ground floor transparency, front facade (min)                 | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
+| **B** | Ground floor transparency, corner side facade (min)           | 30%; 60% if across a public right-of- way and within 150’ of an N-1D, N-1C, N-2C, or N-3C zone |
+| **C** | Upper floor transparency, front and corner side facades (min) | 20% \*\* \*\*                                                                                  |
+
+</TableSmall>
 
 **Pedestrian Access**
 
-|     |                                   |              |
-| --- | --------------------------------- | ------------ |
-| D   | Main entrance location (required) | Front facade |
+<TableSmall>
+
+|       |                                   |              |
+| ----- | --------------------------------- | ------------ |
+| **D** | Main entrance location (required) | Front facade |
+
+</TableSmall>
 
 ## 4.2.7 Specific Standards
 
