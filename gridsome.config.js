@@ -9,7 +9,32 @@ const purgecss = require("@fullhuman/postcss-purgecss");
 
 const postcssPlugins = [tailwind(), autoprefixer()];
 
-const collections = require("./algoliaConfig.js");
+const collections = [
+  {
+    query: `{
+      allPost {
+        edges {
+            node {
+                id
+                title
+                path
+                }
+            }
+        }
+    }`,
+    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
+    indexName: process.env.ALGOLIA_INDEX, // Algolia index name
+    itemFormatter: item => {
+      return {
+        objectID: item.id,
+        title: item.title,
+        slug: item.slug,
+        path: item.path
+      };
+    }, // optional
+    matchFields: ["path"] // Array<String> required with PartialUpdates
+  }
+];
 
 if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
