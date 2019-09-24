@@ -10,8 +10,8 @@ export default function(Vue, { router, head, isClient }) {
 
   // Add a meta tag
   head.meta.push({
-    key: "og:image",
-    name: "og:image",
+    property: "og:image",
+    // name: "og:image",
     content: "meta/meta-img.png"
   });
 }
