@@ -14,30 +14,30 @@ export default function(Vue, { router, head, isClient }) {
   // Add a meta tag
   head.meta.push({
     property: "og:type",
-    href: "article"
+    content: "article"
   });
   head.meta.push({
     property: "og:url",
-    href: siteUrl
+    content: siteUrl
   });
   head.meta.push({
     property: "og:site_name",
-    href: siteName
+    content: siteName
   });
   head.meta.push({
     property: "og:image",
-    href: metaImage
+    content: metaImage
   });
   head.meta.push({
     name: "twitter:card",
-    href: "summary"
+    content: "summary"
   });
   head.meta.push({
     name: "twitter:image",
-    href: metaImage
+    content: metaImage
   });
   head.meta.push({
     name: "twitter:author",
-    href: "@jb_hutch"
+    content: "@jb_hutch"
   });
 }
