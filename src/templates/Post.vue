@@ -36,51 +36,23 @@ export default {
       script: [
         {
           innerHTML:
-            `{
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id":
-                "` +
+            `{"headline":"` +
+            this.$page.post.title +
+            `","dateModified":"` +
+            new Date() +
+            `","datePublished":"` +
+            new Date() +
+            `","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"` +
             this.siteUrl +
             this.$route.path +
-            `"
-            },
-            headline: "` +
-            this.$page.post.title +
-            `",
-            description:
-              "",
-            image: {
-              "@type": "ImageObject",
-              url: "` +
+            `"},"image":"` +
             this.siteUrl +
-            `/meta/meta-img.png",
-              width: "",
-              height: ""
-            },
-            author: {
-              "@type": "Person",
-              name: "@jb_hutch"
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "",
-              logo: {
-                "@type": "ImageObject",
-                url: "",
-                width: "",
-                height: ""
-              }
-            },
-            datePublished: "` +
-            new Date() +
-            `",
-            dateModified: "` +
-            new Date() +
-            `"
-          }`,
+            `/meta/meta-img.png","url":"` +
+            this.siteUrl +
+            this.$route.path +
+            `","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"` +
+            this.siteUrl +
+            `/meta/meta-img.png"},"name":"@jb_hutch"},"author":{"@type":"Person","name":"@jb_hutch"},"description":"","@context":"https://schema.org"}`,
           type: "application/ld+json"
         }
       ]
@@ -91,3 +63,5 @@ export default {
   }
 };
 </script>
+
+``
