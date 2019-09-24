@@ -31,7 +31,7 @@ export default {
   name: "PostTemplate",
   metaInfo() {
     return {
-      title: this.$page.post.title
+      // title: this.$page.post.title
     };
   },
   components: {
