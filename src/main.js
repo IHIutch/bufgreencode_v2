@@ -13,6 +13,10 @@ export default function(Vue, { router, head, isClient }) {
   Vue.component("Layout", DefaultLayout);
   // Add a meta tag
   head.meta.push({
+    property: "og:title",
+    content: siteName
+  });
+  head.meta.push({
     property: "og:type",
     content: "article"
   });
@@ -31,6 +35,10 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     name: "twitter:card",
     content: "summary"
+  });
+  head.meta.push({
+    name: "twitter:title",
+    content: siteName
   });
   head.meta.push({
     name: "twitter:image",
