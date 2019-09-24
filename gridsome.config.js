@@ -9,6 +9,8 @@ const purgecss = require("@fullhuman/postcss-purgecss");
 
 const postcssPlugins = [tailwind(), autoprefixer()];
 
+const collections = require("./algoliaConfig.js");
+
 if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
@@ -50,15 +52,15 @@ module.exports = {
         debug: false
       }
     },
-    // {
-    //   use: "gridsome-plugin-algolia",
-    //   options: {
-    //     appId: process.env.ALGOLIA_APP_ID,
-    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
-    //     collections,
-    //     enablePartialUpdates: true // default: false
-    //   }
-    // },
+    {
+      use: "gridsome-plugin-algolia",
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        collections,
+        enablePartialUpdates: true // default: false
+      }
+    },
     {
       use: "gridsome-plugin-pwa",
       options: {
