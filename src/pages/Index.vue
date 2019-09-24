@@ -32,7 +32,7 @@ import Layout from "~/layouts/SidebarLayout";
 export default {
   name: "IndexPage",
   metaInfo: {
-    title: "Hello, world!"
+    title: "Welcome"
   },
   components: {
     Layout

@@ -14,12 +14,13 @@ const collections = require("./algoliaConfig.js");
 if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
-  siteName: "BufGreenCode",
+  siteName: "Buffalo Green Code",
   siteUrl: "https://gridsome.bufgreencode.com",
   icon: {
     favicon: "./assets/images/meta/favicon.png",
     touchicon: "./assets/images/meta/favicon.png"
   },
+  titleTemplate: "%s | Buffalo Green Code",
   // templates: {
   //   Post: "/:article/:title"
   // },
