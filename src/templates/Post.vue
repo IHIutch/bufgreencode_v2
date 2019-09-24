@@ -29,9 +29,61 @@ import Layout from "~/layouts/SidebarLayout";
 
 export default {
   name: "PostTemplate",
+  props: ["siteUrl"],
   metaInfo() {
     return {
-      // title: this.$page.post.title
+      title: this.$page.post.title,
+      script: [
+        {
+          innerHTML:
+            `{
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id":
+                "` +
+            this.siteUrl +
+            this.$route.path +
+            `"
+            },
+            headline: "` +
+            this.$page.post.title +
+            `",
+            description:
+              "",
+            image: {
+              "@type": "ImageObject",
+              url: "` +
+            this.siteUrl +
+            `/meta/meta-img.png",
+              width: "",
+              height: ""
+            },
+            author: {
+              "@type": "Person",
+              name: "@jb_hutch"
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "",
+              logo: {
+                "@type": "ImageObject",
+                url: "",
+                width: "",
+                height: ""
+              }
+            },
+            datePublished: "` +
+            new Date() +
+            `",
+            dateModified: "` +
+            new Date() +
+            `"
+          }`,
+          type: "application/ld+json"
+        }
+      ]
     };
   },
   components: {
