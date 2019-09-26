@@ -3,6 +3,7 @@
 import "./assets/scss/main.scss";
 
 import DefaultLayout from "~/layouts/Default.vue";
+import InstantSearch from "vue-instantsearch";
 
 const siteUrl = "https://gridsome.bufgreencode.com/";
 const siteName = "Buffalo Green Code";
@@ -11,6 +12,7 @@ const metaImage = siteUrl + "meta/meta-img.png";
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+  Vue.use(InstantSearch);
   // Add a meta tag
   head.meta.push({
     property: "og:title",

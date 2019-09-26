@@ -17,11 +17,39 @@
         </div>
         <div class="lg:w-1/2 xl:w-3/5 px-4 h-full">
           <div class="py-2 h-full">
-            <input
-              class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
-              type="text"
-              placeholder="Search the docs..."
-            />
+            <ais-instant-search
+              :search-client="searchClient"
+              index-name="bufgreencode"
+            >
+              <ais-search-box
+                :class-names="{
+                  'ais-SearchBox-input':
+                    'h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2'
+                }"
+                placeholder="Search the docs..."
+              />
+              <ais-hits
+                :class-names="{
+                  'ais-Hits-list': 'bg-white shadow rounded',
+                  'ais-Hits-item': 'p-2 border-t'
+                }"
+              >
+                <a :href="item.url" slot="item" slot-scope="{ item }">
+                  <h2>
+                    <ais-highlight
+                      attribute="title"
+                      :hit="item"
+                    ></ais-highlight>
+                  </h2>
+                  <p>
+                    <ais-highlight
+                      attribute="content"
+                      :hit="item"
+                    ></ais-highlight>
+                  </p>
+                </a>
+              </ais-hits>
+            </ais-instant-search>
           </div>
         </div>
         <div
@@ -43,7 +71,17 @@
 </template>
 
 <script>
+import algoliasearch from "algoliasearch/lite";
+
 export default {
-  name: "NavbarComponent"
+  name: "NavbarComponent",
+  data() {
+    return {
+      searchClient: algoliasearch(
+        "ZXR82DO3QZ",
+        "0308d82262354320e2806b2127aa771a"
+      )
+    };
+  }
 };
 </script>
