@@ -18,21 +18,23 @@ const collections = [
                 id
                 title
                 path
+                content
+                headings{depth, value}
                 }
             }
         }
     }`,
     transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
-    indexName: process.env.ALGOLIA_INDEX, // Algolia index name
+    indexName: process.env.ALGOLIA_INDEX,
     itemFormatter: item => {
       return {
         objectID: item.id,
         title: item.title,
-        slug: item.slug,
-        path: item.path
+        url: item.path,
+        content: item.content,
+        type: "document"
       };
-    }, // optional
-    matchFields: ["path"] // Array<String> required with PartialUpdates
+    }
   }
 ];
 
@@ -84,7 +86,7 @@ module.exports = {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
         collections,
-        enablePartialUpdates: true // default: false
+        enablePartialUpdates: false // default: false
       }
     },
     {
