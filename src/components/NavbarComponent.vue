@@ -19,7 +19,7 @@
           <div class="py-2 h-full">
             <ais-instant-search
               :search-client="searchClient"
-              index-name="prod_BufGreenCode_v2"
+              index-name="bufgreencode"
             >
               <ais-search-box
                 :class-names="{
@@ -28,26 +28,17 @@
                 }"
                 placeholder="Search the docs..."
               />
-              <ais-hits
-                :class-names="{
-                  'ais-Hits-list': 'bg-white shadow rounded',
-                  'ais-Hits-item': 'p-2 border-t'
-                }"
-              >
-                <router-link :to="item.url" slot="item" slot-scope="{ item }">
-                  <h2>
-                    <ais-highlight
-                      attribute="title"
-                      :hit="item"
-                    ></ais-highlight>
-                  </h2>
-                  <p>
-                    <ais-highlight
-                      attribute="content"
-                      :hit="item"
-                    ></ais-highlight>
-                  </p>
-                </router-link>
+              <ais-hits>
+                <li slot="item" slot-scope="{ item, index }">
+                  <span>{{ index }} -</span>
+                  <span v-if="item.hierarchy && item.hierarchy.lvl0">
+                    {{ item.hierarchy.lvl0 }}</span
+                  >
+                  <ais-highlight
+                    attribute="content"
+                    :hit="item"
+                  ></ais-highlight>
+                </li>
               </ais-hits>
             </ais-instant-search>
           </div>
@@ -78,8 +69,8 @@ export default {
   data() {
     return {
       searchClient: algoliasearch(
-        "2XGCT2V019",
-        "8db85ee2a6a6b15efa88c95230e352ab"
+        "BH4D9OD16A",
+        "4f17115df3fa81ec5deb4173a60a749a"
       )
     };
   }
