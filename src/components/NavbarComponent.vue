@@ -18,6 +18,7 @@
         <div class="lg:w-1/2 xl:w-3/5 px-4 h-full">
           <div class="py-2 h-full">
             <input
+              id="algoliaSearch"
               class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
               type="text"
               placeholder="Search the docs..."
@@ -43,7 +44,17 @@
 </template>
 
 <script>
+import docsearch from "docsearch.js";
+
 export default {
-  name: "NavbarComponent"
+  name: "NavbarComponent",
+  mounted() {
+    docsearch({
+      apiKey: "4f17115df3fa81ec5deb4173a60a749a",
+      indexName: "bufgreencode",
+      inputSelector: "#algoliaSearch",
+      debug: true // Set debug to true if you want to inspect the dropdown
+    });
+  }
 };
 </script>
