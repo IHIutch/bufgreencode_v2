@@ -48,9 +48,4 @@ export default function(Vue, { router, head, isClient }) {
     name: "twitter:author",
     content: "@jb_hutch"
   });
-  head.link.push({
-    rel: "stylesheet",
-    href:
-      "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
-  });
 }

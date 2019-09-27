@@ -34,6 +34,7 @@ module.exports = {
     "thead",
     "ul",
     "ol",
-    "li"
+    "li",
+    "algolia-autocomplete"
   ]
 };

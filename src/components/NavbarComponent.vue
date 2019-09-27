@@ -44,17 +44,21 @@
 </template>
 
 <script>
-import docsearch from "docsearch.js";
-
 export default {
   name: "NavbarComponent",
   mounted() {
-    docsearch({
-      apiKey: "4f17115df3fa81ec5deb4173a60a749a",
-      indexName: "bufgreencode",
-      inputSelector: "#algoliaSearch",
-      debug: true // Set debug to true if you want to inspect the dropdown
+    import("docsearch.js").then(({ default: docsearch }) => {
+      docsearch({
+        indexName: "bufgreencode",
+        inputSelector: "#algoliaSearch",
+        apiKey: "4f17115df3fa81ec5deb4173a60a749a",
+        debug: process.env.NODE_ENV === "development"
+      });
     });
   }
 };
 </script>
+
+<style lang="scss">
+@import "~docsearch.js/dist/cdn/docsearch.min.css";
+</style>

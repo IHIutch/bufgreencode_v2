@@ -142,3 +142,9 @@ table {
     @apply .hidden;
   }
 }
+
+.algolia-autocomplete {
+  @apply .flex;
+  @apply .h-full;
+  // @apply .w-full;
+}
