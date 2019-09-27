@@ -18,7 +18,6 @@ const collections = [
                 id
                 title
                 path
-                content
                 headings{depth, value}
                 }
             }
@@ -31,7 +30,6 @@ const collections = [
         objectID: item.id,
         title: item.title,
         url: item.path,
-        content: item.content,
         type: "document"
       };
     }
