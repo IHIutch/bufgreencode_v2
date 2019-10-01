@@ -27,15 +27,17 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-1D zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                   |             |
 | ----------------- | ----------- |
 | Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
+| Principal Uses    | Section 6.1 |
+| Accessory Uses    | Section 6.2 |
+| Temporary Uses    | Section 6.3 |
+| Landscape         | Section 7.1 |
+| Fences and Walls  | Section 7.2 |
+| Stormwater        | Section 7.3 |
+
 </TableSmall>
 
 ## 3.1.2 N-1C Mixed Use Core
@@ -53,26 +55,28 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-1C zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 3.1.3 N-1S Secondary Employment Center
@@ -91,15 +95,17 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-1S zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                   |             |
 | ----------------- | ----------- |
 | Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
+| Principal Uses    | Section 6.1 |
+| Accessory Uses    | Section 6.2 |
+| Temporary Uses    | Section 6.3 |
+| Landscape         | Section 7.1 |
+| Fences and Walls  | Section 7.2 |
+| Stormwater        | Section 7.3 |
+
 </TableSmall>
 
 ## 3.1.4 N-C2 Mixed Use Center
@@ -118,22 +124,24 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-2C zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |             |
 | -------------------------------- | ----------- |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
+| Frontage Elements                | Section 3.3 |
+| Principal Uses                   | Section 6.1 |
+| Accessory Uses                   | Section 6.2 |
+| Temporary Uses                   | Section 6.3 |
+| Landscape                        | Section 7.1 |
+| Fences and Walls                 | Section 7.2 |
+| Stormwater                       | Section 7.3 |
+| Outdoor Lighting                 | Section 7.4 |
+| Corner Visibility                | Section 7.5 |
+| Site Impacts                     | Section 7.6 |
+| Pedestrian Access                | Section 8.1 |
+| Bicycle Access and Parking       | Section 8.2 |
+| Vehicle Access and Parking       | Section 8.3 |
 | Transportation Demand Management | Section 8.4 |
+
 </TableSmall>
 
 ## 3.1.5 N-2E Mixed-Use Edge
@@ -152,22 +160,24 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-2E zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |             |
 | -------------------------------- | ----------- |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
+| Frontage Elements                | Section 3.3 |
+| Principal Uses                   | Section 6.1 |
+| Accessory Uses                   | Section 6.2 |
+| Temporary Uses                   | Section 6.3 |
+| Landscape                        | Section 7.1 |
+| Fences and Walls                 | Section 7.2 |
+| Stormwater                       | Section 7.3 |
+| Outdoor Lighting                 | Section 7.4 |
+| Corner Visibility                | Section 7.5 |
+| Site Impacts                     | Section 7.6 |
+| Pedestrian Access                | Section 8.1 |
+| Bicycle Access and Parking       | Section 8.2 |
+| Vehicle Access and Parking       | Section 8.3 |
 | Transportation Demand Management | Section 8.4 |
+
 </TableSmall>
 
 ## 3.1.6 N-2R Residential
@@ -186,22 +196,24 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-2R zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |             |
 | -------------------------------- | ----------- |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
+| Frontage Elements                | Section 3.3 |
+| Principal Uses                   | Section 6.1 |
+| Accessory Uses                   | Section 6.2 |
+| Temporary Uses                   | Section 6.3 |
+| Landscape                        | Section 7.1 |
+| Fences and Walls                 | Section 7.2 |
+| Stormwater                       | Section 7.3 |
+| Outdoor Lighting                 | Section 7.4 |
+| Corner Visibility                | Section 7.5 |
+| Site Impacts                     | Section 7.6 |
+| Pedestrian Access                | Section 8.1 |
+| Bicycle Access and Parking       | Section 8.2 |
+| Vehicle Access and Parking       | Section 8.3 |
 | Transportation Demand Management | Section 8.4 |
+
 </TableSmall>
 
 ## 3.1.7 N-3C Mixed-Use Center
@@ -221,26 +233,28 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-3C zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 3.1.8 N-3E Mixed-Use Edge
@@ -259,26 +273,28 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-3E zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 3.1.9 N-3R Residential
@@ -297,26 +313,28 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-3R zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 3.1.10 N-4-30 Single-Family
@@ -335,26 +353,28 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-4-30 zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
 
 ## 3.1.11 N-4-50 Single-Family
@@ -373,24 +393,26 @@ import TableSmall from '~/components/TableSmall.vue'
    All development in the N-4-50 zone must comply with the form standards of Section 3.2, as well as any applicable standards in other sections, including the following:
 
 <TableSmall>
-| | |
+
+|                                  |              |
 | -------------------------------- | ------------ |
-| Frontage Elements | Section 3.3 |
-| Principal Uses | Section 6.1 |
-| Accessory Uses | Section 6.2 |
-| Temporary Uses | Section 6.3 |
-| Landscape | Section 7.1 |
-| Fences and Walls | Section 7.2 |
-| Stormwater | Section 7.3 |
-| Outdoor Lighting | Section 7.4 |
-| Corner Visibility | Section 7.5 |
-| Site Impacts | Section 7.6 |
-| Pedestrian Access | Section 8.1 |
-| Bicycle Access and Parking | Section 8.2 |
-| Vehicle Access and Parking | Section 8.3 |
-| Transportation Demand Management | Section 8.4 |
-| On-Premise Signs | Section 9.2 |
-| Blocks | Section 10.1 |
-| Rights-of-Way | Section 10.2 |
-| Nonconformities | Section 12.1 |
+| Frontage Elements                | Section 3.3  |
+| Principal Uses                   | Section 6.1  |
+| Accessory Uses                   | Section 6.2  |
+| Temporary Uses                   | Section 6.3  |
+| Landscape                        | Section 7.1  |
+| Fences and Walls                 | Section 7.2  |
+| Stormwater                       | Section 7.3  |
+| Outdoor Lighting                 | Section 7.4  |
+| Corner Visibility                | Section 7.5  |
+| Site Impacts                     | Section 7.6  |
+| Pedestrian Access                | Section 8.1  |
+| Bicycle Access and Parking       | Section 8.2  |
+| Vehicle Access and Parking       | Section 8.3  |
+| Transportation Demand Management | Section 8.4  |
+| On-Premise Signs                 | Section 9.2  |
+| Blocks                           | Section 10.1 |
+| Rights-of-Way                    | Section 10.2 |
+| Nonconformities                  | Section 12.1 |
+
 </TableSmall>
