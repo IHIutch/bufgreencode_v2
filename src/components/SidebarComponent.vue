@@ -13,7 +13,7 @@
         >
           <g-link
             :to="sectionStarts[article.article].path"
-            class="text-gray-600 hover:text-gray-900 px-2 py-1 block"
+            class="text-gray-700 hover:text-gray-900 px-2 py-1 block"
           >
             <span
               :class="{
@@ -31,7 +31,7 @@
               <g-link
                 :to="section.node.path"
                 v-if="section.node.article_number == article.article"
-                class="text-gray-600 hover:text-gray-900 max-w-full block truncate px-2 py-1"
+                class="text-gray-700 hover:text-gray-900 max-w-full block truncate px-2 py-1"
               >
                 <span
                   class="truncate"

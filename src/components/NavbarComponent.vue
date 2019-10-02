@@ -28,13 +28,13 @@
         <div
           class="lg:w-1/4 xl:w-1/5 px-6 h-full flex items-center justify-end text-sm font-medium"
         >
-          <g-link class="py-1 pr-2 text-gray-600 hover:text-gray-900"
+          <g-link class="py-1 pr-2 text-gray-700 hover:text-gray-900"
             >About</g-link
           >
-          <g-link class="py-1 px-2 text-gray-600 hover:text-gray-900"
+          <g-link class="py-1 px-2 text-gray-700 hover:text-gray-900"
             >Disclaimer</g-link
           >
-          <a class="py-1 px-2 text-gray-600 hover:text-gray-900" href="#"
+          <a class="py-1 px-2 text-gray-700 hover:text-gray-900" href="#"
             >Github</a
           >
         </div>

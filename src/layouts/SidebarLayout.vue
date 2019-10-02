@@ -25,7 +25,7 @@
                   <li
                     v-for="(anchor, index) in tocContent"
                     :key="index"
-                    class="text-sm font-medium text-gray-600 hover:text-gray-900"
+                    class="text-sm font-medium text-gray-700 hover:text-gray-900"
                   >
                     <a :href="anchor.anchor" class="py-1 block">
                       {{ anchor.value }}
