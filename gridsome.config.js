@@ -7,34 +7,7 @@ const tailwind = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss");
 
-const postcssPlugins = [tailwind(), autoprefixer()];
-
-const collections = [
-  {
-    query: `{
-      allPost {
-        edges {
-            node {
-                id
-                title
-                path
-                headings{depth, value}
-                }
-            }
-        }
-    }`,
-    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
-    indexName: process.env.ALGOLIA_INDEX,
-    itemFormatter: item => {
-      return {
-        objectID: item.id,
-        title: item.title,
-        url: item.path,
-        type: "document"
-      };
-    }
-  }
-];
+const postcssPlugins = [tailwind, autoprefixer];
 
 if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
@@ -59,14 +32,6 @@ module.exports = {
         template: "./src/templates/Post.vue"
       }
     },
-    // {
-    //   use: "@gridsome/source-filesystem",
-    //   options: {
-    //     typeName: "Post",
-    //     path: "./content/**/*.md",
-    //     route: "/:article/:title"
-    //   }
-    // },
     {
       use: "@gridsome/plugin-sitemap"
     },
@@ -76,15 +41,6 @@ module.exports = {
         id: "GTM-KNPMJGD",
         enabled: true,
         debug: false
-      }
-    },
-    {
-      use: "gridsome-plugin-algolia",
-      options: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        collections,
-        enablePartialUpdates: false // default: false
       }
     },
     {
