@@ -42,8 +42,8 @@ module.exports = {
   siteName: "Buffalo Green Code",
   siteUrl: "https://gridsome.bufgreencode.com",
   icon: {
-    favicon: "./assets/images/meta/favicon.png",
-    touchicon: "./assets/images/meta/favicon.png"
+    favicon: "./src/assets/images/meta/favicon.png",
+    touchicon: "./src/assets/images/meta/favicon.png"
   },
   titleTemplate: "%s | Buffalo Green Code",
   // templates: {
