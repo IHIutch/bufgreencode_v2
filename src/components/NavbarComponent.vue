@@ -18,27 +18,74 @@
         <div class="lg:w-1/2 xl:w-3/5 px-4 h-full">
           <div class="py-2 h-full">
             <ais-instant-search
+              class="h-full"
               :search-client="searchClient"
               index-name="bufgreencode"
             >
-              <ais-search-box
-                :class-names="{
-                  'ais-SearchBox-input':
-                    'h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2'
-                }"
-                placeholder="Search the docs..."
-              />
-              <ais-hits>
-                <li slot="item" slot-scope="{ item, index }">
-                  <span>{{ index }} -</span>
-                  <span v-if="item.hierarchy && item.hierarchy.lvl0">
-                    {{ item.hierarchy.lvl0 }}</span
+              <ais-configure :hitsPerPage="5" />
+              <ais-search-box class="h-full">
+                <div
+                  class="h-full"
+                  slot-scope="{ currentRefinement, isSearchStalled, refine }"
+                >
+                  <input
+                    type="search"
+                    class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
+                    placeholder="Search the docs..."
+                    v-model="currentRefinement"
+                    @input="refine($event.currentTarget.value)"
+                  />
+                </div>
+              </ais-search-box>
+              <ais-hits class="bg-white border rounded mt-1">
+                <ul slot-scope="{ items }">
+                  <li
+                    class="border-b"
+                    v-for="item in items"
+                    :key="item.objectID"
                   >
-                  <ais-highlight
-                    attribute="content"
-                    :hit="item"
-                  ></ais-highlight>
-                </li>
+                    <g-link :to="item.url" class="p-2 block hover:bg-gray-100">
+                      <ais-highlight
+                        class="block font-medium"
+                        attribute="hierarchy.lvl0"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="block font-medium text-sm"
+                        attribute="hierarchy.lvl1"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="block font-medium text-sm"
+                        attribute="hierarchy.lvl2"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="block font-medium text-sm"
+                        attribute="hierarchy.lvl3"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="block font-medium text-sm"
+                        attribute="hierarchy.lvl4"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="block font-medium text-sm"
+                        attribute="hierarchy.lvl5"
+                        :hit="item"
+                      ></ais-highlight>
+                      <ais-highlight
+                        class="text-sm text-gray-700"
+                        attribute="content"
+                        :hit="item"
+                      ></ais-highlight>
+                    </g-link>
+                  </li>
+                  <li class="p-2 flex justify-end bg-gray-100">
+                    <ais-powered-by />
+                  </li>
+                </ul>
               </ais-hits>
             </ais-instant-search>
           </div>
@@ -71,7 +118,8 @@ export default {
       searchClient: algoliasearch(
         "BH4D9OD16A",
         "4f17115df3fa81ec5deb4173a60a749a"
-      )
+      ),
+      currentRefinement: ""
     };
   }
 };
