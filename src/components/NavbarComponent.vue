@@ -22,7 +22,11 @@
               :search-client="searchClient"
               index-name="bufgreencode"
             >
-              <ais-configure :hitsPerPage="5" />
+              <ais-configure
+                :attributesToSnippet="['content']"
+                snippetEllipsisText="…"
+                :hitsPerPage="5"
+              />
               <ais-search-box class="h-full">
                 <div
                   class="h-full"
@@ -50,6 +54,11 @@
                           class="font-medium"
                           attribute="hierarchy.lvl0"
                           :hit="item"
+                          highlightedTagName="span"
+                          :class-names="{
+                            'ais-Highlight-highlighted':
+                              'bg-gray-400 rounded-sm'
+                          }"
                         ></ais-highlight>
                         <template v-if="item.hierarchy.lvl1">
                           <span class="px-1 font-medium">/</span>
@@ -57,6 +66,11 @@
                             class="font-medium"
                             attribute="hierarchy.lvl1"
                             :hit="item"
+                            highlightedTagName="span"
+                            :class-names="{
+                              'ais-Highlight-highlighted':
+                                'bg-gray-400 rounded-sm'
+                            }"
                           ></ais-highlight>
                         </template>
                         <template v-if="item.hierarchy.lvl2">
@@ -65,6 +79,11 @@
                             class="font-medium"
                             attribute="hierarchy.lvl2"
                             :hit="item"
+                            highlightedTagName="span"
+                            :class-names="{
+                              'ais-Highlight-highlighted':
+                                'bg-gray-400 rounded-sm'
+                            }"
                           ></ais-highlight>
                         </template>
                         <template v-if="item.hierarchy.lvl3">
@@ -73,6 +92,11 @@
                             class="font-medium"
                             attribute="hierarchy.lvl3"
                             :hit="item"
+                            highlightedTagName="span"
+                            :class-names="{
+                              'ais-Highlight-highlighted':
+                                'bg-gray-400 rounded-sm'
+                            }"
                           ></ais-highlight>
                         </template>
                         <template v-if="item.hierarchy.lvl4">
@@ -81,6 +105,11 @@
                             class="font-medium"
                             attribute="hierarchy.lvl4"
                             :hit="item"
+                            highlightedTagName="span"
+                            :class-names="{
+                              'ais-Highlight-highlighted':
+                                'bg-gray-400 rounded-sm'
+                            }"
                           ></ais-highlight>
                         </template>
                         <template v-if="item.hierarchy.lvl5">
@@ -89,14 +118,20 @@
                             class="font-medium"
                             attribute="hierarchy.lvl5"
                             :hit="item"
+                            highlightedTagName="span"
+                            :class-names="{
+                              'ais-Highlight-highlighted':
+                                'bg-gray-400 rounded-sm'
+                            }"
                           ></ais-highlight>
                         </template>
                       </div>
-                      <ais-highlight
+                      <ais-snippet
                         class="text-sm text-gray-700"
                         attribute="content"
                         :hit="item"
-                      ></ais-highlight>
+                        highlightedTagName="span"
+                      ></ais-snippet>
                     </g-link>
                   </li>
                   <li class="p-2 flex justify-end bg-gray-100">
