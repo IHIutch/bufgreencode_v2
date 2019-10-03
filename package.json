@@ -7,26 +7,26 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "gridsome": "^0.7.5",
+    "vue-instantsearch": "^2.5.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.3.0",
     "@gridsome/plugin-sitemap": "^0.2.2",
     "@gridsome/source-filesystem": "^0.6.0",
     "@gridsome/transformer-remark": "^0.3.4",
     "@gridsome/vue-remark": "^0.1.4",
-    "docsearch.js": "^2.6.3",
-    "gridsome": "^0.7.5",
+    "autoprefixer": "^9.6.1",
     "gridsome-plugin-algolia": "^2.1.1",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.7",
-    "minipass": "2.7.0",
     "postcss-import": "^12.0.1",
-    "sharp": "^0.23.0",
-    "tailwindcss": "^1.1.2"
-  },
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3.0",
-    "autoprefixer": "^9.6.1",
+    "minipass": "2.7.0",
     "node-sass": "^4.12.0",
     "postcss": "^7.0.18",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^8.0.0"
+    "sass-loader": "^8.0.0",
+    "sharp": "^0.23.0",
+    "tailwindcss": "^1.1.2"
   }
 }

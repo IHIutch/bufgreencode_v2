@@ -17,12 +17,7 @@
         </div>
         <div class="lg:w-1/2 xl:w-3/5 px-4 h-full">
           <div class="py-2 h-full">
-            <input
-              id="algoliaSearch"
-              class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
-              type="text"
-              placeholder="Search the docs..."
-            />
+            <SearchComponent />
           </div>
         </div>
         <div
@@ -44,21 +39,10 @@
 </template>
 
 <script>
+import SearchComponent from "@/components/SearchComponent";
+
 export default {
   name: "NavbarComponent",
-  mounted() {
-    import("docsearch.js").then(({ default: docsearch }) => {
-      docsearch({
-        indexName: "bufgreencode",
-        inputSelector: "#algoliaSearch",
-        apiKey: "4f17115df3fa81ec5deb4173a60a749a",
-        debug: process.env.NODE_ENV === "development"
-      });
-    });
-  }
+  components: { SearchComponent }
 };
 </script>
-
-<style lang="scss">
-@import "~docsearch.js/dist/cdn/docsearch.min.css";
-</style>
