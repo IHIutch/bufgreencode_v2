@@ -38,7 +38,7 @@
                 :class-names="{
                   'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                 }"
-              ></ais-highlight>
+              />
               <template v-if="item.hierarchy.lvl1">
                 <span class="px-1 font-medium">/</span>
                 <ais-highlight
@@ -49,7 +49,7 @@
                   :class-names="{
                     'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                   }"
-                ></ais-highlight>
+                />
               </template>
               <template v-if="item.hierarchy.lvl2">
                 <span class="px-1 font-medium">/</span>
@@ -61,7 +61,7 @@
                   :class-names="{
                     'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                   }"
-                ></ais-highlight>
+                />
               </template>
               <template v-if="item.hierarchy.lvl3">
                 <span class="px-1 font-medium">/</span>
@@ -73,7 +73,7 @@
                   :class-names="{
                     'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                   }"
-                ></ais-highlight>
+                />
               </template>
               <template v-if="item.hierarchy.lvl4">
                 <span class="px-1 font-medium">/</span>
@@ -85,7 +85,7 @@
                   :class-names="{
                     'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                   }"
-                ></ais-highlight>
+                />
               </template>
               <template v-if="item.hierarchy.lvl5">
                 <span class="px-1 font-medium">/</span>
@@ -97,7 +97,7 @@
                   :class-names="{
                     'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
                   }"
-                ></ais-highlight>
+                />
               </template>
             </div>
             <ais-snippet
@@ -105,7 +105,7 @@
               attribute="content"
               :hit="item"
               highlightedTagName="span"
-            ></ais-snippet>
+            />
           </g-link>
         </li>
         <li class="p-2 flex justify-end bg-gray-100">
