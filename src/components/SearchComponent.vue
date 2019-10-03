@@ -10,20 +10,22 @@
       :hitsPerPage="5"
     />
     <ais-search-box class="h-full">
-      <div
-        class="h-full"
-        slot-scope="{ currentRefinement, isSearchStalled, refine }"
-      >
+      <div class="h-full" slot-scope="{ refine }">
         <input
           type="search"
           class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
           placeholder="Search the docs..."
-          v-model="currentRefinement"
+          v-model="searchValue"
           @input="refine($event.currentTarget.value)"
+          @focus="isFocused = true"
+          @blur="isFocused = false"
         />
       </div>
     </ais-search-box>
-    <ais-hits class="bg-white border rounded mt-1">
+    <ais-hits
+      v-if="searchValue && isFocused"
+      class="bg-white border rounded mt-1"
+    >
       <ul slot-scope="{ items }">
         <li class="border-b" v-for="item in items" :key="item.objectID">
           <g-link :to="item.url" class="p-2 block hover:bg-gray-100">
@@ -125,7 +127,8 @@ export default {
         "BH4D9OD16A",
         "4f17115df3fa81ec5deb4173a60a749a"
       ),
-      currentRefinement: ""
+      searchValue: "",
+      isFocused: false
     };
   }
 };
