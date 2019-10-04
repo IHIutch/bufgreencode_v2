@@ -18,7 +18,6 @@
     "@gridsome/transformer-remark": "^0.3.4",
     "@gridsome/vue-remark": "^0.1.5",
     "autoprefixer": "^9.6.1",
-    "gridsome-plugin-algolia": "^2.1.1",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.7",
     "minipass": "2.7.0",
