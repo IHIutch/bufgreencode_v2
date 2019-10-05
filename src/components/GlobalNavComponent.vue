@@ -5,7 +5,7 @@
       :key="index"
       class="px-4"
       :class="{
-        'my-2 py-4 bg-gray-200':
+        'my-2 py-2 md:py-4 bg-gray-200':
           $page && $page.post.article_number == article.article
       }"
     >

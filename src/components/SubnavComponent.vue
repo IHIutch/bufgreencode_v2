@@ -1,20 +1,24 @@
 <template>
-  <div class="bg-gray-200">
-    <div class="flex justify-between">
-      <div v-if="menuIsOpen" class="px-2">
-        <div class="flex items-center px-6 h-12">
+  <div
+    class="flex flex-col bg-gray-200"
+    :class="menuIsOpen ? 'flex-grow h-full' : ''"
+  >
+    <div class="flex justify-between h-10">
+      <template v-if="menuIsOpen">
+        <div class="pl-6 flex items-center h-full">
           <span class="text-xl">Menu</span>
         </div>
-        <GlobalNav class="mt-2 pb-6" />
-      </div>
-      <div v-else class="flex pl-6 items-center h-10">
-        <span>Article</span>
-        <span class="px-2">/</span>
-        <span>Section</span>
-        <span class="px-2">/</span>
-        <span>Subsection</span>
-      </div>
-      <div class="flex md:hidden h-10">
+      </template>
+      <template v-else>
+        <div class="flex pl-6 items-center">
+          <span>Article</span>
+          <span class="px-2">/</span>
+          <span>Section</span>
+          <span class="px-2">/</span>
+          <span>Subsection</span>
+        </div>
+      </template>
+      <div class="flex md:hidden">
         <button
           type="button"
           @click="menuIsOpen = !menuIsOpen"
@@ -30,6 +34,20 @@
         </button>
       </div>
     </div>
+    <nav v-if="menuIsOpen" class="flex-grow overflow-y-scroll h-full">
+      <GlobalNav class="mt-2 pb-6" />
+      <div class="flex justify-between border-t px-6 pt-2 mb-4">
+        <g-link class="p-2 text-gray-700 hover:text-gray-900"
+            >About</g-link
+          >
+          <g-link class="p-2 text-gray-700 hover:text-gray-900"
+            >Disclaimer</g-link
+          >
+          <a class="p-2 text-gray-700 hover:text-gray-900" href="#"
+            >Github</a
+          >
+      </div>
+    </nav>
   </div>
 </template>
 

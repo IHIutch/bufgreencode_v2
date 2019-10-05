@@ -1,15 +1,19 @@
 <template>
   <div class="antialiased">
-    <div class="fixed top-0 z-10">
+    <div class="fixed top-0 z-10 w-full max-h-screen h-full flex flex-col">
       <Navbar />
       <Subnav class="md:hidden" />
     </div>
     <div class="flex">
-      <Sidebar
-        class="hidden md:block md:w-1/4 lg:w-1/6 fixed h-full pt-16 flex-shrink-0"
-      />
+      <div
+        class="hidden md:block md:w-1/4 lg:w-1/6 fixed top-0 h-full pt-16 flex-shrink-0"
+      >
+        <Sidebar />
+      </div>
       <transition name="fade" appear>
-        <div class="flex pt-20 md:pt-16 px-6 md:px-8 lg:px-16">
+        <div
+          class="flex pt-20 md:pt-16 px-6 md:px-8 lg:px-16 md:w-3/4 lg:w-5/6 md:ml-auto"
+        >
           <div class="my-12 flex-grow lg:pr-16">
             <main>
               <slot />
@@ -17,7 +21,7 @@
           </div>
           <aside v-if="toc" class="hidden lg:block lg:w-1/4 flex-shrink-0">
             <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
-              <div class="mt-8 pb-8 pr-6">
+              <div class="mt-8 pb-8">
                 <div class="mb-2">
                   <span
                     class="uppercase font-bold text-gray-500 text-sm tracking-wider"
