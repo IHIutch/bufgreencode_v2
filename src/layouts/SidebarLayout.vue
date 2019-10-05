@@ -1,6 +1,8 @@
 <template>
   <div class="antialiased">
-    <div class="fixed top-0 z-10 w-full max-h-screen h-full flex flex-col">
+    <div
+      class="fixed top-0 z-10 w-full max-h-screen h-full md:h-auto flex flex-col"
+    >
       <Navbar />
       <Subnav class="md:hidden" />
     </div>

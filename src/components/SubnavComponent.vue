@@ -37,15 +37,11 @@
     <nav v-if="menuIsOpen" class="flex-grow overflow-y-scroll h-full">
       <GlobalNav class="mt-2 pb-6" />
       <div class="flex justify-between border-t px-6 pt-2 mb-4">
+        <g-link class="p-2 text-gray-700 hover:text-gray-900">About</g-link>
         <g-link class="p-2 text-gray-700 hover:text-gray-900"
-            >About</g-link
-          >
-          <g-link class="p-2 text-gray-700 hover:text-gray-900"
-            >Disclaimer</g-link
-          >
-          <a class="p-2 text-gray-700 hover:text-gray-900" href="#"
-            >Github</a
-          >
+          >Disclaimer</g-link
+        >
+        <a class="p-2 text-gray-700 hover:text-gray-900" href="#">Github</a>
       </div>
     </nav>
   </div>

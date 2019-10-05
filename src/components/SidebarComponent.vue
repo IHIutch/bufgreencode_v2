@@ -1,6 +1,6 @@
 <template>
   <nav class="h-full overflow-y-scroll sticky border-r">
-    <GlobalNav class="mt-8 pb-8 " />
+    <GlobalNav class="mt-8 pb-8" />
   </nav>
 </template>
 
