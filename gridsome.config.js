@@ -53,9 +53,9 @@ module.exports = {
         manifestPath: "./manifest.json",
         serviceWorkerPath: "./service-worker.js",
         shortName: "BufGreenCode",
-        themeColor: "#666600",
+        themeColor: "#80af41",
         backgroundColor: "#ffffff",
-        icon: "./assets/images/meta/favicon.png" // must be supplied!
+        icon: "./src/assets/images/meta/favicon.png" // must be supplied!
       }
     }
   ],
