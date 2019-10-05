@@ -1,5 +1,6 @@
 <template>
   <ais-instant-search
+    v-if="isMounted"
     class="h-full"
     :search-client="searchClient"
     index-name="bufgreencode"
@@ -128,8 +129,12 @@ export default {
         "4f17115df3fa81ec5deb4173a60a749a"
       ),
       searchValue: "",
-      isFocused: false
+      isFocused: false,
+      isMounted: false
     };
+  },
+  mounted() {
+    this.isMounted = true;
   }
 };
 </script>
