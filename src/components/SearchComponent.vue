@@ -14,6 +14,7 @@
     <ais-search-box class="h-full">
       <div class="h-full" slot-scope="{ refine }">
         <input
+          title="Search Input"
           type="search"
           class="h-full w-full rounded-lg border bg-gray-200 focus:bg-white focus:outline-none px-4 py-2"
           placeholder="Search the docs..."

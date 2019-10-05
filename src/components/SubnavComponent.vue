@@ -21,6 +21,7 @@
       <div class="flex md:hidden">
         <button
           type="button"
+          aria-label="Mobile Menu"
           @click="menuIsOpen = !menuIsOpen"
           class="flex px-6 h-full lg:hidden text-gray-700 focus:outline-none focus:text-gray-700"
         >
