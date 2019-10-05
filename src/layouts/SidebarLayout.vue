@@ -1,18 +1,21 @@
 <template>
   <div class="antialiased">
-    <Navbar />
+    <div class="fixed top-0 z-10">
+      <Navbar />
+      <Subnav class="md:hidden" />
+    </div>
     <div class="flex">
-      <Sidebar class="hidden md:block md:w-1/6 lg:w-1/6 fixed h-full pt-16" />
+      <Sidebar
+        class="hidden md:block md:w-1/4 lg:w-1/6 fixed h-full pt-16 flex-shrink-0"
+      />
       <transition name="fade" appear>
-        <div class="md:ml-auto w-full md:w-5/6 lg:w-5/6 flex">
-          <div class="w-full lg:w-5/6 xl:w-9/12 lg:mr-auto px-16 pt-16">
-            <div class="my-12">
-              <main>
-                <slot />
-              </main>
-            </div>
+        <div class="flex pt-20 md:pt-16 px-6 md:px-8 lg:px-16">
+          <div class="my-12 flex-grow lg:pr-16">
+            <main>
+              <slot />
+            </main>
           </div>
-          <aside v-if="toc" class="hidden lg:block lg:w-1/6 xl:w-3/12">
+          <aside v-if="toc" class="hidden lg:block lg:w-1/4 flex-shrink-0">
             <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
               <div class="mt-8 pb-8 pr-6">
                 <div class="mb-2">
@@ -52,6 +55,7 @@ query {
 <script>
 import Sidebar from "~/components/SidebarComponent";
 import Navbar from "~/components/NavbarComponent";
+import Subnav from "~/components/SubnavComponent";
 
 export default {
   name: "SidebarLayout",
@@ -66,7 +70,8 @@ export default {
   },
   components: {
     Sidebar,
-    Navbar
+    Navbar,
+    Subnav
   }
 };
 </script>
