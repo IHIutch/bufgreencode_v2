@@ -1,5 +1,6 @@
 <template>
   <ais-instant-search
+    id="algoliaSearch"
     v-if="isMounted"
     class="h-full"
     :search-client="searchClient"
@@ -18,18 +19,17 @@
           placeholder="Search the docs..."
           v-model="searchValue"
           @input="refine($event.currentTarget.value)"
-          @focus="isFocused = true"
-          @blur="isFocused = false"
+          @focus="showResults = true"
         />
       </div>
     </ais-search-box>
     <ais-hits
-      v-if="searchValue && isFocused"
+      v-if="searchValue && showResults"
       class="bg-white border rounded mt-1"
     >
       <ul slot-scope="{ items }">
         <li class="border-b" v-for="item in items" :key="item.objectID">
-          <g-link :to="item.url" class="p-2 block hover:bg-gray-100">
+          <g-link :to="relUrl(item.url)" class="p-2 block hover:bg-gray-100">
             <div>
               <ais-highlight
                 class="font-medium"
@@ -119,6 +119,7 @@
 
 <script>
 import algoliasearch from "algoliasearch/lite";
+import _ from "lodash";
 
 export default {
   name: "SearchComponent",
@@ -129,12 +130,37 @@ export default {
         "4f17115df3fa81ec5deb4173a60a749a"
       ),
       searchValue: "",
-      isFocused: false,
+      showResults: false,
       isMounted: false
     };
   },
-  mounted() {
-    this.isMounted = true;
+  async mounted() {
+    this.isMounted = await true; // Prevents the need for Algolia SSR
+    let self = this;
+    document.addEventListener("click", function(event) {
+      self.setFocus(event);
+    });
+  },
+  methods: {
+    relUrl(url) {
+      return url.replace("https://gridsome.bufgreencode.com/", "/");
+    },
+    setFocus(event) {
+      if (event && event.target) {
+        let searchObject = document
+          .getElementById("algoliaSearch")
+          .contains(event.target);
+        if (!searchObject) {
+          this.showResults = false;
+        }
+      }
+    }
+  },
+  beforeDestroy() {
+    let self = this;
+    document.addEventListener("click", function(event) {
+      self.setFocus(event);
+    });
   }
 };
 </script>
