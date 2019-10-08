@@ -12,40 +12,42 @@
       >
         <Sidebar />
       </div>
-      <transition name="fade" appear>
-        <div
-          class="flex pt-20 md:pt-16 px-6 md:px-8 lg:px-16 md:w-3/4 lg:w-5/6 md:ml-auto"
-        >
-          <div class="my-12 flex-grow lg:pr-16 lg:w-3/4">
-            <main class="w-full">
-              <slot />
-            </main>
-          </div>
-          <aside v-if="toc" class="hidden lg:block lg:w-1/4 flex-shrink-0">
-            <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
-              <div class="mt-8 pb-8">
-                <div class="mb-2">
-                  <span
-                    class="uppercase font-bold text-gray-500 text-sm tracking-wider"
-                    >On this Page</span
-                  >
-                </div>
-                <ul>
-                  <li
-                    v-for="(anchor, index) in tocContent"
-                    :key="index"
-                    class="text-sm font-medium text-gray-700 hover:text-gray-900"
-                  >
-                    <a :href="anchor.anchor" class="py-1 block">
-                      {{ anchor.value }}
-                    </a>
-                  </li>
-                </ul>
-              </div>
+      <div
+        class="pt-20 md:pt-16 px-6 md:px-8 lg:px-16 md:w-3/4 lg:w-5/6 md:ml-auto"
+      >
+        <transition name="fade" appear>
+          <div class="flex" :key="$route.path">
+            <div class="my-12 flex-grow lg:pr-16 lg:w-3/4">
+              <main class="w-full">
+                <slot />
+              </main>
             </div>
-          </aside>
-        </div>
-      </transition>
+            <aside v-if="toc" class="hidden lg:block lg:w-1/4 flex-shrink-0">
+              <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
+                <div class="mt-8 pb-8">
+                  <div class="mb-2">
+                    <span
+                      class="uppercase font-bold text-gray-500 text-sm tracking-wider"
+                      >On this Page</span
+                    >
+                  </div>
+                  <ul>
+                    <li
+                      v-for="(anchor, index) in tocContent"
+                      :key="index"
+                      class="text-sm font-medium text-gray-700 hover:text-gray-900"
+                    >
+                      <a :href="anchor.anchor" class="py-1 block">
+                        {{ anchor.value }}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
