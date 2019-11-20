@@ -17,7 +17,7 @@
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.3.4",
-    "@gridsome/vue-remark": "^0.1.8",
+    "@gridsome/vue-remark": "^0.1.9",
     "autoprefixer": "^9.7.0",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.9",
