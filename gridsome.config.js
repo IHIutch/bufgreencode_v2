@@ -29,7 +29,10 @@ module.exports = {
         typeName: "Post",
         baseDir: "./content/sections",
         route: "/:article/:title",
-        template: "./src/templates/Post.vue"
+        template: "./src/templates/Post.vue",
+        remark: {
+          autolinkClassName: "heading-anchor"
+        }
       }
     },
     {

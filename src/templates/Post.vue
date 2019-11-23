@@ -60,8 +60,42 @@ export default {
   },
   components: {
     Layout
+  },
+  methods: {
+    scrollToHash(hash) {
+      setTimeout(() => {
+        location.href = this.$route.hash;
+      }, 1);
+    },
+    copyAnchorsToClipBoardOnClick() {
+      var anchor = document.getElementsByClassName("heading-anchor");
+      for (let a of anchor) {
+        a.addEventListener("click", function(e) {
+          var href = e.path[0].baseURI;
+          var textArea = document.createElement("textarea");
+          textArea.value = href;
+          textArea.style.position = "fixed"; //avoid scrolling to bottom
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+
+          try {
+            var successful = document.execCommand("copy");
+            console.log(href);
+          } catch (err) {
+            console.error("Oops, unable to copy", err);
+          }
+
+          document.body.removeChild(textArea);
+        });
+      }
+    }
+  },
+  mounted() {
+    if (this.$route.hash) {
+      setTimeout(() => this.scrollToHash(this.$route.hash), 1);
+    }
+    this.copyAnchorsToClipBoardOnClick();
   }
 };
 </script>
-
-``
