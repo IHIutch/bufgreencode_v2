@@ -154,3 +154,16 @@ table {
   @apply .h-full;
   // @apply .w-full;
 }
+
+.ais-Highlight-highlighted {
+  @apply .font-bold;
+  @apply .border-b-2;
+  @apply .border-green-600;
+}
+
+.ais-Snippet-highlighted {
+  @apply .font-bold;
+  @apply .text-gray-900;
+  @apply .border-b-2;
+  @apply .border-green-600;
+}

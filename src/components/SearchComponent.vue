@@ -30,7 +30,11 @@
     >
       <ul slot-scope="{ items }">
         <li class="border-b" v-for="item in items" :key="item.objectID">
-          <g-link :to="relUrl(item.url)" class="p-2 block hover:bg-gray-100">
+          <g-link
+            :to="relUrl(item.url)"
+            class="p-2 block hover:bg-gray-100"
+            tabindex="0"
+          >
             <div>
               <ais-highlight
                 class="font-medium"
@@ -38,7 +42,8 @@
                 :hit="item"
                 highlightedTagName="span"
                 :class-names="{
-                  'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                  'ais-Highlight-highlighted':
+                    'font-bold border-b-2 border-green-600'
                 }"
               />
               <template v-if="item.hierarchy.lvl1">
@@ -49,7 +54,8 @@
                   :hit="item"
                   highlightedTagName="span"
                   :class-names="{
-                    'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                    'ais-Highlight-highlighted':
+                      'font-bold border-b-2 border-green-600'
                   }"
                 />
               </template>
@@ -61,7 +67,8 @@
                   :hit="item"
                   highlightedTagName="span"
                   :class-names="{
-                    'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                    'ais-Highlight-highlighted':
+                      'font-bold border-b-2 border-green-600'
                   }"
                 />
               </template>
@@ -73,7 +80,8 @@
                   :hit="item"
                   highlightedTagName="span"
                   :class-names="{
-                    'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                    'ais-Highlight-highlighted':
+                      'font-bold border-b-2 border-green-600'
                   }"
                 />
               </template>
@@ -85,7 +93,8 @@
                   :hit="item"
                   highlightedTagName="span"
                   :class-names="{
-                    'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                    'ais-Highlight-highlighted':
+                      'font-bold border-b-2 border-green-600'
                   }"
                 />
               </template>
@@ -97,7 +106,8 @@
                   :hit="item"
                   highlightedTagName="span"
                   :class-names="{
-                    'ais-Highlight-highlighted': 'bg-gray-400 rounded-sm'
+                    'ais-Highlight-highlighted':
+                      'font-bold border-b-2 border-green-600'
                   }"
                 />
               </template>
@@ -107,6 +117,10 @@
               attribute="content"
               :hit="item"
               highlightedTagName="span"
+              :class-names="{
+                'ais-Snippet-highlighted':
+                  'font-bold text-gray-900 border-b-2 border-green-600'
+              }"
             />
           </g-link>
         </li>
@@ -141,6 +155,11 @@ export default {
     document.addEventListener("click", function(event) {
       self.setFocus(event);
     });
+  },
+  watch: {
+    $route() {
+      this.searchValue = "";
+    }
   },
   methods: {
     relUrl(url) {
