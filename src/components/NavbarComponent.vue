@@ -2,13 +2,13 @@
   <nav class="flex bg-white border-b border-gray-200 h-16 inset-x-0">
     <div class="w-full max-w-screen-xl relative mx-auto px-6">
       <div class="flex items-center -mx-6 h-full px-6">
-        <div class="md:w-1/4 lg:w-1/6 pr-6 lg:pr-8 h-full">
+        <div class="md:w-1/4 lg:w-1/6 pr-6 lg:pr-8 h-full flex-shrink-0">
           <div class="flex items-center h-full">
             <g-link to="/" class="block lg:mr-4 h-full"
               ><img
-                src="../assets/images/meta/favicon.png"
+                src="../assets/images/meta/bufgreencode_logo.svg"
                 alt="Buffalo Green Code"
-                class="h-full w-auto"
+                class="h-full w-auto py-1"
               />
             </g-link>
           </div>
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div
-          class="px-6 h-full hidden md:flex items-center justify-end text-sm font-medium"
+          class="px-6 h-full hidden md:flex items-center justify-end text-sm font-medium flex-shrink-0"
         >
           <g-link class="py-1 pr-2 text-gray-700 hover:text-gray-900"
             >About</g-link
