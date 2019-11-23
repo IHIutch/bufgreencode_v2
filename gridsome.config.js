@@ -53,9 +53,12 @@ module.exports = {
         manifestPath: "./manifest.json",
         serviceWorkerPath: "./service-worker.js",
         shortName: "BufGreenCode",
-        themeColor: "#80af41",
+        themeColor: "#86b142",
         backgroundColor: "#ffffff",
-        icon: "./src/assets/images/meta/favicon.png" // must be supplied!
+        purpose: "maskable",
+        icon: "./src/assets/images/meta/favicon.png", // must be supplied!
+        msTileImage: "./src/assets/images/meta/favicon.png",
+        msTileColor: "#86b142"
       }
     }
   ],
