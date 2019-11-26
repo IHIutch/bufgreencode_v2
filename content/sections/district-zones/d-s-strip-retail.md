@@ -15,6 +15,8 @@ The D-S zone addresses strip retail development, which may be mixed-use, may con
 
 All development in the D-S zone must comply with the form standards of this section, as well as any applicable standards in other sections, including the following:
 
+<TableSmall>
+
 |                                  |              |
 | -------------------------------- | ------------ |
 | Principal Uses                   | Section 6.1  |
@@ -35,25 +37,37 @@ All development in the D-S zone must comply with the form standards of this sect
 | Rights-of-Way                    | Section 10.2 |
 | Nonconformities                  | Section 12.1 |
 
+</TableSmall>
+
 ## 4.4.3 Lot
 
 **Lot Dimensionst**
+
+<TableSmall>
 
 |       |                 |          |
 | ----- | --------------- | -------- |
 | **A** | Lot area (min)  | 5,000 SF |
 | **B** | Lot width (min) | 50’      |
 
+</TableSmall>
+
 **Lot Coverage**
+
+<TableSmall>
 
 |       |                           |     |
 | ----- | ------------------------- | --- |
 | **C** | Building coverage (max)   | 90% |
 | **D** | Impervious coverage (max) | 90% |
 
+</TableSmall>
+
 ## 4.4.4 Siting
 
 **Building Setbacks**
+
+<TableSmall>
 
 |       |                            |                      |
 | ----- | -------------------------- | -------------------- |
@@ -61,6 +75,8 @@ All development in the D-S zone must comply with the form standards of this sect
 | **B** | Corner side yard (min/max) | 0/50’<sup>1,2</sup>  |
 | **C** | Interior side yard (min)   | 5’                   |
 | **D** | Rear yard (min)            | 15’                  |
+
+</TableSmall>
 
 **Supplemental Standards**
 
@@ -72,26 +88,38 @@ All development in the D-S zone must comply with the form standards of this sect
 
 **Building Height**
 
+<TableSmall>
+
 |       |                       |           |
 | ----- | --------------------- | --------- |
 | **A** | Building height (max) | 4 stories |
 
+</TableSmall>
+
 **Story Height**
+
+<TableSmall>
 
 |       |                                       |       |
 | ----- | ------------------------------------- | ----- |
 | **B** | Finished ground floor level (min/max) | 0’/2’ |
 | **C** | Ground story height (min)             | 15'   |
 
+</TableSmall>
+
 ## 4.4.6 Activation
 
 **Transparency**
+
+<TableSmall>
 
 |       |                           |                                            |
 | ----- | ------------------------- | ------------------------------------------ |
 | **A** | Ground floor transparency | front facade (min) 30%<sup>1,2</sup>       |
 | **B** | Ground floor transparency | corner side facade (min) 25%<sup>1,2</sup> |
 | **C** | Upper floor transparency  | front and corner side facades (min) 20%    |
+
+</TableSmall>
 
 **Supplemental Standards**
 
@@ -101,9 +129,13 @@ All development in the D-S zone must comply with the form standards of this sect
 
 **Pedestrian Access**
 
+<TableSmall>
+
 |       |                                    |                            |
 | ----- | ---------------------------------- | -------------------------- |
 | **D** | Main entrance location (preferred) | Front facade<sup>1,2</sup> |
+
+</TableSmall>
 
 **Supplemental Standards**
 
