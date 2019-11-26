@@ -9,7 +9,7 @@ import TableSmall from '~/components/TableSmall.vue'
 
 ## 4.2.1 Purpose
 
-The D-M zone addresses medical campuses, which are either primarily single-use or mixed-use, and whose design and layout are based on their special function**.**
+The D-M zone addresses medical campuses, which are either primarily single-use or mixed-use, and whose design and layout are based on their special function.
 
 ## 4.2.2 General
 
