@@ -55,7 +55,7 @@ All development in the D-ON zone must comply with the form standards of this sec
 **Lot Coverage**
 
 <TableSmall>
-    
+
 |       |                           |     |
 | ----- | ------------------------- | --- |
 | **C** | Building coverage (max)   | 2%  |
@@ -83,7 +83,7 @@ All development in the D-ON zone must comply with the form standards of this sec
 **Building Height**
 
 <TableSmall>
-    
+
 |       |                       |         |
 | ----- | --------------------- | ------- |
 | **A** | Building height (max) | 1 story |

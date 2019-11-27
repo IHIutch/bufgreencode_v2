@@ -69,12 +69,12 @@ All development in the D-S zone must comply with the form standards of this sect
 
 <TableSmall>
 
-|       |                            |                      |
-| ----- | -------------------------- | -------------------- |
-| **A** | Front yard (min/max)       | 0/100’<sup>1,2</sup> |
-| **B** | Corner side yard (min/max) | 0/50’<sup>1,2</sup>  |
-| **C** | Interior side yard (min)   | 5’                   |
-| **D** | Rear yard (min)            | 15’                  |
+|       |                            |                       |
+| ----- | -------------------------- | --------------------- |
+| **A** | Front yard (min/max)       | 0/100’ <sup>1,2</sup> |
+| **B** | Corner side yard (min/max) | 0/50’ <sup>1,2</sup>  |
+| **C** | Interior side yard (min)   | 5’                    |
+| **D** | Rear yard (min)            | 15’                   |
 
 </TableSmall>
 
@@ -113,11 +113,11 @@ All development in the D-S zone must comply with the form standards of this sect
 
 <TableSmall>
 
-|       |                           |                                            |
-| ----- | ------------------------- | ------------------------------------------ |
-| **A** | Ground floor transparency | front facade (min) 30%<sup>1,2</sup>       |
-| **B** | Ground floor transparency | corner side facade (min) 25%<sup>1,2</sup> |
-| **C** | Upper floor transparency  | front and corner side facades (min) 20%    |
+|       |                                                              |                    |
+| ----- | ------------------------------------------------------------ | ------------------ |
+| **A** | Ground floor transparency front facade (min)                 | 30% <sup>1,2</sup> |
+| **B** | Ground floor transparency corner side facade (min)           | 25% <sup>1,2</sup> |
+| **C** | Upper floor transparency front and corner side facades (min) | 20%                |
 
 </TableSmall>
 
@@ -131,9 +131,9 @@ All development in the D-S zone must comply with the form standards of this sect
 
 <TableSmall>
 
-|       |                                    |                            |
-| ----- | ---------------------------------- | -------------------------- |
-| **D** | Main entrance location (preferred) | Front facade<sup>1,2</sup> |
+|       |                                    |                             |
+| ----- | ---------------------------------- | --------------------------- |
+| **D** | Main entrance location (preferred) | Front facade <sup>1,2</sup> |
 
 </TableSmall>
 

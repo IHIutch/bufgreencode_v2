@@ -117,8 +117,8 @@ All development in the D-OS zone must comply with the form standards of this sec
 **Pedestrian Access**
 
 <TableSmall>
-  
-| | |
+
+|                        |     |
 | ---------------------- | --- |
 | Main entrance location | N/A |
 

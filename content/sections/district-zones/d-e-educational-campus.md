@@ -5,6 +5,8 @@ article_number: 4
 section_number: 3
 ---
 
+import TableSmall from '~/components/TableSmall.vue'
+
 ## 4.3.1 Purpose
 
 The D-E zone addresses educational campuses, often formally disposed, multiple-building sites centered around a series of interconnected open spaces.

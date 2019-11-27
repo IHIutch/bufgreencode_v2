@@ -68,7 +68,7 @@ All development in the D-OG zone must comply with the form standards of this sec
 **Building Setbacks**
 
 <TableSmall>
-    
+
 |       |                          |     |
 | ----- | ------------------------ | --- |
 | **A** | Front yard (min)         | 15’ |
