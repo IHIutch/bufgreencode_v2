@@ -84,9 +84,9 @@ All development in the D-M zone must comply with the form standards of this sect
 
 <TableSmall>
 
-|       |                       |                       |
-| ----- | --------------------- | --------------------- |
-| **A** | Building height (max) | 6 stories<sup>1</sup> |
+|       |                       |                        |
+| ----- | --------------------- | ---------------------- |
+| **A** | Building height (max) | 6 stories <sup>1</sup> |
 
 </TableSmall>
 
