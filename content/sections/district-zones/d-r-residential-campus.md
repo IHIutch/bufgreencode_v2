@@ -9,7 +9,7 @@ import TableSmall from '~/components/TableSmall.vue'
 import FigureImg from '~/components/FigureImg.vue'
 
 <FigureImg caption="D-R Residential Campus">
-    <g-image src="../../../src/assets/images/4-1/4-1.png" alt="D-R Residential Campus" />
+    <g-image src="~/assets/images/4-1/4-1.png" alt="D-R Residential Campus" />
 </FigureImg>
 
 ## 4.1.1 Purpose
