@@ -147,6 +147,17 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    The following frontage elements are allowed for the attached house building type, subject to the requirements of Section 3.3:
 
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | o Forecourt |
+   | x Awning  | o Plaza     |
+   | x Balcony | x Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
 3. Lot
 
    **Lot Dimensions**
@@ -241,6 +252,144 @@ All principal buildings in the neighborhood zones must comply with the standards
    | **A** | Ground floor transparency front facade (min)                 | 20% |
    | **B** | Ground floor transparency corner side facade (min)           | 20% |
    | **C** | Upper floor transparency front and corner side facades (min) | 20% |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                   |              |
+   | ----- | --------------------------------- | ------------ |
+   | **D** | Main entrance location (required) | Front facade |
+
+   </TableSmall>
+
+7. Specific Standards
+
+   1. A grouping of attached houses may not exceed 120 feet in aggregate width, except in the N-1C and N-1S zones, where there are no such restrictions.
+   2. All attached houses in a single grouping of attached houses must maintain the same front yard setback, with a deviation of up to two feet allowed.
+   3. Exterior facade materials are restricted on attached houses, as follows:
+      1. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+      2. Standard, fluted, or split face concrete masonry units (CMUs) above the basement level are prohibited.
+      3. Exterior insulating finish systems (EIFS) are prohibited in the N-1C, N-1S, N-2E, and N-3E zones.
+      4. Vinyl siding is prohibited in the N-1C, N-1S, N-2E, and N-3E zones.
+
+## 3.2.3 Carriage House
+
+1. Description
+
+   A carriage house is a small building, typically designed for a dwelling or small business that may be above a garage at ground level. A carriage house may be either an ancillary building located to the rear of a lot, or a principal building on its own lot, fronting an alley.
+
+2. Frontage Elements
+
+   The following frontage elements are allowed for the carriage house building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | o Forecourt |
+   | x Awning  | o Plaza     |
+   | x Balcony | x Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |         |
+   | ----- | ------------------- | ------- |
+   | **A** | Lot area (min)      | 900 SF  |
+   | **B** | Lot width (min/max) | 15’/40’ |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   |      |
+   |       | N-1C, N-1S                | 90%  |
+   |       | N-2E, N-2R ,N-3E, N-3R    | 70%  |
+   | **D** | Impervious coverage (max) |      |
+   |       | N-1C, N-1S                | 100% |
+   |       | N-2E, N-2R, N-3E, N-3R    | 80%  |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                         |                                                                                   |
+   | ----- | --------------------------------------- | --------------------------------------------------------------------------------- |
+   | **A** | Front yard (min/max)                    | +/- 5’ from established front yard line                                           |
+   | **B** | Build-to percentage, front facade (min) | 85%                                                                               |
+   | **C** | Corner side yard (min/max)              |                                                                                   |
+   |       | N-1C, N-1S                              | 0’/5’                                                                             |
+   |       | N-2E, N-2R, N-3E, N-3R                  | 3’/15’                                                                            |
+   | **D** | Interior side yard (min)                | 0’                                                                                |
+   | **E** | Interior side yard, end unit (min)      |                                                                                   |
+   |       | N-1C, N-1S                              | 0’                                                                                |
+   |       | N-2E, N-2R, N-3E, N-3R                  | 3’                                                                                |
+   | **F** | Rear yard (min)                         |                                                                                   |
+   |       | N-1C, N-IS                              | 0’; 15% of lot depth if rear lot line abuts an N-2R, N-3R, N-4-30, or N-4-50 zone |
+   |       | N-2E, N-2R                              | 15% of lot depth                                                                  |
+   |       | N-3E, N-3R                              | 20% of lot depth                                                                  |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                        |                             |
+   | ----- | ---------------------- | --------------------------- |
+   | **A** | Building height (max)  |                             |
+   |       | N-1C, N-1S             | 4 stories, 52’              |
+   |       | N-2E, N-2R, N-3E, N-3R | 3 stories, 40’ <sup>1</sup> |
+   | **B** | Building height (min)  |                             |
+   |       | N-1C, N-1S             | 3 stories                   |
+   |       | N-2E, N-2R, N-3E, N-3R | 2 stories                   |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Gates Circle, and North Street in the N-2R zone; and along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2E zone.
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **C** | Finished ground floor level (min/max) | 0’/4’ |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                           |                                         |
+   | ----- | ------------------------- | --------------------------------------- |
+   | **A** | Ground floor transparency | front facade (min) 20%                  |
+   | **B** | Ground floor transparency | corner side facade (min) 20%            |
+   | **C** | Upper floor transparency  | front and corner side facades (min) 20% |
 
    </TableSmall>
 
