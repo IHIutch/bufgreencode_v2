@@ -412,3 +412,142 @@ All principal buildings in the neighborhood zones must comply with the standards
       2. Standard, fluted, or split face concrete masonry units (CMUs) above the basement level are prohibited.
       3. Exterior insulating finish systems (EIFS) are prohibited in the N-1C, N-1S, N-2E, and N-3E zones.
       4. Vinyl siding is prohibited in the N-1C, N-1S, N-2E, and N-3E zones.
+
+## 3.2.4 Civic Building
+
+1. Description
+   A civic building is a building designed to stand apart from its surroundings due to the special nature of its use as a public facility. A civic building is often among the most prominently sited and architecturally significant in a neighborhood.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the civic building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | x Arcade  | x Forecourt |
+   | x Awning  | x Plaza     |
+   | x Balcony | x Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |     |
+   | ----- | ------------------- | --- |
+   | **A** | Lot area (min)      | N/A |
+   | **B** | Lot width (min/max) | N/A |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                                          |      |
+   | ----- | ---------------------------------------- | ---- |
+   | **C** | Building coverage (max)                  |      |
+   |       | N-1D, N-1C, N-1S                         | 100% |
+   |       | N-2C, N-2E, N-3C, N-3E                   | 90%  |
+   |       | N-2R, N-3R, N-4-30                       | 70%  |
+   |       | N-4-50                                   | 50%  |
+   | **D** | Impervious coverage (max)                |      |
+   |       | N-1D, N-1C, N-1S, N-2C, N-2E, N-3C, N-3E | 90%  |
+   |       | N-2R, N-3R, N-4-30                       | 80%  |
+   |       | N-4-50                                   | 60%  |
+
+   </TableSmall>
+
+4. Siting
+
+   <TableSmall>
+
+   |       |                          |                  |
+   | ----- | ------------------------ | ---------------- |
+   | **A** | Front yard (min)         | N/A <sup>1</sup> |
+   | **B** | Corner side yard (min)   | N/A <sup>1</sup> |
+   | **C** | Interior side yard (min) | N/A <sup>1</sup> |
+   | **D** | Rear yard (min)          | N/A <sup>1</sup> |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> Yard requirements are determined by the City Planning Board during site plan approval.
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                                                    |                                                                                                         |
+   | ----- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+   | **A** | Building height (max)                              |                                                                                                         |
+   |       | N-1D                                               | 1.75 times the width of the widest adjacent thoroughfare, plus 3.5’ for each 1’ of upper story stepback |
+   |       | N-1C                                               | 1.25 times the width of the widest adjacent thoroughfare                                                |
+   |       | N-1S                                               | 6 stories, 90’                                                                                          |
+   |       | N-2C, N-2E, N-2R, N-3C, N-3E, N-3R, N-4-30, N-4-50 | 3 stories, 40’ <sup>1</sup>                                                                             |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Gates Circle, and North Street in the N-2R zone; and along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2C and N-2E zones.
+
+   <TableSmall>
+
+   |       |                                        |       |
+   | ----- | -------------------------------------- | ----- |
+   | **B** | Finished ground floor level (min/ max) | 0’/5’ |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |                  |                  |
+   | ---------------- | ---------------- |
+   | Any facade (min) | N/A <sup>1</sup> |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |                                   |              |
+   | --------------------------------- | ------------ |
+   | Main entrance location (required) | Front facade |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> Transparency requirements are determined by the City Planning Board during site plan approval.
+
+7. Specific Standards
+   1. A civic building may be erected only by a government agency or nonprofit establishment and only for the following principal uses, if allowed in the zone: assembly, college/university, cultural facility, government offices, lodge or private club, primary/secondary school, bicycle parking station, Metro Rail station, or major or minor utilities and services.
+   2. A civic building is subject to major site plan review, per Section 11.3.7. As part of major site plan review, the City Planning Board must evaluate a proposal for a civic building against the following design guidelines:
+   3. A civic building should be located and designed to provide a landmark appropriate to its importance and setting, aiding legibility of the wider area.
+      1. A civic building should physically define public space and thoroughfares as places of shared use.
+      2. A civic building should be designed to encourage public use and activity within and nearby its site.
+      3. A civic building should communicate its importance and function through architectural cues and attractive signage.
+      4. A civic building should be built with high quality, durable materials.
+      5. A civic building should incorporate sustainable building and landscape practices.
+      6. A civic building should be noteworthy in itself and in relation to its surroundings, contributing to an attractive setting for users, customers, and the wider public.
+      7. A civic building should promote public spaces and access routes that are attractive and accessible for all users.
+      8. A civic building should build upon and improve community character by responding to and reinforcing locally distinctive patterns of development, landscape, and culture.
+   4. The following exterior facade materials are prohibited on civic buildings:
+      1. Exterior insulating finish systems (EIFS).
+      2. Standard, fluted, or split face concrete masonry units (CMUs) above the basement level. Glazed or heavily polished CMUs are allowed.
+      3. Vinyl siding.
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15%.
