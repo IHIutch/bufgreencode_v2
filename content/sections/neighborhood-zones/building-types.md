@@ -133,6 +133,8 @@ All principal buildings in the neighborhood zones must comply with the standards
 
 </TableResponsive>
 
+<sup>1</sup> Shopfront buildings are not permitted along Hertel Avenue, between Delaware Avenue and Main Street.
+
 ## 3.2.2 Attached House
 
 <FigureImg caption="3.2.2 Attached House">
@@ -551,3 +553,1069 @@ All principal buildings in the neighborhood zones must comply with the standards
       2. Standard, fluted, or split face concrete masonry units (CMUs) above the basement level. Glazed or heavily polished CMUs are allowed.
       3. Vinyl siding.
       4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15%.
+
+## 3.2.5 Commercial Block
+
+1. Description
+   A commercial block is a multi-story building designed to facilitate a vertical mix of uses, with pedestrian- friendly ground floor retail or service uses and upper floor residential, hospitality, o r office uses. A commercial block makes up the primary component of a neighborhood main street or downtown main street, therefore being integral to creating a walkable, mixed- use environment.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the commercial block building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |                      |
+   | --------- | -------------------- |
+   | x Arcade  | x Forecourt          |
+   | x Awning  | x Plaza <sup>1</sup> |
+   | x Balcony | o Porch              |
+   | x Canopy  | o Stoop              |
+
+   </TableSmall>
+
+   <sup>1</sup> Plazas are allowed for commercial block buildings only in the N-1D and N-1C zones.
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |          |
+   | ----- | ------------------- | -------- |
+   | **A** | Lot area (min)      | 1,000 SF |
+   | **B** | Lot width (min/max) |          |
+   |       | N-1D, N-1C          | 15’/none |
+   |       | N-2C, N-2E          | 15’/120’ |
+   |       | N-3C, N-3E          | 15’/150’ |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   |      |
+   |       | N-1D, N-1C                | 100% |
+   |       | N-2C, N-2E, N-3C, N-3E    | 90%  |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                               |                                                                                                                      |
+   | ----- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+   | **A** | Front yard (min/max)                          | 0’/0’                                                                                                                |
+   | **B** | Build-to percentage, front facade (min)       | 85%                                                                                                                  |
+   | **C** | Corner side yard (min/max)                    | 0’/0’                                                                                                                |
+   | **D** | Build-to percentage, corner side facade (min) | 85%                                                                                                                  |
+   | **E** | Interior side yards (min/max total)           | 0’/30’ <sup>1</sup>                                                                                                  |  |
+   | **F** | Rear yard (min)                               | 0’; 15% of lot depth, but need not be greater than 15’, if rear lot line abuts an N-2R, N-3R, N-4-30, or N-4-50 zone |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> In an N-3E zone, a maximum total of 45’ may be permitted for interior side yards, only where the City Planning Board expressly permits parking in an interior side yard as part of major site plan review, per Section 8.3.3.A.3.
+
+5. Height
+
+   <TableSmall>
+
+   |       |                              |                                                                       |
+   | ----- | ---------------------------- | --------------------------------------------------------------------- |
+   | **A** | Building height (max)        |                                                                       |
+   |       | N-1D                         | 1.75 times the width of the widest adjacent thoroughfare <sup>1</sup> |
+   |       | N-1C                         | 1.25 times the width of the widest adjacent thoroughfare              |
+   |       | N-2C, N-2E, N-3C, N-3E       | 3 stories, 44’ <sup>2</sup>                                           |
+   | **B** | Building height (min)        |                                                                       |
+   |       | N-1D                         | 4 stories                                                             |
+   |       | N-1C, N-2C, N-2E, N-3C, N-3E | 2 stories                                                             |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> Buildings that are taller than 1.75 times the width of the widest adjacent thoroughfare in the N-1D zone must comply with the standards for towers in Section 3.2.12.
+
+   <sup>2</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2C and N-2E zones.
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **C** | Finished ground floor level (min/max) | 0’/2’ |
+   | **D** | Ground story height (min)             | 15'   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                              |
+   | ----- | ---------------------------------------------------------------------------- |
+   | **A** | Ground floor transparency front facade (min) 70%                             |
+   | **B** | Ground floor transparency corner side facade (min) 40%                       |
+   | **C** | Upper floor transparency front and corner facades (min) 25%                  |
+   | **D** | Ground floor blank wall width front facade (max) 10’                         |
+   | **E** | Ground floor blank wall width corner side facade (max) 30’                   |
+   | **F** | Ground floor window sill height front and corner facades (min/max) 0.5’/2.5’ |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                                 |                                            |
+   | ----- | ----------------------------------------------- | ------------------------------------------ |
+   | **G** | Main entrance location (required)               | Front facade                               |
+   | **H** | Entrance spacing along front facade (preferred) | At least 1 entrance every 30’ <sup>1</sup> |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.J for entrance spacing requirements which apply in specified sections of Elmwood Village.
+
+7. Specific Standards
+   1. Vertical articulation is required (e.g., bays, mullions, columns, piers, pilasters, recessed entries, awnings, or other architectural treatments) to visually break up the massing of the ground story of the front and corner side facades into segments no greater than 25 feet in width.
+   2. Horizontal articulation is required (e.g., belt courses, cornice lines, entablatures, friezes, awnings or canopies, changes in materials or window patterns, recessed entries, or other architectural treatments) to distinguish the ground story of front and corner side facades from the upper stories.
+   3. A main entrance must effectively address the adjacent public realm and be given prominence on the building facade. This may be satisfied through the use of architectural features such as entranceway roofs; entranceway recesses; a chamfered corner; sidelight windows, transom window, or other adjacent windows; additional mouldings with expression lines; or a bay of unique width.
+   4. Alterations should not cover, infill, remove, or damage significant, original architectural elements of existing commercial block buildings that are visible from the adjacent public right-of-way. In cases where original architectural elements are in poor condition and cannot be restored, replication of original elements with new elements is encouraged.
+   5. Exterior facade materials are restricted on commercial block buildings, as follows:
+      1. Exterior insulating finishing systems (EIFS) are prohibited on the ground story of front and corner side facades, and are limited to 20% on upper stories of front and corner side facades.
+      2. Standard, fluted, or split face concrete masonry units (CMUs) are prohibited above the basement level on front and corner side facades. Glazed or heavily polished CMUs are allowed.
+      3. Vinyl siding is prohibited.
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+   6. Vents, air conditioners, and other utility elements, except where such elements are enclosed, camouflaged, screened, obscured, or otherwise not readily apparent to a casual observer, are prohibited as part of a front or corner side facade.
+   7. Security devices such as coiling shutters and accordion gates are prohibited on front or corner side facades, except where such devices are at least 50% transparent and located wholly behind a window or door, when viewed from the public right-of-way.
+
+## 3.2.6 Detached House
+
+1. Description
+   A detached house is a small-scale, freestanding building, typically set back from the public right-of- way and elevated above the ground level to provide privacy to occupants, and ideally designed to facilitate residential uses.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the detached house building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | o Forecourt |
+   | x Awning  | o Plaza     |
+   | x Balcony | x Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |          |
+   | ----- | ------------------- | -------- |
+   | **A** | Lot area (min)      |          |
+   |       | N-2E, N-2R          | 1,500 SF |
+   |       | N-3E, N-3R          | 1,800 SF |
+   |       | N-4-30              | 2,400 SF |
+   |       | N-4-50              | 4,000 SF |
+   | **B** | Lot width (min/max) |          |
+   |       | N-2E, N-2R          | 25’/60’  |
+   |       | N-3E, N-3R, N-4-30  | 30’/75’  |
+   |       | N-4-50              | 50’/None |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |     |
+   | ----- | ------------------------- | --- |
+   | **C** | Building coverage (max)   |     |
+   |       | N-2E, N-2R, N-3E, N-3R    | 70% |
+   |       | N-4-30                    | 60% |
+   |       | N-4-50                    | 50% |
+   | **D** | Impervious coverage (max) |     |
+   |       | N-2E, N-2R, N-3E, N-3R    | 80% |
+   |       | N-4-30                    | 70% |
+   |       | N-4-50                    | 60% |
+
+   </TableSmall>
+
+4. Siting
+
+   <TableSmall>
+
+   |       |                                         |                                         |
+   | ----- | --------------------------------------- | --------------------------------------- |
+   | **A** | Front yard (min/max)                    | +/- 5’ from established front yard line |
+   | **B** | Build-to percentage, front facade (min) | 65%                                     |
+   | **C** | Side yards (min total)                  | 20% of lot width                        |
+   | **D** | Corner side yard (min)                  |                                         |
+   |       | N-2E, N-2R, N-3E, N-3R, N-4-30          | 3’                                      |
+   |       | N-4-50                                  | 6’                                      |
+   | **E** | Interior side yard (min)                |                                         |
+   |       | N-2E, N-2R, N-3E, N-3R, N-4-30          | 3’                                      |
+   |       | N-4-50                                  | 6’                                      |
+   | **F** | Rear yard (min)                         |                                         |
+   |       | N-2E, N-2R                              | 15% of lot depth                        |
+   |       | N-3E, N-3R                              | 20% of lot depth                        |
+   |       | N-4-30, N-4-50                          | 25% of lot depth                        |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                       |                             |
+   | ----- | --------------------- | --------------------------- |
+   | **A** | Building height (max) | 3 stories, 40’ <sup>1</sup> |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **B** | Finished ground floor level (min/max) | 0'/4' |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Gates Circle, and North Street in the N-2R zone; and along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2E zone.
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                           |                                         |
+   | ----- | ------------------------- | --------------------------------------- |
+   | **A** | Ground floor transparency | front facade (min) 20%                  |
+   | **B** | Ground floor transparency | corner side facade (min) 20%            |
+   | **C** | Upper floor transparency  | front and corner side facades (min) 20% |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                   |                                             |
+   | ----- | --------------------------------- | ------------------------------------------- |
+   | **D** | Main entrance location (required) | Front, interior side, or corner side facade |
+
+   </TableSmall>
+
+7. Specific Standards
+   1. The following exterior facade materials are prohibited on detached houses:
+      1. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15%.
+
+## 3.2.7 Flex Building
+
+1. Description
+   A flex building is a single-story, typically large-footprint building, often naturally lit with monitor or sawtooth roofs. A flex building is ideally designed to facilitate industrial, office, and retail uses.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the flex building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | x Forecourt |
+   | x Awning  | x Plaza     |
+   | o Balcony | o Porch     |
+   | x Canopy  | o Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimesions**
+
+   <TableSmall>
+
+   |       |                 |          |
+   | ----- | --------------- | -------- |
+   | **A** | Lot area (min)  | 5,000 SF |
+   | **B** | Lot width (min) | 50’      |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   | 100% |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                               |       |
+   | ----- | --------------------------------------------- | ----- |
+   | **A** | Front yard (min/max)                          | 0’/5’ |
+   | **B** | Build-to percentage, front facade (min)       | 85%   |
+   | **C** | Corner side yard (min/max)                    | 0’/5’ |
+   | **D** | Build-to percentage, corner side facade (min) | 65%   |
+   | **E** | Interior side yard (min)                      | 0’    |
+   | **F** | Rear yard (min)                               | 0’    |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                 |         |
+   | ----- | --------------- | ------- |
+   | **A** | Building height | 1 story |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **B** | Finished ground floor level (min/max) | 0’/2’ |
+   | **C** | Ground story height (min)             | 18'   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                |                                          |
+   | ----- | -------------------------------------------------------------- | ---------------------------------------- |
+   | **A** | Ground floor transparency, front and corner side facades (min) | 40%                                      |
+   | **B** | Ground floor blank wall width (max)                            | 30’ front facade; 50’ corner side facade |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                   |              |
+   | ----- | --------------------------------- | ------------ |
+   | **C** | Main entrance location (required) | Front facade |
+
+   </TableSmall>
+
+7. Specific Standards
+   1. Windows and other openings or reflective surfaces should be placed so that during the day, natural light may provide effective daylighting to at least 60% of regularly occupied interior spaces. Spaces not used for critical visual tasks, such as copy rooms, storage areas, mechanical plant rooms, laundry rooms, and other low occupancy support areas, are excluded from this recommendation.
+   2. Exterior facade materials are prohibited on flex buildings, as follows:
+      1. Vinyl siding.
+      2. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15%.
+
+## 3.2.8 Lost Building
+
+1. Description
+   A loft building is a multi-story, typically large-footprint building, often naturally lit with tall ceilings, expansive windows, and light wells. A loft building is ideally designed to facilitate a vertical mix of uses, including industrial, office, retail, and residential.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the loft building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | x Forecourt |
+   | x Awning  | x Plaza     |
+   | x Balcony | o Porch     |
+   | x Canopy  | o Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                 |          |
+   | ----- | --------------- | -------- |
+   | **A** | Lot area (min)  | 5,000 SF |
+   | **B** | Lot width (min) | 50’      |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   | 100% |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                               |       |
+   | ----- | --------------------------------------------- | ----- |
+   | **A** | Front yard (min/max)                          | 0’/5’ |
+   | **B** | Build-to percentage, front facade (min)       | 85%   |
+   | **C** | Corner side yard (min/max)                    | 0’/5’ |
+   | **D** | Build-to percentage, corner side facade (min) | 65%   |
+   | **E** | Interior side yard (min)                      | 0’    |
+   | **F** | Rear yard (min)                               | 0’    |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                       |                |
+   | ----- | --------------------- | -------------- |
+   | **A** | Building height (max) | 6 stories, 90’ |
+   | **B** | Building height (min) | 2 stories      |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **C** | Finished ground floor level (min/max) | 0’/4’ |
+   | **D** | Ground story height (min)             | 13'   |
+   | **E** | Upper story height (min)              | 13'   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                |                                          |
+   | ----- | -------------------------------------------------------------- | ---------------------------------------- |
+   | **A** | Ground floor transparency, front and corner side facades (min) | 40%                                      |
+   | **B** | Upper floor transparency, front and corner side facades (min)  | 40%                                      |
+   | **C** | Ground floor blank wall width (max)                            | 30’ front facade; 50’ corner side facade |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                   |              |
+   | ----- | --------------------------------- | ------------ |
+   | **D** | Main entrance location (required) | Front facade |
+
+   </TableSmall>
+
+7. Specific Standards
+   1. Windows and other openings or reflective surfaces should be placed so that during the day, natural light may provide effective daylighting to at least 60% of regularly occupied interior spaces. Spaces not used for critical visual tasks, such as copy rooms, storage areas, mechanical plant rooms, laundry rooms, and other low occupancy support areas, are excluded from this recommendation.
+   2. Exterior facade materials are prohibited on loft buildings, as follows:
+      1. Vinyl siding.
+      2. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15%.
+
+## 3.2.9 Shopfront
+
+1. Description
+   A shopfront is a single-story building designed to facilitate pedestrian-friendly ground floor retail or service uses.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the shopfront building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | x Forecourt |
+   | x Awning  | o Plaza     |
+   | o Balcony | o Porch     |
+   | x Canopy  | o Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |          |
+   | ----- | ------------------- | -------- |
+   | **A** | Lot area (min)      | 1,000 SF |
+   | **B** | Lot width (min/max) | 15’/150’ |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   | 90%  |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                               |                                                                                                                      |
+   | ----- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+   | **A** | Front yard (min/max)                          | 0’/0’                                                                                                                |
+   | **B** | Build-to percentage, front facade (min)       | 85%                                                                                                                  |
+   | **C** | Corner side yard (min/max)                    | 0’/0’                                                                                                                |
+   | **D** | Build-to percentage, corner side facade (min) | 85%                                                                                                                  |
+   | **E** | Interior side yards (min/max total)           | 0’/30’ <sup>1</sup>                                                                                                  |
+   | **F** | Rear yard (min)                               | 0’; 15% of lot depth, but need not be greater than 15’, if rear lot line abuts an N-2R, N-3R, N-4-30, or N-4-50 zone |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> In an N-3E zone, a maximum total of 45’ may be permitted for interior side yards, only where the City Planning Board expressly permits parking in an interior side yard as part of major site plan review, per Section 8.3.3.A.3.
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                 |         |
+   | ----- | --------------- | ------- |
+   | **A** | Building height | 1 story |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **B** | Finished ground floor level (min/max) | 0’/2’ |
+   | **C** | Ground story height (min)             | 18'   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                                   |
+   | ----- | --------------------------------------------------------------------------------- |
+   | **A** | Ground floor transparency front facade (min) 70%                                  |
+   | **B** | Ground floor transparency corner side facade (min) 40%                            |
+   | **C** | Ground floor blank wall width front facade (max) 10’                              |
+   | **D** | Ground floor blank wall width corner side facade (max) 30’                        |
+   | **E** | Ground floor window sill height front and corner side facades (min/max) 0.5’/2.5’ |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                                 |                                            |
+   | ----- | ----------------------------------------------- | ------------------------------------------ |
+   | **F** | Main entrance location (required)               | Front facade                               |
+   | **G** | Entrance spacing along front facade (preferred) | At least 1 entrance every 30’ <sup>1</sup> |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.J for entrance spacing requirements which apply in specified sections of Elmwood Village.
+
+7. Specific Standards
+   1. Vertical articulation is required (e.g. bays, mullions, columns, piers, pilasters, recessed entries, awnings, or other architectural treatments) to visually break up the massing of the front and corner side facades into segments no greater than 25 feet in width.
+   2. Alterations should not cover, infill, remove, or damage significant, original architectural elements of existing shopfront buildings that are visible from the adjacent public right-of-way. In cases where original architectural elements are in poor condition and cannot be restored, replication of original elements with new elements is encouraged.
+   3. A main entrance must effectively address the adjacent public realm and be given prominence on the building facade. This may be satisfied through the use of architectural features such as entranceway roofs; entranceway recesses; a chamfered corner; sidelight windows, transom window, or other adjacent windows; additional mouldings with expression lines; or a bay of unique width.
+   4. Exterior facade materials are restricted on shopfront buildings, as follows:
+      1. Exterior insulating finishing systems (EIFS) are prohibited on front and corner side facades.
+      2. Standard, fluted, or split face concrete masonry units (CMUs) are prohibited above the basement level on front and corner side facades. Glazed or heavily polished CMUs are allowed.
+      3. Vinyl siding is prohibited.
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+   5. Vents, air conditioners, and other utility elements, except where such elements are enclosed, camouflaged, screened, obscured, or otherwise not readily apparent to a casual observer, are prohibited as part of a front or corner side facade.
+   6. Security devices such as coiling shutters and accordion gates are prohibited on front or corner side facades, except where such devices are at least 50% transparent and located wholly behind a window or door, when viewed from the public right-of-way.
+
+## 3.2.10 Shopfront House
+
+1. Description
+   A shopfront house is a detached house or attached house with an attached shopfront. A building type which is unique to Buffalo, a shopfront house is usually the result of, and key facilitator for, the evolution of a residential environment to a mixed-use environment.
+
+2. Frontage Elements
+   The following frontages are allowed for the shopfront house building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | o Forecourt |
+   | x Awning  | o Plaza     |
+   | x Balcony | o Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |          |
+   | ----- | ------------------- | -------- |
+   | **A** | Lot area (min)      |          |
+   |       | N-2C, N-2E          | 1,500 SF |
+   |       | N-3C, N-3E          | 1,800 SF |
+   | **B** | Lot width (min/max) |          |
+   |       | N-2C, N-2E          | 25’/60’  |
+   |       | N-3C, N-3E          | 30’/75’  |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   | 90%  |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                         |                                                    |
+   | ----- | --------------------------------------- | -------------------------------------------------- |
+   | **A** | Front yard (min/max)                    | 0’/0’                                              |
+   | **B** | Build-to percentage, front facade (min) | 85%                                                |
+   | **C** | Corner side yard (min/max)              |                                                    |
+   |       | Shopfront portion                       | 0’/0’                                              |
+   |       | House portion                           | 0’/15’                                             |
+   | **D** | Interior side yard (min/max)            | 0’/30’                                             |
+   | **E** | Rear yard (min)                         | 15% of lot depth, but need not be greater than 15’ |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                       |                             |
+   | ----- | --------------------- | --------------------------- |
+   | **A** | Building height (max) | 3 stories, 44’ <sup>1</sup> |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |                                                        |
+   | ----- | ------------------------------------- | ------------------------------------------------------ |
+   | **B** | Finished ground floor level (min/max) | 0’/2’ for shopfront portion, 1.5’/4’ for house portion |
+   | **C** | Ground story height (min)             | 15’ for shopfront portion                              |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2C and N-2E zones.
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                                             |           |
+   | ----- | ------------------------------------------------------------------------------------------- | --------- |
+   | **A** | Ground floor transparency, front facade (min)                                               | 70%       |
+   | **B** | Ground floor transparency, corner side facade, shopfront portion (min)                      | 40%       |
+   | **C** | Ground floor transparency, corner side facade, house portion (min)                          | 20%       |
+   | **D** | Upper floor transparency, front and corner side facades (min)                               | 20%       |
+   | **E** | Ground floor window sill height, front and corner side facades, shopfront portion (min/max) | 0.5’/2.5’ |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                                                  |                                             |
+   | ----- | ---------------------------------------------------------------- | ------------------------------------------- |
+   | **F** | Main entrance location, shopfront portion (required)             | Front facade                                |
+   | **G** | Main entrance location, house portion (required)                 | Front, corner side, or interior side facade |
+   |       | Entrance spacing along front facade commercial space (preferred) | At least 1 entrance every 30’ <sup>1</sup>  |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.J for entrance spacing requirements which apply in specified sections of Elmwood Village.
+
+7. Specific Standards
+   1. Vertical articulation is required (e.g. bays, mullions, columns, piers, pilasters, recessed entries, awnings, or other architectural treatments) to visually break up the massing of the ground story of front and corner side facades of the shopfront portion into segments no greater than 25 feet in width.
+   2. A main entrance must effectively address the adjacent public realm and be given prominence on the building facade. This may be satisfied through the use of architectural features such as entranceway roofs; entranceway recesses; a chamfered corner; sidelight windows, transom window, or other adjacent windows; additional mouldings with expression lines; or a bay of unique width.
+   3. Alterations should not cover, infill, remove, or damage significant, original architectural elements of existing shopfront buildings that are visible from the adjacent public right-of-way. In cases where original architectural elements are in poor condition and cannot be restored, replication of original elements with new elements is encouraged.
+   4. Exterior facade materials are restricted on shopfront houses, as follows:
+      1. Exterior insulating finishing systems (EIFS) are prohibited on the front and corner side facades.
+      2. Standard, fluted, or split face concrete masonry units (CMUs) are prohibited above the basement level on front and corner side facades. Glazed or heavily polished CMUs are allowed.
+      3. Vinyl siding is prohibited on the shopfront section of the building.
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+   5. Security devices such as coiling shutters and accordion gates are prohibited on front or corner side facades, except where such devices are at least 50% transparent and located wholly behind a window or door, when viewed from the public right-of-way.
+
+## 3.2.11 Stacked Units
+
+1. Description
+   A stacked unit building is a general multi-story building that can facilitate a variety of uses, typically connected by one or more shared entries.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the stacked units building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | o Arcade  | x Forecourt |
+   | x Awning  | x Plaza     |
+   | x Balcony | x Porch     |
+   | x Canopy  | x Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                     |                                           |
+   | ----- | ------------------- | ----------------------------------------- |
+   | **A** | Lot area (min)      | 1,800 SF                                  |
+   | **B** | Lot width (min/max) |                                           |
+   |       | N-1D, N-1C          | 30’/none                                  |
+   |       | N-2E                | 30’/120’                                  |
+   |       | N-3E                | 30’/150’                                  |
+   |       | N-2R                | 25’/60’ interior lot, 25’/100’ corner lot |
+   |       | N-3R                | 30’/75’ interior lot, 30’/100’ corner lot |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   |      |
+   |       | N-1D, N-1C                | 100% |
+   |       | N-2E, N-2R, N-3E, N-3R    | 70%  |
+   | **D** | Impervious coverage (max) |      |
+   |       | N-1D, N-1C                | 100% |
+   |       | N-2E, N-2R, N-3E, N-3R    | 80%  |
+
+   </TableSmall>
+
+4. Siting
+
+   **Building Setbacks**
+
+   <TableSmall>
+
+   |       |                                         |                                                                                                                      |
+   | ----- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+   | **A** | Front yard (min/max)                    |                                                                                                                      |
+   |       | N-1D, N-1C                              | 0’/0’                                                                                                                |
+   |       | N-2E, N-2R, N-3E, N-3R                  | +/- 5’ from established front yard line                                                                              |
+   | **B** | Build-to percentage, front facade (min) | 85%                                                                                                                  |
+   | **C** | Side yards (min total)                  |                                                                                                                      |
+   |       | N-1D, N-1C , N-2E, N-3E                 | N/A                                                                                                                  |
+   |       | N-2R, N-3R                              | 20% of lot width                                                                                                     |
+   | **C** | Corner side yard (min/max)              |                                                                                                                      |
+   |       | N-1D, N-1C                              | 0’/0’                                                                                                                |
+   |       | N-2E, N-3E                              | 0’/15’                                                                                                               |
+   |       | N-2R, N-3R                              | 3’/15’                                                                                                               |
+   | **D** | Interior side yard (min/max)            |                                                                                                                      |
+   |       | N-1D, N-1C                              | 0’/30’                                                                                                               |
+   |       | N-2E, N-2R, N-3E, N-3R                  | 3’/30’                                                                                                               |
+   | **E** | Rear yard (min)                         |                                                                                                                      |
+   |       | N-1D, N-1C                              | 0’; 15% of lot depth, but need not be greater than 15’, if rear lot line abuts an N-2R, N-3R, N-4-30, or N-4-50 zone |
+   |       | N-2E, N-2R                              | 15% of lot depth                                                                                                     |
+   |       | N-3E, N-3R                              | 20% of lot depth                                                                                                     |
+
+      </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                        |                                                                       |
+   | ----- | ---------------------- | --------------------------------------------------------------------- |
+   | **A** | Building height (max)  |                                                                       |
+   |       | N-1D                   | 1.75 times the width of the widest adjacent thoroughfare <sup>1</sup> |
+   |       | N-1C                   | 1.25 times the width of the widest adjacent thoroughfare              |
+   |       | N-2E, N-3E             | 3 stories, 44’ <sup>2</sup>                                           |
+   |       | N-2R, N-3R             | 3 stories, 40’ <sup>2</sup>                                           |
+   | **B** | Building height (min)  |                                                                       |
+   |       | N-1D                   | 4 stories                                                             |
+   |       | N-1C                   | 3 stories                                                             |
+   |       | N-2E, N-2R, N-3E, N-3R | 2 stories                                                             |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> Buildings taller than 1.75 times the width of the widest adjacent thoroughfare in the N-1D zone must comply with the standards for towers in Section 3.2.12.
+
+   <sup>2</sup> See Section 3.2.1.G for height limit exceptions which apply along specified sections of Delaware Avenue, Gates Circle, and North Street in the N-2R zone; and along specified sections of Delaware Avenue, Main Street, and Niagara Street in the N-2E zone.
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **C** | Finished ground floor level (min/max) | 0’/4’ |
+   | **D** | Ground story height (min)             |       |
+   |       | N-1D, N-1C                            | 13’   |
+   |       | N-2E, N-2R, N-3E, N-3R                | 10’   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+      <TableSmall>
+
+   |       |                                                              |                  |
+   | ----- | ------------------------------------------------------------ | ---------------- |
+   | **A** | Ground floor transparency front facade (min)                 | 30% <sup>1</sup> |
+   | **B** | Ground floor transparency corner side facade (min)           | 30%              |
+   | **C** | Upper floor transparency front and corner side facades (min) | 25%              |
+   | **D** | Ground floor blank wall width front facade (max)             | 10’              |
+   | **E** | Ground floor blank wall area corner side facade (max)        | 30’              |
+
+      </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> The minimum transparency for the front facade of ground- floor commercial space is 50%, except where such commercial space is accessed only from an interior lobby and is intended to primarily serve the tenants of the building.
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                                                  |                                |
+   | ----- | ---------------------------------------------------------------- | ------------------------------ |
+   | **F** | Main entrance location (required)                                |                                |
+   |       | N-1D, N-1C, N-2E, N-3E                                           | Front facade                   |
+   |       | N-2R, N-3R                                                       | Front or corner side facade    |
+   |       | Entrance spacing along front facade commercial space (preferred) | At least 1 entrance every 30’1 |
+
+   </TableSmall>
+
+   **Supplemental Standards**
+
+   <sup>1</sup> See Section 3.2.1.J for entrance spacing requirements which apply in specified sections of Elmwood Village.
+
+7. Specific Standards
+
+   1. Exterior facade materials are restricted on stacked unit buildings, as follows:
+      1. Exterior insulating finishing systems (EIFS) are prohibited on the ground story of front and corner side facades, and are limited to 20% on upper stories of front and corner side facades.
+      2. Standard, fluted, or split face concrete masonry units (CMUs) above the basement level are prohibited.
+      3. Vinyl siding is prohibited.
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+   2. Vents, air conditioners, and other utility elements, except where such elements are enclosed, camouflaged, screened, obscured, or otherwise not readily apparent to a casual observer, are prohibited as part of a front or corner side facade.
+   3. Security devices such as coiling shutters and accordion gates are prohibited on front or corner side facades, except where such devices are at least 50% transparent and located wholly behind a window or door, when viewed from the public right-of-way.
+
+## 3.2.12 Tower
+
+1. Description
+   A tower is a stacked unit or commercial block building of substantial height, typically designed with upper- story stepbacks to ensure adequate light and air at the sidewalk level. A tower contributes to the skyline of the downtown and reinforces high density at the region’s public transit hub.
+
+2. Frontage Elements
+   The following frontage elements are allowed for the tower building type, subject to the requirements of Section 3.3:
+
+   <TableSmall>
+
+   |           |             |
+   | --------- | ----------- |
+   | x Arcade  | x Forecourt |
+   | x Awning  | x Plaza     |
+   | x Balcony | o Porch     |
+   | x Canopy  | o Stoop     |
+
+   </TableSmall>
+
+3. Lot
+
+   **Lot Dimensions**
+
+   <TableSmall>
+
+   |       |                 |     |
+   | ----- | --------------- | --- |
+   | **A** | Lot area (min)  | N/A |
+   | **B** | Lot width (min) | N/A |
+
+   </TableSmall>
+
+   **Lot Coverage**
+
+   <TableSmall>
+
+   |       |                           |      |
+   | ----- | ------------------------- | ---- |
+   | **C** | Building coverage (max)   | 100% |
+   | **D** | Impervious coverage (max) | 100% |
+
+   </TableSmall>
+
+4. Siting
+
+   **Builidng Setbacks**
+
+   <TableSmall>
+
+   |       |                                               |                                                                                                                      |
+   | ----- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+   | **A** | Front yard (min/max)                          | 0’/0’                                                                                                                |
+   | **B** | Build-to percentage, front facade (min)       | 85%                                                                                                                  |
+   | **C** | Corner side yard (min/max)                    | 0’/0’                                                                                                                |
+   | **D** | Build-to percentage, corner side facade (min) | 85%                                                                                                                  |
+   | **E** | Interior side yard (min/max)                  | 0’/30’                                                                                                               |
+   | **F** | Rear yard (min)                               | 0’; 15% of lot depth, but need not be greater than 15’, if rear lot line abuts an N-2R, N-3R, N-4-30, or N-4-50 zone |
+
+   </TableSmall>
+
+5. Height
+
+   **Building Height**
+
+   <TableSmall>
+
+   |       |                                                               |                                               |
+   | ----- | ------------------------------------------------------------- | --------------------------------------------- |
+   | **A** | Building height (max)                                         |                                               |
+   |       | N-1D 1.75 times the width of the widest adjacent thoroughfare | plus 3.5’ for each 1’ of upper-story stepback |
+
+   </TableSmall>
+
+   **Story Height**
+
+   <TableSmall>
+
+   |       |                                       |       |
+   | ----- | ------------------------------------- | ----- |
+   | **B** | Finished ground floor level (min/max) | 0’/2’ |
+   | **C** | Ground story height (min)             | 18'   |
+
+   </TableSmall>
+
+6. Activation
+
+   **Transparency**
+
+   <TableSmall>
+
+   |       |                                                                         |           |
+   | ----- | ----------------------------------------------------------------------- | --------- |
+   | **A** | Ground floor transparency front facade (min)                            | 70%       |
+   | **B** | Ground floor transparency corner side facade (min)                      | 40%       |
+   | **C** | Upper floor transparency front and corner side facades (min)            | 25%       |
+   | **D** | Ground floor blank wall width front facade (max)                        | 10’       |
+   | **E** | Ground floor blank wall width corner side facade (max)                  | 30’       |
+   | **F** | Ground floor window sill height front and corner side facades (min/max) | 0.5’/2.5’ |
+
+   </TableSmall>
+
+   **Pedestrian Access**
+
+   <TableSmall>
+
+   |       |                                                                  |                               |
+   | ----- | ---------------------------------------------------------------- | ----------------------------- |
+   | **G** | Main entrance location (required)                                | Front facade                  |
+   | **H** | Entrance spacing along front and corner side facades (preferred) | At least 1 entrance every 30’ |
+
+   </TableSmall>
+
+7. Specific Standards
+   1. Any building that is taller than 1.75 times the width of the widest adjacent thoroughfare in the N-1D zone must comply with the form standards for towers.
+   2. A tower may not cast new shadows upon any D-OG, D-OS, or D-ON zone from 12 noon to 2 pm on September 21.
+   3. Tower tops should incorporate distinctive design and lighting characteristics to give character to the Buffalo skyline. Examples include tops that exhibit a taper, pinnacle, or articulated canopy.
+   4. A main entrance must effectively address the adjacent public realm and be given prominence on the building facade. This may be satisfied through the use of architectural features such as entranceway roofs; entranceway recesses; a chamfered corner; sidelight windows, transom window, or other adjacent windows; additional mouldings with expression lines; or a bay of unique width.
+   5. Towers that abut two parallel thoroughfares are encouraged to provide a continuous, weather protected through-block passage, between such thoroughfares, that is accessible to the general public during regular business hours.
+   6. Exterior facade materials are restricted on Towers, as follows:
+      1. Exterior insulation and finishing systems (EIFS) are prohibited on any portion of any facade visible from a public right-of-way
+      2. Standard, fluted, or split face concrete masonry units (CMUs) are prohibited on any portion of any facade visible from a public right-of-way. Glazed or heavily polished CMUs are allowed.
+      3. Vinyl siding is prohibited
+      4. Reflective wall surface material with a Visible Light Reflectance (VLR) of greater than 15% is prohibited.
+   7. Vents, air conditioners, and other utility elements, except where such elements are enclosed, camouflaged, screened, obscured, or otherwise not readily apparent to a casual observer, are prohibited where visible from a public right-of-way.
+   8. Security devices such as coiling shutters and accordion gates are prohibited on front or corner side facades, except where such devices are at least 50% transparent and located wholly behind a window or door, when viewed from the public right-of-way.
