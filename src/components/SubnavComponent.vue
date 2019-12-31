@@ -24,7 +24,7 @@
         <button
           type="button"
           aria-label="Mobile Menu"
-          @click="toggleMenu()"
+          @click="menuIsOpen = !menuIsOpen"
           class="flex px-6 h-full lg:hidden text-gray-700 focus:outline-none focus:text-gray-700"
         >
           <svg
@@ -60,39 +60,6 @@ export default {
     return {
       menuIsOpen: false
     };
-  },
-  methods: {
-    toggleMenu() {
-      let container = document.getElementById("mobileMenu");
-
-      if (this.menuIsOpen) {
-        this.menuIsOpen = false;
-
-        // container.style.height = "0px";
-
-        // container.addEventListener(
-        //   "transitionend",
-        //   function() {
-        //     container.style.display = "none";
-        //   },
-        //   {
-        //     once: true
-        //   }
-        // );
-      } else {
-        this.menuIsOpen = true;
-        // container.style.display = "block";
-        // container.style.height = "auto";
-
-        // let height = container.clientHeight + "px";
-
-        // container.style.height = "0px";
-
-        // setTimeout(function() {
-        //   container.style.height = height;
-        // }, 0);
-      }
-    }
   }
 };
 </script>
