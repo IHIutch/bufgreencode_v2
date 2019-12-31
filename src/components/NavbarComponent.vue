@@ -1,5 +1,7 @@
 <template>
-  <nav class="flex bg-white border-b border-gray-200 h-16 inset-x-0">
+  <nav
+    class="flex bg-white border-b border-gray-200 h-16 inset-x-0 flex-shrink-0"
+  >
     <div class="w-full max-w-screen-xl relative mx-auto px-6">
       <div class="flex items-center -mx-6 h-full px-6">
         <div class="md:w-1/4 lg:w-1/6 pr-6 lg:pr-8 h-full flex-shrink-0">
