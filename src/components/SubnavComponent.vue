@@ -43,7 +43,14 @@
         <g-link class="p-2 text-gray-700 hover:text-gray-900"
           >Disclaimer</g-link
         >
-        <a class="p-2 text-gray-700 hover:text-gray-900" href="#">Github</a>
+        <a
+          class="flex items-center p-2 text-gray-700 hover:text-gray-900"
+          href="https://github.com/IHIutch/bufgreencode_gridsome"
+          target="_blank"
+        >
+          <span class="mr-1">Github</span>
+          <span><ExternalLinkIcon size="1x"/></span>
+        </a>
       </div>
     </nav>
   </div>
@@ -51,13 +58,13 @@
 
 <script>
 import GlobalNav from "~/components/GlobalNavComponent";
-// import lottie from "lottie-web";
 import Lottie from "vue-lottie";
 import menuAnimation from "~/assets/animations/menu/menu-V2.json";
+import { ExternalLinkIcon } from "vue-feather-icons";
 
 export default {
   name: "SubnavComponent",
-  components: { GlobalNav, Lottie },
+  components: { GlobalNav, Lottie, ExternalLinkIcon },
   data() {
     return {
       defaultOptions: {
