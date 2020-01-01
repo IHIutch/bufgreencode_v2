@@ -23,17 +23,16 @@
       <div class="flex md:hidden">
         <button
           type="button"
-          aria-label="Mobile Menu"
-          @click="menuIsOpen = !menuIsOpen"
+          aria-label="Menu Toggle"
+          @click="toggleMenu"
           class="flex px-6 h-full lg:hidden text-gray-700 focus:outline-none focus:text-gray-700"
         >
-          <svg
-            class="fill-current w-4 h-4"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-          </svg>
+          <Lottie
+            :options="defaultOptions"
+            :height="20"
+            :width="20"
+            @animCreated="handleAnimation"
+          />
         </button>
       </div>
     </div>
@@ -52,14 +51,38 @@
 
 <script>
 import GlobalNav from "~/components/GlobalNavComponent";
+// import lottie from "lottie-web";
+import Lottie from "vue-lottie";
+import menuAnimation from "~/assets/animations/menu/menu-V2.json";
 
 export default {
   name: "SubnavComponent",
-  components: { GlobalNav },
+  components: { GlobalNav, Lottie },
   data() {
     return {
+      defaultOptions: {
+        animationData: menuAnimation,
+        loop: false,
+        autoplay: false
+      },
       menuIsOpen: false
     };
+  },
+  methods: {
+    handleAnimation: function(anim) {
+      this.anim = anim;
+    },
+    toggleMenu() {
+      if (this.menuIsOpen) {
+        this.anim.setSpeed(-1.5);
+        this.anim.play();
+        this.menuIsOpen = !this.menuIsOpen;
+      } else {
+        this.anim.setSpeed(1.5);
+        this.anim.play();
+        this.menuIsOpen = !this.menuIsOpen;
+      }
+    }
   }
 };
 </script>
