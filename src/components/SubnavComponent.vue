@@ -36,7 +36,7 @@
         </button>
       </div>
     </div>
-    <nav id="mobileMenu" class="flex-grow overflow-y-scroll transition-md">
+    <nav class="flex-grow overflow-y-scroll transition-md">
       <GlobalNav class="mt-2 pb-6" />
       <div class="flex justify-between border-t px-6 pt-2 mb-4">
         <g-link class="p-2 text-gray-700 hover:text-gray-900">About</g-link>
