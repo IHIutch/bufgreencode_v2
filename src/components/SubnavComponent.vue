@@ -11,11 +11,10 @@
               <span class="text-xl">Menu</span>
             </div>
             <div v-else>
-              <span>Article</span>
-              <span class="px-2">/</span>
-              <span>Section</span>
-              <span class="px-2">/</span>
-              <span>Subsection</span>
+              <span v-if="pageTitle">
+                <span class="font-bold">&sect;</span>
+                {{ pageArticle }}.{{ pageSection }} {{ pageTitle }}
+              </span>
             </div>
           </div>
         </transition>
@@ -75,6 +74,11 @@ export default {
       menuIsOpen: false
     };
   },
+  watch: {
+    $route() {
+      this.menuIsOpen = false;
+    }
+  },
   methods: {
     handleAnimation: function(anim) {
       this.anim = anim;
@@ -89,6 +93,17 @@ export default {
         this.anim.play();
         this.menuIsOpen = !this.menuIsOpen;
       }
+    }
+  },
+  computed: {
+    pageTitle() {
+      return this.$page ? this.$page.post.title : "";
+    },
+    pageArticle() {
+      return this.$page ? this.$page.post.article_number : "";
+    },
+    pageSection() {
+      return this.$page ? this.$page.post.section_number : "";
     }
   }
 };

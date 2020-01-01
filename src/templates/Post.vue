@@ -19,6 +19,7 @@ query Post ($path: String!) {
     lead
     content
     article_number
+    section_number
     headings{anchor, value}
   }
 }
