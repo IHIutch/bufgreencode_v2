@@ -31,18 +31,22 @@
                       >On this Page</span
                     >
                   </div>
-                  <ul>
+                  <ul ref="toc">
                     <li
                       v-for="(anchor, index) in tocContent"
                       :key="index"
                       class="text-sm font-medium text-gray-700 hover:text-gray-900"
                     >
-                      <a
-                        ref="tocLink"
-                        :href="anchor.anchor"
-                        class="py-1 pl-0 block border-l-2 border-transparent transition-fast"
-                      >
-                        {{ anchor.value }}
+                      <a :href="anchor.anchor" class="py-1 pl-0 block">
+                        <span
+                          class="block border-l-2 transition-fast"
+                          :class="
+                            isActive(index)
+                              ? 'text-gray-900 pl-2 border-gray-900'
+                              : 'pl-0 border-transparent'
+                          "
+                          >{{ anchor.value }}
+                        </span>
                       </a>
                     </li>
                   </ul>
@@ -84,9 +88,7 @@ export default {
     return {
       activeIdx: -1,
       headingOffset: 96,
-      headings: [],
-      tocLinks: [],
-      isMounted: false
+      headings: []
     };
   },
   components: {
@@ -96,7 +98,7 @@ export default {
   },
   watch: {
     $route() {
-      if (this.$refs.tocLink) {
+      if (this.$refs.toc) {
         setTimeout(() => {
           this.initScrollSpy();
         }, 250);
@@ -110,7 +112,6 @@ export default {
       this.headings = [
         ...document.querySelectorAll("h2, h3, h4, h5, h6")
       ].reverse();
-      this.tocLinks = this.$refs.tocLink;
       let self = this;
       window.addEventListener("scroll", function() {
         self.scrollSpy();
@@ -119,33 +120,20 @@ export default {
     },
     scrollSpy() {
       var headings = this.headings;
-      var links = this.tocLinks;
-
-      var newActive =
+      var active =
         headings.length -
         headings.findIndex(
           heading => window.scrollY >= heading.offsetTop - this.headingOffset
         ) -
         1;
-      newActive = newActive < headings.length ? newActive : 0;
-
-      if (this.activeIdx != newActive) {
-        links.forEach(link => {
-          link.classList.remove("text-gray-900", "pl-2", "border-gray-900");
-          link.classList.add("pl-0", "border-transparent");
-        });
-        links[newActive].classList.remove("pl-0", "border-transparent");
-        links[newActive].classList.add(
-          "text-gray-900",
-          "pl-2",
-          "border-gray-900"
-        );
-      }
-      this.activeIdx = newActive;
+      this.activeIdx = active < headings.length ? active : 0;
+    },
+    isActive(idx) {
+      return idx === this.activeIdx;
     }
   },
   mounted() {
-    if (this.$refs.tocLink) {
+    if (this.$refs.toc) {
       setTimeout(() => {
         this.initScrollSpy();
       }, 1);
