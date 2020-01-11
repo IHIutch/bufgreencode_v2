@@ -95,7 +95,7 @@ export default {
     Subnav
   },
   watch: {
-    "$route.path"() {
+    $route() {
       if (this.$refs.tocLink) {
         setTimeout(() => {
           this.initScrollSpy();
