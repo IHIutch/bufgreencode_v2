@@ -37,7 +37,11 @@
                       :key="index"
                       class="text-sm font-medium text-gray-700 hover:text-gray-900"
                     >
-                      <a :href="anchor.anchor" class="py-1 block">
+                      <a
+                        ref="tocLink"
+                        :href="anchor.anchor"
+                        class="py-1 pl-0 block border-l-2 border-transparent transition-fast"
+                      >
                         {{ anchor.value }}
                       </a>
                     </li>
@@ -76,10 +80,76 @@ export default {
       type: Array
     }
   },
+  data() {
+    return {
+      activeIdx: -1,
+      headingOffset: 96,
+      headings: [],
+      tocLinks: [],
+      isMounted: false
+    };
+  },
   components: {
     Sidebar,
     Navbar,
     Subnav
+  },
+  watch: {
+    "$route.path"() {
+      if (this.$refs.tocLink) {
+        setTimeout(() => {
+          this.initScrollSpy();
+        }, 250);
+      }
+    }
+  },
+  methods: {
+    initScrollSpy() {
+      this.activeIdx = -1;
+      this.headings = [];
+      this.headings = [
+        ...document.querySelectorAll("h2, h3, h4, h5, h6")
+      ].reverse();
+      this.tocLinks = this.$refs.tocLink;
+      let self = this;
+      window.addEventListener("scroll", function() {
+        self.scrollSpy();
+      });
+      this.scrollSpy();
+    },
+    scrollSpy() {
+      var headings = this.headings;
+      var links = this.tocLinks;
+
+      var newActive =
+        headings.length -
+        headings.findIndex(
+          heading => window.scrollY >= heading.offsetTop - this.headingOffset
+        ) -
+        1;
+      newActive = newActive < headings.length ? newActive : 0;
+
+      if (this.activeIdx != newActive) {
+        links.forEach(link => {
+          link.classList.remove("text-gray-900", "pl-2", "border-gray-900");
+          link.classList.add("pl-0", "border-transparent");
+        });
+        links[newActive].classList.remove("pl-0", "border-transparent");
+        links[newActive].classList.add(
+          "text-gray-900",
+          "pl-2",
+          "border-gray-900"
+        );
+      }
+      this.activeIdx = newActive;
+    }
+  },
+  mounted() {
+    if (this.$refs.tocLink) {
+      setTimeout(() => {
+        this.initScrollSpy();
+      }, 1);
+    }
   }
 };
 </script>
