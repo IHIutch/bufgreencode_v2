@@ -77,6 +77,7 @@ export default {
   watch: {
     $route() {
       this.menuIsOpen = false;
+      this.reverseAnimation();
     }
   },
   methods: {
@@ -85,14 +86,20 @@ export default {
     },
     toggleMenu() {
       if (this.menuIsOpen) {
-        this.anim.setSpeed(-1.5);
-        this.anim.play();
+        this.reverseAnimation();
         this.menuIsOpen = !this.menuIsOpen;
       } else {
-        this.anim.setSpeed(1.5);
-        this.anim.play();
+        this.playAnimation();
         this.menuIsOpen = !this.menuIsOpen;
       }
+    },
+    playAnimation() {
+      this.anim.setSpeed(1.5);
+      this.anim.play();
+    },
+    reverseAnimation() {
+      this.anim.setSpeed(-1.5);
+      this.anim.play();
     }
   },
   computed: {
