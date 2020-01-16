@@ -16,7 +16,6 @@
         class="pt-20 md:pt-16 px-6 md:px-8 lg:px-16 md:w-3/4 lg:w-5/6 md:ml-auto"
       >
         <transition name="fade" appear>
-          <div class="flex" :key="$route.path">
             <div class="my-12 flex-grow lg:pr-16 lg:w-3/4">
               <main class="w-full">
                 <slot />
