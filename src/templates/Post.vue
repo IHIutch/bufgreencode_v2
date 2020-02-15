@@ -31,36 +31,46 @@ import Layout from "~/layouts/SidebarLayout";
 export default {
   name: "PostTemplate",
   props: ["siteUrl"],
+  components: {
+    Layout
+  },
   metaInfo() {
     return {
       title: this.$page.post.title,
       script: [
         {
-          innerHTML:
-            `{"headline":"` +
-            this.$page.post.title +
-            `","dateModified":"` +
-            new Date() +
-            `","datePublished":"` +
-            new Date() +
-            `","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"` +
-            this.siteUrl +
-            this.$route.path +
-            `"},"image":"` +
-            this.siteUrl +
-            `/meta/meta-img.png","url":"` +
-            this.siteUrl +
-            this.$route.path +
-            `","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"` +
-            this.siteUrl +
-            `/meta/meta-img.png"},"name":"@jb_hutch"},"author":{"@type":"Person","name":"@jb_hutch"},"description":"","@context":"https://schema.org"}`,
-          type: "application/ld+json"
+          type: "application/ld+json",
+          json: {
+            "@type": "BlogPosting",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `${this.siteUrl}${this.$route.path}`
+            },
+            headline: this.$page.post.title,
+            dateModified: new Date(),
+            datePublished: new Date(),
+            image: `${this.siteUrl}/meta/meta-img.png`,
+            url: `${this.siteUrl}${this.$route.path}`,
+            articleBody: this.getPageContent(),
+            wordCount: this.getPageContent().match(/\S+/g).length,
+            publisher: {
+              "@type": "Organization",
+              name: "@jb_hutch",
+              logo: {
+                "@type": "ImageObject",
+                url: `${this.siteUrl}/meta/bufgreencode-logo.png`
+              }
+            },
+            author: {
+              "@type": "Person",
+              name: "@jb_hutch"
+            },
+            isFamilyFriendly: "true",
+            "@context": "https://schema.org"
+          }
         }
       ]
     };
-  },
-  components: {
-    Layout
   },
   methods: {
     scrollToHash(hash) {
@@ -90,6 +100,12 @@ export default {
           document.body.removeChild(textArea);
         });
       }
+    },
+    getPageContent() {
+      return new DOMParser().parseFromString(
+        this.$page.post.content,
+        "text/html"
+      ).body.textContent;
     }
   },
   mounted() {
