@@ -1,7 +1,9 @@
 <template>
   <Layout :toc="true" :tocContent="$page.post.headings">
     <div class="mb-8">
-      <h1 class="text-5xl mb-2 leading-tight">{{ $page.post.title }}</h1>
+      <h1 class="text-5xl mb-2 leading-tight" v-html="$page.post.title">
+        {{ $page.post.title }}
+      </h1>
       <p v-if="$page.post.lead" class="text-gray-700 font-medium">
         {{ $page.post.lead }}
       </p>
