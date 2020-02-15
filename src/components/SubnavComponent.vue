@@ -4,18 +4,22 @@
     :class="menuIsOpen ? 'flex-grow h-full' : 'h-10'"
   >
     <div class="flex justify-between border-b">
-      <div class="flex pl-6 items-center h-10">
+      <div class="flex items-center h-10 flex-grow relative">
         <transition name="fade">
-          <div class="absolute" :key="menuIsOpen">
-            <div v-if="menuIsOpen">
+          <div class="pl-6 absolute truncate w-full" :key="menuIsOpen">
+            <template v-if="menuIsOpen">
               <span class="text-xl">Menu</span>
-            </div>
-            <div v-else>
-              <span v-if="pageTitle">
-                <span class="font-bold">&sect;</span>
-                {{ pageArticle }}.{{ pageSection }} {{ pageTitle }}
-              </span>
-            </div>
+            </template>
+            <template v-else>
+              <div class="truncate">
+                <span class="font-bold mr-2">&sect;</span>
+                <span
+                  v-html="
+                    `${this.pageArticle}.${this.pageSection} ${pageTitle}`
+                  "
+                />
+              </div>
+            </template>
           </div>
         </transition>
       </div>

@@ -20,9 +20,9 @@ query Post ($path: String!) {
     title
     lead
     content
+    headings{anchor, value}
     article_number
     section_number
-    headings{anchor, value}
   }
 }
 </page-query>
