@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="flex flex-col bg-gray-200 transition-md"
-    :class="menuIsOpen ? 'flex-grow h-full' : 'h-10'"
-  >
+  <div class="flex flex-col bg-gray-200 flex-grow h-full">
     <div class="flex justify-between border-b">
       <div class="flex items-center h-10 flex-grow relative">
         <transition name="fade">
@@ -12,7 +9,7 @@
             </template>
             <template v-else>
               <div class="truncate">
-                <span class="font-bold mr-2">&sect;</span>
+                <span class="font-bold mr-2 text-green-700">&sect;</span>
                 <span
                   v-html="
                     `${this.pageArticle}.${this.pageSection} ${pageTitle}`
@@ -39,8 +36,10 @@
         </button>
       </div>
     </div>
-    <nav class="flex-grow overflow-y-scroll transition-md">
-      <GlobalNav class="mt-2 pb-6" />
+    <nav class="flex flex-grow flex-col justify-between">
+      <div class="h-full overflow-auto">
+        <GlobalNav class="mt-2 pb-6 h-0" />
+      </div>
       <div class="flex justify-between border-t px-6 pt-2 mb-4">
         <g-link class="p-2 text-gray-700 hover:text-gray-900">About</g-link>
         <g-link class="p-2 text-gray-700 hover:text-gray-900"
@@ -82,6 +81,9 @@ export default {
     $route() {
       this.menuIsOpen = false;
       this.reverseAnimation();
+    },
+    menuIsOpen() {
+      this.$emit("toggleMenu");
     }
   },
   methods: {

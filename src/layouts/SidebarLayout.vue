@@ -1,10 +1,16 @@
 <template>
-  <div class="antialiased">
-    <div
-      class="fixed top-0 z-10 w-full max-h-screen h-full md:h-auto flex flex-col"
-    >
-      <Navbar />
-      <Subnav class="md:hidden" />
+  <div
+    class="antialiased h-screen"
+    :class="menuIsOpen ? 'overflow-hidden' : 'overflow-y-scroll'"
+  >
+    <div>
+      <Navbar class="fixed top-0 z-20" />
+      <div
+        class="fixed pt-16 inset-x-0 md:hidden z-10 transition-md overflow-hidden"
+        :class="menuIsOpen ? 'h-screen' : 'h-26'"
+      >
+        <Subnav @toggleMenu="toggleMenu" />
+      </div>
     </div>
     <div class="flex">
       <div
@@ -88,7 +94,8 @@ export default {
     return {
       activeIdx: -1,
       headingOffset: 96,
-      headings: []
+      headings: [],
+      menuIsOpen: false
     };
   },
   components: {
@@ -130,6 +137,9 @@ export default {
     },
     isActive(idx) {
       return idx === this.activeIdx;
+    },
+    toggleMenu() {
+      this.menuIsOpen = !this.menuIsOpen;
     }
   },
   mounted() {
