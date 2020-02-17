@@ -1,7 +1,7 @@
 <template>
   <div
     class="antialiased h-screen"
-    :class="menuIsOpen ? 'overflow-hidden' : 'overflow-y-scroll'"
+    :class="menuIsOpen ? 'overflow-hidden' : 'overflow-y-auto'"
   >
     <div>
       <Navbar class="fixed top-0 z-20" />
@@ -43,11 +43,15 @@
                       :key="index"
                       class="text-sm font-medium text-gray-700 hover:text-gray-900"
                     >
-                      <a :href="anchor.anchor" class="py-1 pl-0 block">
+                      <a
+                        @click="scrollToHash(anchor.anchor)"
+                        :href="anchor.anchor"
+                        class="py-1 pl-0 block"
+                      >
                         <span
                           class="block border-l-2 transition-fast"
                           :class="
-                            isActive(index)
+                            activeIdx == index
                               ? 'text-gray-900 pl-2 border-gray-900'
                               : 'pl-0 border-transparent'
                           "
@@ -88,13 +92,13 @@ export default {
     },
     tocContent: {
       type: Array
+    },
+    activeIdx: {
+      type: Number
     }
   },
   data() {
     return {
-      activeIdx: -1,
-      headingOffset: 96,
-      headings: [],
       menuIsOpen: false
     };
   },
@@ -103,50 +107,15 @@ export default {
     Navbar,
     Subnav
   },
-  watch: {
-    $route() {
-      if (this.$refs.toc) {
-        setTimeout(() => {
-          this.initScrollSpy();
-        }, 250);
-      }
-    }
-  },
   methods: {
-    initScrollSpy() {
-      this.activeIdx = -1;
-      this.headings = [];
-      this.headings = [
-        ...document.querySelectorAll("h2, h3, h4, h5, h6")
-      ].reverse();
-      let self = this;
-      window.addEventListener("scroll", function() {
-        self.scrollSpy();
-      });
-      this.scrollSpy();
-    },
-    scrollSpy() {
-      var headings = this.headings;
-      var active =
-        headings.length -
-        headings.findIndex(
-          heading => window.scrollY >= heading.offsetTop - this.headingOffset
-        ) -
-        1;
-      this.activeIdx = active < headings.length ? active : 0;
-    },
-    isActive(idx) {
-      return idx === this.activeIdx;
+    scrollToHash(hash) {
+      let page = document.getElementById("app");
+      let id = hash.substr(1);
+      let headingPosition = document.getElementById(id).offsetTop;
+      page.scrollTop = headingPosition;
     },
     toggleMenu() {
       this.menuIsOpen = !this.menuIsOpen;
-    }
-  },
-  mounted() {
-    if (this.$refs.toc) {
-      setTimeout(() => {
-        this.initScrollSpy();
-      }, 1);
     }
   }
 };

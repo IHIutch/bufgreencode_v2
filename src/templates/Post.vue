@@ -1,5 +1,5 @@
 <template>
-  <Layout :toc="true" :tocContent="$page.post.headings">
+  <Layout :toc="true" :tocContent="$page.post.headings" :activeIdx="activeIdx">
     <div class="mb-8">
       <h1 class="text-5xl mb-2 leading-tight" v-html="$page.post.title">
         {{ $page.post.title }}
@@ -35,6 +35,13 @@ export default {
   props: ["siteUrl"],
   components: {
     Layout
+  },
+  data() {
+    return {
+      headings: [],
+      headingOffset: 96,
+      activeIdx: -1
+    };
   },
   metaInfo() {
     return {
@@ -75,9 +82,37 @@ export default {
     };
   },
   methods: {
-    scrollToHash(hash) {
+    initScrollSpy() {
       setTimeout(() => {
-        location.href = this.$route.hash;
+        this.headings = [];
+        this.headings = [
+          ...document.querySelectorAll("h2, h3, h4, h5, h6")
+        ].reverse();
+        let page = document.getElementById("app");
+        let self = this;
+        page.addEventListener("scroll", function() {
+          self.scrollSpy();
+        });
+        this.scrollSpy();
+      }, 250);
+    },
+    scrollSpy() {
+      let page = document.getElementById("app");
+      let headings = this.headings;
+      let active =
+        headings.length -
+        headings.findIndex(
+          heading => page.scrollTop >= heading.offsetTop - this.headingOffset
+        ) -
+        1;
+      this.activeIdx = active < headings.length ? active : 0;
+    },
+    scrollToHash() {
+      setTimeout(() => {
+        let page = document.getElementById("app");
+        let id = this.$route.hash.substr(1);
+        let headingPosition = document.getElementById(id).offsetTop;
+        page.scrollTop = headingPosition;
       }, 1);
     },
     copyAnchorsToClipBoardOnClick() {
@@ -112,9 +147,13 @@ export default {
   },
   mounted() {
     if (this.$route.hash) {
-      setTimeout(() => this.scrollToHash(this.$route.hash), 1);
+      this.scrollToHash();
     }
     this.copyAnchorsToClipBoardOnClick();
+    this.initScrollSpy();
+  },
+  updated() {
+    this.initScrollSpy();
   }
 };
 </script>
