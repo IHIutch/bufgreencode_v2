@@ -9,7 +9,7 @@
         class="fixed pt-16 inset-x-0 md:hidden z-10 transition-md overflow-hidden"
         :class="menuIsOpen ? 'h-screen' : 'h-26'"
       >
-        <Subnav @toggleMenu="toggleMenu" />
+        <Subnav :menuIsOpen.sync="menuIsOpen" />
       </div>
     </div>
     <div class="flex">

@@ -38,7 +38,9 @@
     </div>
     <nav class="flex flex-grow flex-col justify-between">
       <div class="h-full overflow-auto">
-        <GlobalNav class="mt-2 pb-6 h-0" />
+        <div class="h-0">
+          <GlobalNav class="my-4" />
+        </div>
       </div>
       <div class="flex justify-between border-t px-6 pt-2 mb-4">
         <g-link class="p-2 text-gray-700 hover:text-gray-900">About</g-link>
@@ -83,7 +85,7 @@ export default {
       this.reverseAnimation();
     },
     menuIsOpen() {
-      this.$emit("toggleMenu");
+      this.$emit("update:menuIsOpen", this.menuIsOpen);
     }
   },
   methods: {
