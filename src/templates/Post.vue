@@ -62,10 +62,10 @@ export default {
             datePublished: new Date(),
             image: `${this.siteUrl}/meta/meta-img.png`,
             url: `${this.siteUrl}${this.$route.path}`,
-            articleBody: this.getPageContent(),
-            wordCount: this.getPageContent()
-              .trim()
-              .split(/\s+/).length,
+            // articleBody: this.getPageContent(),
+            // wordCount: this.getPageContent()
+            //   .trim()
+            //   .split(/\s+/).length,
             publisher: {
               "@type": "Organization",
               name: "@jb_hutch",
@@ -141,11 +141,11 @@ export default {
           document.body.removeChild(textArea);
         });
       }
-    },
-    getPageContent() {
-      var dom = new xml.DOM(xml.parse(this.$page.post.content));
-      return dom.document.childNodes[0].text;
     }
+    // getPageContent() {
+    //   var dom = new xml.DOM(xml.parse(this.$page.post.content));
+    //   return dom.document ? dom.document.childNodes[0].text : "";
+    // }
   },
   mounted() {
     if (this.$route.hash) {
