@@ -28,6 +28,8 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
+const xml = require("xml-parse");
+
 import Layout from "~/layouts/SidebarLayout";
 
 export default {
@@ -61,7 +63,9 @@ export default {
             image: `${this.siteUrl}/meta/meta-img.png`,
             url: `${this.siteUrl}${this.$route.path}`,
             articleBody: this.getPageContent(),
-            wordCount: this.getPageContent().match(/\S+/g).length,
+            wordCount: this.getPageContent()
+              .trim()
+              .split(/\s+/).length,
             publisher: {
               "@type": "Organization",
               name: "@jb_hutch",
@@ -139,10 +143,8 @@ export default {
       }
     },
     getPageContent() {
-      return new DOMParser().parseFromString(
-        this.$page.post.content,
-        "text/html"
-      ).body.textContent;
+      var dom = new xml.DOM(xml.parse(this.$page.post.content));
+      return dom.document.childNodes[0].text;
     }
   },
   mounted() {
