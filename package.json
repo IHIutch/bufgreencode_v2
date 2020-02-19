@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "algoliasearch": "^3.35.1",
-    "gridsome": "^0.7.12",
+    "gridsome": "^0.7.13",
     "vue-feather-icons": "^5.0.0",
     "vue-instantsearch": "^2.7.0",
     "vue-lottie": "^0.2.1"
@@ -18,7 +18,7 @@
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
-    "@gridsome/vue-remark": "^0.1.9",
+    "@gridsome/vue-remark": "^0.1.10",
     "autoprefixer": "^9.7.4",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.10",
