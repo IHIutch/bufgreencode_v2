@@ -90,7 +90,6 @@ export default {
   watch: {
     "$route.path"() {
       this.initScrollSpy();
-      this.initCopyAnchors();
     }
   },
   methods: {
@@ -120,47 +119,16 @@ export default {
     scrollToHash(hash) {
       location.href = this.$route.hash;
     },
-    copyAnchorsToClipBoard(e) {
-      setTimeout(() => {
-        const textArea = document.createElement("textarea");
-        textArea.value = e.path[0].baseURI;
-        textArea.style.position = "fixed"; //avoid scrolling to bottom
-        document.body.appendChild(textArea);
-        textArea.select();
-        textArea.setSelectionRange(0, 99999);
-
-        try {
-          document.execCommand("copy");
-        } catch (err) {
-          console.error("Oops, unable to copy", err);
-        }
-        document.body.removeChild(textArea);
-      }, 1);
-    },
     getPageContent() {
       const document = parse5.parse(this.$page.post.content);
       return document.childNodes[0].childNodes[1].childNodes.length
         ? document.childNodes[0].childNodes[1].childNodes[0].value
         : "";
-    },
-    initCopyAnchors() {
-      let self = this;
-      setTimeout(() => {
-        let anchors = [];
-        anchors = document.getElementsByClassName("heading-anchor");
-        console.log(123, anchors);
-        for (let a of anchors) {
-          a.addEventListener("click", function(e) {
-            self.copyAnchorsToClipBoard(e);
-          });
-        }
-      }, 250);
     }
   },
   mounted() {
     let self = this;
     this.initScrollSpy();
-    this.initCopyAnchors();
     if (this.$route.hash) {
       setTimeout(() => {
         this.scrollToHash();

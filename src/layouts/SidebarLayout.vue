@@ -22,7 +22,7 @@
       <div
         class="pt-20 w-full md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto"
       >
-        <transition name="fade" appear>
+        <transition name="fade" @after-enter="afterEnter()" appear>
           <div class="flex" :key="$route.path">
             <div class="my-12 w-full lg:pr-16 lg:w-3/4">
               <main class="w-full">
@@ -107,6 +107,36 @@ export default {
   methods: {
     toggleMenu() {
       this.menuIsOpen = !this.menuIsOpen;
+    },
+    copyAnchorsToClipBoard(e) {
+      setTimeout(() => {
+        const textArea = document.createElement("textarea");
+        textArea.value = e.path[0].baseURI;
+        textArea.style.position = "fixed"; //avoid scrolling to bottom
+        document.body.appendChild(textArea);
+        textArea.select();
+        textArea.setSelectionRange(0, 99999);
+
+        try {
+          document.execCommand("copy");
+        } catch (err) {
+          console.error("Oops, unable to copy", err);
+        }
+        document.body.removeChild(textArea);
+      }, 1);
+    },
+    initCopyAnchors() {
+      let self = this;
+      let anchors = [];
+      anchors = document.getElementsByClassName("heading-anchor");
+      for (let a of anchors) {
+        a.addEventListener("click", function(e) {
+          self.copyAnchorsToClipBoard(e);
+        });
+      }
+    },
+    afterEnter() {
+      this.initCopyAnchors();
     }
   },
   computed: {
