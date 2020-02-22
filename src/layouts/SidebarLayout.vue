@@ -44,11 +44,7 @@
                       :key="index"
                       class="text-sm font-medium text-gray-700 hover:text-gray-900"
                     >
-                      <a
-                        @click="scrollToHash(anchor.anchor)"
-                        :href="anchor.anchor"
-                        class="py-1 pl-0 block"
-                      >
+                      <a :href="anchor.anchor" class="py-1 pl-0 block">
                         <span
                           class="block border-l-2 transition-fast"
                           :class="
@@ -109,11 +105,6 @@ export default {
     Subnav
   },
   methods: {
-    scrollToHash(hash) {
-      let id = hash.substr(1);
-      let headingPosition = document.getElementById(id).offsetTop;
-      window.scrollY = headingPosition;
-    },
     toggleMenu() {
       this.menuIsOpen = !this.menuIsOpen;
     }
