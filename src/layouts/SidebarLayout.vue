@@ -6,7 +6,11 @@
         class="fixed pt-16 inset-x-0 md:hidden z-10 transition-md overflow-hidden"
         :class="menuIsOpen ? 'h-screen' : 'h-26'"
       >
-        <Subnav :menuIsOpen.sync="menuIsOpen" />
+        <Subnav
+          :menuIsOpen.sync="menuIsOpen"
+          :activeHeading="activeHeading"
+          :activeIdx="activeIdx"
+        />
       </div>
     </div>
     <div class="flex">
@@ -48,7 +52,7 @@
                         <span
                           class="block border-l-2 transition-fast"
                           :class="
-                            activeIdx == index
+                            localActiveIdx == index
                               ? 'text-gray-900 pl-2 border-gray-900'
                               : 'pl-0 border-transparent'
                           "
@@ -113,11 +117,19 @@ export default {
     toggleMenu() {
       this.menuIsOpen = !this.menuIsOpen;
     }
+  },
+  computed: {
+    activeHeading() {
+      return this.tocContent[this.activeIdx];
+    },
+    localActiveIdx() {
+      return this.activeIdx == -1 ? 0 : this.activeIdx;
+    }
   }
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .fade-enter-active {
   transition: opacity 0.5s;
 }

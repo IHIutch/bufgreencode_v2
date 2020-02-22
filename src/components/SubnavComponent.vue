@@ -8,13 +8,19 @@
               <span class="text-xl">Menu</span>
             </template>
             <template v-else>
-              <div class="truncate">
-                <span class="font-bold mr-2 text-green-700">&sect;</span>
-                <span
-                  v-html="
-                    `${this.pageArticle}.${this.pageSection} ${pageTitle}`
-                  "
-                />
+              <div class="flex truncate">
+                <div class="mr-2">
+                  <span class="font-bold text-green-700">&sect;</span>
+                </div>
+                <div class="relative">
+                  <transition :name="animationType" appear>
+                    <div class="absolute" :key="activeIdx">
+                      <span v-html="mobileHeadingTitle">
+                        {{ mobileHeadingTitle }}
+                      </span>
+                    </div>
+                  </transition>
+                </div>
               </div>
             </template>
           </div>
@@ -69,6 +75,14 @@ import { ExternalLinkIcon } from "vue-feather-icons";
 export default {
   name: "SubnavComponent",
   components: { GlobalNav, Lottie, ExternalLinkIcon },
+  props: {
+    activeIdx: {
+      type: Number
+    },
+    activeHeading: {
+      type: Object
+    }
+  },
   data() {
     return {
       defaultOptions: {
@@ -76,7 +90,9 @@ export default {
         loop: false,
         autoplay: false
       },
-      menuIsOpen: false
+      menuIsOpen: false,
+      prevIdx: 0,
+      animationType: "slide-fade-up"
     };
   },
   watch: {
@@ -86,6 +102,11 @@ export default {
     },
     menuIsOpen() {
       this.$emit("update:menuIsOpen", this.menuIsOpen);
+    },
+    activeIdx() {
+      this.animationType =
+        this.prevIdx < this.activeIdx ? "slide-fade-up" : "slide-fade-down";
+      this.prevIdx = this.activeIdx;
     }
   },
   methods: {
@@ -121,17 +142,36 @@ export default {
     },
     pageSection() {
       return this.$page ? this.$page.post.section_number : "";
+    },
+    mobileHeadingTitle() {
+      return this.activeHeading
+        ? this.activeHeading.value
+        : `${this.pageArticle}.${this.pageSection} ${this.pageTitle}`;
     }
   }
 };
 </script>
 
-<style>
-.fade-enter-active {
-  transition: opacity 0.5s;
+<style lang="scss" scoped>
+.slide-fade-up-enter-active,
+.slide-fade-down-enter-active {
+  transition: all 0.3s ease;
 }
 
-.fade-enter {
+.slide-fade-up-leave-active,
+.slide-fade-down-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-down-leave-to,
+.slide-fade-up-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-fade-up-leave-to,
+.slide-fade-down-enter {
+  transform: translateY(-10px);
   opacity: 0;
 }
 </style>

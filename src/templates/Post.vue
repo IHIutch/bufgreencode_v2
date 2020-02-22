@@ -109,7 +109,7 @@ export default {
           heading => window.scrollY >= heading.offsetTop - this.headingOffset
         ) -
         1;
-      this.activeIdx = active < headings.length ? active : 0;
+      this.activeIdx = active < headings.length ? active : -1;
     },
     scrollToHash() {
       setTimeout(() => {
