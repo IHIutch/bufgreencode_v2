@@ -18,21 +18,14 @@
   </Layout>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import Layout from "~/layouts/SidebarLayout";
 
 export default {
   name: "IndexPage",
   metaInfo: {
-    title: "Welcome"
+    title: "Welcome",
+    titleTemplate: "Buffalo Green Code"
   },
   components: {
     Layout
