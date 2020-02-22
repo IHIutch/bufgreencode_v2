@@ -120,7 +120,7 @@ export default {
   },
   computed: {
     activeHeading() {
-      return this.tocContent[this.activeIdx];
+      return this.tocContent ? this.tocContent[this.activeIdx] : null;
     },
     localActiveIdx() {
       return this.activeIdx == -1 ? 0 : this.activeIdx;
