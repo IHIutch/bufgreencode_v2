@@ -5,7 +5,7 @@ import "@/assets/scss/main.scss";
 import DefaultLayout from "~/layouts/Default.vue";
 import InstantSearch from "vue-instantsearch";
 
-const siteUrl = "https://gridsome.bufgreencode.com/";
+const siteUrl = "https://bufgreencode.com/";
 const siteName = "Buffalo Green Code";
 const metaImage = siteUrl + "meta/meta-img.png";
 
