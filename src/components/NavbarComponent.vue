@@ -4,13 +4,20 @@
   >
     <div class="w-full max-w-screen-xl relative mx-auto px-6">
       <div class="flex items-center -mx-6 h-full px-6">
-        <div class="md:w-1/4 lg:w-1/6 pr-6 lg:pr-8 h-full flex-shrink-0">
+        <div
+          class="md:w-1/4 lg:w-1/6 pr-4 md:pr-6 lg:pr-8 h-full flex-shrink-0"
+        >
           <div class="flex items-center h-full">
-            <g-link to="/" class="block lg:mr-4 h-full"
-              ><img
+            <g-link to="/" class="block lg:mr-4 h-full">
+              <img
+                src="../assets/images/meta/bufgreencode-icon.svg"
+                alt="Buffalo Green Code"
+                class="h-full w-auto py-1 md:hidden"
+              />
+              <img
                 src="../assets/images/meta/bufgreencode-logo.svg"
                 alt="Buffalo Green Code"
-                class="h-full w-auto py-1"
+                class="h-full w-auto py-1 hidden md:block"
               />
             </g-link>
           </div>
