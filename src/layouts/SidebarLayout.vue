@@ -24,7 +24,7 @@
       >
         <transition name="fade" appear>
           <div class="flex" :key="$route.path">
-            <div class="my-12 w-full lg:w-3/4 lg:pr-16 lg:w-3/4">
+            <div class="my-12 w-full lg:pr-16 lg:w-3/4">
               <main class="w-full">
                 <slot />
               </main>
