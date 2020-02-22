@@ -111,13 +111,8 @@ export default {
         1;
       this.activeIdx = active < headings.length ? active : -1;
     },
-    scrollToHash() {
-      setTimeout(() => {
-        let page = document.getElementById("app");
-        let id = this.$route.hash.substr(1);
-        let headingPosition = document.getElementById(id).offsetTop;
-        page.scrollTop = headingPosition;
-      }, 1);
+    scrollToHash(hash) {
+      location.href = this.$route.hash;
     },
     copyAnchorsToClipBoardOnClick() {
       var anchor = document.getElementsByClassName("heading-anchor");
@@ -151,7 +146,9 @@ export default {
   },
   mounted() {
     if (this.$route.hash) {
-      this.scrollToHash();
+      setTimeout(() => {
+        this.scrollToHash();
+      }, 1);
     }
     this.copyAnchorsToClipBoardOnClick();
     this.initScrollSpy();
