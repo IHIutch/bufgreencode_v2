@@ -55,8 +55,9 @@
         >
         <a
           class="flex items-center p-2 text-gray-700 hover:text-gray-900"
-          href="https://github.com/IHIutch/bufgreencode_gridsome"
+          href="https://github.com/IHIutch/bufgreencode_v2"
           target="_blank"
+          rel="noreferrer"
         >
           <span class="mr-1">Github</span>
           <span><ExternalLinkIcon size="1x"/></span>
