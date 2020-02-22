@@ -134,7 +134,6 @@
 
 <script>
 import algoliasearch from "algoliasearch/lite";
-import _ from "lodash";
 
 export default {
   name: "SearchComponent",
@@ -163,7 +162,7 @@ export default {
   },
   methods: {
     relUrl(url) {
-      return url.replace("https://gridsome.bufgreencode.com/", "/");
+      return url.replace("https://bufgreencode.com/", "/");
     },
     setFocus(event) {
       if (event && event.target) {

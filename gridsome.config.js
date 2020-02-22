@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: "Buffalo Green Code",
-  siteUrl: "https://gridsome.bufgreencode.com",
+  siteUrl: "https://bufgreencode.com",
   icon: {
     favicon: "./src/assets/images/meta/favicon.png",
     touchicon: "./src/assets/images/meta/favicon.png"
@@ -42,7 +42,7 @@ module.exports = {
       use: "gridsome-plugin-gtm",
       options: {
         id: "GTM-KNPMJGD",
-        enabled: process.env.NODE_ENV === "production" ? true : false,
+        enabled: process.env.NODE_ENV === "production",
         debug: false
       }
     },
