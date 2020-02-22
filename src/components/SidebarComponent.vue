@@ -1,5 +1,5 @@
 <template>
-  <nav class="h-full overflow-y-scroll sticky border-r">
+  <nav class="h-full overflow-y-auto sticky border-r">
     <GlobalNav class="mt-8 pb-8" />
   </nav>
 </template>

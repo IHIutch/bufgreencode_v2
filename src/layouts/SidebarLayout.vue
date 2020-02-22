@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="antialiased h-screen"
-    :class="menuIsOpen ? 'overflow-hidden' : 'overflow-y-auto'"
-  >
+  <div class="antialiased">
     <div>
       <Navbar class="fixed top-0 z-20" />
       <div
@@ -19,17 +16,17 @@
         <Sidebar />
       </div>
       <div
-        class="pt-20 md:pt-16 px-6 md:px-8 lg:px-16 md:w-3/4 lg:w-5/6 md:ml-auto"
+        class="pt-20 md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto"
       >
         <transition name="fade" appear>
           <div class="flex" :key="$route.path">
-            <div class="my-12 flex-grow lg:pr-16 lg:w-3/4">
+            <div class="my-12 w-full lg:w-3/4 lg:pr-16 lg:w-3/4">
               <main class="w-full">
                 <slot />
               </main>
             </div>
-            <aside v-if="toc" class="hidden lg:block lg:w-1/4 flex-shrink-0">
-              <div class="sticky h-screen overflow-y-scroll top-0 pt-16">
+            <aside v-if="toc" class="hidden lg:block lg:w-1/4">
+              <div class="sticky h-screen overflow-y-auto top-0 pt-16">
                 <div class="mt-8 pb-8">
                   <div class="mb-2">
                     <span
@@ -109,10 +106,9 @@ export default {
   },
   methods: {
     scrollToHash(hash) {
-      let page = document.getElementById("app");
       let id = hash.substr(1);
       let headingPosition = document.getElementById(id).offsetTop;
-      page.scrollTop = headingPosition;
+      window.scrollY = headingPosition;
     },
     toggleMenu() {
       this.menuIsOpen = !this.menuIsOpen;

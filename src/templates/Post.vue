@@ -34,7 +34,9 @@ import Layout from "~/layouts/SidebarLayout";
 
 export default {
   name: "PostTemplate",
-  props: ["siteUrl"],
+  props: {
+    siteUrl: String
+  },
   components: {
     Layout
   },
@@ -92,21 +94,19 @@ export default {
         this.headings = [
           ...document.querySelectorAll("h2, h3, h4, h5, h6")
         ].reverse();
-        let page = document.getElementById("app");
         let self = this;
-        page.addEventListener("scroll", function() {
+        window.addEventListener("scroll", function() {
           self.scrollSpy();
         });
         this.scrollSpy();
       }, 250);
     },
     scrollSpy() {
-      let page = document.getElementById("app");
-      let headings = this.headings;
-      let active =
+      var headings = this.headings;
+      var active =
         headings.length -
         headings.findIndex(
-          heading => page.scrollTop >= heading.offsetTop - this.headingOffset
+          heading => window.scrollY >= heading.offsetTop - this.headingOffset
         ) -
         1;
       this.activeIdx = active < headings.length ? active : 0;

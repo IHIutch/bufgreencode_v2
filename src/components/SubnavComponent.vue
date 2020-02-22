@@ -96,9 +96,11 @@ export default {
       if (this.menuIsOpen) {
         this.reverseAnimation();
         this.menuIsOpen = !this.menuIsOpen;
+        document.body.classList.remove("overflow-hidden");
       } else {
         this.playAnimation();
         this.menuIsOpen = !this.menuIsOpen;
+        document.body.classList.add("overflow-hidden");
       }
     },
     playAnimation() {
