@@ -8,7 +8,7 @@
               <span class="text-xl">Menu</span>
             </template>
             <template v-else>
-              <div class="flex truncate">
+              <div v-if="activeIdx != null" class="flex truncate">
                 <div class="mr-2">
                   <span class="font-bold text-green-700">&sect;</span>
                 </div>
@@ -100,6 +100,7 @@ export default {
     $route() {
       this.menuIsOpen = false;
       this.reverseAnimation();
+      document.body.classList.remove("overflow-hidden");
     },
     menuIsOpen() {
       this.$emit("update:menuIsOpen", this.menuIsOpen);
