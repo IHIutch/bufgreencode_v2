@@ -20,7 +20,7 @@
         <Sidebar />
       </div>
       <div
-        class="pt-20 md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto"
+        class="pt-20 w-full md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto"
       >
         <transition name="fade" appear>
           <div class="flex" :key="$route.path">
