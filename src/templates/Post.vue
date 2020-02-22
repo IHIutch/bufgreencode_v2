@@ -87,6 +87,12 @@ export default {
       ]
     };
   },
+  watch: {
+    "$route.path"() {
+      this.initScrollSpy();
+      this.initCopyAnchors();
+    }
+  },
   methods: {
     initScrollSpy() {
       setTimeout(() => {
@@ -114,47 +120,52 @@ export default {
     scrollToHash(hash) {
       location.href = this.$route.hash;
     },
-    copyAnchorsToClipBoardOnClick() {
-      var anchor = document.getElementsByClassName("heading-anchor");
-      for (let a of anchor) {
-        a.addEventListener("click", function(e) {
-          var href = e.path[0].baseURI;
-          var textArea = document.createElement("textarea");
-          textArea.value = href;
-          textArea.style.position = "fixed"; //avoid scrolling to bottom
-          document.body.appendChild(textArea);
-          textArea.focus();
-          textArea.select();
+    copyAnchorsToClipBoard(e) {
+      setTimeout(() => {
+        const textArea = document.createElement("textarea");
+        textArea.value = e.path[0].baseURI;
+        textArea.style.position = "fixed"; //avoid scrolling to bottom
+        document.body.appendChild(textArea);
+        textArea.select();
+        textArea.setSelectionRange(0, 99999);
 
-          try {
-            var successful = document.execCommand("copy");
-            console.log(href);
-          } catch (err) {
-            console.error("Oops, unable to copy", err);
-          }
-
-          document.body.removeChild(textArea);
-        });
-      }
+        try {
+          document.execCommand("copy");
+        } catch (err) {
+          console.error("Oops, unable to copy", err);
+        }
+        document.body.removeChild(textArea);
+      }, 1);
     },
     getPageContent() {
       const document = parse5.parse(this.$page.post.content);
       return document.childNodes[0].childNodes[1].childNodes.length
         ? document.childNodes[0].childNodes[1].childNodes[0].value
         : "";
+    },
+    initCopyAnchors() {
+      let self = this;
+      setTimeout(() => {
+        let anchors = [];
+        anchors = document.getElementsByClassName("heading-anchor");
+        console.log(123, anchors);
+        for (let a of anchors) {
+          a.addEventListener("click", function(e) {
+            self.copyAnchorsToClipBoard(e);
+          });
+        }
+      }, 250);
     }
   },
   mounted() {
+    let self = this;
+    this.initScrollSpy();
+    this.initCopyAnchors();
     if (this.$route.hash) {
       setTimeout(() => {
         this.scrollToHash();
       }, 1);
     }
-    this.copyAnchorsToClipBoardOnClick();
-    this.initScrollSpy();
-  },
-  updated() {
-    this.initScrollSpy();
   }
 };
 </script>
