@@ -135,6 +135,9 @@ export default {
       this.anim.play();
     }
   },
+  mounted() {
+    this.prevIdx = this.activeIdx;
+  },
   computed: {
     pageTitle() {
       return this.$page ? this.$page.post.title : "";
