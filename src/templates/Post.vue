@@ -87,11 +87,6 @@ export default {
       ]
     };
   },
-  watch: {
-    "$route.path"() {
-      this.initScrollSpy();
-    }
-  },
   methods: {
     initScrollSpy() {
       setTimeout(() => {
@@ -134,6 +129,9 @@ export default {
         this.scrollToHash();
       }, 1);
     }
+  },
+  updated() {
+    this.initScrollSpy();
   }
 };
 </script>
