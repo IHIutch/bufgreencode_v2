@@ -15,13 +15,10 @@ module.exports = {
   siteName: "Buffalo Green Code",
   siteUrl: "https://bufgreencode.com",
   icon: {
-    favicon: "./src/assets/images/meta/favicon.png",
-    touchicon: "./src/assets/images/meta/favicon.png"
+    favicon: "src/favicon.png",
+    touchicon: "src/assets/images/meta/favicon.png"
   },
   titleTemplate: "%s | Buffalo Green Code",
-  // templates: {
-  //   Post: "/:article/:title"
-  // },
   plugins: [
     {
       use: "@gridsome/vue-remark",
@@ -59,7 +56,7 @@ module.exports = {
         themeColor: "#86b142",
         backgroundColor: "#ffffff",
         purpose: "maskable",
-        icon: "src/favicon.png", // must be supplied!
+        icon: "src/favicon.png",
         msTileImage: "src/favicon.png",
         msTileColor: "#86b142"
       }
