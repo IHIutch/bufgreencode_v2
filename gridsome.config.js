@@ -53,12 +53,12 @@ module.exports = {
         manifestPath: "manifest.json",
         serviceWorkerPath: "service-worker.js",
         shortName: "BufGreenCode",
-        themeColor: "#86b142",
+        themeColor: "#86B142",
         backgroundColor: "#ffffff",
         purpose: "maskable",
         icon: "src/favicon.png",
         msTileImage: "src/favicon.png",
-        msTileColor: "#86b142"
+        msTileColor: "#86B142"
       }
     }
   ],

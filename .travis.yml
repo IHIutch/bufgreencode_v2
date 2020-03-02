@@ -1,3 +1,5 @@
+os:
+  - linux
 language: node_js
 node_js:
   - node
@@ -13,10 +15,9 @@ jobs:
       deploy:
         provider: pages
         local_dir: dist/
-        target-branch: gh-pages
+        target_branch: gh-pages
         name: Travis Deployment Bot
-        skip_cleanup: true
-        github_token: "$GITHUB_TOKEN"
+        token: "$GITHUB_TOKEN"
         fqdn: bufgreencode.com
         on:
           branch: master
