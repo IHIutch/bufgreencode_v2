@@ -17,6 +17,7 @@ jobs:
         local_dir: dist/
         target_branch: gh-pages
         name: Travis Deployment Bot
+        skip_cleanup: true
         token: "$GITHUB_TOKEN"
         fqdn: bufgreencode.com
         on:
