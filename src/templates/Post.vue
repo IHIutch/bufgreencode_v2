@@ -1,14 +1,7 @@
 <template>
   <Layout :toc="true" :tocContent="$page.post.headings" :activeIdx="activeIdx">
     <div class="mb-8">
-      <h1
-        class="text-5xl mb-2 leading-tight"
-        v-html="
-          `${$page.post.article_number}.${$page.post.section_number} ${
-            $page.post.title
-          }`
-        "
-      ></h1>
+      <h1 class="text-5xl mb-2 leading-tight" v-html="$page.post.title"></h1>
       <p v-if="$page.post.lead" class="text-gray-700 font-medium">
         {{ $page.post.lead }}
       </p>
