@@ -19,18 +19,10 @@ export default function(Vue, { router, head, isClient }) {
     property: "og:type",
     content: "website",
   });
-  // head.meta.push({
-  //   property: "og:title",
-  //   content: siteName
-  // });
   head.meta.push({
     property: "og:site_name",
     content: siteName,
   });
-  // head.meta.push({
-  //   property: "og:url",
-  //   content: siteUrl
-  // });
   head.meta.push({
     property: "og:description",
     content: siteDesc,
@@ -47,14 +39,6 @@ export default function(Vue, { router, head, isClient }) {
     name: "twitter:card",
     content: "summary",
   });
-  // head.meta.push({
-  //   name: "twitter:title",
-  //   content: siteName
-  // });
-  // head.meta.push({
-  //   name: "twitter:url",
-  //   content: siteUrl
-  // });
   head.meta.push({
     name: "twitter:description",
     content: siteDesc,
