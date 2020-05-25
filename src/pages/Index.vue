@@ -33,22 +33,22 @@ export default {
       meta: [
         {
           key: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: this.siteName,
         },
         {
           key: "og:url",
-          name: "og:url",
+          property: "og:url",
           content: this.siteUrl,
         },
         {
           key: "twitter:title",
-          name: "og:title",
+          name: "twitter:title",
           content: this.siteName,
         },
         {
           key: "twitter:url",
-          name: "og:url",
+          name: "twitter:url",
           content: this.siteUrl,
         },
       ],

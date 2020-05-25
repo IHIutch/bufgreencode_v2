@@ -54,22 +54,22 @@ export default {
       meta: [
         {
           key: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: `${this.$page.post.title} | ${this.siteName}`,
         },
         {
           key: "og:url",
-          name: "og:url",
+          property: "og:url",
           content: `${this.siteUrl}${this.$route.path}`,
         },
         {
           key: "twitter:title",
-          name: "og:title",
+          name: "twitter:title",
           content: `${this.$page.post.title} | ${this.siteName}`,
         },
         {
           key: "twitter:url",
-          name: "og:url",
+          name: "twitter:url",
           content: `${this.siteUrl}${this.$route.path}`,
         },
       ],
