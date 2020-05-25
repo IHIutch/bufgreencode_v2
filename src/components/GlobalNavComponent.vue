@@ -6,7 +6,7 @@
       class="px-4"
       :class="{
         'my-2 py-2 md:py-4 bg-gray-200':
-          $page && $page.post.article_number == article.article
+          $page && $page.post.article_number == article.article,
       }"
     >
       <g-link
@@ -16,7 +16,7 @@
         <span
           :class="{
             'text-gray-900 font-medium':
-              $page && $page.post.article_number == article.article
+              $page && $page.post.article_number == article.article,
           }"
           >{{ article.article }}. {{ article.title }}</span
         >
@@ -35,14 +35,12 @@
               class="truncate"
               :class="{
                 'text-gray-900 font-medium':
-                  $page && $page.post.title == section.node.title
+                  $page && $page.post.title == section.node.title,
               }"
               v-html="
-                article.article +
-                  '-' +
-                  section.node.section_number +
-                  '. ' +
-                  section.node.title
+                `
+                ${article.article}.${section.node.section_number} 
+                  ${section.node.title}`
               "
             />
           </g-link>
@@ -75,19 +73,19 @@ export default {
   name: "GlobalNavComponent",
   data() {
     return {
-      articles: articleList
+      articles: articleList,
     };
   },
   computed: {
     sectionStarts() {
       let obj = {};
-      this.$static.allPost.edges.forEach(page => {
+      this.$static.allPost.edges.forEach((page) => {
         if (page.node.section_number == 1) {
           obj[page.node.article_number] = page.node;
         }
       });
       return obj;
-    }
-  }
+    },
+  },
 };
 </script>
