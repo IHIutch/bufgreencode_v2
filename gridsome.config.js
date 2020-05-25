@@ -16,9 +16,9 @@ module.exports = {
   siteUrl: "https://bufgreencode.com",
   icon: {
     favicon: "src/favicon.png",
-    touchicon: "src/assets/images/meta/favicon.png"
+    touchicon: "src/assets/images/meta/favicon.png",
   },
-  titleTemplate: "%s | Buffalo Green Code",
+  titleTemplate: "%s · Buffalo Green Code",
   plugins: [
     {
       use: "@gridsome/vue-remark",
@@ -28,20 +28,20 @@ module.exports = {
         route: "/:article/:title",
         template: "./src/templates/Post.vue",
         remark: {
-          autolinkClassName: "heading-anchor"
-        }
-      }
+          autolinkClassName: "heading-anchor",
+        },
+      },
     },
     {
-      use: "@gridsome/plugin-sitemap"
+      use: "@gridsome/plugin-sitemap",
     },
     {
       use: "gridsome-plugin-gtm",
       options: {
         id: "GTM-KNPMJGD",
         enabled: process.env.NODE_ENV === "production",
-        debug: false
-      }
+        debug: false,
+      },
     },
     {
       use: "gridsome-plugin-pwa",
@@ -58,15 +58,15 @@ module.exports = {
         purpose: "maskable",
         icon: "src/favicon.png",
         msTileImage: "src/favicon.png",
-        msTileColor: "#86B142"
-      }
-    }
+        msTileColor: "#86B142",
+      },
+    },
   ],
   css: {
     loaderOptions: {
       postcss: {
-        plugins: postcssPlugins
-      }
-    }
-  }
+        plugins: postcssPlugins,
+      },
+    },
+  },
 };

@@ -47,13 +47,11 @@ export default {
     };
   },
   metaInfo() {
-    let pageTitle = `${$page.post.article_number}.${
-      $page.post.section_number
-    } ${$page.post.title}`;
+    let pageTitle = `${this.$page.post.article_number}.${
+      this.$page.post.section_number
+    } ${this.$page.post.title}`;
     return {
-      title: `${$page.post.article_number}.${$page.post.section_number} ${
-        $page.post.title
-      }`,
+      title: pageTitle,
       meta: [
         {
           key: "title",
