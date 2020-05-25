@@ -23,12 +23,39 @@ import Layout from "~/layouts/SidebarLayout";
 
 export default {
   name: "IndexPage",
-  metaInfo: {
-    title: "Welcome",
-    titleTemplate: "Buffalo Green Code"
+  props: {
+    siteUrl: String,
+    siteName: String,
+  },
+  metaInfo() {
+    return {
+      titleTemplate: this.siteName,
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: this.siteName,
+        },
+        {
+          key: "og:url",
+          name: "og:url",
+          content: this.siteUrl,
+        },
+        {
+          key: "twitter:title",
+          name: "og:title",
+          content: this.siteName,
+        },
+        {
+          key: "twitter:url",
+          name: "og:url",
+          content: this.siteUrl,
+        },
+      ],
+    };
   },
   components: {
-    Layout
-  }
+    Layout,
+  },
 };
 </script>

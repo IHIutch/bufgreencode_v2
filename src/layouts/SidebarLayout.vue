@@ -67,14 +67,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import Sidebar from "~/components/SidebarComponent";
 import Navbar from "~/components/NavbarComponent";
@@ -85,24 +77,24 @@ export default {
   props: {
     toc: {
       type: Boolean,
-      default: false
+      default: false,
     },
     tocContent: {
-      type: Array
+      type: Array,
     },
     activeIdx: {
-      type: Number
-    }
+      type: Number,
+    },
   },
   data() {
     return {
-      menuIsOpen: false
+      menuIsOpen: false,
     };
   },
   components: {
     Sidebar,
     Navbar,
-    Subnav
+    Subnav,
   },
   methods: {
     toggleMenu() {
@@ -137,7 +129,7 @@ export default {
     },
     afterEnter() {
       this.initCopyAnchors();
-    }
+    },
   },
   computed: {
     activeHeading() {
@@ -145,8 +137,8 @@ export default {
     },
     localActiveIdx() {
       return this.activeIdx == -1 ? 0 : this.activeIdx;
-    }
-  }
+    },
+  },
 };
 </script>
 
