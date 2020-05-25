@@ -56,12 +56,12 @@ export default {
         {
           key: "title",
           name: "title",
-          content: `${pageTitle} | ${this.siteName}`,
+          content: `${pageTitle} · ${this.siteName}`,
         },
         {
           key: "og:title",
           property: "og:title",
-          content: `${pageTitle} | ${this.siteName}`,
+          content: `${pageTitle} · ${this.siteName}`,
         },
         {
           key: "og:url",
@@ -71,7 +71,7 @@ export default {
         {
           key: "twitter:title",
           property: "twitter:title",
-          content: `${pageTitle} | ${this.siteName}`,
+          content: `${pageTitle} · ${this.siteName}`,
         },
         {
           key: "twitter:url",
