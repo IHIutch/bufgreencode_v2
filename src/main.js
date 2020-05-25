@@ -17,55 +17,55 @@ export default function(Vue, { router, head, isClient }) {
   // Add a meta tag
   head.meta.push({
     property: "og:type",
-    content: "website"
+    content: "website",
   });
   head.meta.push({
     property: "og:title",
-    content: siteName
+    content: siteName,
   });
   head.meta.push({
     property: "og:site_name",
-    content: siteName
+    content: siteName,
   });
   head.meta.push({
     property: "og:url",
-    content: siteUrl
+    content: siteUrl,
   });
   head.meta.push({
     property: "og:description",
-    content: siteDesc
+    content: siteDesc,
   });
   head.meta.push({
     property: "og:image",
-    content: metaImage
+    content: metaImage,
   });
   head.meta.push({
     name: "twitter:creator",
-    content: "@jb_hutch"
+    content: "@jb_hutch",
   });
   head.meta.push({
     name: "twitter:card",
-    content: "summary"
+    content: "summary",
   });
   head.meta.push({
     name: "twitter:title",
-    content: siteName
+    content: siteName,
   });
   head.meta.push({
     name: "twitter:url",
-    content: siteUrl
+    content: siteUrl,
   });
   head.meta.push({
     name: "twitter:description",
-    content: siteDesc
+    content: siteDesc,
   });
   head.meta.push({
     name: "twitter:image",
-    content: metaImage
+    content: metaImage,
   });
   // Google Search Console
   head.meta.push({
     name: "google-site-verification",
-    content: "2uJ6hXsUDukLmTfNK7Y7jCmnaqyiLptsVDmZ2Ct7Zzk"
+    content: "2uJ6hXsUDukLmTfNK7Y7jCmnaqyiLptsVDmZ2Ct7Zzk",
   });
 }

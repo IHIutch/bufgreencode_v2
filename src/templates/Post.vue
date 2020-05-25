@@ -36,6 +36,7 @@ export default {
   name: "PostTemplate",
   props: {
     siteUrl: String,
+    siteName: String,
   },
   components: {
     Layout,
@@ -50,10 +51,28 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
-      "og:title": this.$page.post.title,
-      "og:url": `${this.siteUrl}${this.$route.path}`,
-      "twitter:title": this.$page.post.title,
-      "twitter:url": `${this.siteUrl}${this.$route.path}`,
+      meta: [
+        {
+          key: "og:title",
+          name: "og:title",
+          content: `${this.$page.post.title} | ${this.siteName}`,
+        },
+        {
+          key: "og:url",
+          name: "og:url",
+          content: `${this.siteUrl}${this.$route.path}`,
+        },
+        {
+          key: "twitter:title",
+          name: "og:title",
+          content: `${this.$page.post.title} | ${this.siteName}`,
+        },
+        {
+          key: "twitter:url",
+          name: "og:url",
+          content: `${this.siteUrl}${this.$route.path}`,
+        },
+      ],
       script: [
         {
           type: "application/ld+json",
