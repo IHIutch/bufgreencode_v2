@@ -16,6 +16,10 @@ export default function(Vue, { router, head, isClient }) {
   Vue.use(InstantSearch);
   // Add a meta tag
   head.meta.push({
+    name: "description",
+    content: siteDesc,
+  });
+  head.meta.push({
     property: "og:type",
     content: "website",
   });
@@ -32,19 +36,19 @@ export default function(Vue, { router, head, isClient }) {
     content: metaImage,
   });
   head.meta.push({
-    name: "twitter:creator",
+    property: "twitter:creator",
     content: "@jb_hutch",
   });
   head.meta.push({
-    name: "twitter:card",
+    property: "twitter:card",
     content: "summary",
   });
   head.meta.push({
-    name: "twitter:description",
+    property: "twitter:description",
     content: siteDesc,
   });
   head.meta.push({
-    name: "twitter:image",
+    property: "twitter:image",
     content: metaImage,
   });
   // Google Search Console

@@ -53,6 +53,11 @@ export default {
       title: this.$page.post.title,
       meta: [
         {
+          key: "title",
+          name: "title",
+          content: `${this.$page.post.title} | ${this.siteName}`,
+        },
+        {
           key: "og:title",
           property: "og:title",
           content: `${this.$page.post.title} | ${this.siteName}`,
@@ -64,12 +69,12 @@ export default {
         },
         {
           key: "twitter:title",
-          name: "twitter:title",
+          property: "twitter:title",
           content: `${this.$page.post.title} | ${this.siteName}`,
         },
         {
           key: "twitter:url",
-          name: "twitter:url",
+          property: "twitter:url",
           content: `${this.siteUrl}${this.$route.path}`,
         },
       ],

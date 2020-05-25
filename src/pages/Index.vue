@@ -32,6 +32,11 @@ export default {
       titleTemplate: this.siteName,
       meta: [
         {
+          key: "title",
+          name: "title",
+          content: this.siteName,
+        },
+        {
           key: "og:title",
           property: "og:title",
           content: this.siteName,
@@ -43,12 +48,12 @@ export default {
         },
         {
           key: "twitter:title",
-          name: "twitter:title",
+          property: "twitter:title",
           content: this.siteName,
         },
         {
           key: "twitter:url",
-          name: "twitter:url",
+          property: "twitter:url",
           content: this.siteUrl,
         },
       ],
