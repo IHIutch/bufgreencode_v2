@@ -35,21 +35,25 @@ import Layout from "~/layouts/SidebarLayout";
 export default {
   name: "PostTemplate",
   props: {
-    siteUrl: String
+    siteUrl: String,
   },
   components: {
-    Layout
+    Layout,
   },
   data() {
     return {
       headings: [],
       headingOffset: 96,
-      activeIdx: -1
+      activeIdx: -1,
     };
   },
   metaInfo() {
     return {
       title: this.$page.post.title,
+      "og:title": this.$page.post.title,
+      "og:url": `${this.siteUrl}${this.$route.path}`,
+      "twitter:title": this.$page.post.title,
+      "twitter:url": `${this.siteUrl}${this.$route.path}`,
       script: [
         {
           type: "application/ld+json",
@@ -57,7 +61,7 @@ export default {
             "@type": "BlogPosting",
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `${this.siteUrl}${this.$route.path}`
+              "@id": `${this.siteUrl}${this.$route.path}`,
             },
             headline: this.$page.post.title,
             dateModified: new Date(),
@@ -73,18 +77,18 @@ export default {
               name: "@jb_hutch",
               logo: {
                 "@type": "ImageObject",
-                url: `${this.siteUrl}/meta/bufgreencode-logo.png`
-              }
+                url: `${this.siteUrl}/meta/bufgreencode-logo.png`,
+              },
             },
             author: {
               "@type": "Person",
-              name: "@jb_hutch"
+              name: "@jb_hutch",
             },
             isFamilyFriendly: "true",
-            "@context": "https://schema.org"
-          }
-        }
-      ]
+            "@context": "https://schema.org",
+          },
+        },
+      ],
     };
   },
   methods: {
@@ -92,7 +96,7 @@ export default {
       setTimeout(() => {
         this.headings = [];
         this.headings = [
-          ...document.querySelectorAll("h2, h3, h4, h5, h6")
+          ...document.querySelectorAll("h2, h3, h4, h5, h6"),
         ].reverse();
         let self = this;
         window.addEventListener("scroll", function() {
@@ -106,7 +110,7 @@ export default {
       var active =
         headings.length -
         headings.findIndex(
-          heading => window.scrollY >= heading.offsetTop - this.headingOffset
+          (heading) => window.scrollY >= heading.offsetTop - this.headingOffset
         ) -
         1;
       this.activeIdx = active < headings.length ? active : -1;
@@ -119,7 +123,7 @@ export default {
       return document.childNodes[0].childNodes[1].childNodes.length
         ? document.childNodes[0].childNodes[1].childNodes[0].value
         : "";
-    }
+    },
   },
   mounted() {
     let self = this;
@@ -132,6 +136,6 @@ export default {
   },
   updated() {
     this.initScrollSpy();
-  }
+  },
 };
 </script>
