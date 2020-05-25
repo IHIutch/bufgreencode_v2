@@ -1,6 +1,6 @@
 <template>
   <div class="m-auto w-1/2">
-    <header class="flex justify-between mb-5 h-20 items-center">
+    <nav class="flex justify-between mb-5 h-20 items-center">
       <strong>
         <g-link class="py-1" to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
@@ -8,30 +8,13 @@
         <g-link class="py-1 pr-4" to="/">Home</g-link>
         <g-link class="py-1 pl-4" to="/about">About</g-link>
       </nav>
-    </header>
+    </nav>
     <slot />
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 export default {
-  name: "DefaultLayout"
+  name: "DefaultLayout",
 };
 </script>
-<style lang="scss" scoped>
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-</style>
