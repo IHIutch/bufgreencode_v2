@@ -151,12 +151,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | o Forecourt |
-   | x Awning  | o Plaza     |
-   | x Balcony | x Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | 🚫 Forecourt |
+   | ✅ Awning  | 🚫 Plaza     |
+   | ✅ Balcony | ✅ Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -289,12 +289,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | o Forecourt |
-   | x Awning  | o Plaza     |
-   | x Balcony | x Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | 🚫 Forecourt |
+   | ✅ Awning  | 🚫 Plaza     |
+   | ✅ Balcony | ✅ Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -425,12 +425,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | x Arcade  | x Forecourt |
-   | x Awning  | x Plaza     |
-   | x Balcony | x Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | ✅ Arcade  | ✅ Forecourt |
+   | ✅ Awning  | ✅ Plaza     |
+   | ✅ Balcony | ✅ Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -564,12 +564,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |                      |
-   | --------- | -------------------- |
-   | x Arcade  | x Forecourt          |
-   | x Awning  | x Plaza <sup>1</sup> |
-   | x Balcony | o Porch              |
-   | x Canopy  | o Stoop              |
+   |            |                       |
+   | ---------- | --------------------- |
+   | ✅ Arcade  | ✅ Forecourt          |
+   | ✅ Awning  | ✅ Plaza <sup>1</sup> |
+   | ✅ Balcony | 🚫 Porch              |
+   | ✅ Canopy  | 🚫 Stoop              |
 
    </TableSmall>
 
@@ -713,12 +713,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | o Forecourt |
-   | x Awning  | o Plaza     |
-   | x Balcony | x Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | 🚫 Forecourt |
+   | ✅ Awning  | 🚫 Plaza     |
+   | ✅ Balcony | ✅ Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -845,12 +845,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | x Forecourt |
-   | x Awning  | x Plaza     |
-   | o Balcony | o Porch     |
-   | x Canopy  | o Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | ✅ Forecourt |
+   | ✅ Awning  | ✅ Plaza     |
+   | 🚫 Balcony | 🚫 Porch     |
+   | ✅ Canopy  | 🚫 Stoop     |
 
    </TableSmall>
 
@@ -957,12 +957,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | x Forecourt |
-   | x Awning  | x Plaza     |
-   | x Balcony | o Porch     |
-   | x Canopy  | o Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | ✅ Forecourt |
+   | ✅ Awning  | ✅ Plaza     |
+   | ✅ Balcony | 🚫 Porch     |
+   | ✅ Canopy  | 🚫 Stoop     |
 
    </TableSmall>
 
@@ -1072,12 +1072,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | x Forecourt |
-   | x Awning  | o Plaza     |
-   | o Balcony | o Porch     |
-   | x Canopy  | o Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | ✅ Forecourt |
+   | ✅ Awning  | 🚫 Plaza     |
+   | 🚫 Balcony | 🚫 Porch     |
+   | ✅ Canopy  | 🚫 Stoop     |
 
    </TableSmall>
 
@@ -1202,12 +1202,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | o Forecourt |
-   | x Awning  | o Plaza     |
-   | x Balcony | o Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | 🚫 Forecourt |
+   | ✅ Awning  | 🚫 Plaza     |
+   | ✅ Balcony | 🚫 Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -1337,12 +1337,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | o Arcade  | x Forecourt |
-   | x Awning  | x Plaza     |
-   | x Balcony | x Porch     |
-   | x Canopy  | x Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | 🚫 Arcade  | ✅ Forecourt |
+   | ✅ Awning  | ✅ Plaza     |
+   | ✅ Balcony | ✅ Porch     |
+   | ✅ Canopy  | ✅ Stoop     |
 
    </TableSmall>
 
@@ -1504,12 +1504,12 @@ All principal buildings in the neighborhood zones must comply with the standards
 
    <TableSmall>
 
-   |           |             |
-   | --------- | ----------- |
-   | x Arcade  | x Forecourt |
-   | x Awning  | x Plaza     |
-   | x Balcony | o Porch     |
-   | x Canopy  | o Stoop     |
+   |            |              |
+   | ---------- | ------------ |
+   | ✅ Arcade  | ✅ Forecourt |
+   | ✅ Awning  | ✅ Plaza     |
+   | ✅ Balcony | 🚫 Porch     |
+   | ✅ Canopy  | 🚫 Stoop     |
 
    </TableSmall>
 
