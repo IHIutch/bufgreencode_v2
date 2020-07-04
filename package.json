@@ -21,7 +21,7 @@
     "@gridsome/vue-remark": "^0.1.10",
     "autoprefixer": "^9.8.4",
     "gridsome-plugin-gtm": "^0.1.1",
-    "gridsome-plugin-pwa": "0.0.10",
+    "gridsome-plugin-pwa": "0.0.18",
     "minipass": "3.1.1",
     "node-sass": "^4.14.1",
     "parse5": "^5.1.1",
