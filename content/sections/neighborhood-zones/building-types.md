@@ -117,19 +117,19 @@ All principal buildings in the neighborhood zones must comply with the standards
 
 <TableResponsive>
 
-|                  | N-1D | N-1C | N-1S | N-2C | N-2E | N-2R | N-3C           | N-3E           | N-3R | N-4-30 | N-4-50 | Definitions/Standards |
-| ---------------- | ---- | ---- | ---- | ---- | ---- | ---- | -------------- | -------------- | ---- | ------ | ------ | --------------------- |
-| Attached House   |      | 4    | 4    |      | 4    | 4    |                | 4              | 4    |        |        | Section 3.2.2         |
-| Carriage House   |      | 4    |      | 4    | 4    | 4    | 4              | 4              | 4    |        |        | Section 3.2.3         |
-| Civic Building   | 4    | 4    | 4    | 4    | 4    | 4    | 4              | 4              | 4    | 4      | 4      | Section 3.2.4         |
-| Commercial Block | 4    | 4    |      | 4    | 4    |      | 4              | 4              |      |        |        | Section 3.2.5         |
-| Detached House   |      |      |      |      | 4    | 4    |                | 4              | 4    | 4      | 4      | Section 3.2.6         |
-| Flex Building    |      |      | 4    |      |      |      |                |                |      |        |        | Section 3.2.7         |
-| Loft Building    |      |      | 4    |      |      |      |                |                |      |        |        | Section 3.2.8         |
-| Shopfront        |      |      |      |      |      |      | 4 <sup>1</sup> | 4 <sup>1</sup> |      |        |        | Section 3.2.9         |
-| Shopfront House  |      |      |      | 4    | 4    |      | 4              | 4              |      |        |        | Section 3.2.10        |
-| Stacked Units    | 4    | 4    |      |      | 4    | 4    |                | 4              | 4    |        |        | Section 3.2.11        |
-| Tower            | 4    |      |      |      |      |      |                |                |      |        |        | Section 3.2.12        |
+|                  | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C                 | N-3E                 | N-3R    | N-4-30  | N-4-50  | Definitions/Standards |
+| ---------------- | ------- | ------- | ------- | ------- | ------- | ------- | -------------------- | -------------------- | ------- | ------- | ------- | --------------------- |
+| Attached House   |         | &#9679; | &#9679; |         | &#9679; | &#9679; |                      | &#9679;              | &#9679; |         |         | Section 3.2.2         |
+| Carriage House   |         | &#9679; |         | &#9679; | &#9679; | &#9679; | &#9679;              | &#9679;              | &#9679; |         |         | Section 3.2.3         |
+| Civic Building   | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679;              | &#9679;              | &#9679; | &#9679; | &#9679; | Section 3.2.4         |
+| Commercial Block | &#9679; | &#9679; |         | &#9679; | &#9679; |         | &#9679;              | &#9679;              |         |         |         | Section 3.2.5         |
+| Detached House   |         |         |         |         | &#9679; | &#9679; |                      | &#9679;              | &#9679; | &#9679; | &#9679; | Section 3.2.6         |
+| Flex Building    |         |         | &#9679; |         |         |         |                      |                      |         |         |         | Section 3.2.7         |
+| Loft Building    |         |         | &#9679; |         |         |         |                      |                      |         |         |         | Section 3.2.8         |
+| Shopfront        |         |         |         |         |         |         | &#9679; <sup>1</sup> | &#9679; <sup>1</sup> |         |         |         | Section 3.2.9         |
+| Shopfront House  |         |         |         | &#9679; | &#9679; |         | &#9679;              | &#9679;              |         |         |         | Section 3.2.10        |
+| Stacked Units    | &#9679; | &#9679; |         |         | &#9679; | &#9679; |                      | &#9679;              | &#9679; |         |         | Section 3.2.11        |
+| Tower            | &#9679; |         |         |         |         |         |                      |                      |         |         |         | Section 3.2.12        |
 
 </TableResponsive>
 

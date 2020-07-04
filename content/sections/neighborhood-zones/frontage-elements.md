@@ -18,16 +18,16 @@ import FigureImg from '~/components/FigureImg.vue'
 
 <TableResponsive>
 
-|           | Attached House | Carriage House | Civic Building | Commercial Block | Detached House | Flex Building | Loft Building | Shopfront | Shopfront House | Stacked Units | Tower | Standards     |
-| --------- | -------------- | -------------- | -------------- | ---------------- | -------------- | ------------- | ------------- | --------- | --------------- | ------------- | ----- | ------------- |
-| Arcade    |                |                | 4              | 4                |                |               |               |           |                 |               | 4     | Section 3.3.2 |
-| Awning    | 4              | 4              | 4              | 4                | 4              | 4             | 4             | 4         | 4               | 4             | 4     | Section 3.3.3 |
-| Balcony   | 4              | 4              | 4              | 4                | 4              |               | 4             |           | 4               | 4             | 4     | Section 3.3.4 |
-| Canopy    | 4              | 4              | 4              | 4                | 4              | 4             | 4             | 4         | 4               | 4             | 4     | Section 3.3.5 |
-| Forecourt |                |                | 4              | 4                |                | 4             | 4             | 4         |                 | 4             | 4     | Section 3.3.6 |
-| Plaza     |                |                | 2              | 2                |                | 2             | 2             |           |                 | 2             | 2     | Section 3.3.7 |
-| Porch     | 4              | 4              | 4              |                  | 4              |               |               |           |                 |               | 4     | Section 3.3.8 |
-| Stoop     | 4              | 4              | 4              |                  | 4              |               |               |           |                 | 4             | 4     | Section 3.3.9 |
+|           | Attached House | Carriage House | Civic Building | Commercial Block | Detached House | Flex Building | Loft Building | Shopfront | Shopfront House | Stacked Units | Tower   | Standards     |
+| --------- | -------------- | -------------- | -------------- | ---------------- | -------------- | ------------- | ------------- | --------- | --------------- | ------------- | ------- | ------------- |
+| Arcade    |                |                | &#9679;        | &#9679;          |                |               |               |           |                 |               | &#9679; | Section 3.3.2 |
+| Awning    | &#9679;        | &#9679;        | &#9679;        | &#9679;          | &#9679;        | &#9679;       | &#9679;       | &#9679;   | &#9679;         | &#9679;       | &#9679; | Section 3.3.3 |
+| Balcony   | &#9679;        | &#9679;        | &#9679;        | &#9679;          | &#9679;        |               | &#9679;       |           | &#9679;         | &#9679;       | &#9679; | Section 3.3.4 |
+| Canopy    | &#9679;        | &#9679;        | &#9679;        | &#9679;          | &#9679;        | &#9679;       | &#9679;       | &#9679;   | &#9679;         | &#9679;       | &#9679; | Section 3.3.5 |
+| Forecourt |                |                | &#9679;        | &#9679;          |                | &#9679;       | &#9679;       | &#9679;   |                 | &#9679;       | &#9679; | Section 3.3.6 |
+| Plaza     |                |                | 2              | 2                |                | 2             | 2             |           |                 | 2             | 2       | Section 3.3.7 |
+| Porch     | &#9679;        | &#9679;        | &#9679;        |                  | &#9679;        |               |               |           |                 |               | &#9679; | Section 3.3.8 |
+| Stoop     | &#9679;        | &#9679;        | &#9679;        |                  | &#9679;        |               |               |           |                 | &#9679;       | &#9679; | Section 3.3.9 |
 
 </TableResponsive>
 
