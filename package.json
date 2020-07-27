@@ -24,7 +24,7 @@
     "gridsome-plugin-pwa": "0.0.10",
     "minipass": "3.1.1",
     "node-sass": "^4.14.1",
-    "parse5": "^5.1.1",
+    "parse5": "^6.0.1",
     "postcss": "^7.0.32",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
