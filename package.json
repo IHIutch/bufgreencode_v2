@@ -7,7 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "algoliasearch": "^3.35.1",
+    "algoliasearch": "^4.9.1",
     "gridsome": "^0.7.18",
     "vue-feather-icons": "^5.0.0",
     "vue-instantsearch": "^2.7.1",
