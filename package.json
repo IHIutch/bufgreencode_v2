@@ -19,7 +19,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/vue-remark": "^0.1.10",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^9.8.6",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.10",
     "minipass": "3.1.1",
