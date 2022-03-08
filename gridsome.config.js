@@ -36,6 +36,14 @@ module.exports = {
       use: "@gridsome/plugin-sitemap",
     },
     {
+      use: "gridsome-plugin-fathom",
+      options: {
+        siteId: "HWWXLVYL",
+        host: "phenomenal-bright.bufgreencode.com",
+        debug: false,
+      },
+    },
+    {
       use: "gridsome-plugin-gtm",
       options: {
         id: "GTM-KNPMJGD",
