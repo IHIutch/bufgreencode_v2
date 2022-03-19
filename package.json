@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "algoliasearch": "^3.35.1",
-    "gridsome": "^0.7.18",
-    "vue-feather-icons": "^5.0.0",
+    "gridsome": "^0.7.23",
+    "vue-feather-icons": "^5.1.0",
     "vue-instantsearch": "^2.7.1",
     "vue-lottie": "^0.2.1"
   },
@@ -19,17 +19,17 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/vue-remark": "^0.1.10",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^9.8.8",
     "gridsome-plugin-gtm": "^0.1.1",
     "gridsome-plugin-pwa": "0.0.10",
     "minipass": "3.1.1",
     "node-sass": "^4.14.1",
     "parse5": "^5.1.1",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.39",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.2",
     "sharp": "^0.25.4",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.9.6"
   }
 }
