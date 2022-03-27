@@ -30,7 +30,7 @@ export default function SidebarLayout({ headings, children }) {
         <div className="pt-20 w-full md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto">
           <div className="flex" key={route.pathname}>
             <div className="my-12 w-full lg:pr-16 lg:w-3/4">
-              <main className="w-full prose">{children}</main>
+              <main className="w-full">{children}</main>
             </div>
             {headings && headings.length > 0 ? (
               <aside className="hidden lg:block lg:w-1/4">
@@ -47,7 +47,10 @@ export default function SidebarLayout({ headings, children }) {
                           key={idx}
                           className="text-sm font-medium text-gray-700 hover:text-gray-900"
                         >
-                          <a href={`#${heading.anchor}`} className="py-1 pl-0 block">
+                          <a
+                            href={`#${heading.anchor}`}
+                            className="py-1 pl-0 block"
+                          >
                             <span
                             // className={`block border-l-2 transition-fast ${
                             //   localActiveIdx == index

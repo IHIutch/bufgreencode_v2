@@ -10,8 +10,13 @@ export default function Post() {
 
   return (
     <SidebarLayout headings={headings}>
-      <h1>{frontmatter.title}</h1>
-      <Component />
+      <h1 className="text-5xl mb-2 leading-tight">{frontmatter.title}</h1>
+      {frontmatter.lead ? (
+        <p className="text-gray-700 font-medium">{frontmatter.lead}</p>
+      ) : null}
+      <div className="page-content">
+        <Component />
+      </div>
     </SidebarLayout>
   )
 }
