@@ -11,12 +11,12 @@ export default function NavbarComponent() {
             <div className="flex items-center h-full">
               <Link to="/" className="block lg:mr-4 h-full">
                 <img
-                  src="meta/bufgreencode-icon.svg"
+                  src="/meta/bufgreencode-icon.svg"
                   alt="Buffalo Green Code"
                   className="h-full w-auto py-1 md:hidden"
                 />
                 <img
-                  src="meta/bufgreencode-logo.svg"
+                  src="/meta/bufgreencode-logo.svg"
                   alt="Buffalo Green Code"
                   className="h-full w-auto py-1 hidden md:block"
                 />

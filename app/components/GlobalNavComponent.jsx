@@ -1,4 +1,4 @@
-import { Link, NavLink, useLoaderData } from "remix";
+import { NavLink, useLoaderData } from "remix";
 import groupBy from "lodash/groupBy";
 
 export default function GlobalNavComponent() {
