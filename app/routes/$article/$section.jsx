@@ -1,0 +1,31 @@
+import { json, useLoaderData } from "remix";
+import { getArticle, getArticles } from "~/models/articles.server"
+import {getMDXComponent} from 'mdx-bundler/client'
+import { useMemo } from "react";
+import SidebarLayout from "~/layouts/SidebarLayout";
+
+export default function Post() {
+  const { content: {code, frontmatter, slug, headings} } = useLoaderData();
+  const Component = useMemo(() => getMDXComponent(code), [code])
+
+  return (
+    <SidebarLayout headings={headings}>
+      <h1>{frontmatter.title}</h1>
+      <Component />
+    </SidebarLayout>
+  )
+}
+
+export const loader = async ({ params }) => { 
+  const {article, section} = params;
+  const content = await getArticle({ article, section })
+  const articles =  await getArticles()
+
+  if (!content || !articles) {
+    throw new Response("Not Found", {
+      status: 404,
+    });
+  }
+
+  return json({ content, articles });
+} 

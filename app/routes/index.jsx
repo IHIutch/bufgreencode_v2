@@ -1,32 +1,33 @@
+import { json } from "remix";
+import SidebarLayout from "~/layouts/SidebarLayout";
+import { getArticles } from "~/models/articles.server";
+
+export async function loader () {
+  return json({
+    articles: await getArticles(),
+  });
+};
+
+
 export default function Index() {
+  
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
-    </div>
+    <SidebarLayout>
+      <h1 className="text-4xl mb-6 font-medium">Welcome</h1>
+      <p className="text-xl font-light mb-4">
+        The Buffalo Green Code Unified Development Ordinance Becomes Effective
+        Citywide.
+      </p>
+      <p>
+        With the Unified Development Ordinance now effective citywide, April 3,
+        2017 marks the culmination of a nearly seven-year effort that involved
+        thousands of community members in neighborhoods throughout our city.
+        Since Mayor Byron W. Brown initially announced the Buffalo Green Code,
+        on Earth Day of 2010, the effort has been a community-driven process
+        aimed at ensuring the Green Code reflects the values of our residents.
+        Thank you to all of you who have dedicated so much of your time and
+        passion during this historic initiative!
+      </p>
+    </SidebarLayout>
   );
 }
