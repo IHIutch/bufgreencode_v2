@@ -6,7 +6,7 @@ module.exports = {
   server: process.env.NODE_ENV === "development" ? undefined : "./server.js",
   ignoredRouteFiles: [".*"],
   // appDirectory: "app",
-  assetsBuildDirectory: "dist", // This is temporary until we are ready to use default settings on vercel
+  // assetsBuildDirectory: "public/build",
   // serverBuildPath: "api/index.js",
   // publicPath: "/build/",
   serverDependenciesToBundle: [

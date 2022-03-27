@@ -1,6 +1,5 @@
 {
-  "name": "remix-template-vercel",
-  "private": false,
+  "name": "bufgreencode_v3",
   "description": "",
   "scripts": {
     "build": "npm run build:css && remix build",
