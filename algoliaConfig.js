@@ -1,4 +1,4 @@
-[
+;[
   {
     query: `{
       allPost {
@@ -15,16 +15,16 @@
     }`,
     transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
     indexName: process.env.ALGOLIA_INDEX,
-    itemFormatter: item => {
+    itemFormatter: (item) => {
       return {
         objectID: item.id,
         title: item.title,
         slug: item.slug,
         path: item.path,
         content: item.content,
-        type: "document"
-      };
+        type: 'document',
+      }
     },
-    matchFields: ["slug"] // Array<String> required with PartialUpdates
-  }
-];
+    matchFields: ['slug'], // Array<String> required with PartialUpdates
+  },
+]

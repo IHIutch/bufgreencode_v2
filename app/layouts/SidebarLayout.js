@@ -1,11 +1,11 @@
-import { useMatches } from "remix";
-import NavbarComponent from "~/components/NavbarComponent";
-import SidebarComponent from "~/components/SidebarComponent";
-import SubnavComponent from "~/components/SubnavComponent";
+import { useMatches } from 'remix'
+import NavbarComponent from '~/components/NavbarComponent'
+import SidebarComponent from '~/components/SidebarComponent'
+import SubnavComponent from '~/components/SubnavComponent'
 
 export default function SidebarLayout({ headings, children }) {
-  const matches = useMatches();
-  const route = matches[1];
+  const matches = useMatches()
+  const route = matches[1]
 
   return (
     <div className="antialiased">
@@ -72,5 +72,5 @@ export default function SidebarLayout({ headings, children }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

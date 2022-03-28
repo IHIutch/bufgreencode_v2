@@ -1,5 +1,5 @@
-import { Link } from "remix";
-import metadata from "~/data/metadata.json";
+import { Link } from 'remix'
+import metadata from '~/data/metadata.json'
 
 export default function DefaultLayout({ children }) {
   return (
@@ -21,5 +21,5 @@ export default function DefaultLayout({ children }) {
       </nav>
       {children}
     </div>
-  );
+  )
 }

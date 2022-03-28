@@ -1,6 +1,5 @@
-import React from "react";
-import { Link } from "remix";
-import NewSearch from "./NewSearch";
+import { Link } from 'remix'
+import SearchComponent from './SearchComponent'
 
 export default function NavbarComponent() {
   return (
@@ -24,8 +23,8 @@ export default function NavbarComponent() {
             </div>
           </div>
           <div className="md:block flex-grow md:px-4 h-full pl-4 md:pr-2">
-            <div className="py-2 h-full">
-              <NewSearch />
+            <div className="py-2 h-full w-full flex items-center">
+              {typeof document !== 'undefined' && <SearchComponent />}
             </div>
           </div>
           <div className="px-6 h-full hidden md:flex items-center justify-end text-sm font-medium flex-shrink-0">
@@ -54,5 +53,5 @@ export default function NavbarComponent() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

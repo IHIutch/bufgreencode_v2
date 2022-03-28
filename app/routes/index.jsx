@@ -1,16 +1,14 @@
-import { json } from "remix";
-import SidebarLayout from "~/layouts/SidebarLayout";
-import { getArticles } from "~/models/articles.server";
+import { json } from 'remix'
+import SidebarLayout from '~/layouts/SidebarLayout'
+import { getArticles } from '~/models/articles.server'
 
-export async function loader () {
+export async function loader() {
   return json({
     articles: await getArticles(),
-  });
-};
-
+  })
+}
 
 export default function Index() {
-  
   return (
     <SidebarLayout>
       <h1 className="text-4xl mb-6 font-medium">Welcome</h1>
@@ -29,5 +27,5 @@ export default function Index() {
         passion during this historic initiative!
       </p>
     </SidebarLayout>
-  );
+  )
 }

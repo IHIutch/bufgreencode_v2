@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "remix";
-import GlobalNavComponent from "./GlobalNavComponent";
+import React from 'react'
+import { Link } from 'remix'
+import GlobalNavComponent from './GlobalNavComponent'
 
 export default function SubnavComponent() {
   return (
@@ -75,5 +75,5 @@ export default function SubnavComponent() {
         </div>
       </nav>
     </div>
-  );
+  )
 }
