@@ -1,4 +1,5 @@
-import { useMatches } from 'remix'
+import clsx from 'clsx'
+import { useMatches, useTransition } from 'remix'
 import NavbarComponent from '~/components/NavbarComponent'
 import SidebarComponent from '~/components/SidebarComponent'
 import SubnavComponent from '~/components/SubnavComponent'
@@ -6,6 +7,8 @@ import SubnavComponent from '~/components/SubnavComponent'
 export default function SidebarLayout({ headings, children }) {
   const matches = useMatches()
   const route = matches[1]
+  const transition = useTransition()
+  const isLoading = transition.state === 'loading'
 
   return (
     <div className="antialiased">
@@ -23,17 +26,23 @@ export default function SidebarLayout({ headings, children }) {
           />
         </div> */}
       </div>
-      <div className="flex">
-        <div className="hidden md:block md:w-1/4 lg:w-1/6 fixed top-0 h-full pt-16 flex-shrink-0">
+      <div className="flex max-w-screen-2xl mx-auto">
+        <div className="hidden md:block md:w-1/4 xl:w-1/5 2xl:w-1/6 fixed top-0 h-full pt-16 flex-shrink-0">
           <SidebarComponent />
         </div>
-        <div className="pt-20 w-full md:pt-16 px-6 md:px-8 lg:pl-16 lg:pr-0 md:w-3/4 lg:w-5/6 md:ml-auto">
-          <div className="flex" key={route.pathname}>
-            <div className="my-12 w-full lg:pr-16 lg:w-3/4">
+        <div className="pt-20 w-full md:pt-16 px-6 md:px-8 md:ml-1/4 xl:ml-1/5 2xl:ml-1/6">
+          <div
+            className={clsx(
+              'flex',
+              'transition-all duration-200 position-absolute w-full',
+              isLoading ? 'opacity-0' : 'opacity-100'
+            )}
+          >
+            <div className="my-12 w-full">
               <main className="w-full">{children}</main>
             </div>
             {headings && headings.length > 0 ? (
-              <aside className="hidden lg:block lg:w-1/4">
+              <aside className="hidden xl:block lg:w-1/4">
                 <div className="sticky h-screen overflow-y-auto top-0 pt-16">
                   <div className="mt-8 pb-8">
                     <div className="mb-2">

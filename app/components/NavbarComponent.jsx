@@ -4,7 +4,7 @@ import SearchComponent from './SearchComponent'
 export default function NavbarComponent() {
   return (
     <nav className="flex bg-white border-b border-gray-200 h-16 inset-x-0 flex-shrink-0">
-      <div className="w-full xl:max-w-screen relative mx-auto px-6">
+      <div className="max-w-screen-2xl w-full relative mx-auto px-6">
         <div className="flex items-center -mx-6 h-full px-6">
           <div className="md:w-1/4 lg:w-1/6 pr-4 md:pr-6 lg:pr-8 h-full flex-shrink-0">
             <div className="flex items-center h-full">

@@ -27,6 +27,16 @@ export default function SearchComponent() {
           apiKey="4f17115df3fa81ec5deb4173a60a749a"
           onClose={onClose}
           placeholder="Search the docs..."
+          transformItems={(items) =>
+            items
+              .filter((i) => {
+                return i.type !== 'lvl0'
+              })
+              .map((i) => {
+                console.log(i)
+                return { ...i, url: i.url.replace('/docs/', '/') }
+              })
+          }
         />
       )}
     </div>

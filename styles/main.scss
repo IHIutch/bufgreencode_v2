@@ -5,3 +5,24 @@
 .DocSearch.DocSearch-Button{
     @apply w-full
 }
+
+@keyframes open {
+  0% { height: 0 }
+  100% { height: var(--radix-accordion-content-height) }
+};
+
+@keyframes close {
+  0% { height: var(--radix-accordion-content-height) }
+  100% { height: 0 }
+};
+
+
+.rdx-collapsible {
+    @apply overflow-hidden;
+    &[data-state="open"]{ 
+        animation: open 200ms ease-out forwards 
+    }
+    &[data-state="closed"]{ 
+        animation: close 200ms ease-out forwards 
+    }
+}

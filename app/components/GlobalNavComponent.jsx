@@ -1,8 +1,12 @@
 import { NavLink, useLoaderData } from 'remix'
 import groupBy from 'lodash/groupBy'
+import * as Accordion from '@radix-ui/react-accordion'
+import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
+  const [activeIdx, setActiveIdx] = useState([])
 
   const articleData = articles
     .map((a) => ({
@@ -22,40 +26,66 @@ export default function GlobalNavComponent() {
   const groupedArticles = groupBy(articleData, 'article')
 
   return (
-    <ul className="text-sm">
-      {Object.keys(groupedArticles).map((article, idx) => (
-        <li key={idx} className="px-4">
-          <div
-            // to={groupedArticles[article][0].slug}
-            className="text-gray-700 hover:text-gray-900 px-2 py-1 block"
+    <Accordion.Root asChild type="multiple" onValueChange={setActiveIdx}>
+      <ul className="text-sm">
+        {Object.keys(groupedArticles).map((article, idx) => (
+          <Accordion.Item
+            asChild
+            key={idx}
+            value={`content-${idx}`}
+            className={`px-4 duration-200 ${
+              activeIdx.includes(`content-${idx}`) ? 'bg-gray-100' : ''
+            }`}
           >
-            <span>
-              {groupedArticles[article][0].article_number}. {article}
-            </span>
-          </div>
-          <ul className="pl-2">
-            {groupedArticles[article].map((section, sIdx) => (
-              <li key={sIdx}>
-                <NavLink
-                  to={`/${section.slug}`}
-                  className="text-gray-700 hover:text-gray-900 max-w-full block truncate px-2 py-1"
-                >
-                  {({ isActive }) => (
-                    <span
-                      className={`truncate ${
-                        isActive ? 'text-gray-900 font-medium' : ''
-                      }`}
-                    >
-                      {section.article_number}.{section.section_number}{' '}
-                      {section.title}
+            <li>
+              <Accordion.Trigger className="w-full text-left">
+                <div className="flex items-center w-full text-gray-700 hover:text-gray-900">
+                  <div className="grow px-2 py-1">
+                    <span>
+                      {groupedArticles[article][0].article_number}. {article}
                     </span>
-                  )}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </li>
-      ))}
-    </ul>
+                  </div>
+                  <div>
+                    <div
+                      className={`duration-200
+                        ${
+                          activeIdx.includes(`content-${idx}`)
+                            ? 'rotate-180'
+                            : 'rotate-0'
+                        }`}
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </div>
+                  </div>
+                </div>
+              </Accordion.Trigger>
+              <Accordion.Content className="rdx-collapsible">
+                <ul className="pl-2">
+                  {groupedArticles[article].map((section, sIdx) => (
+                    <li key={sIdx}>
+                      <NavLink
+                        to={`/${section.slug}`}
+                        className="text-gray-700 hover:text-gray-900 max-w-full block truncate px-2 py-1"
+                      >
+                        {({ isActive }) => (
+                          <span
+                            className={`truncate ${
+                              isActive ? 'text-gray-900 font-medium' : ''
+                            }`}
+                          >
+                            {section.article_number}.{section.section_number}{' '}
+                            {section.title}
+                          </span>
+                        )}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </Accordion.Content>
+            </li>
+          </Accordion.Item>
+        ))}
+      </ul>
+    </Accordion.Root>
   )
 }
