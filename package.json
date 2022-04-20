@@ -3,7 +3,7 @@
   "description": "",
   "scripts": {
     "build": "npm run build:css && remix build",
-    "build:css": "postcss styles/main.scss -m -o app/styles/main.css",
+    "build:css": "postcss styles/main.scss -o app/styles/main.css -m",
     "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
     "dev:css": "postcss -w styles/main.scss -o app/styles/main.css",
     "postinstall": "remix setup node",
@@ -15,6 +15,7 @@
     "@remix-run/react": "^1.3.2",
     "@remix-run/vercel": "^1.3.2",
     "clsx": "^1.1.1",
+    "cssnano": "^5.1.7",
     "lucide-react": "^0.17.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
