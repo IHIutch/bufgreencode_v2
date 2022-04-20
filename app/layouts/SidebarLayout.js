@@ -3,12 +3,17 @@ import { useMatches, useTransition } from 'remix'
 import NavbarComponent from '~/components/NavbarComponent'
 import SidebarComponent from '~/components/SidebarComponent'
 import SubnavComponent from '~/components/SubnavComponent'
+import { useScrollSpy } from '~/hooks/useScrollSpy'
 
 export default function SidebarLayout({ headings, children }) {
   const matches = useMatches()
   const route = matches[1]
   const transition = useTransition()
   const isLoading = transition.state === 'loading'
+
+  const activeId = useScrollSpy(
+    [...(headings || [])].reverse().map((heading) => `[id="${heading.anchor}"]`)
+  )
 
   return (
     <div className="antialiased">
@@ -61,11 +66,12 @@ export default function SidebarLayout({ headings, children }) {
                             className="py-1 pl-0 block"
                           >
                             <span
-                            // className={`block border-l-2 transition-fast ${
-                            //   localActiveIdx == index
-                            //     ? "text-gray-900 pl-2 border-gray-900"
-                            //     : "pl-0 border-transparent"
-                            // }`}
+                              className={clsx(
+                                'block border-l-2 transition-fast',
+                                activeId === heading.anchor
+                                  ? 'text-gray-900 pl-2 border-gray-900'
+                                  : 'pl-0 border-transparent'
+                              )}
                             >
                               {heading.title}
                             </span>

@@ -3,6 +3,7 @@ import groupBy from 'lodash/groupBy'
 import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import clsx from 'clsx'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
@@ -33,9 +34,10 @@ export default function GlobalNavComponent() {
             asChild
             key={idx}
             value={`content-${idx}`}
-            className={`px-4 duration-200 ${
+            className={clsx(
+              'px-4 duration-200',
               activeIdx.includes(`content-${idx}`) ? 'bg-gray-100' : ''
-            }`}
+            )}
           >
             <li>
               <Accordion.Trigger className="w-full text-left">
@@ -47,12 +49,12 @@ export default function GlobalNavComponent() {
                   </div>
                   <div>
                     <div
-                      className={`duration-200
-                        ${
-                          activeIdx.includes(`content-${idx}`)
-                            ? 'rotate-180'
-                            : 'rotate-0'
-                        }`}
+                      className={clsx(
+                        'duration-200',
+                        activeIdx.includes(`content-${idx}`)
+                          ? 'rotate-180'
+                          : 'rotate-0'
+                      )}
                     >
                       <ChevronDown className="h-4 w-4" />
                     </div>
@@ -60,7 +62,15 @@ export default function GlobalNavComponent() {
                 </div>
               </Accordion.Trigger>
               <Accordion.Content className="rdx-collapsible">
-                <ul className="pl-2">
+                <ul
+                  className={clsx(
+                    'pl-2',
+                    'transition-all duration-200',
+                    activeIdx.includes(`content-${idx}`)
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 -translate-y-4'
+                  )}
+                >
                   {groupedArticles[article].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
@@ -69,9 +79,10 @@ export default function GlobalNavComponent() {
                       >
                         {({ isActive }) => (
                           <span
-                            className={`truncate ${
+                            className={clsx(
+                              'truncate',
                               isActive ? 'text-gray-900 font-medium' : ''
-                            }`}
+                            )}
                           >
                             {section.article_number}.{section.section_number}{' '}
                             {section.title}
