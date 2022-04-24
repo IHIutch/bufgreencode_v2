@@ -114,6 +114,9 @@
             }
         }
     }
+    img {
+        @apply w-full;
+    }
 }
 
 table {
@@ -194,12 +197,4 @@ table {
             left: -2rem;
         }
     }
-}
-
-.transition-fast {
-    transition: all 0.2s ease !important;
-}
-
-.transition-md {
-    transition: all 0.4s ease !important;
 }

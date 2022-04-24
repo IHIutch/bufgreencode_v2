@@ -8,16 +8,16 @@ export default function NavbarComponent() {
         <div className="flex items-center -mx-6 h-full px-6">
           <div className="md:w-1/4 lg:w-1/6 pr-4 md:pr-6 lg:pr-8 h-full flex-shrink-0">
             <div className="flex items-center h-full">
-              <Link to="/" className="block lg:mr-4 h-full">
+              <Link to="/" className="block lg:mr-4 h-full w-full py-2">
                 <img
                   src="/meta/bufgreencode-icon.svg"
                   alt="Buffalo Green Code"
-                  className="h-full w-auto py-1 md:hidden"
+                  className="h-full w-auto md:hidden"
                 />
                 <img
                   src="/meta/bufgreencode-logo.svg"
                   alt="Buffalo Green Code"
-                  className="h-full w-auto py-1 hidden md:block"
+                  className="h-full w-auto hidden md:block"
                 />
               </Link>
             </div>

@@ -12,12 +12,12 @@ export default function Post() {
 
   return (
     <SidebarLayout headings={headings}>
-      <div className="mx-auto">
+      <div className="w-100 max-w-prose mx-auto">
         <h1 className="text-5xl mb-2 leading-tight">{frontmatter.title}</h1>
         {frontmatter.lead ? (
           <p className="text-gray-700 font-medium">{frontmatter.lead}</p>
         ) : null}
-        <div className="page-content">
+        <div className="page-content prose">
           <Component />
         </div>
       </div>

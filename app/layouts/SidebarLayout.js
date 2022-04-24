@@ -49,9 +49,9 @@ export default function SidebarLayout({ headings, children }) {
             {headings && headings.length > 0 ? (
               <aside className="hidden xl:block lg:w-1/4">
                 <div className="sticky h-screen overflow-y-auto top-0 pt-16">
-                  <div className="mt-8 pb-8">
+                  <div className="mt-8 pb-8 pr-4">
                     <div className="mb-2">
-                      <span className="uppercase font-bold text-gray-500 text-sm tracking-wider">
+                      <span className="uppercase font-bold text-gray-500 text-xs tracking-wider">
                         On this Page
                       </span>
                     </div>
@@ -59,22 +59,39 @@ export default function SidebarLayout({ headings, children }) {
                       {headings.map((heading, idx) => (
                         <li
                           key={idx}
-                          className="text-sm font-medium text-gray-700 hover:text-gray-900"
+                          className="text-sm text-gray-600 hover:text-gray-900"
                         >
                           <a
                             href={`#${heading.anchor}`}
-                            className="py-1 pl-0 block"
+                            className="py-1.5 block"
                           >
-                            <span
+                            <div
                               className={clsx(
-                                'block border-l-2 transition-fast',
+                                'border-l-2 transition-all duration-200',
                                 activeId === heading.anchor
-                                  ? 'text-gray-900 pl-2 border-gray-900'
-                                  : 'pl-0 border-transparent'
+                                  ? ' border-green-700'
+                                  : ' border-transparent'
                               )}
                             >
-                              {heading.title}
-                            </span>
+                              <div
+                                className={clsx(
+                                  'transition-all duration-200',
+                                  activeId === heading.anchor
+                                    ? 'translate-x-2'
+                                    : 'translate-x-0'
+                                )}
+                              >
+                                <span
+                                  className={
+                                    activeId === heading.anchor
+                                      ? 'text-green-700'
+                                      : 'text-gray-700'
+                                  }
+                                >
+                                  {heading.title}
+                                </span>
+                              </div>
+                            </div>
                           </a>
                         </li>
                       ))}

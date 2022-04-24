@@ -6,5 +6,5 @@
       "~/*": ["./app/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": [".git", ".cache", ".npm", ".github", "**/node_modules/*"]
 }

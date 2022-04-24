@@ -28,22 +28,14 @@ export default function GlobalNavComponent() {
 
   return (
     <Accordion.Root asChild type="multiple" onValueChange={setActiveIdx}>
-      <ul className="text-sm">
+      <ul className="text-sm px-2 py-1">
         {Object.keys(groupedArticles).map((article, idx) => (
-          <Accordion.Item
-            asChild
-            key={idx}
-            value={`content-${idx}`}
-            className={clsx(
-              'px-4 duration-200',
-              activeIdx.includes(`content-${idx}`) ? 'bg-gray-100' : ''
-            )}
-          >
-            <li>
+          <Accordion.Item asChild key={idx} value={`content-${idx}`}>
+            <li className="pb-1 'px-2'">
               <Accordion.Trigger className="w-full text-left">
-                <div className="flex items-center w-full text-gray-700 hover:text-gray-900">
+                <div className="flex items-center w-full text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
-                    <span>
+                    <span className="font-medium">
                       {groupedArticles[article][0].article_number}. {article}
                     </span>
                   </div>
@@ -61,10 +53,10 @@ export default function GlobalNavComponent() {
                   </div>
                 </div>
               </Accordion.Trigger>
-              <Accordion.Content className="rdx-collapsible">
+              <Accordion.Content className="rdx-collapsible pl-3 py-1">
                 <ul
                   className={clsx(
-                    'pl-2',
+                    'pb-1 border-l border-gray-300',
                     'transition-all duration-200',
                     activeIdx.includes(`content-${idx}`)
                       ? 'opacity-100 translate-y-0'
@@ -74,19 +66,32 @@ export default function GlobalNavComponent() {
                   {groupedArticles[article].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
+                        className={clsx(
+                          'block w-full text-gray-600 hover:text-gray-900 truncate py-1.5',
+                          'transition-all duration-200 -ml-px'
+                        )}
                         to={`/${section.slug}`}
-                        className="text-gray-700 hover:text-gray-900 max-w-full block truncate px-2 py-1"
                       >
                         {({ isActive }) => (
-                          <span
+                          <div
                             className={clsx(
-                              'truncate',
-                              isActive ? 'text-gray-900 font-medium' : ''
+                              'px-2 border-l-2',
+                              'transition-all duration-200',
+                              isActive
+                                ? 'border-green-700'
+                                : 'border-transparent'
                             )}
                           >
-                            {section.article_number}.{section.section_number}{' '}
-                            {section.title}
-                          </span>
+                            <span
+                              className={clsx(
+                                'truncate',
+                                isActive ? 'text-green-700' : ''
+                              )}
+                            >
+                              {section.article_number}.{section.section_number}{' '}
+                              {section.title}
+                            </span>
+                          </div>
                         )}
                       </NavLink>
                     </li>
