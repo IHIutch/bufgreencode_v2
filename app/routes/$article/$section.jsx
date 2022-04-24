@@ -6,7 +6,7 @@ import SidebarLayout from '~/layouts/SidebarLayout'
 
 export default function Post() {
   const {
-    content: { code, frontmatter, slug, headings },
+    content: { code, frontmatter, headings },
   } = useLoaderData()
   const Component = useMemo(() => getMDXComponent(code), [code])
 
@@ -23,6 +23,32 @@ export default function Post() {
       </div>
     </SidebarLayout>
   )
+}
+
+export function meta({ data, location }) {
+  const siteTitle = 'Buffalo Green Code'
+  const pageTitle = data?.content?.frontmatter?.title || ''
+  const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
+
+  const pathname = location?.pathname || null
+  const url = pathname ? `https://bufgreencode.com${pathname}` : null
+
+  return {
+    charset: 'utf-8',
+    viewport: 'width=device-width,initial-scale=1',
+    title,
+    // description: description,
+    'og:type': 'website',
+    'og:title': title,
+    'og:url': url,
+    // 'og:description': description,
+    // 'og:image': image,
+    'twitter:card': 'summary_large_image',
+    'twitter:title': title,
+    'twitter:url': url,
+    // 'twitter:description': description,
+    // 'twitter:image': image,
+  }
 }
 
 export const loader = async ({ params }) => {

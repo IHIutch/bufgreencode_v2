@@ -22,7 +22,7 @@ export function links() {
 export function meta() {
   return {
     charset: 'utf-8',
-    title: 'New Remix App',
+    title: 'Buffalo Green Code',
     viewport: 'width=device-width,initial-scale=1',
   }
 }
