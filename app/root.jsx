@@ -21,7 +21,7 @@ export function links() {
 }
 
 export function meta() {
-  const metaTags = getMetaTags()
+  const metaTags = getMetaTags({})
   return {
     charset: 'utf-8',
     viewport: 'width=device-width,initial-scale=1',

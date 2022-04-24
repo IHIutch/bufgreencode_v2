@@ -1,6 +1,6 @@
 export const getMetaTags = ({
   pageTitle = '',
-  pathname,
+  pathname = '',
   description = 'Buffalo Green Code Unified Development Ordinance',
 }) => {
   const siteUrl = 'https://bufgreencode.com'
