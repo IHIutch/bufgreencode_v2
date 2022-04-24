@@ -37,7 +37,7 @@ export default function SearchComponent() {
                 return i.type !== 'lvl0'
               })
               .map((i) => {
-                console.log(i)
+                // console.log(i)
                 return { ...i, url: i.url.replace('/docs/', '/') }
               })
           }

@@ -3,17 +3,13 @@ import { useMatches, useTransition } from 'remix'
 import NavbarComponent from '~/components/NavbarComponent'
 import SidebarComponent from '~/components/SidebarComponent'
 import SubnavComponent from '~/components/SubnavComponent'
-import { useScrollSpy } from '~/hooks/useScrollSpy'
+import PageToc from '~/components/PageToc'
 
-export default function SidebarLayout({ headings, children }) {
+export default function SidebarLayout({ children }) {
   const matches = useMatches()
   const route = matches[1]
   const transition = useTransition()
   const isLoading = transition.state === 'loading'
-
-  const activeId = useScrollSpy(
-    [...(headings || [])].reverse().map((heading) => `[id="${heading.anchor}"]`)
-  )
 
   return (
     <div className="antialiased">
@@ -43,63 +39,7 @@ export default function SidebarLayout({ headings, children }) {
               isLoading ? 'opacity-0' : 'opacity-100'
             )}
           >
-            <div className="my-12 w-full">
-              <main className="w-full">{children}</main>
-            </div>
-            {headings && headings.length > 0 ? (
-              <aside className="hidden xl:block lg:w-1/4">
-                <div className="sticky h-screen overflow-y-auto top-0 pt-16">
-                  <div className="mt-8 pb-8 pr-4">
-                    <div className="mb-2">
-                      <span className="uppercase font-bold text-gray-500 text-xs tracking-wider">
-                        On this Page
-                      </span>
-                    </div>
-                    <ul>
-                      {headings.map((heading, idx) => (
-                        <li
-                          key={idx}
-                          className="text-sm text-gray-600 hover:text-gray-900"
-                        >
-                          <a
-                            href={`#${heading.anchor}`}
-                            className="py-1.5 block"
-                          >
-                            <div
-                              className={clsx(
-                                'border-l-2 transition-all duration-200',
-                                activeId === heading.anchor
-                                  ? ' border-green-700'
-                                  : ' border-transparent'
-                              )}
-                            >
-                              <div
-                                className={clsx(
-                                  'transition-all duration-200',
-                                  activeId === heading.anchor
-                                    ? 'translate-x-2'
-                                    : 'translate-x-0'
-                                )}
-                              >
-                                <span
-                                  className={
-                                    activeId === heading.anchor
-                                      ? 'text-green-700'
-                                      : 'text-gray-700'
-                                  }
-                                >
-                                  {heading.title}
-                                </span>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </aside>
-            ) : null}
+            <main className="my-12 w-full">{children}</main>
           </div>
         </div>
       </div>

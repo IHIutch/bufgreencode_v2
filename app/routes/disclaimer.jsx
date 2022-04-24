@@ -1,16 +1,6 @@
-import { json } from 'remix'
-import SidebarLayout from '~/layouts/SidebarLayout'
-import { getArticles } from '~/models/articles.server'
-
-export async function loader() {
-  return json({
-    articles: await getArticles(),
-  })
-}
-
 export default function Disclaimer() {
   return (
-    <SidebarLayout>
+    <div>
       <h1 className="text-4xl mb-6 font-medium">Disclaimer</h1>
       <div className="prose">
         <p className="lead">
@@ -44,6 +34,6 @@ export default function Disclaimer() {
           .
         </p>
       </div>
-    </SidebarLayout>
+    </div>
   )
 }

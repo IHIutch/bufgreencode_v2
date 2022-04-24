@@ -1,16 +1,6 @@
-import { json } from 'remix'
-import SidebarLayout from '~/layouts/SidebarLayout'
-import { getArticles } from '~/models/articles.server'
-
-export async function loader() {
-  return json({
-    articles: await getArticles(),
-  })
-}
-
 export default function Index() {
   return (
-    <SidebarLayout>
+    <div>
       <h1 className="text-4xl mb-6 font-medium">Welcome</h1>
       <p className="text-xl font-light mb-4">
         The Buffalo Green Code Unified Development Ordinance Becomes Effective
@@ -26,6 +16,6 @@ export default function Index() {
         Thank you to all of you who have dedicated so much of your time and
         passion during this historic initiative!
       </p>
-    </SidebarLayout>
+    </div>
   )
 }
