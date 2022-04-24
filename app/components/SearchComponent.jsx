@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import { DocSearchModal } from '@docsearch/react'
+import { Search } from 'lucide-react'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +19,10 @@ export default function SearchComponent() {
         className="h-full w-full rounded-lg border bg-gray-100 px-4 py-2 text-left text-gray-500"
         onClick={onOpen}
       >
-        Search the docs...
+        <div className="flex items-center">
+          <Search className="h-4 w-4" />
+          <span className="ml-2">Search the docs...</span>
+        </div>
       </button>
       {isOpen && (
         <DocSearchModal

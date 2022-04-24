@@ -3,6 +3,7 @@ import { getArticle, getArticles } from '~/models/articles.server'
 import { getMDXComponent } from 'mdx-bundler/client'
 import { useMemo } from 'react'
 import SidebarLayout from '~/layouts/SidebarLayout'
+import { getMetaTags } from '~/utils'
 
 export default function Post() {
   const {
@@ -26,29 +27,14 @@ export default function Post() {
 }
 
 export function meta({ data, location }) {
-  const siteTitle = 'Buffalo Green Code'
   const pageTitle = data?.content?.frontmatter?.title || ''
-  const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
+  const pathname = location?.pathname || ''
+  const metaTags = getMetaTags({
+    pageTitle,
+    pathname,
+  })
 
-  const pathname = location?.pathname || null
-  const url = pathname ? `https://bufgreencode.com${pathname}` : null
-
-  return {
-    charset: 'utf-8',
-    viewport: 'width=device-width,initial-scale=1',
-    title,
-    // description: description,
-    'og:type': 'website',
-    'og:title': title,
-    'og:url': url,
-    // 'og:description': description,
-    // 'og:image': image,
-    'twitter:card': 'summary_large_image',
-    'twitter:title': title,
-    'twitter:url': url,
-    // 'twitter:description': description,
-    // 'twitter:image': image,
-  }
+  return { ...metaTags }
 }
 
 export const loader = async ({ params }) => {

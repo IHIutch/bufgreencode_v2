@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from 'remix'
 import styles from '~/styles/main.css'
+import { getMetaTags } from '~/utils'
 
 export function links() {
   return [
@@ -20,10 +21,11 @@ export function links() {
 }
 
 export function meta() {
+  const metaTags = getMetaTags()
   return {
     charset: 'utf-8',
-    title: 'Buffalo Green Code',
     viewport: 'width=device-width,initial-scale=1',
+    ...metaTags,
   }
 }
 
