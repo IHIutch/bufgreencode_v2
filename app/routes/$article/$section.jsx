@@ -13,8 +13,10 @@ export default function Post() {
 
   return (
     <div className="flex">
-      <div className="w-full max-w-prose mx-auto">
-        <h1 className="text-5xl mb-2 leading-tight">{frontmatter.title}</h1>
+      <div className="w-full max-w-prose mx-auto lg:w-3/4">
+        <h1 className="text-5xl mb-2 font-medium leading-tight">
+          {frontmatter.title}
+        </h1>
         {frontmatter.lead ? (
           <p className="text-gray-700 font-medium">{frontmatter.lead}</p>
         ) : null}
