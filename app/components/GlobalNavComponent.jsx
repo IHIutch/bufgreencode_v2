@@ -1,13 +1,16 @@
-import { NavLink, useLoaderData } from 'remix'
+import { NavLink, useLoaderData, useMatches } from 'remix'
 import groupBy from 'lodash/groupBy'
 import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
+import { slug } from 'github-slugger'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
-  const [activeIdx, setActiveIdx] = useState([])
+
+  const matches = useMatches()
+  const currentArticle = matches?.[1]?.params?.article
 
   const articleData = articles
     .map((a) => ({
@@ -25,9 +28,20 @@ export default function GlobalNavComponent() {
     })
 
   const groupedArticles = groupBy(articleData, 'article')
+  const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
+    (article) => slug(article) === currentArticle
+  )
+  const [activeIdx, setActiveIdx] = useState(
+    defaultArticleIdx ? [`content-${defaultArticleIdx}`] : []
+  )
 
   return (
-    <Accordion.Root asChild type="multiple" onValueChange={setActiveIdx}>
+    <Accordion.Root
+      asChild
+      type="multiple"
+      defaultValue={activeIdx}
+      onValueChange={setActiveIdx}
+    >
       <ul className="text-sm px-2 py-1">
         {Object.keys(groupedArticles).map((article, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>

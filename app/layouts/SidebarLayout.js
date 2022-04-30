@@ -1,13 +1,10 @@
 import clsx from 'clsx'
-import { useMatches, useTransition } from 'remix'
+import { useTransition } from 'remix'
 import NavbarComponent from '~/components/NavbarComponent'
 import SidebarComponent from '~/components/SidebarComponent'
 import SubnavComponent from '~/components/SubnavComponent'
-import PageToc from '~/components/PageToc'
 
 export default function SidebarLayout({ children }) {
-  const matches = useMatches()
-  const route = matches[1]
   const transition = useTransition()
   const isLoading = transition.state === 'loading'
 
