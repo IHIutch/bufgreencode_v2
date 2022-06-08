@@ -4,11 +4,11 @@ import GlobalNavComponent from './GlobalNavComponent'
 
 export default function SubnavComponent() {
   return (
-    <div className="flex flex-col bg-gray-200 flex-grow h-full">
+    <div className="flex h-full flex-grow flex-col bg-gray-200">
       <div className="flex justify-between border-b">
-        <div className="flex items-center h-10 flex-grow relative">
+        <div className="relative flex h-10 flex-grow items-center">
           <transition name="fade">
-            <div className="pl-6 absolute truncate w-full" key={menuIsOpen}>
+            <div className="absolute w-full truncate pl-6" key={menuIsOpen}>
               <template v-if="menuIsOpen">
                 <span className="text-xl">Menu</span>
               </template>
@@ -33,7 +33,7 @@ export default function SubnavComponent() {
           <button
             type="button"
             aria-label="Menu Toggle"
-            className="flex px-6 h-full lg:hidden text-gray-700 focus:outline-none focus:text-gray-700"
+            className="flex h-full px-6 text-gray-700 focus:text-gray-700 focus:outline-none lg:hidden"
             onClick={toggleMenu}
           >
             {/* <span className="block h-full w-6">
@@ -58,7 +58,7 @@ export default function SubnavComponent() {
             <GlobalNavComponent className="my-4" />
           </div>
         </div>
-        <div className="flex justify-between border-t px-6 pt-2 mb-4">
+        <div className="mb-4 flex justify-between border-t px-6 pt-2">
           <Link className="p-2 text-gray-700 hover:text-gray-900">About</Link>
           <Link className="p-2 text-gray-700 hover:text-gray-900">
             Disclaimer

@@ -13,12 +13,12 @@ export default function Post() {
 
   return (
     <div className="flex">
-      <div className="w-full max-w-prose mx-auto lg:w-3/4">
-        <h1 className="text-5xl mb-2 font-medium leading-tight">
+      <div className="mx-auto w-full max-w-prose lg:w-3/4">
+        <h1 className="mb-2 text-5xl font-medium leading-tight">
           {frontmatter.title}
         </h1>
         {frontmatter.lead ? (
-          <p className="text-gray-700 font-medium">{frontmatter.lead}</p>
+          <p className="font-medium text-gray-700">{frontmatter.lead}</p>
         ) : null}
         <div className="page-content prose">
           <Component />

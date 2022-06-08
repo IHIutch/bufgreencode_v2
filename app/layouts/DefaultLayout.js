@@ -4,7 +4,7 @@ import metadata from '~/data/metadata.json'
 export default function DefaultLayout({ children }) {
   return (
     <div className="m-auto w-1/2">
-      <nav className="flex justify-between mb-5 h-20 items-center">
+      <nav className="mb-5 flex h-20 items-center justify-between">
         <strong>
           <Link className="py-1" to="/">
             {metadata.siteName}

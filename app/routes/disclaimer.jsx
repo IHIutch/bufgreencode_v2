@@ -1,8 +1,8 @@
 export default function Disclaimer() {
   return (
     <div className="lg:w-3/4">
-      <div className="w-full max-w-prose mx-auto">
-        <h1 className="text-5xl mb-6 font-medium leading-tight">Disclaimer</h1>
+      <div className="mx-auto w-full max-w-prose">
+        <h1 className="mb-6 text-5xl font-medium leading-tight">Disclaimer</h1>
         <div className="prose">
           <p className="lead">
             This site is an unofficial site for the Buffalo Green Code. This is

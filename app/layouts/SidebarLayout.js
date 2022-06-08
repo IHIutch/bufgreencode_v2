@@ -24,15 +24,15 @@ export default function SidebarLayout({ children }) {
           />
         </div> */}
       </div>
-      <div className="flex max-w-screen-2xl mx-auto">
-        <div className="hidden md:block md:w-1/4 xl:w-1/5 2xl:w-1/6 fixed top-0 h-full pt-16 flex-shrink-0">
+      <div className="mx-auto flex max-w-screen-2xl">
+        <div className="fixed top-0 hidden h-full flex-shrink-0 pt-16 md:block md:w-1/4 xl:w-1/5 2xl:w-1/6">
           <SidebarComponent />
         </div>
-        <div className="pt-20 w-full md:pt-16 px-6 md:px-8 md:ml-1/4 xl:ml-1/5 2xl:ml-1/6">
+        <div className="w-full px-6 pt-20 md:ml-1/4 md:px-8 md:pt-16 xl:ml-1/5 2xl:ml-1/6">
           <div
             className={clsx(
               'flex',
-              'transition-all duration-200 position-absolute w-full',
+              'position-absolute w-full transition-all duration-200',
               isLoading ? 'opacity-0' : 'opacity-100'
             )}
           >

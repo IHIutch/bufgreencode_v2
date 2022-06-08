@@ -1,8 +1,8 @@
 export default function Index() {
   return (
     <div className="lg:w-3/4">
-      <div className="w-full max-w-prose mx-auto">
-        <h1 className="text-5xl mb-6 font-medium leading-tight">Welcome</h1>
+      <div className="mx-auto w-full max-w-prose">
+        <h1 className="mb-6 text-5xl font-medium leading-tight">Welcome</h1>
         <div className="prose">
           <p className="lead">
             The Buffalo Green Code Unified Development Ordinance Becomes

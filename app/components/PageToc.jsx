@@ -12,11 +12,11 @@ export default function PageToc() {
   )
 
   return headings && headings.length > 0 ? (
-    <aside className="hidden xl:block lg:w-1/4">
-      <div className="sticky h-screen overflow-y-auto top-0 pt-16">
+    <aside className="hidden lg:w-1/4 xl:block">
+      <div className="sticky top-0 h-screen overflow-y-auto pt-16">
         <div className="mt-8 pb-8 pr-4">
           <div className="mb-2">
-            <span className="uppercase font-bold text-gray-500 text-xs tracking-wider">
+            <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
               On this Page
             </span>
           </div>
@@ -26,7 +26,7 @@ export default function PageToc() {
                 key={idx}
                 className="text-sm text-gray-600 hover:text-gray-900"
               >
-                <a href={`#${heading.anchor}`} className="py-1.5 block">
+                <a href={`#${heading.anchor}`} className="block py-1.5">
                   <div
                     className={clsx(
                       'border-l-2 transition-all duration-200',

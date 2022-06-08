@@ -42,12 +42,12 @@ export default function GlobalNavComponent() {
       defaultValue={activeIdx}
       onValueChange={setActiveIdx}
     >
-      <ul className="text-sm px-2 py-1">
+      <ul className="px-2 py-1 text-sm">
         {Object.keys(groupedArticles).map((article, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>
-            <li className="pb-1 'px-2'">
+            <li className="'px-2' pb-1">
               <Accordion.Trigger className="w-full text-left">
-                <div className="flex items-center w-full text-gray-600 hover:text-gray-900">
+                <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
                     <span className="font-medium">
                       {groupedArticles[article][0].article_number}. {article}
@@ -67,29 +67,29 @@ export default function GlobalNavComponent() {
                   </div>
                 </div>
               </Accordion.Trigger>
-              <Accordion.Content className="rdx-collapsible pl-3 py-1">
+              <Accordion.Content className="rdx-collapsible py-1 pl-3">
                 <ul
                   className={clsx(
-                    'pb-1 border-l border-gray-300',
+                    'border-l border-gray-300 pb-1',
                     'transition-all duration-200',
                     activeIdx.includes(`content-${idx}`)
-                      ? 'opacity-100 translate-y-0'
-                      : 'opacity-0 -translate-y-4'
+                      ? 'translate-y-0 opacity-100'
+                      : '-translate-y-4 opacity-0'
                   )}
                 >
                   {groupedArticles[article].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
                         className={clsx(
-                          'block w-full text-gray-600 hover:text-gray-900 truncate py-1.5',
-                          'transition-all duration-200 -ml-px'
+                          'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
+                          '-ml-px transition-all duration-200'
                         )}
                         to={`/${section.slug}`}
                       >
                         {({ isActive }) => (
                           <div
                             className={clsx(
-                              'px-2 border-l-2',
+                              'border-l-2 px-2',
                               'transition-all duration-200',
                               isActive
                                 ? 'border-green-700'
