@@ -1,91 +1,38 @@
 .page-content {
     h1 {
         @apply text-4xl;
-        @apply font-medium;
-        @apply mb-4;
-        @apply leading-tight;
-
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
     }
 
     h2 {
         @apply text-3xl;
-        @apply font-medium;
-        @apply mb-4;
-        @apply mt-8;
-        @apply leading-tight;
-
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
+        @apply mt-20;
     }
 
     h3 {
         @apply text-2xl;
-        @apply font-medium;
-        @apply mb-4;
-        @apply mt-8;
-        @apply leading-tight;
-
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
+        @apply mt-12;
     }
 
     h4 {
         @apply text-xl;
-        @apply font-medium;
-        @apply mb-4;
         @apply mt-8;
-        @apply leading-tight;
-
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
     }
 
     h5 {
         @apply text-lg;
-        @apply font-medium;
-        @apply mb-4;
         @apply mt-8;
-        @apply leading-tight;
+      }
 
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
-    }
-
-    h6 {
+      h6 {
         @apply text-base;
-        @apply font-medium;
-        @apply mb-4;
-        @apply mt-8;
-        @apply leading-tight;
+      }
 
-        &[id]::before {
-            content: "";
-            @apply block;
-            @apply h-24;
-            @apply -mt-24;
-        }
+      h1, h2, h3, h4, h5, h6 {
+        scroll-margin-top: 6rem;
+        @apply mb-4;
+        @apply mt-20;
+        @apply font-medium;
+        @apply leading-tight;
     }
 
     p {
@@ -120,7 +67,6 @@
 }
 
 table {
-
     th,
     td {
         @apply p-1;
@@ -171,30 +117,4 @@ table {
     @apply text-gray-900;
     @apply border-b-2;
     @apply border-green-700;
-}
-
-.heading-anchor {
-    @apply relative;
-
-    &::before {
-        content: "\00A7";
-        @apply absolute;
-        @apply font-normal;
-        @apply text-green-700;
-        @apply px-2;
-        @apply opacity-50;
-        left: -2rem;
-    }
-
-    &:hover {
-        &::before {
-            content: "\00A7";
-            @apply absolute;
-            @apply font-normal;
-            @apply text-green-700;
-            @apply px-2;
-            @apply opacity-100;
-            left: -2rem;
-        }
-    }
 }

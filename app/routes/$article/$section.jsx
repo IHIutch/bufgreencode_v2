@@ -54,11 +54,11 @@ const Heading = ({ id, level, children }) => {
         <Tooltip.Trigger asChild>
           <button
             type="button"
-            className="flex items-center font-bold text-green-600 underline"
+            className="flex items-center font-semibold text-green-600 underline transition-colors hover:text-green-700"
             onClick={copyLinkToClipboard}
           >
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-            <Link className="h-5" />
+            <Link className="h-4 w-4" />
             <div>
               <span className="ml-2">Copy Section Link</span>
             </div>
