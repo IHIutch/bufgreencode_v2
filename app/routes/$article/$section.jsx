@@ -22,7 +22,7 @@ export default function Post() {
           {Markdoc.renderers.react(content, React)}
         </div>
       </div>
-      {/* <PageToc /> */}
+      <PageToc />
     </div>
   )
 }

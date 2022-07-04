@@ -40,7 +40,22 @@ export const loader = async () => {
     })
   }
 
-  return json({ articles })
+  const mappedArticles = articles
+    .map((a) => ({
+      article: a.frontmatter.article,
+      title: a.frontmatter.title,
+      article_number: a.frontmatter.article_number,
+      section_number: a.frontmatter.section_number,
+      slug: a.slug,
+    }))
+    .sort((a, b) => {
+      return a.article_number - b.article_number
+    })
+    .sort((a, b) => {
+      return a.section_number - b.section_number
+    })
+
+  return json({ articles: mappedArticles })
 }
 
 export default function App() {

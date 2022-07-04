@@ -3,12 +3,10 @@ import clsx from 'clsx'
 import { useScrollSpy } from '~/hooks/useScrollSpy'
 
 export default function PageToc() {
-  const {
-    content: { headings },
-  } = useLoaderData()
+  const { headings } = useLoaderData()
 
   const activeId = useScrollSpy(
-    [...(headings || [])].reverse().map((heading) => `[id="${heading.anchor}"]`)
+    [...(headings || [])].reverse().map((heading) => `[id="${heading.id}"]`)
   )
 
   return headings && headings.length > 0 ? (
@@ -26,11 +24,11 @@ export default function PageToc() {
                 key={idx}
                 className="text-sm text-gray-600 hover:text-gray-900"
               >
-                <a href={`#${heading.anchor}`} className="block py-1.5">
+                <a href={`#${heading.id}`} className="block py-1.5">
                   <div
                     className={clsx(
                       'border-l-2 transition-all duration-200',
-                      activeId === heading.anchor
+                      activeId === heading.id
                         ? ' border-green-700'
                         : ' border-transparent'
                     )}
@@ -38,14 +36,14 @@ export default function PageToc() {
                     <div
                       className={clsx(
                         'transition-all duration-200',
-                        activeId === heading.anchor
+                        activeId === heading.id
                           ? 'translate-x-2'
                           : 'translate-x-0'
                       )}
                     >
                       <span
                         className={
-                          activeId === heading.anchor
+                          activeId === heading.id
                             ? 'text-green-700'
                             : 'text-gray-700'
                         }

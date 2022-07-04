@@ -12,22 +12,7 @@ export default function GlobalNavComponent() {
   const matches = useMatches()
   const currentArticle = matches?.[1]?.params?.article
 
-  const articleData = articles
-    .map((a) => ({
-      article: a.frontmatter.article,
-      title: a.frontmatter.title,
-      article_number: a.frontmatter.article_number,
-      section_number: a.frontmatter.section_number,
-      slug: a.slug,
-    }))
-    .sort((a, b) => {
-      return a.article_number - b.article_number
-    })
-    .sort((a, b) => {
-      return a.section_number - b.section_number
-    })
-
-  const groupedArticles = groupBy(articleData, 'article')
+  const groupedArticles = groupBy(articles, 'article')
   const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
     (article) => slug(article) === currentArticle
   )
