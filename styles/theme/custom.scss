@@ -40,28 +40,15 @@
     @apply leading-tight;
   }
 
-  p {
-    @apply mb-4;
-  }
-
   ol {
-    list-style: upper-alpha;
+    @apply list-[upper-alpha];
     @apply pl-5;
-
-    li {
-      @apply mb-4;
-    }
-
     ol {
-      @apply mt-2;
       @apply list-decimal;
-      @apply mb-6;
-
       ol {
-        list-style: lower-alpha;
-
+        @apply list-[lower-alpha];
         ol {
-          list-style: lower-roman;
+          @apply list-[lower-roman];
         }
       }
     }
@@ -73,14 +60,12 @@
 
   figure {
     p {
-      @apply mb-0;
       @apply w-full;
     }
   }
 }
 
 table {
-
   th,
   td {
     @apply p-1;
