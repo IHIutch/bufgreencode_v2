@@ -5,9 +5,9 @@ import { Link } from '@remix-run/react'
 export default function NavbarComponent() {
   return (
     <nav className="inset-x-0 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white">
-      <div className="relative mx-auto w-full max-w-screen-2xl px-6">
-        <div className="-mx-6 flex h-full items-center px-6">
-          <div className="h-full w-16 flex-shrink-0 pr-4 md:w-1/4 md:pr-6 lg:w-1/6 lg:pr-8">
+      <div className="relative mx-auto w-full max-w-screen-2xl">
+        <div className="flex h-full items-center">
+          <div className="h-full w-16 flex-shrink-0 md:w-40 lg:w-72 2xl:w-80 pl-4">
             <div className="flex h-full items-center">
               <Link to="/" className="block h-full w-full py-2 lg:mr-4">
                 <img
@@ -23,12 +23,12 @@ export default function NavbarComponent() {
               </Link>
             </div>
           </div>
-          <div className="h-full flex-1 px-2 md:block md:px-4 lg:px-4">
+          <div className="h-full flex-1 px-4 md:px-8 md:block w-full xl:w-3/4">
             <div className="flex h-full w-full items-center py-2">
               {typeof document !== 'undefined' && <SearchComponent />}
             </div>
           </div>
-          <div className="hidden h-full w-1/6 flex-shrink-0 items-center text-sm font-medium md:flex">
+          <div className="hidden h-full lg:w-72 2xl:w-80 flex-shrink-0 items-center text-sm font-medium md:flex pr-4">
             <Link
               to="/disclaimer"
               className="py-1 px-2 text-gray-700 hover:text-gray-900"

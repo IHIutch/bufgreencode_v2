@@ -1,21 +1,30 @@
 {
+  "include": ["remix.env.d.ts", "**/*.js", "**/*.jsx"],
+  // "exclude": [
+  //   ".git",
+  //   ".cache",
+  //   ".npm",
+  //   ".github",
+  //   "**/node_modules/*",
+  //   "./app/styles/*"
+  // ],
   "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
     "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     },
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["DOM", "DOM.Iterable", "ES2019"],
-    "strict": true,
-    "target": "ES2019",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "moduleResolution": "node",
-    "noEmit": true,
-    "resolveJsonModule": true
-  },
-  "exclude": [".git", ".cache", ".npm", ".github", "**/node_modules/*"],
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+
+    // Remix takes care of building everything in `remix build`.
+    "noEmit": true
+  }
 }

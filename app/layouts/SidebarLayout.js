@@ -24,21 +24,21 @@ export default function SidebarLayout({ children }) {
           />
         </div> */}
       </div>
-      <div className="mx-auto flex max-w-screen-2xl">
-        <div className="fixed top-0 hidden h-full flex-shrink-0 pt-16 md:block md:w-1/4 xl:w-1/5 2xl:w-1/6">
-          <SidebarComponent />
-        </div>
-        <div className="w-full px-6 pt-20 md:ml-1/4 md:px-8 md:pt-16 xl:ml-1/5 2xl:ml-1/6">
-          <div
-            className={clsx(
-              'flex',
-              'position-absolute w-full transition-all duration-200',
-              isLoading ? 'opacity-0' : 'opacity-100'
-            )}
-          >
-            <main className="my-12 w-full">{children}</main>
+        <div className="mx-auto flex max-w-screen-2xl">
+          <div className="fixed top-0 hidden h-full flex-shrink-0 pt-16 md:block md:w-72 2xl:w-80">
+            <SidebarComponent />
           </div>
-        </div>
+          <div className="w-full pt-20 md:ml-72 md:pt-16 2xl:ml-80">
+            <div
+              className={clsx(
+                'flex',
+                'position-absolute w-full transition-all duration-200',
+                isLoading ? 'opacity-0' : 'opacity-100'
+              )}
+            >
+              <main className="mt-12 w-full">{children}</main>
+            </div>
+          </div>
       </div>
     </div>
   )

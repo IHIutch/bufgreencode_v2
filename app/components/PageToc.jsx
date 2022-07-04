@@ -10,7 +10,7 @@ export default function PageToc() {
   )
 
   return headings && headings.length > 0 ? (
-    <aside className="hidden lg:w-1/4 xl:block">
+    <aside className="hidden lg:w-80 xl:block">
       <div className="sticky top-0 h-screen overflow-y-auto pt-16">
         <div className="mt-8 pb-8 pr-4">
           <div className="mb-2">

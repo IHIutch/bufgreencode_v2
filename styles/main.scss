@@ -34,7 +34,7 @@
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(5px) scale(1);
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
@@ -42,7 +42,7 @@
 
 @keyframes slideOutDown {
   0% {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(5px) scale(1);
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
@@ -60,7 +60,7 @@
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
   100% {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(-5px) scale(1);
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }
@@ -68,7 +68,7 @@
 
 @keyframes slideOutUp {
   0% {
-    opacity: 1;
+    opacity: 0.9;
     transform: translateY(-5px) scale(1);
     transform-origin: var(--radix-tooltip-content-transform-origin);
   }

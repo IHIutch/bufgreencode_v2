@@ -17,22 +17,24 @@ export default function Post() {
 
   return (
     <div className="flex">
-      <div className="mx-auto w-full max-w-prose lg:w-3/4">
-        <h1 className="mb-2 text-5xl font-medium leading-tight">
-          {frontmatter.title}
-        </h1>
-        {frontmatter.lead ? (
-          <p className="font-medium text-gray-700">{frontmatter.lead}</p>
-        ) : null}
-        <div className="page-content prose">
-          {Markdoc.renderers.react(content, React, {
-            components: {
-              Heading,
-              TableSmall,
-              FigureImg,
-              TableResponsive,
-            },
-          })}
+      <div className="mx-8 w-full xl:w-3/4 mb-12">
+        <div className="xl:mx-auto max-w-prose">
+          <h1 className="mb-2 text-5xl font-medium leading-tight">
+            {frontmatter.title}
+          </h1>
+          {frontmatter.lead ? (
+            <p className="text-lg text-gray-700">{frontmatter.lead}</p>
+          ) : null}
+          <div className="page-content prose">
+            {Markdoc.renderers.react(content, React, {
+              components: {
+                Heading,
+                TableSmall,
+                FigureImg,
+                TableResponsive,
+              },
+            })}
+          </div>
         </div>
       </div>
       <PageToc />
@@ -42,7 +44,7 @@ export default function Post() {
 
 const Heading = ({ id, level, children }) => {
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
-  const headingEl = createElement(`h${level}`, { id }, children)
+  const headingEl = createElement(`h${level}`, { id, className: 'mt-0' }, children)
   const copyLinkToClipboard = () => {
     setIsToolTipVisible(true)
     navigator.clipboard.writeText(
@@ -54,8 +56,8 @@ const Heading = ({ id, level, children }) => {
   }
 
   return (
-    <div>
-      {headingEl}
+    <div className='mt-[2em]'>
+
       <Tooltip.Root open={isToolTipVisible}>
         <Tooltip.Trigger asChild>
           <button
@@ -66,20 +68,21 @@ const Heading = ({ id, level, children }) => {
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <Link className="h-4 w-4" />
             <div>
-              <span className="ml-2">Copy Section Link</span>
+              <span className="ml-2">Copy Link</span>
             </div>
           </button>
         </Tooltip.Trigger>
         <Tooltip.Content
           className={clsx(
             'rdx-tooltip',
-            'inline-flex items-center rounded-md px-3 py-1.5',
-            'bg-gray-800 text-sm text-white'
+            'inline-flex items-center rounded-md px-2 py-1',
+            'bg-gray-800 text-xs text-white'
           )}
         >
-          Link Copied to Clipboard
+          Copied to clipboard
         </Tooltip.Content>
       </Tooltip.Root>
+      {headingEl}
     </div>
   )
 }
