@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { createElement, useState } from 'react'
 import { getArticle } from '~/models/articles.server'
 import { getMetaTags } from '~/utils'
 import PageToc from '~/components/PageToc'
 import Markdoc from '@markdoc/markdoc'
 import { useLoaderData } from '@remix-run/react'
 import { json } from '@remix-run/node'
+import * as Tooltip from '@radix-ui/react-tooltip'
+import clsx from 'clsx'
+import { Link } from 'lucide-react'
 
 export default function Post() {
   const { content, frontmatter } = useLoaderData()
@@ -19,10 +22,58 @@ export default function Post() {
           <p className="font-medium text-gray-700">{frontmatter.lead}</p>
         ) : null}
         <div className="page-content prose">
-          {Markdoc.renderers.react(content, React)}
+          {Markdoc.renderers.react(content, React, {
+            components: {
+              Heading,
+            },
+          })}
         </div>
       </div>
       <PageToc />
+    </div>
+  )
+}
+
+const Heading = ({ id, level, children }) => {
+  const [isToolTipVisible, setIsToolTipVisible] = useState(false)
+  const headingEl = createElement(`h${level}`, { id }, children)
+  const copyLinkToClipboard = () => {
+    setIsToolTipVisible(true)
+    navigator.clipboard.writeText(
+      `${window.location.origin}${window.location.pathname}#${id}`
+    )
+    setTimeout(() => {
+      setIsToolTipVisible(false)
+    }, 800)
+  }
+
+  return (
+    <div>
+      {headingEl}
+      <Tooltip.Root open={isToolTipVisible}>
+        <Tooltip.Trigger asChild>
+          <button
+            type="button"
+            className="flex items-center font-bold text-green-600 underline"
+            onClick={copyLinkToClipboard}
+          >
+            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+            <Link className="h-5" />
+            <div>
+              <span className="ml-2">Copy Section Link</span>
+            </div>
+          </button>
+        </Tooltip.Trigger>
+        <Tooltip.Content
+          className={clsx(
+            'rdx-tooltip',
+            'inline-flex items-center rounded-md px-3 py-1.5',
+            'bg-gray-800 text-sm text-white'
+          )}
+        >
+          Link Copied to Clipboard
+        </Tooltip.Content>
+      </Tooltip.Root>
     </div>
   )
 }

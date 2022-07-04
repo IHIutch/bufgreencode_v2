@@ -1,6 +1,6 @@
-import { nodes } from '@markdoc/markdoc'
+import { Tag } from '@markdoc/markdoc'
 
-function generateID(children, attributes) {
+const generateID = (children, attributes) => {
   if (attributes.id && typeof attributes.id === 'string') {
     return attributes.id
   }
@@ -9,15 +9,26 @@ function generateID(children, attributes) {
     .join(' ')
     .replace(/[?]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/\./g, '-')
+    .replace(/[./]/g, '-')
     .toLowerCase()
 }
 
-module.exports = {
-  ...nodes.heading,
+export const heading = {
+  children: ['inline'],
+  attributes: {
+    id: { type: String },
+  },
   transform(node, config) {
-    const base = nodes.heading.transform(node, config)
-    base.attributes.id = generateID(base.children, base.attributes)
-    return base
+    const attributes = node.transformAttributes(config)
+    const children = node.transformChildren(config)
+
+    const id = generateID(children, attributes)
+
+    return new Tag(
+      `Heading`,
+      // `h${node.attributes['level']}`,
+      { ...attributes, ...node.attributes, id },
+      children
+    )
   },
 }

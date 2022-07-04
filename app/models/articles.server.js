@@ -1,12 +1,12 @@
 import fs from 'fs'
 import Markdoc from '@markdoc/markdoc'
 import yaml from 'js-yaml'
-import headingMarkdoc from '~/markdoc/schema/heading.markdoc'
+import { heading } from '~/markdoc/schema/heading.markdoc'
 
 const getHeadings = (node, sections = []) => {
   if (node?.name) {
-    // Match all h1, h2, h3… tags
-    if (node.name.match(/h\d/)) {
+    // 'Heading' is defined in markdoc/schema/heading.markdoc.js
+    if (node.name.match('Heading')) {
       const title = node.children[0]
 
       if (typeof title === 'string') {
@@ -95,7 +95,7 @@ export async function getArticle({ article, section }) {
 
     const content = Markdoc.transform(ast, {
       nodes: {
-        heading: headingMarkdoc,
+        heading,
       },
     })
     const headings = getHeadings(content)
