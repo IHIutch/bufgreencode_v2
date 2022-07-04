@@ -12,7 +12,7 @@ export default function SidebarLayout({ children }) {
     <div className="antialiased">
       <div className="fixed top-0 z-20 w-full">
         <NavbarComponent />
-        {/* <div
+        <div
           class={`fixed pt-16 inset-x-0 md:hidden z-10 transition-md overflow-hidden ${
             menuIsOpen ? "h-screen" : "h-26"
           }`}
@@ -22,7 +22,7 @@ export default function SidebarLayout({ children }) {
             activeHeading={activeHeading}
             activeIdx={activeIdx}
           />
-        </div> */}
+        </div>
       </div>
         <div className="mx-auto flex max-w-screen-2xl">
           <div className="fixed top-0 hidden h-full flex-shrink-0 pt-16 md:block md:w-72 2xl:w-80">
