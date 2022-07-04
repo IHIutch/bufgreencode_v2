@@ -1,15 +1,12 @@
+import React from 'react'
 import { json, useLoaderData } from 'remix'
 import { getArticle } from '~/models/articles.server'
-import { getMDXComponent } from 'mdx-bundler/client'
-import { useMemo } from 'react'
 import { getMetaTags } from '~/utils'
 import PageToc from '~/components/PageToc'
+import Markdoc from '@markdoc/markdoc'
 
 export default function Post() {
-  const {
-    content: { code, frontmatter },
-  } = useLoaderData()
-  const Component = useMemo(() => getMDXComponent(code), [code])
+  const { content, frontmatter } = useLoaderData()
 
   return (
     <div className="flex">
@@ -21,10 +18,10 @@ export default function Post() {
           <p className="font-medium text-gray-700">{frontmatter.lead}</p>
         ) : null}
         <div className="page-content prose">
-          <Component />
+          {Markdoc.renderers.react(content, React)}
         </div>
       </div>
-      <PageToc />
+      {/* <PageToc /> */}
     </div>
   )
 }
@@ -50,5 +47,5 @@ export const loader = async ({ params }) => {
     })
   }
 
-  return json({ content })
+  return json(content)
 }

@@ -10,7 +10,7 @@ import {
 import styles from '~/styles/main.css'
 import { getMetaTags } from '~/utils'
 import SidebarLayout from '~/layouts/SidebarLayout'
-import { getArticles, getArticle } from '~/models/articles.server'
+import { getArticles } from '~/models/articles.server'
 
 export function links() {
   return [
@@ -34,7 +34,6 @@ export function meta() {
 
 export const loader = async () => {
   const articles = await getArticles()
-
   if (!articles) {
     throw new Response('Not Found', {
       status: 404,
