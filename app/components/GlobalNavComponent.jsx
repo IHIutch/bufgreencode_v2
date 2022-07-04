@@ -1,10 +1,10 @@
-import { NavLink, useLoaderData, useMatches } from 'remix'
 import groupBy from 'lodash/groupBy'
 import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
 import { slug } from 'github-slugger'
+import { NavLink, useLoaderData, useMatches } from '@remix-run/react'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()

@@ -1,6 +1,6 @@
-import { Link } from 'remix'
 import SearchComponent from './SearchComponent'
 import { ExternalLink } from 'lucide-react'
+import { Link } from '@remix-run/react'
 
 export default function NavbarComponent() {
   return (

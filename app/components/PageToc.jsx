@@ -1,5 +1,5 @@
+import { useLoaderData } from '@remix-run/react'
 import clsx from 'clsx'
-import { useLoaderData } from 'remix'
 import { useScrollSpy } from '~/hooks/useScrollSpy'
 
 export default function PageToc() {

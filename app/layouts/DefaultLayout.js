@@ -1,4 +1,4 @@
-import { Link } from 'remix'
+import { Link } from '@remix-run/react'
 import metadata from '~/data/metadata.json'
 
 export default function DefaultLayout({ children }) {

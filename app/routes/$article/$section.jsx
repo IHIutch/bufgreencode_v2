@@ -1,9 +1,10 @@
 import React from 'react'
-import { json, useLoaderData } from 'remix'
 import { getArticle } from '~/models/articles.server'
 import { getMetaTags } from '~/utils'
 import PageToc from '~/components/PageToc'
 import Markdoc from '@markdoc/markdoc'
+import { useLoaderData } from '@remix-run/react'
+import { json } from '@remix-run/node'
 
 export default function Post() {
   const { content, frontmatter } = useLoaderData()

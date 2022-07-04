@@ -1,5 +1,5 @@
+import { useTransition } from '@remix-run/react'
 import clsx from 'clsx'
-import { useTransition } from 'remix'
 import NavbarComponent from '~/components/NavbarComponent'
 import SidebarComponent from '~/components/SidebarComponent'
 import SubnavComponent from '~/components/SubnavComponent'

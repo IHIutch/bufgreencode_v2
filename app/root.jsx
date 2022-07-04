@@ -1,16 +1,16 @@
+import styles from '~/styles/main.css'
+import { getMetaTags } from '~/utils'
+import SidebarLayout from '~/layouts/SidebarLayout'
+import { getArticles } from '~/models/articles.server'
+import { json } from '@remix-run/node'
 import {
-  json,
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from 'remix'
-import styles from '~/styles/main.css'
-import { getMetaTags } from '~/utils'
-import SidebarLayout from '~/layouts/SidebarLayout'
-import { getArticles } from '~/models/articles.server'
+} from '@remix-run/react'
 
 export function links() {
   return [
