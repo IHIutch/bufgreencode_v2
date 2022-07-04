@@ -94,6 +94,22 @@ export async function getArticle({ article, section }) {
       : {}
 
     const content = Markdoc.transform(ast, {
+      tags: {
+        tableSmall: {
+          render: 'TableSmall',
+        },
+        figureImg: {
+          render: 'FigureImg',
+          attributes: {
+            caption: {
+              type: 'String',
+            },
+          },
+        },
+        tableResponsive: {
+          render: 'TableResponsive',
+        },
+      },
       nodes: {
         heading,
       },

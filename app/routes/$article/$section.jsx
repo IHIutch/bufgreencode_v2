@@ -8,6 +8,9 @@ import { json } from '@remix-run/node'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import clsx from 'clsx'
 import { Link } from 'lucide-react'
+import TableSmall from '~/components/TableSmall'
+import FigureImg from '~/components/FigureImg'
+import TableResponsive from '~/components/TableResponsive'
 
 export default function Post() {
   const { content, frontmatter } = useLoaderData()
@@ -25,6 +28,9 @@ export default function Post() {
           {Markdoc.renderers.react(content, React, {
             components: {
               Heading,
+              TableSmall,
+              FigureImg,
+              TableResponsive,
             },
           })}
         </div>
