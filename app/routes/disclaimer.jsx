@@ -5,9 +5,9 @@ export default function Disclaimer() {
         <h1 className="mb-6 text-5xl font-medium leading-tight">Disclaimer</h1>
         <div className="prose">
           <p className="lead">
-            This site is an unofficial site for the Buffalo Green Code. This is
-            a an open source project and is not affiliated with the City of
-            Buffalo.
+            This site is an <span className="font-semibold">unofficial</span>{' '}
+            digitisation for the Buffalo Green Code. This is a an open source
+            project and is not affiliated with the City of Buffalo.
           </p>
           <p>
             The official documentation can be found on the{' '}
@@ -16,14 +16,13 @@ export default function Disclaimer() {
               target="_blank"
               rel="noreferrer"
             >
-              City of Buffalo 's website.
+              City of Buffalo's website.
             </a>
           </p>
           <p>
-            We've done our best to make this site as accurate as possible, in
+            We've done our best to make this site as accurate as possible in
             order to make it easier to search and find important information.
-            Any information that is not accurate or up to date is not
-            intentional.
+            Any inaccurate or or out of date information is unintentional.
           </p>
           <p>
             If you find any errors or inaccuracies,{' '}

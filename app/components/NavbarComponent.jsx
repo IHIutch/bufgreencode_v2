@@ -41,7 +41,7 @@ export default function NavbarComponent() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="mr-1">Github</span>
+              <span className="mr-1">Source Code</span>
               <span>
                 <ExternalLink className="h-4 w-4" />
               </span>

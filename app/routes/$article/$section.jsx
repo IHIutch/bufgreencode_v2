@@ -32,7 +32,7 @@ export default function Post() {
                 TableSmall,
                 FigureImg,
                 TableResponsive,
-                Sup
+                Sup,
               },
             })}
           </div>
@@ -43,7 +43,7 @@ export default function Post() {
   )
 }
 
-const Sup = ({children}) => {
+const Sup = ({ children }) => {
   return <sup>{children}</sup>
 }
 
@@ -70,13 +70,13 @@ const Heading = ({ id, level, children }) => {
         <Tooltip.Trigger asChild>
           <button
             type="button"
-            className="flex items-center font-semibold text-green-600 underline transition-colors hover:text-green-700"
+            className="flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
             onClick={copyLinkToClipboard}
           >
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <Link className="h-4 w-4" />
             <div>
-              <span className="ml-2">Copy Link</span>
+              <span className="ml-1">Copy Link</span>
             </div>
           </button>
         </Tooltip.Trigger>
