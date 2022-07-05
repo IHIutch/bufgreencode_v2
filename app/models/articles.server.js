@@ -110,6 +110,9 @@ export async function getArticle({ article, section }) {
         tableResponsive: {
           render: 'TableResponsive',
         },
+        sup: {
+          render: 'Sup',
+        },
       },
       nodes: {
         heading,

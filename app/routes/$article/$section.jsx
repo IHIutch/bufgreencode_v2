@@ -32,6 +32,7 @@ export default function Post() {
                 TableSmall,
                 FigureImg,
                 TableResponsive,
+                Sup
               },
             })}
           </div>
@@ -40,6 +41,10 @@ export default function Post() {
       <PageToc />
     </div>
   )
+}
+
+const Sup = ({children}) => {
+  return <sup>{children}</sup>
 }
 
 const Heading = ({ id, level, children }) => {
