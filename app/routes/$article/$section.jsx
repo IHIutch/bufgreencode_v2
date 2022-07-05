@@ -32,7 +32,7 @@ export default function Post() {
                 TableSmall,
                 FigureImg,
                 TableResponsive,
-                Sup,
+                Sup: ({ children }) => <sup>{children}</sup>,
               },
             })}
           </div>
@@ -41,10 +41,6 @@ export default function Post() {
       <PageToc />
     </div>
   )
-}
-
-const Sup = ({ children }) => {
-  return <sup>{children}</sup>
 }
 
 const Heading = ({ id, level, children }) => {
@@ -59,6 +55,7 @@ const Heading = ({ id, level, children }) => {
     navigator.clipboard.writeText(
       `${window.location.origin}${window.location.pathname}#${id}`
     )
+    // Fathom.trackGoal() TODO: track link clicks
     setTimeout(() => {
       setIsToolTipVisible(false)
     }, 800)
