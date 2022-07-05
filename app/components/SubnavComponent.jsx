@@ -5,28 +5,29 @@ import { ExternalLink } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import GlobalNavComponent from '~/components/GlobalNavComponent'
 
+const open = keyframes({
+  from: { height: 0 },
+  to: { height: 'calc(100vh - 6rem)' },
+})
+
+const close = keyframes({
+  from: { height: 'calc(100vh - 6rem)' },
+  to: { height: 0 },
+})
+
+const CollapsibleContent = styled(Collapsible.Content, {
+  overflow: 'hidden',
+  '&[data-state="open"]': {
+    animation: `${open} 200ms ease-in-out forwards`,
+  },
+  '&[data-state="closed"]': {
+    animation: `${close} 200ms ease-in-out forwards`,
+  },
+})
+
 export default function SubnavComponent() {
   const { section } = useParams()
   const [isOpen, setIsOpen] = useState(false)
-  const open = keyframes({
-    from: { height: 0 },
-    to: { height: 'calc(100vh - 6rem)' },
-  })
-
-  const close = keyframes({
-    from: { height: 'calc(100vh - 6rem)' },
-    to: { height: 0 },
-  })
-
-  const CollapsibleContent = styled(Collapsible.Content, {
-    overflow: 'hidden',
-    '&[data-state="open"]': {
-      animation: `${open} 200ms ease-in-out forwards`,
-    },
-    '&[data-state="closed"]': {
-      animation: `${close} 200ms ease-in-out forwards`,
-    },
-  })
 
   useEffect(() => {
     setIsOpen(false)

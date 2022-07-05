@@ -6,6 +6,24 @@ import clsx from 'clsx'
 import { NavLink, useLoaderData, useMatches } from '@remix-run/react'
 import { keyframes, styled } from '@stitches/react'
 
+const open = keyframes({
+  from: { height: 0 },
+  to: { height: 'var(--radix-accordion-content-height)' },
+})
+
+const close = keyframes({
+  from: { height: 'var(--radix-accordion-content-height)' },
+  to: { height: 0 },
+})
+
+const AccordionContent = styled(Accordion.Content, {
+  overflow: 'hidden',
+  '&[data-state="open"]': { animation: `${open} 200ms ease-in-out forwards` },
+  '&[data-state="closed"]': {
+    animation: `${close} 200ms ease-in-out forwards`,
+  },
+})
+
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
 
@@ -22,24 +40,6 @@ export default function GlobalNavComponent() {
   const [activeIdx, setActiveIdx] = useState(
     defaultArticleIdx ? [`content-${defaultArticleIdx}`] : []
   )
-
-  const open = keyframes({
-    from: { height: 0 },
-    to: { height: 'var(--radix-accordion-content-height)' },
-  })
-
-  const close = keyframes({
-    from: { height: 'var(--radix-accordion-content-height)' },
-    to: { height: 0 },
-  })
-
-  const AccordionContent = styled(Accordion.Content, {
-    overflow: 'hidden',
-    '&[data-state="open"]': { animation: `${open} 200ms ease-in-out forwards` },
-    '&[data-state="closed"]': {
-      animation: `${close} 200ms ease-in-out forwards`,
-    },
-  })
 
   return (
     <Accordion.Root
