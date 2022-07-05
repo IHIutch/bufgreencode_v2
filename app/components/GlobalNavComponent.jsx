@@ -3,8 +3,8 @@ import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
-import { slug } from 'github-slugger'
 import { NavLink, useLoaderData, useMatches } from '@remix-run/react'
+import { keyframes, styled } from '@stitches/react'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
@@ -12,13 +12,34 @@ export default function GlobalNavComponent() {
   const matches = useMatches()
   const currentArticle = matches?.[1]?.params?.article
 
-  const groupedArticles = groupBy(articles, 'article')
+  const groupedArticles = groupBy(articles, 'articleSlug')
+
   const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
-    (article) => slug(article) === currentArticle
+    (articleSlug) => {
+      return articleSlug === currentArticle
+    }
   )
   const [activeIdx, setActiveIdx] = useState(
     defaultArticleIdx ? [`content-${defaultArticleIdx}`] : []
   )
+
+  const open = keyframes({
+    from: { height: 0 },
+    to: { height: 'var(--radix-accordion-content-height)' },
+  })
+
+  const close = keyframes({
+    from: { height: 'var(--radix-accordion-content-height)' },
+    to: { height: 0 },
+  })
+
+  const AccordionContent = styled(Accordion.Content, {
+    overflow: 'hidden',
+    '&[data-state="open"]': { animation: `${open} 200ms ease-in-out forwards` },
+    '&[data-state="closed"]': {
+      animation: `${close} 200ms ease-in-out forwards`,
+    },
+  })
 
   return (
     <Accordion.Root
@@ -28,14 +49,15 @@ export default function GlobalNavComponent() {
       onValueChange={setActiveIdx}
     >
       <ul className="px-2 py-1 text-sm">
-        {Object.keys(groupedArticles).map((article, idx) => (
+        {Object.keys(groupedArticles).map((articleSlug, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>
-            <li className="'px-2' pb-1">
+            <li className="px-2 pb-1">
               <Accordion.Trigger className="w-full text-left">
                 <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
                     <span className="font-medium">
-                      {groupedArticles[article][0].article_number}. {article}
+                      {groupedArticles[articleSlug][0].articleNumber}.{' '}
+                      {groupedArticles[articleSlug][0].articleTitle}
                     </span>
                   </div>
                   <div>
@@ -52,7 +74,7 @@ export default function GlobalNavComponent() {
                   </div>
                 </div>
               </Accordion.Trigger>
-              <Accordion.Content className="rdx-collapsible py-1 pl-3">
+              <AccordionContent className={clsx('rdx-accordion', 'py-1 pl-3')}>
                 <ul
                   className={clsx(
                     'border-l border-gray-300 pb-1',
@@ -62,7 +84,7 @@ export default function GlobalNavComponent() {
                       : '-translate-y-4 opacity-0'
                   )}
                 >
-                  {groupedArticles[article].map((section, sIdx) => (
+                  {groupedArticles[articleSlug].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
                         className={clsx(
@@ -87,8 +109,8 @@ export default function GlobalNavComponent() {
                                 isActive ? 'text-green-700' : ''
                               )}
                             >
-                              {section.article_number}.{section.section_number}{' '}
-                              {section.title}
+                              {section.articleNumber}.{section.sectionNumber}{' '}
+                              {section.sectionTitle}
                             </span>
                           </div>
                         )}
@@ -96,7 +118,7 @@ export default function GlobalNavComponent() {
                     </li>
                   ))}
                 </ul>
-              </Accordion.Content>
+              </AccordionContent>
             </li>
           </Accordion.Item>
         ))}

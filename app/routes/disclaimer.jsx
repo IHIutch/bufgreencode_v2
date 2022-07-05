@@ -1,6 +1,6 @@
 export default function Disclaimer() {
   return (
-    <div className="lg:w-3/4">
+    <div className="mb-12 w-full px-4 md:px-8 xl:w-3/4">
       <div className="mx-auto w-full max-w-prose">
         <h1 className="mb-6 text-5xl font-medium leading-tight">Disclaimer</h1>
         <div className="prose">

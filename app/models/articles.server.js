@@ -66,6 +66,7 @@ export async function getArticles() {
       return {
         frontmatter,
         slug: `${path.article}/${path.section}`,
+        articleSlug: path.article,
       }
     })
   )

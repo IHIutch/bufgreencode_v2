@@ -17,8 +17,8 @@ export default function Post() {
 
   return (
     <div className="flex">
-      <div className="mx-8 w-full xl:w-3/4 mb-12">
-        <div className="xl:mx-auto max-w-prose">
+      <div className="mb-12 w-full px-4 md:px-8 xl:w-3/4">
+        <div className="max-w-prose xl:mx-auto">
           <h1 className="mb-2 text-5xl font-medium leading-tight">
             {frontmatter.title}
           </h1>
@@ -44,7 +44,11 @@ export default function Post() {
 
 const Heading = ({ id, level, children }) => {
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
-  const headingEl = createElement(`h${level}`, { id, className: 'mt-0' }, children)
+  const headingEl = createElement(
+    `h${level}`,
+    { id, className: 'mt-0' },
+    children
+  )
   const copyLinkToClipboard = () => {
     setIsToolTipVisible(true)
     navigator.clipboard.writeText(
@@ -56,8 +60,7 @@ const Heading = ({ id, level, children }) => {
   }
 
   return (
-    <div className='mt-[2em]'>
-
+    <div className="mt-[2em]">
       <Tooltip.Root open={isToolTipVisible}>
         <Tooltip.Trigger asChild>
           <button
