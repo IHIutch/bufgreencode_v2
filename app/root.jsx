@@ -10,7 +10,10 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from '@remix-run/react'
+import { useEffect, useRef } from 'react'
+import * as Fathom from 'fathom-client'
 
 export function links() {
   return [
@@ -35,6 +38,7 @@ export function meta() {
 export const loader = async () => {
   const articles = await getArticles()
   if (!articles) {
+    // Fathom.trackGoal() TODO: track 404's
     throw new Response('Not Found', {
       status: 404,
     })
@@ -48,7 +52,7 @@ export const loader = async () => {
       articleNumber: a.frontmatter.article_number,
       sectionNumber: a.frontmatter.section_number,
       slug: a.slug,
-      articleSlug: a.articleSlug
+      articleSlug: a.articleSlug,
     }))
     .sort((a, b) => {
       return a.articleNumber - b.articleNumber
@@ -61,6 +65,23 @@ export const loader = async () => {
 }
 
 export default function App() {
+  let fathomLoaded = useRef(false)
+  let location = useLocation()
+
+  useEffect(
+    function setupFathom() {
+      if (!fathomLoaded.current && process.env.NODE_ENV === 'production') {
+        Fathom.load('HWWXLVYL', {
+          url: 'https://phenomenal-bright.bufgreencode.com/script.js',
+        })
+        fathomLoaded.current = true
+      } else {
+        Fathom.trackPageview()
+      }
+    },
+    [location]
+  )
+
   return (
     <html lang="en">
       <head>

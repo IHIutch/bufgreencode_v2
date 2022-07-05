@@ -25,7 +25,7 @@ export default function NavbarComponent() {
           </div>
           <div className="h-full w-full flex-1 px-4 md:block md:px-8 xl:w-3/4">
             <div className="flex h-full w-full items-center py-2">
-              {typeof document !== 'undefined' && <SearchComponent />}
+              <SearchComponent />
             </div>
           </div>
           <div className="hidden h-full flex-shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80">
