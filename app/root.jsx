@@ -32,6 +32,7 @@ export function meta() {
     charset: 'utf-8',
     viewport: 'width=device-width,initial-scale=1',
     ...metaTags,
+    'google-site-verification': '2uJ6hXsUDukLmTfNK7Y7jCmnaqyiLptsVDmZ2Ct7Zzk',
   }
 }
 

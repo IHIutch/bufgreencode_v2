@@ -96,7 +96,7 @@ const Heading = ({ id, level, children }) => {
 }
 
 export function meta({ data, location }) {
-  const pageTitle = data?.content?.frontmatter?.title || ''
+  const pageTitle = data?.frontmatter?.title || ''
   const pathname = location?.pathname || ''
   const metaTags = getMetaTags({
     pageTitle,
