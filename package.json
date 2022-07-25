@@ -10,7 +10,7 @@
     "algoliasearch": "^3.35.1",
     "gridsome": "^0.7.23",
     "vue-feather-icons": "^5.1.0",
-    "vue-instantsearch": "^2.7.1",
+    "vue-instantsearch": "^4.4.2",
     "vue-lottie": "^0.2.1"
   },
   "devDependencies": {
