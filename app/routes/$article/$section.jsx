@@ -7,7 +7,7 @@ import { useLoaderData } from '@remix-run/react'
 import { json } from '@remix-run/node'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import clsx from 'clsx'
-import { Link } from 'lucide-react'
+import { Link as LinkIcon } from 'lucide-react'
 import TableSmall from '~/components/TableSmall'
 import FigureImg from '~/components/FigureImg'
 import TableResponsive from '~/components/TableResponsive'
@@ -71,8 +71,7 @@ const Heading = ({ id, level, children }) => {
             className="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
             onClick={copyLinkToClipboard}
           >
-            {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
-            <Link strokeWidth="3" className="h-4 w-4" />
+            <LinkIcon strokeWidth="3" className="h-[0.875rem] w-[0.875rem]" />
             <div>
               <span className="ml-1">Share Section</span>
             </div>
