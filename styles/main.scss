@@ -1,79 +1,8 @@
-@import "theme/tailwind.scss";
-@import "theme/custom.scss";
-@import "@docsearch/css/dist/style.css";
+@import 'theme/tailwind.scss';
+@import 'theme/hamburgers.scss';
+@import 'theme/custom.scss';
+@import '@docsearch/css/dist/style.css';
 
-.DocSearch.DocSearch-Button{
-    @apply w-full
-}
-
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(0) scale(0.75);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-  100% {
-    opacity: 0.9;
-    transform: translateY(5px) scale(1);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-};
-
-@keyframes slideOutDown {
-  0% {
-    opacity: 0.9;
-    transform: translateY(5px) scale(1);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(0) scale(0.75);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-};
-
-@keyframes slideInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(0) scale(0.75);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-  100% {
-    opacity: 0.9;
-    transform: translateY(-5px) scale(1);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-};
-
-@keyframes slideOutUp {
-  0% {
-    opacity: 0.9;
-    transform: translateY(-5px) scale(1);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(0) scale(0.75);
-    transform-origin: var(--radix-tooltip-content-transform-origin);
-  }
-};
-
-.rdx-tooltip {
-  &[data-state="instant-open"] {
-    &[data-side="top"] {
-      animation: slideInDown 100ms ease-in-out forwards;
-    }
-    &[data-side="bottom"] {
-      animation: slideInUp 100ms ease-in-out forwards;
-    }
-  }
-  &[data-state="closed"] {
-    &[data-side="top"] {
-      animation: slideOutUp 100ms ease-in-out forwards;
-    }
-    &[data-side="bottom"] {
-      animation: slideOutDown 100ms ease-in-out forwards;
-    }
-   }
-
+.DocSearch.DocSearch-Button {
+  @apply w-full;
 }

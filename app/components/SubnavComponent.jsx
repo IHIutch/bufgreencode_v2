@@ -1,6 +1,7 @@
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { Link, useParams } from '@remix-run/react'
 import { keyframes, styled } from '@stitches/react'
+import clsx from 'clsx'
 import { ExternalLink } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import GlobalNavComponent from '~/components/GlobalNavComponent'
@@ -44,27 +45,22 @@ export default function SubnavComponent() {
       <div className="flex flex-col bg-gray-100">
         <Collapsible.Root open={isOpen} onOpenChange={setIsOpen}>
           <div className="sticky top-0 z-10 flex h-10 justify-between border-b bg-gray-100">
-            <Collapsible.Trigger asChild>
-              <button
-                type="button"
-                aria-label="Menu Toggle"
-                className="ml-auto px-4 text-gray-700 focus:text-gray-700"
-              >
-                <div className="w-6">
-                  <svg
-                    className="h-full w-full"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </button>
-            </Collapsible.Trigger>
+            <div className="ml-auto text-gray-700 focus:text-gray-700">
+              <Collapsible.Trigger asChild>
+                <button
+                  type="button"
+                  aria-label="Menu Toggle"
+                  className={clsx(
+                    { 'is-active': isOpen },
+                    'hamburger hamburger--squeeze'
+                  )}
+                >
+                  <span className="hamburger-box">
+                    <span className="hamburger-inner" />
+                  </span>
+                </button>
+              </Collapsible.Trigger>
+            </div>
           </div>
           <CollapsibleContent>
             <nav className="z-0 flex h-full max-h-[calc(100vh-6rem)] flex-grow flex-col justify-between">

@@ -74,7 +74,7 @@ const Heading = ({ id, level, children }) => {
             {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
             <Link strokeWidth="3" className="h-4 w-4" />
             <div>
-              <span className="ml-1">Copy Link</span>
+              <span className="ml-1">Share Section</span>
             </div>
           </button>
         </Tooltip.Trigger>
