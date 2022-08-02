@@ -11,6 +11,7 @@ import { Link } from 'lucide-react'
 import TableSmall from '~/components/TableSmall'
 import FigureImg from '~/components/FigureImg'
 import TableResponsive from '~/components/TableResponsive'
+import * as Fathom from 'fathom-client'
 
 export default function Post() {
   const { content, frontmatter } = useLoaderData()
@@ -55,7 +56,7 @@ const Heading = ({ id, level, children }) => {
     navigator.clipboard.writeText(
       `${window.location.origin}${window.location.pathname}#${id}`
     )
-    // Fathom.trackGoal() TODO: track link clicks
+    Fathom.trackGoal('RC2RYOND')
     setTimeout(() => {
       setIsToolTipVisible(false)
     }, 800)
