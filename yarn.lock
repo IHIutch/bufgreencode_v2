@@ -1140,7 +1140,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.3", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.18.3", "@babel/runtime@^7.8.4":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
   integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
@@ -1151,6 +1151,13 @@
   version "7.17.8"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.8.tgz"
   integrity sha512-dQpEpK0O9o6lj6oPu0gRDbbnk+4LeHlNcBpspf6Olzt3GIX4P1lWF1gS+pHLDFlaJvbR6q7jCfQ08zA4QJBnmA==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.7.6":
+  version "7.18.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.9.tgz#b4fcfce55db3d2e5e080d2490f608a3b9f407f4a"
+  integrity sha512-lkqXDcvlFT5rvEjiu6+QYO+1GXrEHRo2LOtS7E4GtX5ESIZOgepqsZBVIj6Pv+a6zqsya9VCgiK1KAK4BvJDAw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1285,9 +1292,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@markdoc/markdoc@^0.1.2":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@markdoc/markdoc/-/markdoc-0.1.3.tgz#6bcbfa536f7ad72534b7390365a5481d9f698076"
-  integrity sha512-4n2cobUSeOob+237wZhpNiOEHCSfOydlQnKHTFdRY6ug/DupXGaxkkkszJYQxRftiMs8jmb10XvVO1svEYD43Q==
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@markdoc/markdoc/-/markdoc-0.1.4.tgz#2f229ce3feb80aa781c0d8f453f7a7a614e1248a"
+  integrity sha512-WOm+jwCeDyWtshIc5tjZ/AD+rFpqL9b1YAUiC975VlZISxRXt2G6Df5G3RwH420Jbavtik50r2tDInnEWIS8nQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1645,13 +1652,29 @@
     source-map-support "^0.5.21"
     stream-slice "^0.1.2"
 
+"@remix-run/node@1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@remix-run/node/-/node-1.6.7.tgz#55530b1ce17a0545d67e63120cdb50ea705f8d8f"
+  integrity sha512-m0o7S6rTE/6kEpqjn10uYMp3KRPQyw3MA1EKCEnOQNz/dIS6s34GfDrd0e5COTBdFnx2QbCQOJQmQZJEfmRUOg==
+  dependencies:
+    "@remix-run/server-runtime" "1.6.7"
+    "@remix-run/web-fetch" "^4.1.3"
+    "@remix-run/web-file" "^3.0.2"
+    "@remix-run/web-stream" "^1.0.3"
+    "@web3-storage/multipart-parser" "^1.0.0"
+    abort-controller "^3.0.0"
+    cookie-signature "^1.1.0"
+    source-map-support "^0.5.21"
+    stream-slice "^0.1.2"
+
 "@remix-run/react@^1.3.2":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@remix-run/react/-/react-1.6.3.tgz#c12b6ea87d57456195c65efec87a48f8e03073fd"
-  integrity sha512-xMJB83WOSFCjGjYJvtZB+JnFYJSteJKt9/F2T68AEetYpfgVwpjs7HAWR1ZTeBHD9ED7gGJdJxS9vrkg82jtlA==
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@remix-run/react/-/react-1.6.7.tgz#3018ba4fa3b43038b76cfe9abaa36e485bcaee74"
+  integrity sha512-0eRqiUyn1HkEKCxWLHpMpZBU7YWTD8/CFAXlicwgPWFz/eg06PaqCsrSqqYraGlOlNQO5GYaB7qpeZ3EHJIzQw==
   dependencies:
     history "^5.3.0"
     react-router-dom "^6.2.2"
+    type-fest "^2.17.0"
 
 "@remix-run/serve@^1.3.2":
   version "1.6.3"
@@ -1676,12 +1699,25 @@
     set-cookie-parser "^2.4.8"
     source-map "^0.7.3"
 
-"@remix-run/vercel@^1.3.2":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@remix-run/vercel/-/vercel-1.6.3.tgz#afcc1ae48bd5c701978047fce1f2cec9f1fad986"
-  integrity sha512-YhjhYlwK7gAfXFscuRRERV0JPk8Wdi59riYHAUPBhQyShs/IMMbKuja9fdUMe8jw0uYu2vt3LB8pI9cNLd3L8Q==
+"@remix-run/server-runtime@1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@remix-run/server-runtime/-/server-runtime-1.6.7.tgz#1c57bad74c5e26219104cf56c45d17ba8b8fb327"
+  integrity sha512-7mn+zztDqTnM9XyFQmpPsiyYULtlSqcQN0ct82+tcWa6Wxp4he/3JcHwa9BQBKr500RSDDYpJKSByRIZB9kp1w==
   dependencies:
-    "@remix-run/node" "1.6.3"
+    "@types/cookie" "^0.4.0"
+    "@web3-storage/multipart-parser" "^1.0.0"
+    cookie "^0.4.1"
+    jsesc "3.0.2"
+    react-router-dom "^6.2.2"
+    set-cookie-parser "^2.4.8"
+    source-map "^0.7.3"
+
+"@remix-run/vercel@^1.3.2":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@remix-run/vercel/-/vercel-1.6.7.tgz#15f7b38fe2b180b890c5d1fdda45ca82959a038b"
+  integrity sha512-46efa6Ea9sqsq/b564koeNa97EeUw/DAhO3YRuISAos/FdM+1qhpvFJu/yO0Vgnmvib6Dd8LrS7Z5db1s10LUQ==
+  dependencies:
+    "@remix-run/node" "1.6.7"
 
 "@remix-run/web-blob@^3.0.3", "@remix-run/web-blob@^3.0.4":
   version "3.0.4"
@@ -1692,12 +1728,12 @@
     web-encoding "1.1.5"
 
 "@remix-run/web-fetch@^4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@remix-run/web-fetch/-/web-fetch-4.1.3.tgz#8ad3077c1b5bd9fe2a8813d0ad3c84970a495c04"
-  integrity sha512-D3KXAEkzhR248mu7wCHReQrMrIo3Y9pDDa7TrlISnsOEvqkfWkJJF+PQWmOIKpOSHAhDg7TCb2tzvW8lc/MfHw==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/web-fetch/-/web-fetch-4.2.0.tgz#d35780dbf28bcfd82a5657cabb7bccc7931802f4"
+  integrity sha512-Bll+4Z3CT4ryYKRFTbdanLaXbOjtSuwYcj8s6DSXehVcZWWrz7mA3O394T52iFjvhaJ+ELSstNhVeBQc6NUfGg==
   dependencies:
     "@remix-run/web-blob" "^3.0.4"
-    "@remix-run/web-form-data" "^3.0.2"
+    "@remix-run/web-form-data" "^3.0.3"
     "@remix-run/web-stream" "^1.0.3"
     "@web3-storage/multipart-parser" "^1.0.0"
     data-uri-to-buffer "^3.0.1"
@@ -1710,10 +1746,10 @@
   dependencies:
     "@remix-run/web-blob" "^3.0.3"
 
-"@remix-run/web-form-data@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@remix-run/web-form-data/-/web-form-data-3.0.2.tgz#733a4c8f8176523b7b60a8bd0dc6704fd4d498f3"
-  integrity sha512-F8tm3iB1sPxMpysK6Js7lV3gvLfTNKGmIW38t/e6dtPEB5L1WdbRG1cmLyhsonFc7rT1x1JKdz+2jCtoSdnIUw==
+"@remix-run/web-form-data@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@remix-run/web-form-data/-/web-form-data-3.0.3.tgz#f89a7f971aaf1084d2da87affbb7f4e01c32b8ce"
+  integrity sha512-wL4veBtVPazSpXfPMzrbmeV3IxuxCfcQYPerQ8BXRO5ahAEVw23tv7xS+yoX0XDO5j+vpRaSbhHJK1H5gF7eYQ==
   dependencies:
     web-encoding "1.1.5"
 
@@ -2859,9 +2895,9 @@ clone@^1.0.2:
   integrity sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==
 
 clsx@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.0.tgz#b0e415ea7537dbac01b169c5cec1caeb11d86566"
-  integrity sha512-EPRP7XJsM1y0iCU3Z7C7jFKdQboXSeHgEfzQUTlz7m5NP3hDrlz48aUsmNGp4pC+JOW9WA3vIRqlYuo/bl4Drw==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
+  integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 
 collection-visit@^1.0.0:
   version "1.0.0"
@@ -6848,9 +6884,9 @@ prettier-linter-helpers@^1.0.0:
     fast-diff "^1.1.2"
 
 prettier-plugin-tailwindcss@^0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.11.tgz#6112da68d9d022b7f896d35c070464931c99c35f"
-  integrity sha512-a28+1jvpIZQdZ/W97wOXb6VqI762MKE/TxMMuibMEHhyYsSxQA8Ek30KObd5kJI2HF1ldtSYprFayXJXi3pz8Q==
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.13.tgz#ca1071361dc7e2ed5d95a2ee36825ce45f814942"
+  integrity sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==
 
 prettier@2.6.1:
   version "2.6.1"
@@ -7233,9 +7269,9 @@ remix-utils@^3.3.0:
     uuid "^8.3.2"
 
 remix@^1.3.2:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/remix/-/remix-1.6.3.tgz#fb0d97654e9705fb1caffb6785b35c09298c4c31"
-  integrity sha512-9p0Rge/6URPVb5lJdwJBJivhbcfa/AdTs9d2V/hdOaoJPqHSrAWC6n/1wT0CjR4tkC7xvF38oS5n44UuHLtyiw==
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/remix/-/remix-1.6.7.tgz#e19bf8526a94f525d5e126f67569552be73a3cfd"
+  integrity sha512-jP0s0u88EpEmfVrxfEQkV67AfYZsCBxsSU0AnHDO3NR+6mNQLa9wmabyHZ0tiF+T173sRB4MgxkiM6F7xQLhJQ==
 
 repeat-element@^1.1.2:
   version "1.1.4"
@@ -7503,9 +7539,9 @@ serve-static@1.15.0:
     send "0.18.0"
 
 set-cookie-parser@^2.4.8:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.5.0.tgz#96b59525e1362c94335c3c761100bb6e8f2da4b0"
-  integrity sha512-cHMAtSXilfyBePduZEBVPTCftTQWz6ehWJD5YNUg4mqvRosrrjKbo4WS8JkB0/RxonMoohHm7cOGH60mDkRQ9w==
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/set-cookie-parser/-/set-cookie-parser-2.5.1.tgz#ddd3e9a566b0e8e0862aca974a6ac0e01349430b"
+  integrity sha512-1jeBGaKNGdEq4FgIrORu/N570dwoPYio8lSoYLWmX7sQ//0JY08Xh9o5pBcgmHQ/MbsYp/aZnOe1s1lIsbLprQ==
 
 set-value@^2.0.0, set-value@^2.0.1:
   version "2.0.1"
@@ -8127,6 +8163,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^2.17.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.18.0.tgz#fdef3a74e0a9e68ebe46054836650fb91ac3881e"
+  integrity sha512-pRS+/yrW5TjPPHNOvxhbNZexr2bS63WjrMU8a+VzEBhUi9Tz1pZeD+vQz3ut0svZ46P+SRqMEPnJmk2XnvNzTw==
 
 type-fest@^2.5.2:
   version "2.16.0"
