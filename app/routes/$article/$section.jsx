@@ -17,7 +17,7 @@ export default function Post() {
 
   return (
     <div className="flex">
-      <div className="mb-12 w-full px-4 md:px-8 xl:w-3/4">
+      <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
         <div className="max-w-prose xl:mx-auto">
           <h1 className="mb-2 text-5xl font-medium leading-tight">
             {frontmatter.title}

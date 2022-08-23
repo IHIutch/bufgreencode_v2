@@ -26,7 +26,7 @@ export default function SidebarLayout({ children }) {
               isLoading ? 'opacity-0' : 'opacity-100'
             )}
           >
-            <main className="mt-12 w-full">{children}</main>
+            <main className="w-full">{children}</main>
           </div>
         </div>
       </div>

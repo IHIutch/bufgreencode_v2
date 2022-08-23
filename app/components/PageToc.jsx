@@ -11,52 +11,54 @@ export default function PageToc() {
 
   return headings && headings.length > 0 ? (
     <aside className="hidden lg:w-80 xl:block">
-      <div className="sticky top-0 h-screen overflow-y-auto pt-16">
-        <div className="mt-8 pb-8 pr-4">
-          <div className="mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
-              On this Page
-            </span>
-          </div>
-          <ul>
-            {headings.map((heading, idx) => (
-              <li
-                key={idx}
-                className="text-sm text-gray-600 hover:text-gray-900"
-              >
-                <a href={`#${heading.id}`} className="block py-1.5">
-                  <div
-                    className={clsx(
-                      'border-l-2 transition-all duration-200',
-                      activeId === heading.id
-                        ? ' border-green-700'
-                        : ' border-transparent'
-                    )}
-                  >
+      <div className="fixed top-0 h-screen pt-16">
+        <div className="h-full overflow-y-auto">
+          <div className="my-12 pr-4">
+            <div className="mb-2">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-500">
+                On this Page
+              </span>
+            </div>
+            <ul>
+              {headings.map((heading, idx) => (
+                <li
+                  key={idx}
+                  className="text-sm text-gray-600 hover:text-gray-900"
+                >
+                  <a href={`#${heading.id}`} className="block py-1.5">
                     <div
                       className={clsx(
-                        'transition-all duration-200',
+                        'border-l-2 transition-all duration-200',
                         activeId === heading.id
-                          ? 'translate-x-2'
-                          : 'translate-x-0'
+                          ? ' border-green-700'
+                          : ' border-transparent'
                       )}
                     >
-                      <span
+                      <div
                         className={clsx(
-                          'font-medium',
+                          'transition-all duration-200',
                           activeId === heading.id
-                            ? 'text-green-700'
-                            : 'text-gray-700'
+                            ? 'translate-x-2'
+                            : 'translate-x-0'
                         )}
                       >
-                        {heading.title}
-                      </span>
+                        <span
+                          className={clsx(
+                            'font-medium',
+                            activeId === heading.id
+                              ? 'text-green-700'
+                              : 'text-gray-700'
+                          )}
+                        >
+                          {heading.title}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </aside>
