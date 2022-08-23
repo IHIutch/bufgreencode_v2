@@ -3,9 +3,10 @@ import { DocSearchModal } from '@docsearch/react'
 import { Loader, Search } from 'lucide-react'
 import { useHydrated } from 'remix-utils'
 import clsx from 'clsx'
-import { Link } from '@remix-run/react'
+import { Link, useLoaderData } from '@remix-run/react'
 
 export default function SearchComponent() {
+  const { ENV } = useLoaderData()
   const [isOpen, setIsOpen] = useState(false)
   let isHydrated = useHydrated()
 
@@ -31,9 +32,9 @@ export default function SearchComponent() {
       {isOpen && isHydrated ? (
         <DocSearchModal
           initialScrollY={window.scrollY}
-          appId={process.env.ALGOLIA_API_KEY}
-          indexName={process.env.ALGOLIA_INDEX_NAME}
-          apiKey={process.env.ALGOLIA_API_KEY}
+          appId={ENV.ALGOLIA_APP_ID}
+          indexName={ENV.ALGOLIA_INDEX_NAME}
+          apiKey={ENV.ALGOLIA_API_KEY}
           onClose={() => setIsOpen(false)}
           placeholder="Search the docs..."
           hitComponent={Hit}

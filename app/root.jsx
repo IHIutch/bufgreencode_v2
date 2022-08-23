@@ -59,7 +59,13 @@ export const loader = async () => {
       return a.sectionNumber - b.sectionNumber
     })
 
-  return json({ articles: mappedArticles })
+  const ENV = {
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+  }
+
+  return json({ articles: mappedArticles, ENV })
 }
 
 export default function App() {
