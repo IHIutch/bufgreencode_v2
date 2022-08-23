@@ -42,11 +42,12 @@ export default function PageToc() {
                       )}
                     >
                       <span
-                        className={
+                        className={clsx(
+                          'font-medium',
                           activeId === heading.id
                             ? 'text-green-700'
                             : 'text-gray-700'
-                        }
+                        )}
                       >
                         {heading.title}
                       </span>

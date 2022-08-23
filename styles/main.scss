@@ -3,7 +3,11 @@
 /* purgecss end ignore */
 
 @import 'theme/hamburgers.scss';
+
+/* purgecss start ignore */
 @import 'theme/custom.scss';
+/* purgecss end ignore */
+
 @import '@docsearch/css/dist/style.css';
 
 .DocSearch.DocSearch-Button {
