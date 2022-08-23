@@ -11,7 +11,6 @@ import { Link as LinkIcon } from 'lucide-react'
 import TableSmall from '~/components/TableSmall'
 import FigureImg from '~/components/FigureImg'
 import TableResponsive from '~/components/TableResponsive'
-import * as Fathom from 'fathom-client'
 
 export default function Post() {
   const { content, frontmatter } = useLoaderData()
@@ -56,7 +55,10 @@ const Heading = ({ id, level, children }) => {
     navigator.clipboard.writeText(
       `${window.location.origin}${window.location.pathname}#${id}`
     )
-    Fathom.trackGoal('RC2RYOND')
+
+    if (process.env.NODE_ENV === 'production') {
+      window.fathom.trackGoal('RC2RYOND', 0)
+    }
     setTimeout(() => {
       setIsToolTipVisible(false)
     }, 800)

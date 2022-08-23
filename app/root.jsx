@@ -10,10 +10,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLocation,
 } from '@remix-run/react'
-import { useEffect, useRef } from 'react'
-import * as Fathom from 'fathom-client'
 
 export function links() {
   return [
@@ -66,23 +63,6 @@ export const loader = async () => {
 }
 
 export default function App() {
-  let fathomLoaded = useRef(false)
-  let location = useLocation()
-
-  useEffect(
-    function setupFathom() {
-      if (!fathomLoaded.current && process.env.NODE_ENV === 'production') {
-        Fathom.load('HWWXLVYL', {
-          url: 'https://phenomenal-bright.bufgreencode.com/script.js',
-        })
-        fathomLoaded.current = true
-      } else {
-        Fathom.trackPageview()
-      }
-    },
-    [location]
-  )
-
   return (
     <html lang="en">
       <head>
@@ -94,6 +74,14 @@ export default function App() {
           <Outlet />
         </SidebarLayout>
         <ScrollRestoration />
+
+        {process.env.NODE_ENV === 'production' ? (
+          <script
+            src="https://phenomenal-bright.bufgreencode.com/script.js"
+            data-site="HWWXLVYL"
+            defer
+          />
+        ) : null}
         <Scripts />
         <LiveReload />
       </body>
