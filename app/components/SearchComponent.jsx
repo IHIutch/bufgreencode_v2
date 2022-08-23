@@ -3,6 +3,7 @@ import { DocSearchModal } from '@docsearch/react'
 import { Loader, Search } from 'lucide-react'
 import { useHydrated } from 'remix-utils'
 import clsx from 'clsx'
+import { Link } from '@remix-run/react'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
@@ -35,18 +36,60 @@ export default function SearchComponent() {
           apiKey="4f17115df3fa81ec5deb4173a60a749a"
           onClose={() => setIsOpen(false)}
           placeholder="Search the docs..."
-          transformItems={(items) =>
-            items
-              .filter((i) => {
-                return i.type !== 'lvl0'
-              })
-              .map((i) => {
-                // console.log(i)
-                return { ...i, url: i.url.replace('/docs/', '/') }
-              })
-          }
+          hitComponent={Hit}
+          transformItems={(items) => {
+            return items.map((item, index) => {
+              console.log({ item })
+              const a = document.createElement('a')
+              a.href = item.url
+
+              if (item.hierarchy?.lvl0) {
+                item.hierarchy.lvl0 = item.hierarchy.lvl0.replace(/&amp;/g, '&')
+              }
+
+              if (item._highlightResult?.hierarchy?.lvl0?.value) {
+                item._highlightResult.hierarchy.lvl0.value =
+                  item._highlightResult.hierarchy.lvl0.value.replace(
+                    /&amp;/g,
+                    '&'
+                  )
+              }
+
+              return {
+                ...item,
+                url: `${a.pathname}${a.hash}`,
+                __is_result: () => true,
+                // __is_parent: () =>
+                //   item.type === 'lvl1' && items.length > 1 && index === 0,
+                // __is_child: () =>
+                //   item.type !== 'lvl1' &&
+                //   items.length > 1 &&
+                //   items[0].type === 'lvl1' &&
+                //   index !== 0,
+                __is_first: () => index === 1,
+                __is_last: () => index === items.length - 1 && index !== 0,
+              }
+            })
+          }}
         />
       ) : null}
     </div>
+  )
+}
+
+const Hit = ({ hit, children }) => {
+  return (
+    <Link
+      to={hit.url}
+      className={clsx({
+        'DocSearch-Hit--Result': hit.__is_result?.(),
+        // 'DocSearch-Hit--Parent': hit.__is_parent?.(),
+        // 'DocSearch-Hit--Child': hit.__is_child?.(),
+        'DocSearch-Hit--FirstChild': hit.__is_first?.(),
+        'DocSearch-Hit--LastChild': hit.__is_last?.(),
+      })}
+    >
+      {children}
+    </Link>
   )
 }
