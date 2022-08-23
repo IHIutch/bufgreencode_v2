@@ -6,11 +6,11 @@ export default function Disclaimer() {
         <div className="prose">
           <p className="lead">
             This site is an <span className="font-semibold">unofficial</span>{' '}
-            digitisation for the Buffalo Green Code. This is a an open source
+            digitisation for the Buffalo Green Code. This is an open source
             project and is not affiliated with the City of Buffalo.
           </p>
           <p>
-            The official documentation can be found on the{' '}
+            The official Green Code can be found on the{' '}
             <a
               href="https://www.buffalony.gov/1224/Using-the-Unified-Development-Ordinance"
               target="_blank"
@@ -22,7 +22,8 @@ export default function Disclaimer() {
           <p>
             We've done our best to make this site as accurate as possible in
             order to make it easier to search and find important information.
-            Any inaccurate or or out of date information is unintentional.
+            Any inaccurate or or out of date information is completely
+            unintentional.
           </p>
           <p>
             If you find any errors or inaccuracies,{' '}

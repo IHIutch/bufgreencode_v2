@@ -59,6 +59,7 @@ export const loader = async () => {
       return a.sectionNumber - b.sectionNumber
     })
 
+  // This is necessary for exposing client side env vars with Remix. Read: https://remix.run/docs/en/v1/guides/envvars
   const ENV = {
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
