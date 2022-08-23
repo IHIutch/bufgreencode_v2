@@ -31,9 +31,9 @@ export default function SearchComponent() {
       {isOpen && isHydrated ? (
         <DocSearchModal
           initialScrollY={window.scrollY}
-          appId="BH4D9OD16A"
-          indexName="bufgreencode"
-          apiKey="4f17115df3fa81ec5deb4173a60a749a"
+          appId={process.env.ALGOLIA_API_KEY}
+          indexName={process.env.ALGOLIA_INDEX_NAME}
+          apiKey={process.env.ALGOLIA_API_KEY}
           onClose={() => setIsOpen(false)}
           placeholder="Search the docs..."
           hitComponent={Hit}
