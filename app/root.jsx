@@ -77,7 +77,7 @@ export default function App() {
 
         {process.env.NODE_ENV === 'production' ? (
           <script
-            src="https://phenomenal-bright.bufgreencode.com/script.js"
+            src="https://delightful-cat.bufgreencode.com/script.js"
             data-site="HWWXLVYL"
             defer
           />
