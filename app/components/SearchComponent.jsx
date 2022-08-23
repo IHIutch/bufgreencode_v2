@@ -29,6 +29,7 @@ export default function SearchComponent() {
       </button>
       {isOpen && isHydrated ? (
         <DocSearchModal
+          initialScrollY={window.scrollY}
           appId="BH4D9OD16A"
           indexName="bufgreencode"
           apiKey="4f17115df3fa81ec5deb4173a60a749a"
