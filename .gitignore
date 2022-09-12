@@ -9,3 +9,6 @@ node_modules
 /public/build
 /api/index.js
 /api/_assets/
+
+/app/styles/main.css
+/app/styles/main.css.map
