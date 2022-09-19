@@ -1,4 +1,5 @@
-import styles from '~/styles/main.css'
+import mainStyle from '~/styles/main.css'
+import hamburgerStyle from '~/styles/hamburgers.css'
 import { getMetaTags } from '~/utils'
 import SidebarLayout from '~/layouts/SidebarLayout'
 import { getArticles } from '~/models/articles.server'
@@ -14,7 +15,8 @@ import {
 
 export function links() {
   return [
-    { rel: 'stylesheet', href: styles },
+    { rel: 'stylesheet', href: mainStyle },
+    { rel: 'stylesheet', href: hamburgerStyle },
     {
       rel: 'preconnect',
       href: 'https://BH4D9OD16A-dsn.algolia.net',

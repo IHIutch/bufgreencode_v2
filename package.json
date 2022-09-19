@@ -2,10 +2,10 @@
   "name": "bufgreencode_v3",
   "description": "",
   "scripts": {
-    "build": "pnpm build:css && remix build",
-    "build:css": "postcss styles/main.scss -o app/styles/main.css -m",
-    "dev": "concurrently \"pnpm dev:css\" \"remix dev\"",
-    "dev:css": "postcss -w styles/main.scss -o app/styles/main.css",
+    "build": "pnpm build:postcss && remix build",
+    "build:postcss": "postcss -m styles/*.scss --base styles -d app/styles --ext css",
+    "dev": "concurrently \"pnpm dev:postcss\"  \"remix dev\"",
+    "dev:postcss": "postcss -m -w styles/*.scss --base styles -d app/styles --ext css",
     "postinstall": "remix setup node",
     "lint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore . --fix"
   },

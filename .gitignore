@@ -10,5 +10,4 @@ node_modules
 /api/index.js
 /api/_assets/
 
-/app/styles/main.css
-/app/styles/main.css.map
+/app/styles/**

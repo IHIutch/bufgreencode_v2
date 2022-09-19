@@ -64,8 +64,10 @@ export default function SubnavComponent() {
           </div>
           <CollapsibleContent>
             <nav className="z-0 flex h-full max-h-[calc(100vh-6rem)] flex-grow flex-col justify-between">
-              <div className="h-full overflow-auto py-2">
-                <GlobalNavComponent className="my-4" />
+              <div className="h-full overflow-y-auto">
+                <div class="py-2">
+                  <GlobalNavComponent className="my-4" />
+                </div>
               </div>
               <div className="sticky bottom-0 z-10 flex justify-between border-t bg-gray-100 px-6 pt-2 pb-4">
                 <Link
