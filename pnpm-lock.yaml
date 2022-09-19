@@ -4,7 +4,7 @@ specifiers:
   '@csstools/postcss-sass': ^5.0.1
   '@docsearch/css': ^3.2.1
   '@docsearch/react': 3.2.1
-  '@fullhuman/postcss-purgecss': ^4.1.3
+  '@fullhuman/postcss-purgecss': ^5.0.0
   '@markdoc/markdoc': ^0.1.7
   '@radix-ui/react-accordion': 1.0.0
   '@radix-ui/react-collapsible': 1.0.0
@@ -29,10 +29,10 @@ specifiers:
   hamburgers: ^1.2.1
   js-yaml: ^4.1.0
   lodash: ^4.17.21
-  lucide-react: ^0.88.0
+  lucide-react: ^0.89.0
   postcss: ^8.4.16
   postcss-cli: ^10.0.0
-  postcss-import: ^14.1.0
+  postcss-import: ^15.0.0
   postcss-scss: ^4.0.5
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
@@ -57,7 +57,7 @@ dependencies:
   clsx: 1.2.1
   js-yaml: 4.1.0
   lodash: 4.17.21
-  lucide-react: 0.88.0_sh5qlbywuemxd2y3xkrw2y2kr4
+  lucide-react: 0.89.0_sh5qlbywuemxd2y3xkrw2y2kr4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   remix: 1.7.1
@@ -65,7 +65,7 @@ dependencies:
 
 devDependencies:
   '@csstools/postcss-sass': 5.0.1_postcss@8.4.16
-  '@fullhuman/postcss-purgecss': 4.1.3_postcss@8.4.16
+  '@fullhuman/postcss-purgecss': 5.0.0_postcss@8.4.16
   '@remix-run/dev': 1.7.1_dmkalgmjfluropgshi7qkdeohm
   '@remix-run/eslint-config': 1.7.1_j37t4rqwl7h3nhuecgvzwhcgii
   '@remix-run/serve': 1.7.1_biqbaboplfbrettd7655fr4n2y
@@ -80,7 +80,7 @@ devDependencies:
   hamburgers: 1.2.1
   postcss: 8.4.16
   postcss-cli: 10.0.0_postcss@8.4.16
-  postcss-import: 14.1.0_postcss@8.4.16
+  postcss-import: 15.0.0_postcss@8.4.16
   postcss-scss: 4.0.5_postcss@8.4.16
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
@@ -1676,13 +1676,13 @@ packages:
       - '@types/react'
     dev: false
 
-  /@fullhuman/postcss-purgecss/4.1.3_postcss@8.4.16:
-    resolution: {integrity: sha512-jqcsyfvq09VOsMXxJMPLRF6Fhg/NNltzWKnC9qtzva+QKTxerCO4esG6je7hbnmkpZtaDyPTwMBj9bzfWorsrw==}
+  /@fullhuman/postcss-purgecss/5.0.0_postcss@8.4.16:
+    resolution: {integrity: sha512-onDS/b/2pMRzqSoj4qOs2tYFmOpaspjTAgvACIHMPiicu1ptajiBruTrjBzTKdxWdX0ldaBb7wj8nEaTLyFkJw==}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
       postcss: 8.4.16
-      purgecss: 4.1.3
+      purgecss: 5.0.0
     dev: true
 
   /@gar/promisify/1.1.3:
@@ -3121,6 +3121,12 @@ packages:
       balanced-match: 1.0.2
       concat-map: 0.0.1
 
+  /brace-expansion/2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: true
+
   /braces/2.3.2:
     resolution: {integrity: sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==}
     engines: {node: '>=0.10.0'}
@@ -3442,9 +3448,9 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /commander/8.3.0:
-    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
-    engines: {node: '>= 12'}
+  /commander/9.4.0:
+    resolution: {integrity: sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==}
+    engines: {node: ^12.20.0 || >=14}
     dev: true
 
   /commondir/1.0.1:
@@ -5373,6 +5379,17 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /glob/8.0.3:
+    resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.0
+      once: 1.4.0
+    dev: true
+
   /globals/11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
@@ -6238,8 +6255,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-react/0.88.0_sh5qlbywuemxd2y3xkrw2y2kr4:
-    resolution: {integrity: sha512-DiLZ0uqqt4Qpe7bc+RvJMMI7z3gWlMOnst+TtNFUH6XfQ12APMQDx+/fHsmMlIkyCs/pPo3UKZpYbZ5i1iMOuA==}
+  /lucide-react/0.89.0_sh5qlbywuemxd2y3xkrw2y2kr4:
+    resolution: {integrity: sha512-PPTa9/Zv2VOCrdUj5DEfab1flHo/VGEvicvcRUPTXeggK/hDySBVHmeIcB0VAsZBPJrZFdKLP2t70T0+Yn4p4g==}
     peerDependencies:
       prop-types: ^15.7.2
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
@@ -6756,6 +6773,13 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
+
+  /minimatch/5.1.0:
+    resolution: {integrity: sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
 
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
@@ -7368,6 +7392,18 @@ packages:
       resolve: 1.22.1
     dev: true
 
+  /postcss-import/15.0.0_postcss@8.4.16:
+    resolution: {integrity: sha512-Y20shPQ07RitgBGv2zvkEAu9bqvrD77C9axhj/aA1BQj4czape2MdClCExvB27EwYEJdGgKZBpKanb0t1rK2Kg==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.16
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.1
+    dev: true
+
   /postcss-js/4.0.0_postcss@8.4.16:
     resolution: {integrity: sha512-77QESFBwgX4irogGVPgQ5s07vLvFqWr228qZY+w6lW599cRlK/HmnlivnnVUxkjHnCu4J16PDMHcH+e+2HbvTQ==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -7785,12 +7821,12 @@ packages:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
 
-  /purgecss/4.1.3:
-    resolution: {integrity: sha512-99cKy4s+VZoXnPxaoM23e5ABcP851nC2y2GROkkjS8eJaJtlciGavd7iYAw2V84WeBqggZ12l8ef44G99HmTaw==}
+  /purgecss/5.0.0:
+    resolution: {integrity: sha512-RAnuxrGuVyLLTr8uMbKaxDRGWMgK5CCYDfRyUNNcaz5P3kGgD2b7ymQGYEyo2ST7Tl/ScwFgf5l3slKMxHSbrw==}
     hasBin: true
     dependencies:
-      commander: 8.3.0
-      glob: 7.2.3
+      commander: 9.4.0
+      glob: 8.0.3
       postcss: 8.4.16
       postcss-selector-parser: 6.0.10
     dev: true
