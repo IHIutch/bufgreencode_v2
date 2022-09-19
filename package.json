@@ -3,9 +3,9 @@
   "description": "",
   "scripts": {
     "build": "pnpm build:postcss && remix build",
-    "build:postcss": "postcss -m styles/*.scss --base styles -d app/styles --ext css",
+    "build:postcss": "postcss styles/*.scss -m -d app/styles --ext css",
     "dev": "concurrently \"pnpm dev:postcss\"  \"remix dev\"",
-    "dev:postcss": "postcss -m -w styles/*.scss --base styles -d app/styles --ext css",
+    "dev:postcss": "postcss styles/*.scss -m -w -d app/styles --ext css",
     "postinstall": "remix setup node",
     "lint:fix": "eslint --ext .js,.jsx --ignore-path .gitignore . --fix"
   },
