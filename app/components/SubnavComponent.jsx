@@ -52,12 +52,12 @@ export default function SubnavComponent() {
                   aria-label="Menu Toggle"
                   className={clsx(
                     { 'is-active': isOpen },
-                    'hamburger hamburger--squeeze'
+                    'hamburger hamburger--squeeze !flex h-full items-center'
                   )}
                 >
-                  <span className="hamburger-box">
+                  <div className="hamburger-box">
                     <span className="hamburger-inner" />
-                  </span>
+                  </div>
                 </button>
               </Collapsible.Trigger>
             </div>
