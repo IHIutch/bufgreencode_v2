@@ -57,9 +57,7 @@ const Heading = ({ id, level, children }) => {
     )
 
     if (process.env.NODE_ENV === 'production') {
-      window.fathom.trackGoal('RC2RYOND', {
-        anchor: '#' + id,
-      })
+      window.fathom.trackGoal('RC2RYOND', 0)
     }
     setTimeout(() => {
       setIsToolTipVisible(false)
