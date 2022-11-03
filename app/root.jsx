@@ -85,11 +85,14 @@ export default function App() {
         <ScrollRestoration />
 
         {process.env.NODE_ENV === 'production' ? (
-          <script
-            src="https://delightful-cat.bufgreencode.com/script.js"
-            data-site="HWWXLVYL"
-            defer
-          />
+          <>
+            <script defer src="/va/script.js" />
+            <script
+              src="https://delightful-cat.bufgreencode.com/script.js"
+              data-site="HWWXLVYL"
+              defer
+            />
+          </>
         ) : null}
         <Scripts />
         <LiveReload />
