@@ -105,13 +105,6 @@ export default function App() {
               data-site="HWWXLVYL"
               defer
             />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.ENV.VERCEL_ANALYTICS_ID = ${JSON.stringify(
-                  ENV.VERCEL_ANALYTICS_ID
-                )}`,
-              }}
-            />
           </>
         ) : null}
         <Scripts />
