@@ -42,6 +42,7 @@ specifiers:
   remix: ^1.7.4
   remix-utils: ^3.4.0
   tailwindcss: ^3.2.1
+  web-vitals: ^3.0.4
 
 dependencies:
   '@docsearch/css': 3.3.0
@@ -64,6 +65,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   remix: 1.7.4
   remix-utils: 3.4.0_bm7hbc2s3lxadcmk7ze4q7tq4y
+  web-vitals: 3.0.4
 
 devDependencies:
   '@csstools/postcss-sass': 5.0.1_postcss@8.4.18
@@ -9672,6 +9674,10 @@ packages:
   /web-streams-polyfill/3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
+
+  /web-vitals/3.0.4:
+    resolution: {integrity: sha512-Yau8qf1AJ/dm6MY180Bi0qpCIuWmAfKAnOqmxLecGfIHn0+ND3H4JOhXeY73Pyi9zjSF5J4SNUewHLNUzU7mmA==}
+    dev: false
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
