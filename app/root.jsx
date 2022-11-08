@@ -13,8 +13,8 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from '@remix-run/react'
-import reportWebVitals from './reportWebVitals'
-import { sendToVercelAnalytics } from './vitals'
+import reportWebVitals from './reportWebVitals.client'
+import { sendToVercelAnalytics } from './vitals.client'
 import { useHydrated } from 'remix-utils'
 
 export function links() {
@@ -79,8 +79,7 @@ export const loader = async () => {
 export default function App() {
   const { ENV } = useLoaderData()
 
-  const isHydrated = useHydrated()
-  if (isHydrated)
+  if (useHydrated())
     reportWebVitals(sendToVercelAnalytics, {
       analyticsId: ENV.VERCEL_ANALYTICS_ID,
     })
