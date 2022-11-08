@@ -11,6 +11,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from '@remix-run/react'
 
 export function links() {
@@ -66,12 +67,14 @@ export const loader = async () => {
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+    VERCEL_ANALYTICS_ID: process.env.VERCEL_ANALYTICS_ID,
   }
 
   return json({ articles: mappedArticles, ENV })
 }
 
 export default function App() {
+  const { ENV } = useLoaderData()
   return (
     <html lang="en">
       <head>
@@ -91,6 +94,13 @@ export default function App() {
               src="https://delightful-cat.bufgreencode.com/script.js"
               data-site="HWWXLVYL"
               defer
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.ENV.VERCEL_ANALYTICS_ID = ${JSON.stringify(
+                  ENV.VERCEL_ANALYTICS_ID
+                )}`,
+              }}
             />
           </>
         ) : null}
