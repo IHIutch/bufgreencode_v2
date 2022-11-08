@@ -32,6 +32,10 @@ export function meta() {
     viewport: 'width=device-width,initial-scale=1',
     ...metaTags,
     'google-site-verification': '2uJ6hXsUDukLmTfNK7Y7jCmnaqyiLptsVDmZ2Ct7Zzk',
+    'Content-Security-Policy': {
+      httpEquiv: 'Content-Security-Policy',
+      content: 'script-src vitals.vercel-insights.com',
+    },
   }
 }
 
