@@ -8,8 +8,7 @@ function getConnectionSpeed() {
     : ''
 }
 
-export function sendToVercelAnalytics(metric) {
-  const analyticsId = window.ENV.VERCEL_ANALYTICS_ID
+export function sendToVercelAnalytics({ metric, analyticsId }) {
   if (!analyticsId) {
     return
   }
