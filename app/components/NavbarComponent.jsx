@@ -9,7 +9,11 @@ export default function NavbarComponent() {
         <div className="flex h-full items-center">
           <div className="h-full w-16 flex-shrink-0 pl-4 md:w-40 lg:w-72 2xl:w-80">
             <div className="flex h-full items-center">
-              <Link to="/" className="block h-full w-full py-2 lg:mr-4">
+              <Link
+                prefetch="intent"
+                to="/"
+                className="block h-full w-full py-2 lg:mr-4"
+              >
                 <img
                   src="/meta/bufgreencode-icon.svg"
                   alt="Buffalo Green Code"
@@ -30,6 +34,7 @@ export default function NavbarComponent() {
           </div>
           <div className="hidden h-full flex-shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80">
             <Link
+              prefetch="intent"
               to="/disclaimer"
               className="py-1 px-2 text-gray-700 hover:text-gray-900"
             >

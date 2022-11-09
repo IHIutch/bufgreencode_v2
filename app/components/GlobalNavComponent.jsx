@@ -87,6 +87,7 @@ export default function GlobalNavComponent() {
                   {groupedArticles[articleSlug].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
+                        prefetch="intent"
                         className={clsx(
                           'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
                           '-ml-px transition-all duration-200'

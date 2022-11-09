@@ -71,6 +71,7 @@ export default function SubnavComponent() {
               </div>
               <div className="sticky bottom-0 z-10 flex justify-between border-t bg-gray-100 px-6 pt-2 pb-4">
                 <Link
+                  prefetch="intent"
                   to="/disclaimer"
                   className="p-2 text-gray-700 hover:text-gray-900"
                 >

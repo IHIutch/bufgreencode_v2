@@ -81,6 +81,7 @@ export default function SearchComponent() {
 const Hit = ({ hit, children }) => {
   return (
     <Link
+      prefetch="intent"
       to={hit.url}
       className={clsx({
         'DocSearch-Hit--Result': hit.__is_result?.(),
