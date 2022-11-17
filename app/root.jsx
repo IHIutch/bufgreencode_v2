@@ -21,8 +21,13 @@ import { Analytics } from '@vercel/analytics/react'
 
 export function links() {
   return [
+    // Preload
+    { rel: 'preload', href: mainStyle, as: 'style' },
+    { rel: 'preload', href: hamburgerStyle, as: 'style' },
+    // Styles
     { rel: 'stylesheet', href: mainStyle },
     { rel: 'stylesheet', href: hamburgerStyle },
+    // Preconnect scripts
     {
       rel: 'preconnect',
       href: 'https://BH4D9OD16A-dsn.algolia.net',
