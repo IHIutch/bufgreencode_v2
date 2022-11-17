@@ -20,8 +20,8 @@ import { MetronomeLinks } from '@metronome-sh/react'
 
 export function links() {
   return [
-    { rel: 'stylesheet', href: mainStyle },
-    { rel: 'stylesheet', href: hamburgerStyle },
+    { rel: 'preload', as: 'style', href: mainStyle },
+    { rel: 'preload', as: 'style', href: hamburgerStyle },
     {
       rel: 'preconnect',
       href: 'https://BH4D9OD16A-dsn.algolia.net',
