@@ -16,6 +16,7 @@ import {
 import reportWebVitals from './reportWebVitals.client'
 import { sendToVercelAnalytics } from './vitals.client'
 import { useHydrated } from 'remix-utils'
+import { MetronomeLinks } from '@metronome-sh/react'
 
 export function links() {
   return [
@@ -89,6 +90,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <MetronomeLinks />
       </head>
       <body>
         <SidebarLayout>
