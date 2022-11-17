@@ -17,11 +17,12 @@ import reportWebVitals from './reportWebVitals.client'
 import { sendToVercelAnalytics } from './vitals.client'
 import { useHydrated } from 'remix-utils'
 import { MetronomeLinks } from '@metronome-sh/react'
+import { Analytics } from '@vercel/analytics/react'
 
 export function links() {
   return [
-    { rel: 'preload', as: 'style', href: mainStyle },
-    { rel: 'preload', as: 'style', href: hamburgerStyle },
+    { rel: 'stylesheet', href: mainStyle },
+    { rel: 'stylesheet', href: hamburgerStyle },
     {
       rel: 'preconnect',
       href: 'https://BH4D9OD16A-dsn.algolia.net',
@@ -91,6 +92,7 @@ export default function App() {
         <Meta />
         <Links />
         <MetronomeLinks />
+        <Analytics />
       </head>
       <body>
         <SidebarLayout>
@@ -100,7 +102,7 @@ export default function App() {
 
         {process.env.NODE_ENV === 'production' ? (
           <>
-            <script defer src="/va/script.js" />
+            {/* <script src="/_vercel/insights/script.js" defer></script> */}
             <script
               src="https://delightful-cat.bufgreencode.com/script.js"
               data-site="HWWXLVYL"
