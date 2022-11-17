@@ -1,3 +1,5 @@
 module.exports = {
-  ignoredRoutes: ['root'], // Ignores the root route
+  ignoredRoutes: [],
+  ignoredPathnames: ['/healthcheck'],
+  ignoreHeadMethod: true,
 }
