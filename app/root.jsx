@@ -39,7 +39,7 @@ export function links() {
 export function headers(){
   return {
     "Cache-Control": "max-age=31536000, immutable"
-  ]
+  }
 }
 
 export function meta() {
