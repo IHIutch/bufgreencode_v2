@@ -107,6 +107,12 @@ export function meta({ data, location }) {
   return { ...metaTags }
 }
 
+export function headers(){
+  return {
+    "Cache-Control": "max-age=31536000, immutable"
+  }
+}
+
 export const loader = async ({ params }) => {
   const { article, section } = params
   const content = await getArticle({ article, section })
