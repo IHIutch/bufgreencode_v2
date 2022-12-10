@@ -3,7 +3,6 @@ import { getArticles } from '~/models/articles.server'
 export const loader = async () => {
   const articles = await getArticles()
   if (!articles) {
-    // Fathom.trackGoal() TODO: track 404's
     throw new Response('Not Found', {
       status: 404,
     })

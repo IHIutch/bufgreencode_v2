@@ -118,7 +118,6 @@ export const loader = async ({ params }) => {
   const content = await getArticle({ article, section })
 
   if (!content) {
-    // Fathom.trackGoal() TODO: track 404's
     throw new Response('Not Found', {
       status: 404,
     })
