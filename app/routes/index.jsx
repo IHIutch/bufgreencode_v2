@@ -1,3 +1,9 @@
+export function headers() {
+  return {
+    'Cache-Control': 'max-age=31536000, immutable',
+  }
+}
+
 export default function Index() {
   return (
     <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">

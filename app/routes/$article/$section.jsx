@@ -107,9 +107,9 @@ export function meta({ data, location }) {
   return { ...metaTags }
 }
 
-export function headers(){
+export function headers() {
   return {
-    "Cache-Control": "max-age=31536000, immutable"
+    'Cache-Control': 'max-age=31536000, immutable',
   }
 }
 
