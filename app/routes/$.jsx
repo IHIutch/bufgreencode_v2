@@ -2,8 +2,9 @@ import { Link } from '@remix-run/react'
 import { useHydrated } from 'remix-utils'
 
 export default function FourOhFour() {
-  if (process.env.NODE_ENV === 'production' && useHydrated()) {
-    window.fathom.trackGoal('8HR9GZLM', 0)
+  const isHydrated = useHydrated()
+  if (process.env.NODE_ENV === 'production' && isHydrated) {
+    window?.fathom?.trackGoal('8HR9GZLM', 0) // 404
   }
 
   return (
