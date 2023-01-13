@@ -19,7 +19,7 @@ specifiers:
   '@remix-run/vercel': ^1.8.2
   '@stitches/react': ^1.2.8
   '@tailwindcss/typography': ^0.5.8
-  '@vercel/analytics': ^0.1.6
+  '@vercel/analytics': ^0.1.8
   '@vercel/node': ^2.8.0
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
@@ -44,7 +44,7 @@ specifiers:
   remix: ^1.8.2
   remix-utils: ^4.4.0
   tailwindcss: ^3.2.4
-  web-vitals: ^3.1.0
+  web-vitals: ^3.1.1
 
 dependencies:
   '@docsearch/css': 3.3.0
@@ -59,7 +59,7 @@ dependencies:
   '@remix-run/react': 1.8.2_biqbaboplfbrettd7655fr4n2y
   '@remix-run/vercel': 1.8.2_ldwa5totof75qvkyrgfna3owpu
   '@stitches/react': 1.2.8_react@18.2.0
-  '@vercel/analytics': 0.1.6_react@18.2.0
+  '@vercel/analytics': 0.1.8_react@18.2.0
   '@vercel/node': 2.8.0
   clsx: 1.2.1
   js-yaml: 4.1.0
@@ -69,7 +69,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   remix: 1.8.2
   remix-utils: 4.4.0_o3zhahsvck7zi5znt5b63mwi34
-  web-vitals: 3.1.0
+  web-vitals: 3.1.1
 
 devDependencies:
   '@csstools/postcss-sass': 5.0.1_postcss@8.4.19
@@ -3228,8 +3228,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/analytics/0.1.6_react@18.2.0:
-    resolution: {integrity: sha512-zNd5pj3iDvq8IMBQHa1YRcIteiw6ZiPB8AsONHd8ieFXlNpLqhXfIYnf4WvTfZ7S1NSJ++mIM14aJnNac/VMXQ==}
+  /@vercel/analytics/0.1.8_react@18.2.0:
+    resolution: {integrity: sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==}
     peerDependencies:
       react: ^16.8||^17||^18
     dependencies:
@@ -10418,8 +10418,8 @@ packages:
     resolution: {integrity: sha512-sVWcwhU5mX6crfI5Vd2dC4qchyTqxV8URinzt25XqVh+bHEPGH4C3NPrNionCP7Obx59wrYEbNlw4Z8sjALzZg==}
     dev: false
 
-  /web-vitals/3.1.0:
-    resolution: {integrity: sha512-zCeQ+bOjWjJbXv5ZL0r8Py3XP2doCQMZXNKlBGfUjPAVZWokApdeF/kFlK1peuKlCt8sL9TFkKzyXE9/cmNJQA==}
+  /web-vitals/3.1.1:
+    resolution: {integrity: sha512-qvllU+ZeQChqzBhZ1oyXmWsjJ8a2jHYpH8AMaVuf29yscOPZfTQTjQFRX6+eADTdsDE8IanOZ0cetweHMs8/2A==}
     dev: false
 
   /webidl-conversions/3.0.1:
