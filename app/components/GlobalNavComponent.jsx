@@ -4,25 +4,6 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
 import { NavLink, useLoaderData, useParams } from '@remix-run/react'
-import { keyframes, styled } from '@stitches/react'
-
-const open = keyframes({
-  from: { height: 0 },
-  to: { height: 'var(--radix-accordion-content-height)' },
-})
-
-const close = keyframes({
-  from: { height: 'var(--radix-accordion-content-height)' },
-  to: { height: 0 },
-})
-
-const AccordionContent = styled(Accordion.Content, {
-  overflow: 'hidden',
-  '&[data-state="open"]': { animation: `${open} 200ms ease-in-out forwards` },
-  '&[data-state="closed"]': {
-    animation: `${close} 200ms ease-in-out forwards`,
-  },
-})
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
@@ -72,7 +53,12 @@ export default function GlobalNavComponent() {
                   </div>
                 </div>
               </Accordion.Trigger>
-              <AccordionContent className={clsx('rdx-accordion', 'py-1 pl-3')}>
+              <Accordion.Content
+                className={clsx(
+                  'overflow-hidden transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up',
+                  'py-1 pl-3'
+                )}
+              >
                 <ul
                   className={clsx(
                     'border-l border-gray-300 pb-1',
@@ -117,7 +103,7 @@ export default function GlobalNavComponent() {
                     </li>
                   ))}
                 </ul>
-              </AccordionContent>
+              </Accordion.Content>
             </li>
           </Accordion.Item>
         ))}

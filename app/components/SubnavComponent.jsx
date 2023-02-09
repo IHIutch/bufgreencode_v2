@@ -1,30 +1,9 @@
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { Link, useParams } from '@remix-run/react'
-import { keyframes, styled } from '@stitches/react'
 import clsx from 'clsx'
 import { ExternalLink } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import GlobalNavComponent from '~/components/GlobalNavComponent'
-
-const open = keyframes({
-  from: { height: 0 },
-  to: { height: 'calc(100vh - 6rem)' },
-})
-
-const close = keyframes({
-  from: { height: 'calc(100vh - 6rem)' },
-  to: { height: 0 },
-})
-
-const CollapsibleContent = styled(Collapsible.Content, {
-  overflow: 'hidden',
-  '&[data-state="open"]': {
-    animation: `${open} 200ms ease-in-out forwards`,
-  },
-  '&[data-state="closed"]': {
-    animation: `${close} 200ms ease-in-out forwards`,
-  },
-})
 
 export default function SubnavComponent() {
   const { section } = useParams()
@@ -62,8 +41,8 @@ export default function SubnavComponent() {
               </Collapsible.Trigger>
             </div>
           </div>
-          <CollapsibleContent>
-            <nav className="z-0 flex h-full max-h-[calc(100vh-6rem)] flex-grow flex-col justify-between">
+          <Collapsible.Content className="overflow-hidden transition-all data-[state=open]:animate-collapsable-down data-[state=closed]:animate-collapsable-up">
+            <nav className="z-0 flex h-full max-h-[calc(100vh-6.5rem)] flex-grow flex-col justify-between">
               <div className="h-full overflow-y-auto">
                 <div class="py-2">
                   <GlobalNavComponent className="my-4" />
@@ -90,7 +69,7 @@ export default function SubnavComponent() {
                 </a>
               </div>
             </nav>
-          </CollapsibleContent>
+          </Collapsible.Content>
         </Collapsible.Root>
       </div>
     </div>
