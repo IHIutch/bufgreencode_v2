@@ -29,7 +29,7 @@ const getHeadings = (node, sections = []) => {
 }
 
 export async function getArticles() {
-  const contentDir = process.cwd() + '/api/articles'
+  const contentDir = process.cwd() + '/app/content'
   const contentPaths = fs.readdirSync(contentDir)
 
   const articlePaths = contentPaths.reduce((acc, path) => {
@@ -63,7 +63,7 @@ export async function getArticles() {
 
 export async function getArticle({ article, section }) {
   try {
-    const contentDir = process.cwd() + '/api/articles'
+    const contentDir = process.cwd() + '/app/content'
     const source = fs.readFileSync(
       `${contentDir}/${article}/${section}.mdx`,
       'utf8',
