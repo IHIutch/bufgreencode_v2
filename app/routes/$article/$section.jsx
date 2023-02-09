@@ -11,9 +11,11 @@ import { Link as LinkIcon } from 'lucide-react'
 import TableSmall from '~/components/TableSmall'
 import FigureImg from '~/components/FigureImg'
 import TableResponsive from '~/components/TableResponsive'
+import { getMDXComponent } from 'mdx-bundler/client'
 
 export default function Post() {
-  const { content, frontmatter } = useLoaderData()
+  const { code, frontmatter } = useLoaderData()
+  const Component = React.useMemo(() => getMDXComponent(code), [code])
 
   return (
     <div className="flex">
@@ -26,15 +28,24 @@ export default function Post() {
             <p className="text-lg text-gray-700">{frontmatter.lead}</p>
           ) : null}
           <div className="page-content prose">
-            {Markdoc.renderers.react(content, React, {
+            <Component
+              components={{
+                Heading,
+                TableSmall,
+                FigureImg,
+                TableResponsive,
+                Sup: ({ children }) => <sup>{children}</sup>,
+              }}
+            />
+            {/* {Markdoc.renderers.react(content, React, {
               components: {
                 Heading,
                 TableSmall,
                 FigureImg,
                 TableResponsive,
                 Sup: ({ children }) => <sup>{children}</sup>,
-              },
-            })}
+              }, */}
+            {/* })} */}
           </div>
         </div>
       </div>
