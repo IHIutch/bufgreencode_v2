@@ -29,6 +29,7 @@ export const loader = async () => {
       'Content-Type': 'application/xml',
       'xml-version': '1.0',
       encoding: 'UTF-8',
+      'Cache-Control': 'max-age=31536000, immutable',
     },
   })
 }
