@@ -62,6 +62,7 @@ export const loader = async () => {
       articleNumber: a.article_number,
       sectionNumber: a.section_number,
       slug: a.slug,
+      articleSlug: a.articleSlug,
     }))
     .sort((a, b) => {
       return a.articleNumber - b.articleNumber

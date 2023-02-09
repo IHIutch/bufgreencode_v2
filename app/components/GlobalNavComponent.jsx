@@ -3,7 +3,7 @@ import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
-import { NavLink, useLoaderData, useMatches } from '@remix-run/react'
+import { NavLink, useLoaderData, useParams } from '@remix-run/react'
 import { keyframes, styled } from '@stitches/react'
 
 const open = keyframes({
@@ -26,15 +26,13 @@ const AccordionContent = styled(Accordion.Content, {
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
+  const params = useParams()
 
-  const matches = useMatches()
-  const currentArticle = matches?.[1]?.params?.article
-
-  const groupedArticles = groupBy(articles, 'article_number')
+  const groupedArticles = groupBy(articles, 'articleSlug')
 
   const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
-    (article_number) => {
-      return article_number === currentArticle
+    (articleSlug) => {
+      return articleSlug === params.article
     }
   )
   const [activeIdx, setActiveIdx] = useState(
@@ -49,15 +47,15 @@ export default function GlobalNavComponent() {
       onValueChange={setActiveIdx}
     >
       <ul className="px-2 py-1 text-sm">
-        {Object.keys(groupedArticles).map((article_number, idx) => (
+        {Object.keys(groupedArticles).map((articleSlug, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>
             <li className="px-2 pb-1">
               <Accordion.Trigger className="w-full text-left">
                 <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
                     <span className="font-medium">
-                      {groupedArticles[article_number][0].articleNumber}.{' '}
-                      {groupedArticles[article_number][0].articleTitle}
+                      {groupedArticles[articleSlug][0].articleNumber}.{' '}
+                      {groupedArticles[articleSlug][0].articleTitle}
                     </span>
                   </div>
                   <div>
@@ -84,7 +82,7 @@ export default function GlobalNavComponent() {
                       : '-translate-y-4 opacity-0'
                   )}
                 >
-                  {groupedArticles[article_number].map((section, sIdx) => (
+                  {groupedArticles[articleSlug].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
                         prefetch="intent"
