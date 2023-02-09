@@ -3,38 +3,17 @@ import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
-import { NavLink, useLoaderData, useMatches } from '@remix-run/react'
-import { keyframes, styled } from '@stitches/react'
-
-const open = keyframes({
-  from: { height: 0 },
-  to: { height: 'var(--radix-accordion-content-height)' },
-})
-
-const close = keyframes({
-  from: { height: 'var(--radix-accordion-content-height)' },
-  to: { height: 0 },
-})
-
-const AccordionContent = styled(Accordion.Content, {
-  overflow: 'hidden',
-  '&[data-state="open"]': { animation: `${open} 200ms ease-in-out forwards` },
-  '&[data-state="closed"]': {
-    animation: `${close} 200ms ease-in-out forwards`,
-  },
-})
+import { NavLink, useLoaderData, useParams } from '@remix-run/react'
 
 export default function GlobalNavComponent() {
   const { articles } = useLoaderData()
+  const params = useParams()
 
-  const matches = useMatches()
-  const currentArticle = matches?.[1]?.params?.article
-
-  const groupedArticles = groupBy(articles, 'article_number')
+  const groupedArticles = groupBy(articles, 'articleSlug')
 
   const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
-    (article_number) => {
-      return article_number === currentArticle
+    (articleSlug) => {
+      return articleSlug === params.article
     }
   )
   const [activeIdx, setActiveIdx] = useState(
@@ -49,15 +28,15 @@ export default function GlobalNavComponent() {
       onValueChange={setActiveIdx}
     >
       <ul className="px-2 py-1 text-sm">
-        {Object.keys(groupedArticles).map((article_number, idx) => (
+        {Object.keys(groupedArticles).map((articleSlug, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>
             <li className="px-2 pb-1">
               <Accordion.Trigger className="w-full text-left">
                 <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
                     <span className="font-medium">
-                      {groupedArticles[article_number][0].articleNumber}.{' '}
-                      {groupedArticles[article_number][0].articleTitle}
+                      {groupedArticles[articleSlug][0].articleNumber}.{' '}
+                      {groupedArticles[articleSlug][0].articleTitle}
                     </span>
                   </div>
                   <div>
@@ -74,7 +53,12 @@ export default function GlobalNavComponent() {
                   </div>
                 </div>
               </Accordion.Trigger>
-              <AccordionContent className={clsx('rdx-accordion', 'py-1 pl-3')}>
+              <Accordion.Content
+                className={clsx(
+                  'overflow-hidden transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up',
+                  'py-1 pl-3'
+                )}
+              >
                 <ul
                   className={clsx(
                     'border-l border-gray-300 pb-1',
@@ -84,7 +68,7 @@ export default function GlobalNavComponent() {
                       : '-translate-y-4 opacity-0'
                   )}
                 >
-                  {groupedArticles[article_number].map((section, sIdx) => (
+                  {groupedArticles[articleSlug].map((section, sIdx) => (
                     <li key={sIdx}>
                       <NavLink
                         prefetch="intent"
@@ -119,7 +103,7 @@ export default function GlobalNavComponent() {
                     </li>
                   ))}
                 </ul>
-              </AccordionContent>
+              </Accordion.Content>
             </li>
           </Accordion.Item>
         ))}

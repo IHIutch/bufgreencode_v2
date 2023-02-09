@@ -33,8 +33,9 @@ export async function getArticles() {
     const paths = fs.readdirSync(`${contentDir}/${path}`)
     return acc.concat(
       paths.map((p) => ({
-        fullPath: `${contentDir}/${path}/${p}`,
-        slug: `${path}/${p}`.split('.').slice(0, -1).join('.'),
+        path: `${contentDir}/${path}/${p}`,
+        articleSlug: path,
+        pageSlug: `${path}/${p}`.split('.').slice(0, -1).join('.'),
       }))
     )
   }, [])
@@ -42,13 +43,17 @@ export async function getArticles() {
   const articles = await Promise.all(
     articlePaths.map(async (ap) => {
       const result = await bundleMDX({
-        file: ap.fullPath,
+        file: ap.path,
         cwd: process.cwd() + '/app/components',
       })
 
       const { frontmatter } = result
 
-      return { ...frontmatter, slug: ap.slug }
+      return {
+        ...frontmatter,
+        slug: ap.pageSlug,
+        articleSlug: ap.articleSlug,
+      }
     })
   )
   return articles
