@@ -57,12 +57,11 @@ export const loader = async () => {
   const mappedArticles = articles
     .map((a) => ({
       ...a,
-      articleTitle: a.frontmatter.article,
-      sectionTitle: a.frontmatter.title,
-      articleNumber: a.frontmatter.article_number,
-      sectionNumber: a.frontmatter.section_number,
+      articleTitle: a.article,
+      sectionTitle: a.title,
+      articleNumber: a.article_number,
+      sectionNumber: a.section_number,
       slug: a.slug,
-      articleSlug: a.articleSlug,
     }))
     .sort((a, b) => {
       return a.articleNumber - b.articleNumber
