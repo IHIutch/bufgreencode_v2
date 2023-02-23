@@ -1,0 +1,47 @@
+---
+import { Heading } from '@/components/content/Heading'
+import SidebarLayout from '@/layouts/SidebarLayout.astro'
+import { getCollection } from 'astro:content'
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const allArticles = await getCollection('articles')
+  return allArticles.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
+// 2. When it's time to render, you can get the entry directly from the prop
+const { entry } = Astro.props
+const { Content } = await entry.render()
+import '../styles/main.scss'
+---
+
+<SidebarLayout>
+  <div class="flex">
+    <div class="my-12 w-full px-4 md:px-8 xl:w-3/4">
+      <div class="max-w-prose xl:mx-auto">
+        <h1 class="mb-2 text-5xl font-medium leading-tight">
+          {entry.data.title}
+        </h1>
+        {
+          entry.data.lead ? (
+            <p class="text-lg text-gray-700">{entry.data.lead}</p>
+          ) : null
+        }
+        <div class="page-content prose">
+          <Content />
+          <!-- {Markdoc.renderers.react(content, React, {
+              components: {
+                Heading,
+                TableSmall,
+                FigureImg,
+                TableResponsive,
+                Sup: ({ children }) => <sup>{children}</sup>,
+              },
+            })} -->
+        </div>
+      </div>
+    </div>
+    <!-- <PageToc /> -->
+  </div>
+</SidebarLayout>

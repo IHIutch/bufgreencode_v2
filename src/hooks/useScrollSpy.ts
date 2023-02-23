@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-export function useScrollSpy(selectors = [], options = {}) {
+export function useScrollSpy(selectors: [], options: {}) {
   const [activeId, setActiveId] = useState()
   const observer = useRef(null)
   useEffect(() => {

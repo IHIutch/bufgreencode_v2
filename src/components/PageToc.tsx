@@ -1,13 +1,13 @@
-import { useLoaderData } from '@remix-run/react'
+import { useScrollSpy } from '@/hooks/useScrollSpy'
 import clsx from 'clsx'
-import { useScrollSpy } from '~/hooks/useScrollSpy'
 
 export default function PageToc() {
-  const { headings } = useLoaderData()
+  const headings = []
+  const activeId = 1
 
-  const activeId = useScrollSpy(
-    [...(headings || [])].reverse().map((heading) => `[id="${heading.id}"]`)
-  )
+  // const activeId = useScrollSpy(
+  //   [...(headings || [])].reverse().map((heading) => `[id="${heading.id}"]`)
+  // )
 
   return headings && headings.length > 0 ? (
     <aside className="hidden lg:w-80 xl:block">

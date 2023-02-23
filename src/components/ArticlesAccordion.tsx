@@ -5,11 +5,9 @@ import { ChevronDown } from 'lucide-react'
 import clsx from 'clsx'
 import type { CollectionEntry } from 'astro:content'
 
-export default function GlobalNavComponent({
-  className,
+export default function ArticlesAccordion({
   articles,
 }: {
-  className?: string
   articles: CollectionEntry<'articles'>[]
 }) {
   const params = { article: '' }
@@ -57,7 +55,7 @@ export default function GlobalNavComponent({
               </Accordion.Trigger>
               <Accordion.Content
                 className={clsx(
-                  'overflow-hidden transition-all data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up',
+                  'data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden transition-all',
                   'py-1 pl-3'
                 )}
               >
@@ -72,7 +70,7 @@ export default function GlobalNavComponent({
                 >
                   {groupedArticles[articleSlug].map((section, sIdx) => (
                     <li key={sIdx}>
-                      <link
+                      <a
                         className={clsx(
                           'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
                           '-ml-px transition-all duration-200'
@@ -98,7 +96,7 @@ export default function GlobalNavComponent({
                           </span>
                         </div>
                         {/* )} */}
-                      </link>
+                      </a>
                     </li>
                   ))}
                 </ul>

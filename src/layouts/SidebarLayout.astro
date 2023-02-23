@@ -2,16 +2,16 @@
 import clsx from 'clsx'
 import NavbarComponent from '@/components/NavbarComponent.astro'
 import SubnavComponent from '@/components/SubnavComponent'
-import GlobalNavComponent from '@/components/GlobalNavComponent'
 import { getCollection } from 'astro:content'
+import ArticlesAccordion from '@/components/ArticlesAccordion'
 const allArticles = await getCollection('articles')
 ---
 
 <div class="antialiased">
   <div class="fixed top-0 z-10 w-full">
     <NavbarComponent />
-    <SubnavComponent client:only>
-      <GlobalNavComponent articles={allArticles} client:only />
+    <SubnavComponent client:load>
+      <ArticlesAccordion articles={allArticles} client:load />
     </SubnavComponent>
   </div>
   <div class="mx-auto flex max-w-screen-2xl">
@@ -20,7 +20,7 @@ const allArticles = await getCollection('articles')
     >
       <nav class="sticky h-full overflow-y-auto border-r">
         <div class="py-8">
-          <GlobalNavComponent articles={allArticles} client:only />
+          <ArticlesAccordion articles={allArticles} client:load />
         </div>
       </nav>
     </div>

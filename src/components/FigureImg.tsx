@@ -1,6 +1,12 @@
-import React from 'react'
+import type { ReactElement } from 'react'
 
-export default function FigureImg({ caption, children }) {
+export default function FigureImg({
+  caption,
+  children,
+}: {
+  caption: string
+  children: ReactElement
+}) {
   return (
     <figure className="not-prose mb-4">
       <div className="inline-flex w-full rounded border p-1">{children}</div>
