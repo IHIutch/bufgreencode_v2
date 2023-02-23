@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content, components } = await entry.render()
 import '../styles/main.scss'
 ---
 
@@ -29,7 +29,7 @@ import '../styles/main.scss'
           ) : null
         }
         <div class="page-content prose">
-          <Content />
+          <Content components={{ ...components }} />
           <!-- {Markdoc.renderers.react(content, React, {
               components: {
                 Heading,

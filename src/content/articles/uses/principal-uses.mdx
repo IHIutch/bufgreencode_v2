@@ -5,6 +5,8 @@ article_number: 6
 section_number: 1
 ---
 
+import TableResponsive from '@/components/content/TableResponsive.astro'
+
 ## 6.1.1 General
 
 1. All principal uses must comply with the standards of this section.
@@ -69,7 +71,7 @@ section_number: 1
 
 ### Residential
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                           | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30  | N-4-50  | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS | D-OG | D-ON | C-R | Definitions  |
 | ------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ---- | ---- | ---- | --- | ------------ |
@@ -85,11 +87,11 @@ section_number: 1
 | Halfway House             | &#9681; | &#9681; | &#9681; |         |         |         |         |         |         |         |         |         | &#9681; |         |         |         | &#9681; |         |      |      |      |     | Sec. 6.1.2.J |
 | Residential Care Facility | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; |         | &#9679; | &#9679; |         |         |         | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; |         |         |      |      |      |     | Sec. 6.1.2.K |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Civic
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                          | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30  | N-4-50  | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS    | D-OG    | D-ON    | C-R     | Definitions  |
 | ------------------------ | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------------ |
@@ -105,11 +107,11 @@ section_number: 1
 | Public Safety Facility   | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9681; | &#9679; | &#9679; | &#9681; | &#9681; | &#9681; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | Sec. 6.1.3.J |
 | Zoo                      |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | &#9681; |         |         | Sec. 6.1.3.K |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Lodging
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                      | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30 | N-4-50 | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH | D-OS | D-OG | D-ON | C-R | Definitions  |
 | -------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------ | ------ | ------- | ------- | ------- | ------- | ------- | ------- | ---- | ---- | ---- | ---- | --- | ------------ |
@@ -117,11 +119,11 @@ section_number: 1
 | Hotel/Hostel         | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; |         | &#9679; | &#9679; |         |        |        |         | &#9679; | &#9679; | &#9679; | &#9679; | &#9681; |      |      |      |      |     | Sec. 6.1.4.B |
 | Rooming House/S.R.O. | &#9679; | &#9679; | &#9679; | &#9681; | &#9681; |         | &#9681; | &#9681; |         |        |        |         | &#9681; | &#9681; | &#9681; | &#9681; |         |      |      |      |      |     | Sec. 6.1.4.C |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Retail & Service
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                             | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R | N-3C    | N-3E    | N-3R | N-4-30 | N-4-50 | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS    | D-OG    | D-ON    | C-R | Definitions   |
 | --------------------------- | ------- | ------- | ------- | ------- | ------- | ---- | ------- | ------- | ---- | ------ | ------ | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | --- | ------------- |
@@ -154,11 +156,11 @@ section_number: 1
 | Vehicle Repair, Major       |         | &#9681; | &#9679; | &#9681; | &#9681; |      | &#9681; | &#9681; |      |        |        |         |         |         | &#9679; | &#9679; | &#9679; | &#9679; |         |         |         |     | Sec. 6.1.5.AA |
 | Vehicle Repair, Minor       |         | &#9681; | &#9679; | &#9681; | &#9681; |      | &#9681; | &#9681; |      |        |        |         |         |         | &#9679; | &#9679; | &#9679; |         |         |         |         |     | Sec. 6.1.5.AB |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Employment
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                              | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R | N-3C    | N-3E    | N-3R | N-4-30 | N-4-50 | D-R | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS | D-OG    | D-ON | C-R | Definitions  |
 | ---------------------------- | ------- | ------- | ------- | ------- | ------- | ---- | ------- | ------- | ---- | ------ | ------ | --- | ------- | ------- | ------- | ------- | ------- | ------- | ---- | ------- | ---- | --- | ------------ |
@@ -173,22 +175,22 @@ section_number: 1
 | Warehouse/Distribution       |         | &#9681; | &#9679; |         |         |      |         |         |      |        |        |     | &#9681; |         |         | &#9681; | &#9679; | &#9679; |      |         |      |     | Sec. 6.1.6.I |
 | Waste Transfer Station       |         |         |         |         |         |      |         |         |      |        |        |     |         |         |         |         |         | &#9681; |      |         |      |     | Sec. 6.1.6.J |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Agriculture
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                  | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30  | N-4-50  | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH | D-OS    | D-OG    | D-ON    | C-R | Definitions  |
 | ---------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ---- | ------- | ------- | ------- | --- | ------------ |
 | Community Garden | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; |      | &#9679; | &#9679; | &#9679; |     | Sec. 6.1.7.A |
 | Market Garden    | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9681; | &#9681; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; | &#9679; |      |         |         |         |     | Sec. 6.1.7.B |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Transportation
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                            | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30  | N-4-50  | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS    | D-OG    | D-ON    | C-R     | Definitions  |
 | -------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------------ |
@@ -208,11 +210,11 @@ section_number: 1
 | Railway Facilities         |         |         | &#9679; |         |         |         |         |         |         |         |         |         |         |         |         | &#9681; | &#9679; | &#9679; |         |         |         | &#9679; | Sec. 6.1.8.N |
 | Truck Stop                 |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | &#9679; | &#9679; |         |         |         |         | Sec. 6.1.8.O |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ### Infrastructure
 
-{% tableResponsive %}
+<TableResponsive>
 
 |                             | N-1D    | N-1C    | N-1S    | N-2C    | N-2E    | N-2R    | N-3C    | N-3E    | N-3R    | N-4-30  | N-4-50  | D-R     | D-M     | D-E     | D-S     | D-C     | D-IL    | D-IH    | D-OS    | D-OG    | D-ON    | C-R     | Definitions  |
 | --------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------------ |
@@ -223,7 +225,7 @@ section_number: 1
 | Wind Farm                   |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         |         | &#9681; | &#9681; |         |         |         |         | Sec. 6.1.9.E |
 | Wireless Communications     | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9681; | &#9679; | &#9679; | &#9679; | &#9679; |         |         |         | &#9679; | Sec. 6.1.9.F |
 
-{% /tableResponsive %}
+</TableResponsive>
 
 ## 6.1.2 Residential
 
@@ -353,7 +355,7 @@ section_number: 1
     4. A gas station must be located at least 150 feet from a Historic Olmsted Park or Parkway. This requirement does not apply to any gas station in the D-S, D-C, D-IL, or D-IH zone, or to any gas station that engages in the sale of fuel principally for watercraft.
 14. Human Service Facility. An establishment that provides services to persons in need of assistance due to age, physical or mental disability, addiction, illness, or injury. Services include supervision of self-administered medication; rehabilitative or recovery assistance; counseling, self-help, education or referrals, or other treatment or assistance; aid in personal hygiene, dressing, and eating and drinking; day shelter; or any combination of same.
     1. A human service facility is allowed as an accessory use to a hospital or an emergency shelter. A special use permit for such an accessory use is not required.
-    2. A special use permit application for a human service facility must document the community’s need for the proposed facility and provide a detailed description of the proposed use, including an estimation of the number of individuals to be served at the facility over a stated time period, activities and programs anticipated at the facility, hours of operation, degree of supervision
+    2. A special use permit application for a human service facility must document the community's need for the proposed facility and provide a detailed description of the proposed use, including an estimation of the number of individuals to be served at the facility over a stated time period, activities and programs anticipated at the facility, hours of operation, degree of supervision
        at the facility, and any other information as may reasonably be necessary to ascertain the impact of the proposed facility on public safety, health, and welfare.
     3. A special use permit for a human service facility may be granted only where the use is found to be consistent with the general criteria of Section 11.3.3 and the following additional criteria:
        1. The proposed use will not alter the essential nature and character of the community.
@@ -490,7 +492,7 @@ section_number: 1
 
 ## 6.1.9 Infrastructure
 
-1. District Energy System. A community-based energy system shared by property owners for common use, or managed by a homeowners’ association, institution, or similar organization.
+1. District Energy System. A community-based energy system shared by property owners for common use, or managed by a homeowners' association, institution, or similar organization.
    1. District energy systems must be built in accordance with accessory use standards for each type of energy system, as applicable, per Section 6.2.
 2. Solar Farm. A site at which photovoltaic cells and generators are used to generate and produce electric power for distribution to consumers, typically managed by a single entity.
 3. Utilities and Services, Major. Large-scale facilities that primarily serve a regional need, which because of their scale or method of operation are more likely to produce external impacts that are detectable beyond the property lines of the subject property. Such facilities include, but are not limited to, sewage treatment plants, electric or gas generation plants, high voltage transmission lines, water pumping stations, and water towers and tanks.
@@ -499,7 +501,7 @@ section_number: 1
 5. Wind Farm. A site at which wind turbines are erected to generate and produce electric power for distribution to consumers, typically managed by a single entity, and exceeding a rated capacity of 500 kW.
    1. Construction
       1. The design of the wind farm must conform to applicable industry standards, including those of the American National Standards Institute. The facility owner or operator must submit certificates of design compliance obtained by the equipment manufacturers from Underwriters Laboratories, Det Norske Veritas, Germanishcer Lloyd Wind Energies, or other similar certifying organizations.
-      2. An engineer’s certificate must be completed by a structural engineer, licensed in New York State, certifying that the tower and foundation of the wind turbines are compatible with, and are appropriate for, the particular model of wind turbine used, and that the specific soils at the site can support the wind turbine.
+      2. An engineer's certificate must be completed by a structural engineer, licensed in New York State, certifying that the tower and foundation of the wind turbines are compatible with, and are appropriate for, the particular model of wind turbine used, and that the specific soils at the site can support the wind turbine.
    2. Setbacks
       1. Wind turbines must be set back from all buildings and all lot lines a distance of 110% of the turbine tip height, as measured from the nearest point on the foundation of the occupied building to the nearest point on the outside edge of a tower. Turbine tip height is measured from the base of the tower to the tip of a prop at maximum vertical rotation.
       2. Accessory operation and maintenance buildings and substations must be set back in accord with the underlying zone standards.
@@ -512,7 +514,7 @@ section_number: 1
          advertising are permitted on the turbine aside from identification of the turbine manufacturer or the facility owner and operator.
       5. To prevent unauthorized climbing, climbing pegs must be removed from the lower ten feet of the turbine, or ladder access must be restricted. All access doors to wind turbines and electrical equipment must be locked or fenced, as appropriate, to prevent entry by unauthorized persons.
    4. Operation
-      1. The facility owner or operator must make reasonable efforts to avoid disruption or loss of radio, telephone, television, or similar signals, and must mitigate signal disruption caused by the wind farm in a manner reasonably calculated to remedy such disruption, including, but not limited to, providing alternative methods of signal delivery to affected property owners at the facility owner or operator’s expense. This provision may not be interpreted to excuse compliance with any regulations governing electronic transmissions.
+      1. The facility owner or operator must make reasonable efforts to avoid disruption or loss of radio, telephone, television, or similar signals, and must mitigate signal disruption caused by the wind farm in a manner reasonably calculated to remedy such disruption, including, but not limited to, providing alternative methods of signal delivery to affected property owners at the facility owner or operator's expense. This provision may not be interpreted to excuse compliance with any regulations governing electronic transmissions.
       2. During normal operation, wind turbines may not exceed five dBA over ambient sound as measured at the closest neighboring inhabited dwelling in existence at the time of application for the wind farm. This sound level may be exceeded during short-term events, such as utility outages and storms.
       3. A wind turbine may not cause shadow flicker to fall upon any window of an inhabited dwelling that exists at the time of application for the wind farm.
       4. A wind turbine must employ preventive measures to eliminate any deleterious effects of ice throw in compliance with specifications contained in the latest edition of the Germanischer Lloyd Guideline for the Certification of Wind Turbines.
@@ -523,7 +525,7 @@ section_number: 1
          If the site plan is for a new wireless communication tower, the site plan must indicate the fall zone by a shaded circle.
       2. A demonstration of the need for, and service area of, the wireless
          communication tower, antenna, or related structure, with specific reference to
-         the provider’s coverage, capacity, and quality needs and objectives.
+         the provider's coverage, capacity, and quality needs and objectives.
       3. The service area of the proposed wireless communications tower, antennas, and ancillary structures.
       4. If the proposal is for a wireless communication tower, a written report proving that collocation is not feasible.
       5. Certification by a licensed and registered professional engineer regarding the manner in which the proposed structure could fail.
