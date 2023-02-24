@@ -1,4 +1,3 @@
-import { useScrollSpy } from '@/hooks/useScrollSpy'
 import clsx from 'clsx'
 import { MouseEvent, useEffect, useState } from 'react'
 

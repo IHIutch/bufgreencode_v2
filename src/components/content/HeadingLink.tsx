@@ -1,7 +1,6 @@
-import { createElement, ReactNode, useState } from 'react'
+import { useState } from 'react'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { LinkIcon } from 'lucide-react'
-import clsx from 'clsx'
 
 export const HeadingLink = ({ id }: { id: string }) => {
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
