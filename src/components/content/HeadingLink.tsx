@@ -34,13 +34,7 @@ export const HeadingLink = ({ id }: { id: string }) => {
             </div>
           </button>
         </Tooltip.Trigger>
-        <Tooltip.Content
-          className={clsx(
-            'rdx-tooltip',
-            'inline-flex items-center rounded-md px-2 py-1',
-            'bg-gray-800 text-xs text-white'
-          )}
-        >
+        <Tooltip.Content className="rdx-tooltip inline-flex items-center rounded-md bg-gray-800 px-2 py-1 text-xs text-white">
           Copied to clipboard
         </Tooltip.Content>
       </Tooltip.Root>

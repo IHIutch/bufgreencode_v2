@@ -13,12 +13,8 @@ const { slug } = Astro.params
 <div class="antialiased">
   <div class="fixed top-0 z-10 w-full">
     <NavbarComponent />
-    <SubnavComponent client:only="react">
-      <ArticlesAccordion
-        activeSlug={slug}
-        articles={allArticles}
-        client:only="react"
-      />
+    <SubnavComponent client:load>
+      <ArticlesAccordion activeSlug={slug} articles={allArticles} client:load />
     </SubnavComponent>
   </div>
   <div class="mx-auto flex max-w-screen-2xl">
@@ -30,7 +26,7 @@ const { slug } = Astro.params
           <ArticlesAccordion
             activeSlug={slug}
             articles={allArticles}
-            client:only="react"
+            client:load
           />
         </div>
       </nav>
