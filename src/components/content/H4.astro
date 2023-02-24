@@ -1,23 +1,10 @@
 ---
-import { LinkIcon } from 'lucide-react'
+import { HeadingLink } from './HeadingLink'
 const { id } = Astro.props
 ---
 
 <div id={id} class="mt-[2em] scroll-mt-20">
-  <a
-    href={`#${id}`}
-    class="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
-  >
-    <LinkIcon
-      client:only
-      strokeWidth="3"
-      className="h-[0.875rem] w-[0.875rem]"
-    />
-    <div>
-      <span class="ml-1">Section Link</span>
-    </div>
-  </a>
-
+  <HeadingLink client:only id={id} />
   <h4 class="mt-0">
     <slot />
   </h4>
