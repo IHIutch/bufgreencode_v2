@@ -18,6 +18,7 @@ specifiers:
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   astro: ^2.0.14
+  astro-seo: ^0.7.1
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
   cssnano: ^5.1.15
@@ -49,6 +50,7 @@ dependencies:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   astro: 2.0.14
+  astro-seo: 0.7.1
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
   hamburgers: 1.2.1
@@ -1717,6 +1719,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-seo/0.7.1:
+    resolution: {integrity: sha512-8Yo1nQrl2iB5zj+VUAHrvGIck8bZ4WAmXQgJOeF9FuAZGQD5qK6DtSZaRbpBXsFfZYHA6tE8pjs3btHhLbC1zQ==}
+    dev: false
 
   /astro/2.0.14:
     resolution: {integrity: sha512-BiXnHyK3rj5Uz45V5p9jRi0xtJc/zxhCxnXYAekHHF1bVvvoa3aXMwl0GZ3Bc0mxP6vPLmbRcjNKdqfyZn1B3Q==}
