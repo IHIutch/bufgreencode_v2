@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 
 export function useScrollSpy(selectors: string[]) {
+  console.log({ selectors })
+
   const [activeId, setActiveId] = useState<string | null>()
   const observer = useRef()
   useEffect(() => {
@@ -20,7 +22,7 @@ export function useScrollSpy(selectors: string[]) {
             entry.intersectionRatio > 0
           ) {
             if (entry.isIntersecting) {
-              console.log('active from top')
+              console.log('active from top', entry.target)
               setActiveId(entry.target.getAttribute('id'))
             } else {
               // console.log('inactive from top')
@@ -33,7 +35,7 @@ export function useScrollSpy(selectors: string[]) {
             entry.intersectionRatio > 0
           ) {
             if (entry.isIntersecting) {
-              console.log('active from bottom')
+              console.log('active from bottom', entry.target)
               setActiveId(entry.target.getAttribute('id'))
             } else {
               // console.log('inactive from bottom')

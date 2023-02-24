@@ -1,0 +1,24 @@
+---
+import { LinkIcon } from 'lucide-react'
+const { id } = Astro.props
+---
+
+<div class="mt-[2em]">
+  <a
+    href={`#${id}`}
+    class="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
+  >
+    <LinkIcon
+      client:only
+      strokeWidth="3"
+      className="h-[0.875rem] w-[0.875rem]"
+    />
+    <div>
+      <span class="ml-1">Section Link</span>
+    </div>
+  </a>
+
+  <h6 class="mt-0">
+    <slot />
+  </h6>
+</div>
