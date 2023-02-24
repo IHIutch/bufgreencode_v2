@@ -1,27 +1,26 @@
 ---
 import PageToc from '@/components/PageToc'
 import SidebarLayout from '@/layouts/SidebarLayout.astro'
-import { getCollection } from 'astro:content'
+import { getCollection, getEntryBySlug } from 'astro:content'
 import { SEO } from 'astro-seo'
 import H2 from '@/components/content/H2.astro'
 import H3 from '@/components/content/H3.astro'
 import H4 from '@/components/content/H4.astro'
 import H5 from '@/components/content/H5.astro'
 import H6 from '@/components/content/H2.astro'
-import siteMeta from '@/utils/siteMeta'
 import CustomSEO from '@/components/CustomSEO.astro'
 
-// 1. Generate a new path for every collection entry
-export async function getStaticPaths() {
-  const allArticles = await getCollection('articles')
-  return allArticles.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }))
+// 1. Get the slug from the incoming server request
+const { slug } = Astro.params
+// 2. Query for the entry directly using the request slug
+const entry = await getEntryBySlug('articles', slug || '')
+
+if (!entry) {
+  return Astro.redirect('/404')
 }
-// 2. When it's time to render, you can get the entry directly from the prop
-const { entry } = Astro.props
-const { Content, components, headings } = await entry.render()
+
+// 3. (Optional) render the entry to HTML in the template
+const { Content, headings } = await entry.render()
 ---
 
 <head>
@@ -42,7 +41,7 @@ const { Content, components, headings } = await entry.render()
         <div class="page-content prose">
           <Content
             components={{
-              ...components,
+              // ...components,
               h2: H2,
               h3: H3,
               h4: H4,

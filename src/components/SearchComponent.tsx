@@ -5,7 +5,6 @@ import type {
   InternalDocSearchHit,
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
-import '@docsearch/css'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
