@@ -4,7 +4,7 @@ const { id } = Astro.props
 ---
 
 <div id={id} class="mt-[2em] scroll-mt-20">
-  <HeadingLink client:only id={id} />
+  <HeadingLink id={id} client:only="react" />
   <h2 class="mt-0">
     <slot />
   </h2>

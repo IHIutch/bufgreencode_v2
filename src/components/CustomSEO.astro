@@ -3,7 +3,7 @@ import { SEO } from 'astro-seo'
 
 const { pageTitle, slug } = Astro.props
 
-const siteUrl = 'https://bufgreencode.com'
+const siteUrl = import.meta.env.SITE
 const siteTitle = 'Buffalo Green Code'
 
 const url = slug ? `${siteUrl}/${slug}` : siteUrl

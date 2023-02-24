@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap'
 import mdx from '@astrojs/mdx'
 
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   integrations: [react(), sitemap(), mdx()],
+  site: 'https://bufgreencode.com',
 })
