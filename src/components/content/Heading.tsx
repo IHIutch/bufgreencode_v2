@@ -7,13 +7,11 @@ export const Heading = ({
   id,
   level,
   children,
-  ...props
 }: {
-  id: string
-  level: number
-  children: ReactNode
+  id?: string
+  level?: number
+  children?: ReactNode
 }) => {
-  console.log({ props })
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
   const headingEl = createElement(
     `h${level}`,

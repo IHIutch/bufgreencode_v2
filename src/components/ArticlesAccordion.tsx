@@ -7,15 +7,29 @@ import type { CollectionEntry } from 'astro:content'
 
 export default function ArticlesAccordion({
   articles,
+  activeSlug,
 }: {
   articles: CollectionEntry<'articles'>[]
+  activeSlug?: string
 }) {
-  const params = { article: '' }
-  const groupedArticles = groupBy(articles, 'data.article_number')
+  const groupedArticles = groupBy(
+    articles.sort(
+      (a, b) =>
+        a.data.article_number +
+        a.data.section_number -
+        (b.data.article_number + b.data.section_number)
+    ),
+    'data.article_number'
+  )
 
-  const defaultArticleIdx = Object.keys(groupedArticles).findIndex((slug) => {
-    return slug === params.article
-  })
+  const activeArticle = articles.find((a) => a.slug === activeSlug)
+  const activeArticleId = activeArticle?.data.article_number
+
+  const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
+    (articleNum) => {
+      return activeArticleId === Number(articleNum)
+    }
+  )
   const [activeIdx, setActiveIdx] = useState(
     defaultArticleIdx ? [`content-${defaultArticleIdx}`] : []
   )
@@ -28,15 +42,15 @@ export default function ArticlesAccordion({
       onValueChange={setActiveIdx}
     >
       <ul className="px-2 py-1 text-sm">
-        {Object.keys(groupedArticles).map((articleSlug, idx) => (
+        {Object.keys(groupedArticles).map((articleNum, idx) => (
           <Accordion.Item asChild key={idx} value={`content-${idx}`}>
             <li className="px-2 pb-1">
               <Accordion.Trigger className="w-full text-left">
                 <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                   <div className="grow px-2 py-1">
                     <span className="font-medium">
-                      {groupedArticles[articleSlug][0].data.article_number}.{' '}
-                      {groupedArticles[articleSlug][0].data.article}
+                      {groupedArticles[articleNum][0].data.article_number}.{' '}
+                      {groupedArticles[articleNum][0].data.article}
                     </span>
                   </div>
                   <div>
@@ -68,7 +82,7 @@ export default function ArticlesAccordion({
                       : '-translate-y-4 opacity-0'
                   )}
                 >
-                  {groupedArticles[articleSlug].map((section, sIdx) => (
+                  {groupedArticles[articleNum].map((section, sIdx) => (
                     <li key={sIdx}>
                       <a
                         className={clsx(
@@ -81,14 +95,18 @@ export default function ArticlesAccordion({
                         <div
                           className={clsx(
                             'border-l-2 px-2',
-                            'transition-all duration-200'
-                            // isActive ? 'border-green-700' : 'border-transparent'
+                            'transition-all duration-200',
+                            activeSlug === section.slug
+                              ? 'border-green-700'
+                              : 'border-transparent'
                           )}
                         >
                           <span
                             className={clsx(
-                              'truncate'
-                              // isActive ? 'text-green-700' : ''
+                              'truncate',
+                              activeSlug === section.slug
+                                ? 'text-green-700'
+                                : ''
                             )}
                           >
                             {section.data.article_number}.

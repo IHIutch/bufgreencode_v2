@@ -1,13 +1,10 @@
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import clsx from 'clsx'
 
-export default function PageToc() {
-  const headings = []
-  const activeId = 1
-
-  // const activeId = useScrollSpy(
-  //   [...(headings || [])].reverse().map((heading) => `[id="${heading.id}"]`)
-  // )
+export default function PageToc({ headings }: { headings?: any[] }) {
+  const activeId = useScrollSpy(
+    [...(headings || [])].reverse().map((heading) => `[id="${heading.slug}"]`)
+  )
 
   return headings && headings.length > 0 ? (
     <aside className="hidden lg:w-80 xl:block">
@@ -25,11 +22,11 @@ export default function PageToc() {
                   key={idx}
                   className="text-sm text-gray-600 hover:text-gray-900"
                 >
-                  <a href={`#${heading.id}`} className="block py-1.5">
+                  <a href={`#${heading.slug}`} className="block py-1.5">
                     <div
                       className={clsx(
                         'border-l-2 transition-all duration-200',
-                        activeId === heading.id
+                        activeId === heading.slug
                           ? ' border-green-700'
                           : ' border-transparent'
                       )}
@@ -37,7 +34,7 @@ export default function PageToc() {
                       <div
                         className={clsx(
                           'transition-all duration-200',
-                          activeId === heading.id
+                          activeId === heading.slug
                             ? 'translate-x-2'
                             : 'translate-x-0'
                         )}
@@ -45,12 +42,12 @@ export default function PageToc() {
                         <span
                           className={clsx(
                             'font-medium',
-                            activeId === heading.id
+                            activeId === heading.slug
                               ? 'text-green-700'
                               : 'text-gray-700'
                           )}
                         >
-                          {heading.title}
+                          {heading.text}
                         </span>
                       </div>
                     </div>

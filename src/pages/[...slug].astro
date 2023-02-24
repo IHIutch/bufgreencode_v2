@@ -1,7 +1,13 @@
 ---
-import { Heading } from '@/components/content/Heading'
+import React from 'react'
+import MarkdocRenderer from '@/components/MarkdocRenderer'
+import PageToc from '@/components/PageToc'
 import SidebarLayout from '@/layouts/SidebarLayout.astro'
 import { getCollection } from 'astro:content'
+import Markdoc from '@markdoc/markdoc'
+import { Heading } from '@/components/content/Heading'
+import TestHeading from '@/components/content/TestHeading.astro'
+
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const allArticles = await getCollection('articles')
@@ -12,36 +18,43 @@ export async function getStaticPaths() {
 }
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props
-const { Content, components } = await entry.render()
-import '../styles/main.scss'
+const { Content, components, headings } = await entry.render()
+const content = Markdoc.renderers.react(entry.body, React, {
+  components: {
+    Heading,
+  },
+})
 ---
 
-<SidebarLayout>
-  <div class="flex">
-    <div class="my-12 w-full px-4 md:px-8 xl:w-3/4">
-      <div class="max-w-prose xl:mx-auto">
-        <h1 class="mb-2 text-5xl font-medium leading-tight">
-          {entry.data.title}
-        </h1>
-        {
-          entry.data.lead ? (
-            <p class="text-lg text-gray-700">{entry.data.lead}</p>
-          ) : null
-        }
-        <div class="page-content prose">
-          <Content components={{ ...components }} />
-          <!-- {Markdoc.renderers.react(content, React, {
-              components: {
-                Heading,
-                TableSmall,
-                FigureImg,
-                TableResponsive,
-                Sup: ({ children }) => <sup>{children}</sup>,
-              },
-            })} -->
+<head>
+  <title>{entry.data.title}</title>
+</head>
+<body>
+  <SidebarLayout>
+    <div class="flex">
+      <div class="my-12 w-full px-4 md:px-8 xl:w-3/4">
+        <div class="max-w-prose xl:mx-auto">
+          <h1 class="mb-2 text-5xl font-medium leading-tight">
+            {entry.data.title}
+          </h1>
+          {
+            entry.data.lead ? (
+              <p class="text-lg text-gray-700">{entry.data.lead}</p>
+            ) : null
+          }
+          <div class="page-content prose">
+            <!-- {content} -->
+            <Content
+              components={{
+                ...components,
+                h2: TestHeading,
+              }}
+            />
+            <!-- <MarkdocRenderer client:only content={entry.body} /> -->
+          </div>
         </div>
       </div>
+      <PageToc headings={headings} client:only />
     </div>
-    <!-- <PageToc /> -->
-  </div>
-</SidebarLayout>
+  </SidebarLayout>
+</body>
