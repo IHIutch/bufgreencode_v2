@@ -6,12 +6,14 @@ import PageToc from '@/components/PageToc'
 import TableSmall from '@/components/content/TableSmall'
 import TableResponsive from '@/components/content/TableResponsive'
 import FigureImg from '@/components/content/FigureImg'
+import { type ContentHeading } from 'types'
+import { notFound } from 'next/navigation'
 
 export const generateStaticParams = async () =>
-  allArticles.map((post) => ({ slug: post._raw.flattenedPath }))
+  allArticles.map((post) => ({ slug: post._raw.flattenedPath.split('/') }))
 
 const mdxComponents = {
-  Heading: ({ level, slug, children }) => {
+  Heading: ({ level, slug, children }: ContentHeading) => {
     const headingEl = createElement(
       `h${level}`,
       { id: slug, className: 'mt-0 scroll-mt-24' },
@@ -25,15 +27,11 @@ const mdxComponents = {
   Sup: (props: any) => <sup {...props} />,
 }
 
-export default function Post({
-  params,
-}: {
-  params: { slug: [string, string] }
-}) {
-  const article = allArticles.find(
-    (article) => article._raw.flattenedPath === params.slug.join('/')
-  )
-  if (!article) throw new Error(`article not found for slug: ${params.slug}`)
+export default function Post({ params }: { params: { slug: string[] } }) {
+  const article = allArticles.find((article) => {
+    return article._raw.flattenedPath === params.slug.join('/')
+  })
+  if (!article) notFound()
 
   const MDXContent = useMDXComponent(article.body.code)
 

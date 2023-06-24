@@ -1,5 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import toc from 'markdown-toc'
+
+import remarkGfm from 'remark-gfm'
 import { withTableOfContents } from './remark/withTableOfContents.mjs'
 
 export const Article = defineDocumentType(() => ({
@@ -47,6 +49,6 @@ export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Article],
   mdx: {
-    remarkPlugins: [withTableOfContents],
+    remarkPlugins: [remarkGfm, withTableOfContents],
   },
 })
