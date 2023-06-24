@@ -1,32 +1,24 @@
 'use client'
 
 import { createElement, useState } from 'react'
-import type { ReactNode } from 'react'
 
 import clsx from 'clsx'
 import { Link as LinkIcon } from 'lucide-react'
+import { type ContentHeading } from 'types'
 
 import * as Tooltip from '@radix-ui/react-tooltip'
 
-export default function Heading({
-  id,
-  level,
-  children,
-}: {
-  id: string
-  level: number
-  children: ReactNode
-}) {
+export default function Heading({ slug, level, children }: ContentHeading) {
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
   const headingEl = createElement(
     `h${level}`,
-    { id, className: 'mt-0 scroll-mt-24' },
+    { id: slug, className: 'mt-0 scroll-mt-24' },
     children
   )
   const copyLinkToClipboard = () => {
     setIsToolTipVisible(true)
     navigator.clipboard.writeText(
-      `${window.location.origin}${window.location.pathname}#${id}`
+      `${window.location.origin}${window.location.pathname}#${slug}`
     )
 
     setTimeout(() => {

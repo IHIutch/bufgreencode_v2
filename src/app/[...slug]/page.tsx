@@ -1,11 +1,11 @@
-import React, { createElement } from 'react'
+import React from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 
 import { allArticles } from 'contentlayer/generated'
-import { type ContentHeading } from 'types'
 
 import FigureImg from '@/components/content/FigureImg'
+import Heading from '@/components/content/Heading'
 import TableResponsive from '@/components/content/TableResponsive'
 import TableSmall from '@/components/content/TableSmall'
 import PageToc from '@/components/PageToc'
@@ -14,14 +14,7 @@ export const generateStaticParams = async () =>
   allArticles.map((post) => ({ slug: post._raw.flattenedPath.split('/') }))
 
 const mdxComponents = {
-  Heading: ({ level, slug, children }: ContentHeading) => {
-    const headingEl = createElement(
-      `h${level}`,
-      { id: slug, className: 'mt-0 scroll-mt-24' },
-      children
-    )
-    return <div>{headingEl}</div>
-  },
+  Heading,
   TableSmall,
   TableResponsive,
   FigureImg,
@@ -41,7 +34,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
       <div className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]">
         <div className="max-w-prose xl:mx-auto">
           <h1 className="mb-2 text-5xl font-medium leading-tight">
-            {article.title}
+            {article.article_number}.{article.section_number} {article.title}
           </h1>
           {article.lead ? (
             <p className="text-lg text-gray-700">{article.lead}</p>
