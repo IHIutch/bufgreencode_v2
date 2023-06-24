@@ -3,15 +3,12 @@
 import { useEffect, useState, type MouseEvent } from 'react'
 
 import clsx from 'clsx'
+import { type TocHeading } from 'types'
 
-export default function PageToc({
-  headings,
-}: {
-  headings: { content: string; slug: string }[]
-}) {
+export default function PageToc({ headings }: { headings?: TocHeading[] }) {
   const [currentHeading, setCurrentHeading] = useState({
-    slug: headings[0].slug,
-    text: headings[0].content,
+    slug: headings?.[0]?.slug || '',
+    text: headings?.[0]?.content || '',
   })
 
   useEffect(() => {
@@ -59,44 +56,46 @@ export default function PageToc({
 
   return (
     <ul>
-      {headings.map((heading, idx) => (
-        <li key={idx} className="text-sm text-gray-600 hover:text-gray-900">
-          <a
-            href={`#${heading.slug}`}
-            className="block py-1.5"
-            onClick={onLinkClick}
-          >
-            <div
-              className={clsx(
-                'border-l-2 transition-all duration-200',
-                currentHeading.slug === heading.slug
-                  ? 'border-green-700'
-                  : 'border-transparent'
-              )}
-            >
-              <div
-                className={clsx(
-                  'transition-all duration-200',
-                  currentHeading.slug === heading.slug
-                    ? 'translate-x-2'
-                    : 'translate-x-0'
-                )}
+      {headings
+        ? headings.map((heading, idx) => (
+            <li key={idx} className="text-sm text-gray-600 hover:text-gray-900">
+              <a
+                href={`#${heading.slug}`}
+                className="block py-1.5"
+                onClick={onLinkClick}
               >
-                <span
+                <div
                   className={clsx(
-                    'font-medium',
+                    'border-l-2 transition-all duration-200',
                     currentHeading.slug === heading.slug
-                      ? 'text-green-700'
-                      : 'text-gray-700'
+                      ? 'border-green-700'
+                      : 'border-transparent'
                   )}
                 >
-                  {heading.content}
-                </span>
-              </div>
-            </div>
-          </a>
-        </li>
-      ))}
+                  <div
+                    className={clsx(
+                      'transition-all duration-200',
+                      currentHeading.slug === heading.slug
+                        ? 'translate-x-2'
+                        : 'translate-x-0'
+                    )}
+                  >
+                    <span
+                      className={clsx(
+                        'font-medium',
+                        currentHeading.slug === heading.slug
+                          ? 'text-green-700'
+                          : 'text-gray-700'
+                      )}
+                    >
+                      {heading.content}
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        : null}
     </ul>
   )
 }
