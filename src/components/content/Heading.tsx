@@ -2,9 +2,11 @@
 
 import { createElement, useState } from 'react'
 import type { ReactNode } from 'react'
-import * as Tooltip from '@radix-ui/react-tooltip'
-import { Link as LinkIcon } from 'lucide-react'
+
 import clsx from 'clsx'
+import { Link as LinkIcon } from 'lucide-react'
+
+import * as Tooltip from '@radix-ui/react-tooltip'
 
 export default function Heading({
   id,

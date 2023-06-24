@@ -1,26 +1,35 @@
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
+    "next",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "parserOptions": {
-    "project": "tsconfig.json",
     "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
     "sourceType": "module" // Allows for the use of imports
   },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+  ],
   "rules": {
+    "@next/next/no-html-link-for-pages": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_",
+        "destructuredArrayIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
@@ -28,16 +37,11 @@
         "fixStyle": "inline-type-imports"
       }
     ],
-    "tailwindcss/no-custom-classname": "off",
-    "@next/next/no-html-link-for-pages": "off"
+    "tailwindcss/no-custom-classname": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
     }
-  },
-  "ignorePatterns": [
-    "*.config.cjs",
-    "*.config.js"
-  ]
+  }
 }

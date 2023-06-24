@@ -1,9 +1,11 @@
-import { ExternalLink } from 'lucide-react'
 import Image from 'next/image'
-import SearchComponent from './SearchComponent'
 import Link from 'next/link'
-import Logo from '../../public/meta/bufgreencode-logo.svg'
+
+import { ExternalLink } from 'lucide-react'
+
 import Icon from '../../public/meta/bufgreencode-icon.svg'
+import Logo from '../../public/meta/bufgreencode-logo.svg'
+import SearchComponent from './SearchComponent'
 
 export default function NavbarComponent() {
   return (
@@ -34,12 +36,12 @@ export default function NavbarComponent() {
           <div className="hidden h-full shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80">
             <Link
               href="/disclaimer"
-              className="py-1 px-2 text-gray-700 hover:text-gray-900"
+              className="px-2 py-1 text-gray-700 hover:text-gray-900"
             >
               Disclaimer
             </Link>
             <a
-              className="flex items-center py-1 px-2 text-gray-700 hover:text-gray-900"
+              className="flex items-center px-2 py-1 text-gray-700 hover:text-gray-900"
               href="https://github.com/IHIutch/bufgreencode_v2"
               target="_blank"
               rel="noreferrer"

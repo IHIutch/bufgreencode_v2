@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react'
+
 import ArticlesAccordion from '@/components/ArticlesAccordion'
 import NavbarComponent from '@/components/NavbarComponent'
 import SubnavComponent from '@/components/SubnavComponent'
-import type { ReactNode } from 'react'
+
 import '../../styles/main.scss'
 
 import { Inter } from 'next/font/google'

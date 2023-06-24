@@ -1,7 +1,8 @@
 'use client'
 
+import { useEffect, useState, type MouseEvent } from 'react'
+
 import clsx from 'clsx'
-import { type MouseEvent, useEffect, useState } from 'react'
 
 export default function PageToc({
   headings,

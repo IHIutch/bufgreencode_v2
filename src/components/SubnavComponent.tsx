@@ -1,11 +1,13 @@
 'use client'
 
-import * as Collapsible from '@radix-ui/react-collapsible'
-import clsx from 'clsx'
-import { ExternalLink } from 'lucide-react'
-import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
+
+import clsx from 'clsx'
+import { ExternalLink } from 'lucide-react'
+
+import * as Collapsible from '@radix-ui/react-collapsible'
 
 export default function SubnavComponent({
   children,
@@ -48,12 +50,12 @@ export default function SubnavComponent({
               </Collapsible.Trigger>
             </div>
           </div>
-          <Collapsible.Content className="data-[state=open]:animate-collapsable-down data-[state=closed]:animate-collapsable-up overflow-hidden transition-all">
+          <Collapsible.Content className="overflow-hidden transition-all data-[state=closed]:animate-collapsable-up data-[state=open]:animate-collapsable-down">
             <nav className="z-0 flex h-full max-h-[calc(100vh-6.5rem)] grow flex-col justify-between">
               <div className="h-full overflow-y-auto">
                 <div className="py-2">{children}</div>
               </div>
-              <div className="sticky bottom-0 z-10 flex justify-between border-t bg-gray-100 px-6 pt-2 pb-4">
+              <div className="sticky bottom-0 z-10 flex justify-between border-t bg-gray-100 px-6 pb-4 pt-2">
                 <Link
                   href="/disclaimer"
                   className="p-2 text-gray-700 hover:text-gray-900"

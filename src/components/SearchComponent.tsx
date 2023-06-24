@@ -1,14 +1,16 @@
 'use client'
 
-import { type ReactNode, useState } from 'react'
-import { DocSearchModal } from '@docsearch/react'
+import { useState, type ReactNode } from 'react'
+import { type Route } from 'next'
+import Link from 'next/link'
+
 import { Search } from 'lucide-react'
+
+import { DocSearchModal } from '@docsearch/react'
 import type {
   InternalDocSearchHit,
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
-import Link from 'next/link'
-import { type Route } from 'next'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)

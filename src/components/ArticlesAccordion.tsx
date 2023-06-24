@@ -1,14 +1,16 @@
 'use client'
 
-import groupBy from 'lodash/groupBy'
-import * as Accordion from '@radix-ui/react-accordion'
 import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { type Route } from 'next'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
-import { type Route } from 'next'
+import groupBy from 'lodash/groupBy'
+import { ChevronDown } from 'lucide-react'
+
+import * as Accordion from '@radix-ui/react-accordion'
 
 export default function ArticlesAccordion() {
   const activeSlug = usePathname()
@@ -69,7 +71,7 @@ export default function ArticlesAccordion() {
               </Accordion.Trigger>
               <Accordion.Content
                 className={clsx(
-                  'data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up overflow-hidden transition-all',
+                  'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
                   'py-1 pl-3'
                 )}
               >

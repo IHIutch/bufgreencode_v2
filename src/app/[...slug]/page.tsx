@@ -1,13 +1,14 @@
 import React, { createElement } from 'react'
-import { allArticles } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-
-import PageToc from '@/components/PageToc'
-import TableSmall from '@/components/content/TableSmall'
-import TableResponsive from '@/components/content/TableResponsive'
-import FigureImg from '@/components/content/FigureImg'
-import { type ContentHeading } from 'types'
 import { notFound } from 'next/navigation'
+
+import { allArticles } from 'contentlayer/generated'
+import { type ContentHeading } from 'types'
+
+import FigureImg from '@/components/content/FigureImg'
+import TableResponsive from '@/components/content/TableResponsive'
+import TableSmall from '@/components/content/TableSmall'
+import PageToc from '@/components/PageToc'
 
 export const generateStaticParams = async () =>
   allArticles.map((post) => ({ slug: post._raw.flattenedPath.split('/') }))
