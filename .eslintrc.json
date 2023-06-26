@@ -3,8 +3,7 @@
   "extends": [
     "next",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:tailwindcss/recommended"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
@@ -36,8 +35,7 @@
         "prefer": "type-imports",
         "fixStyle": "inline-type-imports"
       }
-    ],
-    "tailwindcss/no-custom-classname": "off"
+    ]
   },
   "settings": {
     "react": {

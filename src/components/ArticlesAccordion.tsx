@@ -9,8 +9,16 @@ import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
 import groupBy from 'lodash/groupBy'
 import { ChevronDown } from 'lucide-react'
+import { square } from 'styled-system/patterns'
 
-import * as Accordion from '@radix-ui/react-accordion'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@ark-ui/react'
+
+import { css } from 'styled-system/css'
 
 export default function ArticlesAccordion() {
   const activeSlug = usePathname()
@@ -26,103 +34,174 @@ export default function ArticlesAccordion() {
 
   const activeArticle = allArticles.find((a) => a.slug === activeSlug)
 
-  const defaultArticleIdx = Object.keys(groupedArticles).findIndex(
-    (articleNum) => {
-      return activeArticle?.article_number === Number(articleNum)
-    }
-  )
-
-  const [activeIdx, setActiveIdx] = useState(
-    defaultArticleIdx !== -1 ? [`content-${defaultArticleIdx}`] : []
-  )
-
   return (
-    <Accordion.Root
-      asChild
-      type="multiple"
-      defaultValue={activeIdx}
-      onValueChange={setActiveIdx}
+    <Accordion
+      multiple
+      defaultValue={
+        activeArticle ? [activeArticle?.article_number.toString()] : []
+      }
     >
-      <ul className="px-2 py-1 text-sm">
+      <ul
+        className={css({ px: '2', py: '1', fontSize: 'sm' })}
+        // className="px-2 py-1 text-sm"
+      >
         {Object.keys(groupedArticles).map((articleNum, idx) => (
-          <Accordion.Item asChild key={idx} value={`content-${idx}`}>
-            <li className="px-2 pb-1">
-              <Accordion.Trigger className="w-full text-left">
-                <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
-                  <div className="grow px-2 py-1">
-                    <span className="font-medium">
-                      {groupedArticles[articleNum][0].article_number}.{' '}
-                      {groupedArticles[articleNum][0].article}
-                    </span>
-                  </div>
-                  <div>
+          <AccordionItem key={idx} value={articleNum} className="group">
+            {({ isOpen }) => (
+              <li
+                className={css({
+                  px: '2',
+                  pb: '1',
+                })}
+                // className="px-2 pb-1"
+              >
+                <AccordionTrigger
+                  className={css({
+                    w: 'full',
+                    textAlign: 'left',
+                  })}
+                  // className="w-full text-left"
+                >
+                  <div
+                    className={css({
+                      display: 'flex',
+                      w: 'full',
+                      alignItems: 'center',
+                      color: { base: 'gray.600', _hover: 'gray.900' },
+                    })}
+                    // className="flex w-full items-center text-gray-600 hover:text-gray-900"
+                  >
                     <div
-                      className={clsx(
-                        'duration-200',
-                        activeIdx.includes(`content-${idx}`)
-                          ? 'rotate-180'
-                          : 'rotate-0'
-                      )}
+                      className={css({
+                        flexGrow: '1',
+                        px: '2',
+                        py: '1',
+                      })}
+                      // className="grow px-2 py-1"
                     >
-                      <ChevronDown className="h-4 w-4" />
+                      <span
+                        className={css({
+                          fontWeight: 'medium',
+                        })}
+                        // className="font-medium"
+                      >
+                        {groupedArticles[articleNum][0].article_number}.{' '}
+                        {groupedArticles[articleNum][0].article}
+                      </span>
+                    </div>
+                    <div>
+                      <div
+                        className={css({
+                          transition: 'transform ease 0.2s',
+                          transform: 'rotate(0)',
+                          _groupExpanded: {
+                            transform: 'rotate(180deg)',
+                          },
+                        })}
+                        // className={clsx(
+                        //   'duration-200',
+                        //   isOpen ? 'rotate-180' : 'rotate-0'
+                        // )}
+                      >
+                        <ChevronDown
+                          className={square({ size: '4' })}
+                          // className="h-4 w-4"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Accordion.Trigger>
-              <Accordion.Content
-                className={clsx(
-                  'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
-                  'py-1 pl-3'
-                )}
-              >
-                <ul
-                  className={clsx(
-                    'border-l border-gray-300 pb-1',
-                    'transition-all duration-200',
-                    activeIdx.includes(`content-${idx}`)
-                      ? 'translate-y-0 opacity-100'
-                      : '-translate-y-4 opacity-0'
-                  )}
+                </AccordionTrigger>
+                <AccordionContent
+                  className={css({
+                    overflow: 'hidden',
+                    py: '1',
+                    pl: '3',
+                  })}
+                  // className={
+                  //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
+                  // }
                 >
-                  {groupedArticles[articleNum].map((section, sIdx) => (
-                    <li key={sIdx}>
-                      <Link
-                        className={clsx(
-                          'block w-full truncate py-1.5 text-gray-600 hover:text-gray-900',
-                          '-ml-px transition-all duration-200'
-                        )}
-                        href={`${section.slug}` as Route}
-                      >
-                        <div
-                          className={clsx(
-                            'border-l-2 px-2',
-                            'transition-all duration-200',
-                            activeSlug === section.slug
-                              ? 'border-green-700'
-                              : 'border-transparent'
-                          )}
+                  <ul
+                    className={css({
+                      pb: '1',
+                      borderLeftWidth: '1px',
+                      borderLeftColor: 'gray.300',
+                    })}
+                    // className={clsx(
+                    //   'border-l border-gray-300 pb-1',
+                    //   'transition-all duration-200',
+                    //   isOpen
+                    //     ? 'translate-y-0 opacity-100'
+                    //     : '-translate-y-4 opacity-0'
+                    // )}
+                  >
+                    {groupedArticles[articleNum].map((section, sIdx) => (
+                      <li key={sIdx}>
+                        <Link
+                          className={css({
+                            display: 'block',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            whiteSpace: 'nowrap',
+                            py: '1.5',
+                            color: {
+                              base: 'gray.600',
+                              _hover: 'gray.900',
+                            },
+                            ml: '-1px',
+                            transition: 'color ease 0.2s',
+                          })}
+                          // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
+                          href={`${section.slug}` as Route}
                         >
-                          <span
-                            className={clsx(
-                              'truncate',
-                              activeSlug === section.slug
-                                ? 'text-green-700'
-                                : ''
-                            )}
+                          <div
+                            className={css({
+                              px: '2',
+                              transition: 'color ease 0.2s',
+                              borderLeftWidth: '2px',
+                              overflow: 'hidden',
+                              textOverflow: 'ellipsis',
+                              whiteSpace: 'nowrap',
+                              ...(activeSlug === section.slug
+                                ? {
+                                    borderColor: 'green.700',
+                                    color: 'green.700',
+                                  }
+                                : {
+                                    borderColor: 'transparent',
+                                    color: undefined,
+                                  }),
+                            })}
+                            // className={clsx(
+                            //   'border-l-2 px-2',
+                            //   'transition-all duration-200',
+                            //   activeSlug === section.slug
+                            //     ? 'border-green-700'
+                            //     : 'border-transparent'
+                            // )}
                           >
-                            {section.article_number}.{section.section_number}{' '}
-                            {section.title}
-                          </span>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </Accordion.Content>
-            </li>
-          </Accordion.Item>
+                            <span
+                            // className={clsx(
+                            //   'truncate',
+                            //   activeSlug === section.slug
+                            //     ? 'text-green-700'
+                            //     : ''
+                            // )}
+                            >
+                              {section.article_number}.{section.section_number}{' '}
+                              {section.title}
+                            </span>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </li>
+            )}
+          </AccordionItem>
         ))}
       </ul>
-    </Accordion.Root>
+    </Accordion>
   )
 }

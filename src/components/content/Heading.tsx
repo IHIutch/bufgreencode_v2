@@ -4,15 +4,32 @@ import { createElement, useState } from 'react'
 
 import clsx from 'clsx'
 import { Link as LinkIcon } from 'lucide-react'
-import { type ContentHeading } from 'types'
+import { square } from 'styled-system/patterns'
 
-import * as Tooltip from '@radix-ui/react-tooltip'
+import { type ContentHeading } from '@/types'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipPositioner,
+  TooltipTrigger,
+} from '@ark-ui/react'
+
+import { css } from 'styled-system/css'
 
 export default function Heading({ slug, level, children }: ContentHeading) {
   const [isToolTipVisible, setIsToolTipVisible] = useState(false)
   const headingEl = createElement(
     `h${level}`,
-    { id: slug, className: 'mt-0 scroll-mt-24' },
+    {
+      id: slug,
+      className: css({
+        mt: '0',
+        scrollMarginTop: '28',
+        lineHeight: 'tight',
+        fontWeight: 'semibold',
+      }),
+    },
+    // { id: slug, className: 'mt-0 scroll-mt-24' },
     children
   )
   const copyLinkToClipboard = () => {
@@ -27,32 +44,60 @@ export default function Heading({ slug, level, children }: ContentHeading) {
   }
 
   return (
-    <div className="mt-[2em]">
-      <Tooltip.Provider>
-        <Tooltip.Root open={isToolTipVisible}>
-          <Tooltip.Trigger asChild>
-            <button
-              type="button"
-              className="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
-              onClick={copyLinkToClipboard}
+    <div className={css({ mt: '2em' })}>
+      <Tooltip
+        open={isToolTipVisible}
+        positioning={{ placement: 'top-center' }}
+      >
+        <TooltipTrigger
+          className={css({
+            mb: '1',
+            display: 'flex',
+            alignItems: 'center',
+            fontSize: 'sm',
+            fontWeight: 'semibold',
+            color: {
+              base: 'green.700',
+              _hover: 'green.800',
+            },
+            textDecoration: 'underline',
+            transition: 'color ease 0.2s',
+          })}
+          // className="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
+          onClick={copyLinkToClipboard}
+        >
+          <LinkIcon
+            strokeWidth="3"
+            className={square({ size: '3.5' })}
+            // className="h-[0.875rem] w-[0.875rem]"
+          />
+          <div>
+            <span
+              className={css({ ml: '1' })}
+              // className="ml-1"
             >
-              <LinkIcon strokeWidth="3" className="h-[0.875rem] w-[0.875rem]" />
-              <div>
-                <span className="ml-1">Share Section</span>
-              </div>
-            </button>
-          </Tooltip.Trigger>
-          <Tooltip.Content
-            className={clsx(
-              'rdx-tooltip',
-              'inline-flex items-center rounded-md px-2 py-1',
-              'bg-gray-800 text-xs text-white'
-            )}
+              Share Section
+            </span>
+          </div>
+        </TooltipTrigger>
+        <TooltipPositioner>
+          <TooltipContent
+            className={css({
+              display: 'inline-flex',
+              alignItems: 'center',
+              rounded: 'md',
+              px: '2',
+              py: '1',
+              bg: 'gray.800',
+              fontSize: 'sm',
+              color: 'white',
+            })}
+            // className="rdx-tooltip inline-flex items-center rounded-md px-2 py-1 bg-gray-800 text-xs text-white"
           >
             Copied to clipboard
-          </Tooltip.Content>
-        </Tooltip.Root>
-      </Tooltip.Provider>
+          </TooltipContent>
+        </TooltipPositioner>
+      </Tooltip>
       {headingEl}
     </div>
   )

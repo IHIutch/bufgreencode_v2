@@ -1,7 +1,28 @@
+import { css } from 'styled-system/css'
+
 export default function Home() {
   return (
-    <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
-      <div className="mx-auto w-full max-w-prose">
+    // <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
+    <div
+      className={css({
+        my: '12',
+        w: 'full',
+        px: '4',
+        md: {
+          px: '8',
+        },
+        lg: {
+          w: '3/4',
+        },
+      })}
+    >
+      <div
+        className={css({
+          mx: 'auto',
+          w: 'full',
+          maxW: 'prose',
+        })}
+      >
         <h1 className="mb-6 text-5xl font-medium leading-tight">Welcome</h1>
         <div className="prose">
           <p className="lead">

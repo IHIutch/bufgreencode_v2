@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 
 .contentlayer
+
+# Panda
+styled-system
+styled-system-static

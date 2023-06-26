@@ -1,0 +1,7 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@import '@docsearch/css/dist/style.css';
+
+.DocSearch.DocSearch-Button {
+  width: '100%';
+}

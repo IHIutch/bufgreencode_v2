@@ -5,6 +5,7 @@ import { type Route } from 'next'
 import Link from 'next/link'
 
 import { Search } from 'lucide-react'
+import { square } from 'styled-system/patterns'
 
 import { DocSearchModal } from '@docsearch/react'
 import type {
@@ -12,18 +13,59 @@ import type {
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
 
+import { css } from 'styled-system/css'
+
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="h-full w-full">
+    <div
+      className={css({
+        h: 'full',
+        w: 'full',
+      })}
+      // className="h-full w-full"
+    >
       <button
-        className="h-full w-full rounded-lg border bg-gray-100 px-4 py-2 text-left text-gray-500 transition-colors"
+        className={css({
+          h: 'full',
+          w: 'full',
+          rounded: 'lg',
+          borderWidth: '1px',
+          borderColor: 'gray.200',
+          bg: {
+            base: 'gray.50',
+            _hover: 'gray.100',
+          },
+          px: '4',
+          py: '2',
+          textAlign: 'left',
+          color: 'gray.500',
+          transition: 'background-color ease 0.2s',
+          cursor: 'pointer',
+        })}
+        // className="h-full w-full rounded-lg border bg-gray-100 px-4 py-2 text-left text-gray-500 transition-colors"
         onClick={() => setIsOpen(true)}
       >
-        <div className="flex items-center">
-          <Search className="h-4 w-4" />
-          <span className="ml-2">Search the code...</span>
+        <div
+          className={css({
+            display: 'flex',
+            alignItems: 'center',
+          })}
+          // className="flex items-center"
+        >
+          <Search
+            className={square({ size: '4' })}
+            // className="h-4 w-4"
+          />
+          <span
+            className={css({
+              ml: '2',
+            })}
+            // className="ml-2"
+          >
+            Search the Green Code...
+          </span>
         </div>
       </button>
       {isOpen ? (
@@ -33,7 +75,7 @@ export default function SearchComponent() {
           indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME || ''}
           apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY || ''}
           onClose={() => setIsOpen(false)}
-          placeholder="Search the docs..."
+          placeholder="Search the Green Code..."
           hitComponent={Hit}
           transformItems={(items) => {
             return items.map((item, index) => {

@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prepare": "panda codegen",
+    "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
     "next:lint": "next lint",
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@ark-ui/react": "^0.7.0",
     "@docsearch/css": "^3.5.1",
     "@docsearch/react": "^3.5.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",
@@ -39,6 +41,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-sass": "^5.0.1",
+    "@pandacss/dev": "^0.5.0",
     "@types/lodash": "^4.14.195",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
@@ -49,11 +52,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "7.32.2",
-    "eslint-plugin-tailwindcss": "^3.11.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "^3.3.2",
     "typescript": "4.9.5"
   }
 }
