@@ -19,17 +19,11 @@ export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div
-      className={css({
-        h: 'full',
-        w: 'full',
-      })}
-      // className="h-full w-full"
-    >
+    <>
       <button
         className={css({
-          h: 'full',
-          w: 'full',
+          h: { base: '10', lg: '12' },
+          flexGrow: '1',
           rounded: 'lg',
           borderWidth: '1px',
           borderColor: 'gray.200',
@@ -38,7 +32,6 @@ export default function SearchComponent() {
             _hover: 'gray.100',
           },
           px: '4',
-          py: '2',
           textAlign: 'left',
           color: 'gray.500',
           transition: 'background-color ease 0.2s',
@@ -112,7 +105,7 @@ export default function SearchComponent() {
           }}
         />
       ) : null}
-    </div>
+    </>
   )
 }
 

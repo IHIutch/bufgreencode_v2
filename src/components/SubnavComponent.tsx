@@ -37,7 +37,7 @@ export default function SubnavComponent({
         position: 'fixed',
         insetX: '0',
         top: '0',
-        pt: '16',
+        pt: { base: '14', lg: '16' },
         display: {
           md: 'none',
         },

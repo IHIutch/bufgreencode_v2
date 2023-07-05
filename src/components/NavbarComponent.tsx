@@ -6,6 +6,7 @@ import { square } from 'styled-system/patterns'
 
 import Icon from '../../public/meta/bufgreencode-icon.svg'
 import Logo from '../../public/meta/bufgreencode-logo.svg'
+import MobileMenuComponent from './MobileMenuComponent'
 import SearchComponent from './SearchComponent'
 
 import { css } from 'styled-system/css'
@@ -18,7 +19,7 @@ export default function NavbarComponent() {
         insetX: '0',
         zIndex: '2',
         display: 'flex',
-        h: '16',
+        h: { base: '14', lg: '16' },
         flexShrink: '0',
         borderBottomWidth: '1px',
         borderBottomColor: 'gray.200',
@@ -47,13 +48,13 @@ export default function NavbarComponent() {
             className={css({
               h: 'full',
               flexShrink: '0',
-              pl: '4',
               w: {
                 base: '16',
                 md: '40',
                 lg: '72',
                 '2xl': '80',
               },
+              pl: '4',
             })}
             // className="h-full w-16 shrink-0 pl-4 md:w-40 lg:w-72 2xl:w-80"
           >
@@ -71,9 +72,10 @@ export default function NavbarComponent() {
                   display: 'block',
                   h: 'full',
                   w: 'full',
-                  py: '2',
+                  py: '1',
                   lg: {
                     mr: '4',
+                    py: '2',
                   },
                 })}
                 // className="block h-full w-full py-2 lg:mr-4"
@@ -126,78 +128,91 @@ export default function NavbarComponent() {
               className={css({
                 display: 'flex',
                 h: 'full',
-                w: 'full',
                 alignItems: 'center',
-                py: '2',
               })}
               // className="flex h-full w-full items-center py-2"
             >
               <SearchComponent />
             </div>
           </div>
-          <div
-            className={css({
-              display: {
-                base: 'none',
-                md: 'flex',
-              },
-              flexShrink: '0',
-              alignItems: 'center',
-              pr: '4',
-              fontSize: 'sm',
-              fontWeight: 'semibold',
-              w: {
-                lg: '72',
-                '2xl': '80',
-              },
-            })}
-            // className="hidden h-full shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80"
-          >
-            <Link
-              href="/disclaimer"
+          <div className={css({ pr: '4' })}>
+            {/* Mobile */}
+            <div
               className={css({
-                px: '2',
-                py: '1',
-                color: {
-                  base: 'gray.600',
-                  _hover: 'gray.900',
-                },
-              })}
-              // className="px-2 py-1 text-gray-700 hover:text-gray-900"
-            >
-              Disclaimer
-            </Link>
-            <a
-              className={css({
-                display: 'flex',
+                h: 'full',
                 alignItems: 'center',
-                px: '2',
-                py: '1',
-                color: {
-                  base: 'gray.600',
-                  _hover: 'gray.900',
+                display: {
+                  base: 'flex',
+                  md: 'none',
                 },
               })}
-              // className="flex items-center px-2 py-1 text-gray-700 hover:text-gray-900"
-              href="https://github.com/IHIutch/bufgreencode_v2"
-              target="_blank"
-              rel="noreferrer"
             >
-              <span
+              <MobileMenuComponent />
+            </div>
+            {/* Desktop */}
+            <div
+              className={css({
+                display: {
+                  base: 'none',
+                  lg: 'flex',
+                },
+                flexShrink: '0',
+                alignItems: 'center',
+                fontSize: 'sm',
+                fontWeight: 'semibold',
+                w: {
+                  lg: '72',
+                  '2xl': '80',
+                },
+              })}
+              // className="hidden h-full shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80"
+            >
+              <Link
+                href="/disclaimer"
                 className={css({
-                  mr: '1',
+                  px: '2',
+                  py: '1',
+                  color: {
+                    base: 'gray.600',
+                    _hover: 'gray.900',
+                  },
                 })}
-                // className="mr-1"
+                // className="px-2 py-1 text-gray-700 hover:text-gray-900"
               >
-                Source Code
-              </span>
-              <span>
-                <ExternalLink
-                  className={square({ size: '4' })}
-                  // className="h-4 w-4"
-                />
-              </span>
-            </a>
+                Disclaimer
+              </Link>
+              <a
+                className={css({
+                  display: 'flex',
+                  alignItems: 'center',
+                  px: '2',
+                  py: '1',
+                  color: {
+                    base: 'gray.600',
+                    _hover: 'gray.900',
+                  },
+                })}
+                // className="flex items-center px-2 py-1 text-gray-700 hover:text-gray-900"
+                href="https://github.com/IHIutch/bufgreencode_v2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span
+                  className={css({
+                    mr: '1',
+                  })}
+                  // className="mr-1"
+                >
+                  Source Code
+                </span>
+                <span>
+                  <ExternalLink
+                    className={square({ size: '4' })}
+                    // className="h-4 w-4"
+                  />
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
