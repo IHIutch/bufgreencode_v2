@@ -70,7 +70,7 @@ export default function SubnavComponent({
             <div
               className={css({
                 ml: 'auto',
-                color: 'gray.700',
+                color: 'gray.600',
               })}
               // className="ml-auto text-gray-700 focus:text-gray-700"
             >
@@ -148,7 +148,7 @@ export default function SubnavComponent({
                   className={css({
                     p: '2',
                     color: {
-                      base: 'gray.700',
+                      base: 'gray.600',
                       _hover: 'gray.900',
                     },
                   })}
@@ -162,7 +162,7 @@ export default function SubnavComponent({
                     alignItems: 'center',
                     p: '2',
                     color: {
-                      base: 'gray.700',
+                      base: 'gray.600',
                       _hover: 'gray.900',
                     },
                   })}

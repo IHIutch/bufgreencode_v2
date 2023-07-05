@@ -78,7 +78,7 @@ export const proseRecipe = defineRecipe({
       ':where(pre)': {
         p: '4',
         rounded: 'md',
-        bg: 'gray.700',
+        bg: 'gray.600',
         color: 'gray.50',
         overflow: 'auto',
         _dark: {
@@ -159,7 +159,7 @@ export const proseRecipe = defineRecipe({
             borderBottomWidth: '1px',
             borderBottomColor: 'gray.200',
             _dark: {
-              borderBottomColor: 'gray.700',
+              borderBottomColor: 'gray.600',
             },
             ':last-of-type': {
               borderBottomWidth: '0px',

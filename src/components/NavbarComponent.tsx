@@ -145,7 +145,7 @@ export default function NavbarComponent() {
               alignItems: 'center',
               pr: '4',
               fontSize: 'sm',
-              fontWeight: 'medium',
+              fontWeight: 'semibold',
               w: {
                 lg: '72',
                 '2xl': '80',
@@ -159,7 +159,7 @@ export default function NavbarComponent() {
                 px: '2',
                 py: '1',
                 color: {
-                  base: 'gray.700',
+                  base: 'gray.600',
                   _hover: 'gray.900',
                 },
               })}
@@ -174,7 +174,7 @@ export default function NavbarComponent() {
                 px: '2',
                 py: '1',
                 color: {
-                  base: 'gray.700',
+                  base: 'gray.600',
                   _hover: 'gray.900',
                 },
               })}

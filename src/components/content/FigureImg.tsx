@@ -38,7 +38,7 @@ export default function FigureImg({
           className={css({
             mt: '1',
             fontSize: 'sm',
-            color: 'gray.700',
+            color: 'gray.600',
           })}
           // className="mt-1 text-sm text-gray-700"
         >
