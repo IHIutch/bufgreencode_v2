@@ -2,6 +2,7 @@ import React from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 
+import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
 import { customProse, prose } from 'styled-system/recipes'
 
@@ -68,8 +69,9 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           {article.lead ? (
             <p
               className={css({
-                fontSize: 'lg',
-                color: 'gray.700',
+                fontSize: 'xl',
+                lineHeight: 'relaxed',
+                color: 'gray.600',
               })}
               // className="text-lg text-gray-700"
             >
@@ -77,7 +79,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             </p>
           ) : null}
           <div
-            className={prose() + ' ' + customProse()}
+            className={clsx(prose(), customProse())}
             // className="page-content prose"
           >
             <MDXContent components={mdxComponents} />

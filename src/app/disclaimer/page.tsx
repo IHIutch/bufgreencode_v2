@@ -1,11 +1,54 @@
+import { prose } from 'styled-system/recipes'
+
+import { css } from 'styled-system/css'
+
 export default function Disclaimer() {
   return (
-    <div className="my-12 w-full px-4 md:px-8 xl:w-3/4">
-      <div className="mx-auto w-full max-w-prose">
-        <h1 className="mb-6 text-5xl font-medium leading-tight">Disclaimer</h1>
-        <div className="prose">
-          <p className="lead">
-            This site is an <span className="font-semibold">unofficial</span>{' '}
+    <div
+      className={css({
+        my: '12',
+        w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
+        px: { base: '4', md: '8' },
+      })}
+      // className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]"
+    >
+      <div
+        className={css({
+          maxW: 'prose',
+          mx: { base: 'auto', md: '0', xl: 'auto' },
+        })}
+        // className="max-w-prose xl:mx-auto"
+      >
+        <h1
+          className={css({
+            mb: '6',
+            fontSize: '5xl',
+            fontWeight: 'medium',
+            letterSpacing: 'tight',
+          })}
+          // className="mb-6 text-5xl font-medium leading-tight"
+        >
+          Disclaimer
+        </h1>
+        <div
+          className={prose()}
+          // className="prose"
+        >
+          <p
+            className={css({
+              fontSize: 'xl',
+              lineHeight: 'relaxed',
+              color: 'gray.600',
+            })}
+            // className="lead"
+          >
+            This site is an{' '}
+            <span
+              className={css({ fontWeight: 'semibold' })}
+              // className="font-semibold"
+            >
+              unofficial
+            </span>{' '}
             digitisation for the Buffalo Green Code. This is an open source
             project and is not affiliated with the City of Buffalo.
           </p>
@@ -15,6 +58,10 @@ export default function Disclaimer() {
               href="https://www.buffalony.gov/1224/Using-the-Unified-Development-Ordinance"
               target="_blank"
               rel="noreferrer"
+              className={css({
+                color: 'green.700',
+                textDecoration: 'underline',
+              })}
             >
               City of Buffalo&apos;s website.
             </a>
@@ -31,6 +78,10 @@ export default function Disclaimer() {
               href="https://forms.reform.app/szenkB/buffalo-green-code/sxml6n"
               target="_blank"
               rel="noreferrer"
+              className={css({
+                color: 'green.700',
+                textDecoration: 'underline',
+              })}
             >
               please let us know
             </a>
