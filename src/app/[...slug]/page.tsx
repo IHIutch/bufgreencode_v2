@@ -2,7 +2,6 @@ import React from 'react'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 
-import clsx from 'clsx'
 import { allArticles } from 'contentlayer/generated'
 import { customProse, prose } from 'styled-system/recipes'
 
@@ -12,7 +11,7 @@ import TableResponsive from '@/components/content/TableResponsive'
 import TableSmall from '@/components/content/TableSmall'
 import PageToc from '@/components/PageToc'
 
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 export const generateStaticParams = async () =>
   allArticles.map((post) => ({ slug: post._raw.flattenedPath.split('/') }))
@@ -79,7 +78,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             </p>
           ) : null}
           <div
-            className={clsx(prose(), customProse())}
+            className={cx(prose(), customProse())}
             // className="page-content prose"
           >
             <MDXContent components={mdxComponents} />

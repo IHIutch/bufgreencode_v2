@@ -2,7 +2,6 @@
 
 import { createElement, useState } from 'react'
 
-import clsx from 'clsx'
 import { Link as LinkIcon } from 'lucide-react'
 import { square } from 'styled-system/patterns'
 

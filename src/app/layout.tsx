@@ -8,9 +8,7 @@ import '../index.css'
 
 import { Inter } from 'next/font/google'
 
-import clsx from 'clsx'
-
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +16,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={clsx(
+        className={cx(
           inter.className,
           css({
             fontSmoothing: 'antialiased',

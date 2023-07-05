@@ -2,8 +2,6 @@
 
 import React from 'react'
 
-import clsx from 'clsx'
-
 import {
   Dialog,
   DialogBackdrop,
@@ -17,13 +15,13 @@ import {
 } from '@ark-ui/react'
 import { HamburgerIcon } from './HamburgerIcon'
 
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 export default function MobileMenuComponent() {
   return (
     <Dialog>
       <DialogTrigger
-        className={clsx(
+        className={cx(
           'group',
           css({
             h: '10',
@@ -47,9 +45,31 @@ export default function MobileMenuComponent() {
         <HamburgerIcon />
       </DialogTrigger>
       <Portal>
-        <DialogBackdrop />
-        <DialogContainer>
-          <DialogContent>
+        <DialogBackdrop
+          className={css({
+            pos: 'fixed',
+            inset: '0',
+            opacity: '0.4',
+            bg: 'black',
+            zIndex: '3',
+          })}
+        />
+        <DialogContainer
+          className={css({
+            pos: 'fixed',
+            inset: '0',
+            zIndex: '3',
+          })}
+        >
+          <DialogContent
+            className={css({
+              minW: 'md',
+              pos: 'relative',
+              shadow: 'lg',
+              bg: 'white',
+              rounded: 'lg',
+            })}
+          >
             <DialogTitle>Dialog Title</DialogTitle>
             <DialogDescription>Dialog Description</DialogDescription>
             <DialogCloseTrigger>Close</DialogCloseTrigger>
