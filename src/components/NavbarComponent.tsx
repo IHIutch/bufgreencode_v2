@@ -6,7 +6,7 @@ import { square } from 'styled-system/patterns'
 
 import Icon from '../../public/meta/bufgreencode-icon.svg'
 import Logo from '../../public/meta/bufgreencode-logo.svg'
-import MobileMenuComponent from './MobileMenuComponent'
+import MenuDrawerComponent from './MenuDrawerComponent'
 import SearchComponent from './SearchComponent'
 
 import { css } from 'styled-system/css'
@@ -147,7 +147,7 @@ export default function NavbarComponent() {
                 },
               })}
             >
-              <MobileMenuComponent />
+              <MenuDrawerComponent />
             </div>
             {/* Desktop */}
             <div

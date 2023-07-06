@@ -61,7 +61,6 @@ export default definePreset({
             translateX,
             translateY,
             duration,
-            ...rest
           } = props
 
           return {
@@ -72,7 +71,6 @@ export default definePreset({
             [`--${direction}-rotate`]: rotate || 'initial',
             [`--${direction}-translate-x`]: translateX || 'initial',
             [`--${direction}-translate-y`]: translateY || 'initial',
-            ...rest,
           }
         },
       },

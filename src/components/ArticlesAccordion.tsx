@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import { allArticles } from 'contentlayer/generated'
 import groupBy from 'lodash/groupBy'
 import { ChevronDown } from 'lucide-react'
-import { square } from 'styled-system/patterns'
+import { animate, square } from 'styled-system/patterns'
 
 import {
   Accordion,
@@ -17,7 +17,7 @@ import {
   AccordionTrigger,
 } from '@ark-ui/react'
 
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 export default function ArticlesAccordion() {
   const activeSlug = usePathname()
@@ -46,7 +46,7 @@ export default function ArticlesAccordion() {
       >
         {Object.keys(groupedArticles).map((articleNum, idx) => (
           <AccordionItem key={idx} value={articleNum} className="group">
-            {({ isOpen }) => (
+            {({ isOpen: _ }) => (
               <li
                 className={css({
                   px: '2',
@@ -58,6 +58,7 @@ export default function ArticlesAccordion() {
                   className={css({
                     w: 'full',
                     textAlign: 'left',
+                    cursor: 'pointer',
                   })}
                   // className="w-full text-left"
                 >
@@ -113,7 +114,8 @@ export default function ArticlesAccordion() {
                 <AccordionContent
                   className={css({
                     overflow: 'hidden',
-                    py: '1',
+                    pt: '1',
+                    pb: '2',
                     pl: '3',
                   })}
                   // className={
@@ -121,11 +123,18 @@ export default function ArticlesAccordion() {
                   // }
                 >
                   <ul
-                    className={css({
-                      pb: '1',
-                      borderLeftWidth: '1px',
-                      borderLeftColor: 'gray.300',
-                    })}
+                    className={cx(
+                      css({
+                        borderLeftWidth: '1px',
+                        borderLeftColor: 'gray.300',
+                      }),
+                      animate({
+                        direction: 'enter',
+                        translateY: 'token(spacing.-2)',
+                        opacity: '0.4',
+                        duration: 'token(durations.normal)',
+                      })
+                    )}
                     // className={clsx(
                     //   'border-l border-gray-300 pb-1',
                     //   'transition-all duration-200',
@@ -168,7 +177,6 @@ export default function ArticlesAccordion() {
                                   }
                                 : {
                                     borderColor: 'transparent',
-                                    color: undefined,
                                   }),
                             })}
                             // className={clsx(

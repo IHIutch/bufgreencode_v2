@@ -20,7 +20,7 @@ import { HamburgerIcon } from './HamburgerIcon'
 
 import { css, cx } from 'styled-system/css'
 
-export default function MobileMenuComponent() {
+export default function MenuDrawerComponent() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -99,6 +99,8 @@ export default function MobileMenuComponent() {
                     bg: 'white',
                     maxWidth: 'sm',
                     w: 'full',
+                    display: 'flex',
+                    flexDirection: 'column',
                   }),
                   animate({
                     direction: 'enter',
@@ -113,17 +115,21 @@ export default function MobileMenuComponent() {
                     px: '6',
                     fontSize: 'xl',
                     fontWeight: 'semibold',
+                    borderBottomWidth: '1px',
+                    borderBottomColor: 'slate.200',
                   })}
                 >
                   Menu
                 </DialogTitle>
-                <DialogDescription
+                <div
                   className={css({
                     py: '2',
+                    overflowY: 'auto',
+                    flex: '1',
                   })}
                 >
                   <ArticlesAccordion />
-                </DialogDescription>
+                </div>
               </DialogContent>
             </DialogContainer>
           </Portal>
