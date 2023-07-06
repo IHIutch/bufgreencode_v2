@@ -9,6 +9,8 @@ export default function TableSmall({ children }: { children: ReactNode }) {
         mt: '-2',
         mb: '4',
         '& table': {
+          fontSize: 'sm',
+          lineHeight: 'relaxed',
           '& thead': {
             display: 'none',
           },
@@ -17,8 +19,15 @@ export default function TableSmall({ children }: { children: ReactNode }) {
             borderBottomColor: 'gray.200',
           },
           '& td': {
+            p: '2.5',
             borderTopWidth: '1px',
             borderTopColor: 'gray.200',
+            '&:first-of-type': {
+              pl: '0',
+            },
+            '&:last-of-type': {
+              pr: '0',
+            },
           },
         },
       })}
