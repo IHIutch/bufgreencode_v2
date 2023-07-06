@@ -110,16 +110,13 @@ export default function NavbarComponent() {
           <div
             className={css({
               h: 'full',
-              w: 'full',
               flex: '1',
               px: '4',
               md: {
                 display: 'block',
                 px: '8',
               },
-              xl: {
-                w: '3/4',
-              },
+              w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
             })}
             // className="h-full w-full flex-1 px-4 md:block md:px-8 xl:w-3/4"
           >
@@ -128,21 +125,25 @@ export default function NavbarComponent() {
                 display: 'flex',
                 h: 'full',
                 alignItems: 'center',
+                mx: 'auto',
+                maxW: 'prose',
+                w: 'full',
               })}
               // className="flex h-full w-full items-center py-2"
             >
               <SearchComponent />
             </div>
           </div>
-          <div className={css({ pr: '4' })}>
+          <div>
             {/* Mobile */}
             <div
               className={css({
                 h: 'full',
                 alignItems: 'center',
+                pr: '4',
                 display: {
                   base: 'flex',
-                  md: 'none',
+                  lg: 'none',
                 },
               })}
             >
@@ -159,18 +160,17 @@ export default function NavbarComponent() {
                 alignItems: 'center',
                 fontSize: 'sm',
                 fontWeight: 'semibold',
-                w: {
-                  lg: '72',
-                  '2xl': '80',
-                },
+                pr: '4',
+                w: { xl: '80' },
               })}
               // className="hidden h-full shrink-0 items-center pr-4 text-sm font-medium md:flex lg:w-72 2xl:w-80"
             >
               <Link
                 href="/disclaimer"
                 className={css({
+                  ml: '-2',
                   px: '2',
-                  py: '1',
+                  py: '2',
                   color: {
                     base: 'gray.600',
                     _hover: 'gray.900',
@@ -185,7 +185,7 @@ export default function NavbarComponent() {
                   display: 'flex',
                   alignItems: 'center',
                   px: '2',
-                  py: '1',
+                  py: '2',
                   color: {
                     base: 'gray.600',
                     _hover: 'gray.900',

@@ -51,12 +51,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
               top: '0',
               display: {
                 base: 'none',
-                md: 'block',
+                lg: 'block',
               },
               h: 'full',
               pt: '16',
               w: {
-                md: '72',
+                lg: '72',
                 '2xl': '80',
               },
             })}
@@ -88,7 +88,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
               overflowY: 'auto',
               inset: '0',
               mt: '28',
-              md: {
+              lg: {
                 pl: '72',
                 mt: '16',
               },

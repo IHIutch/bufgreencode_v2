@@ -50,16 +50,17 @@ export default function Post({ params }: { params: { slug: string[] } }) {
         <div
           className={css({
             maxW: 'prose',
-            mx: { base: 'auto', md: '0', xl: 'auto' },
+            mx: { base: 'auto', lg: '0', xl: 'auto' },
           })}
           // className="max-w-prose xl:mx-auto"
         >
           <h1
             className={css({
               mb: '2',
-              fontSize: '5xl',
+              fontSize: { base: '4xl', sm: '5xl' },
               fontWeight: 'medium',
               letterSpacing: 'tight',
+              lineHeight: 'tight',
             })}
             // className="mb-2 text-5xl font-medium leading-tight"
           >
