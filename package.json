@@ -11,7 +11,7 @@
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@ark-ui/react": "^0.7.0",
+    "@ark-ui/react": "^0.7.2",
     "@docsearch/css": "^3.5.1",
     "@docsearch/react": "^3.5.1",
     "@fullhuman/postcss-purgecss": "^5.0.0",

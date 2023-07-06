@@ -3,7 +3,7 @@
 import { createElement, useState } from 'react'
 
 import { Link as LinkIcon } from 'lucide-react'
-import { square } from 'styled-system/patterns'
+import { animate, square } from 'styled-system/patterns'
 
 import { type ContentHeading } from '@/types'
 import {
@@ -13,10 +13,9 @@ import {
   TooltipTrigger,
 } from '@ark-ui/react'
 
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 export default function Heading({ slug, level, children }: ContentHeading) {
-  const [isToolTipVisible, setIsToolTipVisible] = useState(false)
   const headingEl = createElement(
     `h${level}`,
     {
@@ -32,21 +31,23 @@ export default function Heading({ slug, level, children }: ContentHeading) {
     children
   )
   const copyLinkToClipboard = () => {
-    setIsToolTipVisible(true)
+    // setIsToolTipVisible(true)
     navigator.clipboard.writeText(
       `${window.location.origin}${window.location.pathname}#${slug}`
     )
 
-    setTimeout(() => {
-      setIsToolTipVisible(false)
-    }, 800)
+    // setTimeout(() => {
+    //   setIsToolTipVisible(false)
+    // }, 800)
   }
 
   return (
     <div className={css({ mt: '2em' })}>
       <Tooltip
-        open={isToolTipVisible}
-        positioning={{ placement: 'top-center' }}
+        open={false}
+        positioning={{ placement: 'top' }}
+        openDelay={0}
+        closeOnPointerDown={false}
       >
         <TooltipTrigger
           className={css({
@@ -61,6 +62,7 @@ export default function Heading({ slug, level, children }: ContentHeading) {
             },
             textDecoration: 'underline',
             transition: 'color ease 0.2s',
+            cursor: 'pointer',
           })}
           // className="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
           onClick={copyLinkToClipboard}
@@ -81,19 +83,30 @@ export default function Heading({ slug, level, children }: ContentHeading) {
         </TooltipTrigger>
         <TooltipPositioner>
           <TooltipContent
-            className={css({
-              display: 'inline-flex',
-              alignItems: 'center',
-              rounded: 'md',
-              px: '2',
-              py: '1',
-              bg: 'gray.800',
-              fontSize: 'sm',
-              color: 'white',
-            })}
+            className={cx(
+              css({
+                display: 'inline-flex',
+                alignItems: 'center',
+                rounded: 'md',
+
+                px: '2',
+                bg: 'gray.800',
+                fontSize: 'xs',
+                fontWeight: 'medium',
+                color: 'white',
+                zIndex: '10',
+                position: 'relative',
+                lineHeight: 'loose',
+              }),
+              animate({
+                direction: 'enter',
+                translateY: 'token(spacing.1)',
+                opacity: '0',
+              })
+            )}
             // className="rdx-tooltip inline-flex items-center rounded-md px-2 py-1 bg-gray-800 text-xs text-white"
           >
-            Copied to clipboard
+            Copy to clipboard
           </TooltipContent>
         </TooltipPositioner>
       </Tooltip>
