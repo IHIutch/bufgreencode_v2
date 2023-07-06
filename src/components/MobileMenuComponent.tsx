@@ -36,7 +36,7 @@ export default function MobileMenuComponent() {
       onClose={() => setIsOpen(false)}
       onOpen={() => setIsOpen(true)}
     >
-      {({ isOpen }) => (
+      {({ isOpen: _ }) => (
         <>
           <DialogTrigger
             className={cx(
