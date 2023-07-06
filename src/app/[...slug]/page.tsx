@@ -86,66 +86,54 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           </div>
         </div>
       </div>
-      <aside
-        className={css({
-          display: {
-            base: 'none',
-            xl: 'block',
-          },
-          flexShrink: '0',
-          w: '80',
-        })}
-        // className="hidden shrink-0 lg:w-80 xl:block"
-      >
-        {article.toc ? (
+      {article.toc ? (
+        <aside
+          className={css({
+            pos: 'fixed',
+            top: '16',
+            bottom: '0',
+            right: '0',
+            display: {
+              base: 'none',
+              xl: 'block',
+            },
+            flexShrink: '0',
+            w: '80',
+          })}
+          // className="hidden shrink-0 lg:w-80 xl:block"
+        >
           <div
             className={css({
-              pos: 'fixed',
-              top: '0',
               h: 'full',
-              pt: '16',
+              overflow: 'auto',
+              py: '12',
+              pr: '4',
             })}
             // className="fixed top-0 h-screen pt-16"
           >
             <div
               className={css({
-                h: 'full',
-                overflowY: 'auto',
+                mb: '2',
               })}
-              // className="h-full overflow-y-auto"
+              // className="mb-2"
             >
-              <div
+              <span
                 className={css({
-                  my: '12',
-                  pr: '4',
+                  fontSize: 'xs',
+                  fontWeight: 'bold',
+                  letterSpacing: 'wider',
+                  color: 'gray.500',
+                  textTransform: 'uppercase',
                 })}
-                // className="my-12 pr-4"
+                // className="text-xs font-bold uppercase tracking-wider text-gray-500"
               >
-                <div
-                  className={css({
-                    mb: '2',
-                  })}
-                  // className="mb-2"
-                >
-                  <span
-                    className={css({
-                      fontSize: 'xs',
-                      fontWeight: 'bold',
-                      letterSpacing: 'wider',
-                      color: 'gray.500',
-                      textTransform: 'uppercase',
-                    })}
-                    // className="text-xs font-bold uppercase tracking-wider text-gray-500"
-                  >
-                    On this Page
-                  </span>
-                </div>
-                <PageToc headings={article.toc} />
-              </div>
+                On this Page
+              </span>
             </div>
+            <PageToc headings={article.toc} />
           </div>
-        ) : null}
-      </aside>
+        </aside>
+      ) : null}
     </div>
   )
 }

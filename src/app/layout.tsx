@@ -87,14 +87,8 @@ export default async function Layout({ children }: { children: ReactNode }) {
               // pos: 'fixed',
               overflowY: 'auto',
               inset: '0',
-              mt: '28',
-              lg: {
-                pl: '72',
-                mt: '16',
-              },
-              '2xl': {
-                pl: '80',
-              },
+              mt: { base: '14', lg: '16' },
+              pl: { lg: '72', '2xl': '80' },
             })}
             // className="w-full pt-20 md:ml-72 md:pt-16 2xl:ml-80"
           >
