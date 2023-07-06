@@ -28,15 +28,15 @@ export default async function Layout({ children }: { children: ReactNode }) {
           className={css({
             pos: 'fixed',
             top: '0',
-            zIndex: '1',
+            zIndex: '4',
             w: 'full',
           })}
           // className="fixed top-0 z-10 w-full"
         >
           <NavbarComponent />
-          <SubnavComponent>
+          {/* <SubnavComponent>
             <ArticlesAccordion />
-          </SubnavComponent>
+          </SubnavComponent> */}
         </div>
         <div
           className={css({

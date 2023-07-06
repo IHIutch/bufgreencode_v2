@@ -17,7 +17,6 @@ export default function NavbarComponent() {
       className={css({
         pos: 'relative',
         insetX: '0',
-        zIndex: '2',
         display: 'flex',
         h: { base: '14', lg: '16' },
         flexShrink: '0',
