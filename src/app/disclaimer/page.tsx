@@ -75,7 +75,7 @@ export default function Disclaimer() {
           <p>
             If you find any errors or inaccuracies,{' '}
             <a
-              href="https://forms.reform.app/szenkB/buffalo-green-code/sxml6n"
+              href="https://github.com/IHIutch/bufgreencode_v2/issues/new?assignees=&labels=&projects=&template=found-an-issue.yml"
               target="_blank"
               rel="noreferrer"
               className={css({
