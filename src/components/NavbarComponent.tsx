@@ -159,7 +159,6 @@ export default function NavbarComponent() {
                 flexShrink: '0',
                 alignItems: 'center',
                 fontSize: 'sm',
-                fontWeight: 'semibold',
                 pr: '4',
                 w: { xl: '80' },
               })}
@@ -175,6 +174,7 @@ export default function NavbarComponent() {
                     base: 'gray.600',
                     _hover: 'gray.900',
                   },
+                  fontWeight: 'medium',
                 })}
                 // className="px-2 py-1 text-gray-700 hover:text-gray-900"
               >
@@ -190,9 +190,10 @@ export default function NavbarComponent() {
                     base: 'gray.600',
                     _hover: 'gray.900',
                   },
+                  fontWeight: 'medium',
                 })}
                 // className="flex items-center px-2 py-1 text-gray-700 hover:text-gray-900"
-                href="https://github.com/IHIutch/bufgreencode_v2"
+                href="https://github.com/IHIutch/bufgreencode_v2/issues/new?assignees=&labels=&projects=&template=found-an-issue.yml"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -202,11 +203,11 @@ export default function NavbarComponent() {
                   })}
                   // className="mr-1"
                 >
-                  Source Code
+                  Report an Issue
                 </span>
                 <span>
                   <ExternalLink
-                    className={square({ size: '4' })}
+                    className={square({ size: '3' })}
                     // className="h-4 w-4"
                   />
                 </span>

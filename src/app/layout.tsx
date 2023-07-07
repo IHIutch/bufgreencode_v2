@@ -2,7 +2,6 @@ import type { ReactNode } from 'react'
 
 import ArticlesAccordion from '@/components/ArticlesAccordion'
 import NavbarComponent from '@/components/NavbarComponent'
-import SubnavComponent from '@/components/SubnavComponent'
 
 import '../index.css'
 
