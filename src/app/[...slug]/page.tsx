@@ -87,7 +87,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
         </div>
       </div>
       {article.toc ? (
-        <aside
+        <nav
+          aria-labelledby="toc-heading"
           className={css({
             pos: 'fixed',
             top: '16',
@@ -117,7 +118,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
               })}
               // className="mb-2"
             >
-              <span
+              <h3
+                id="toc-heading"
                 className={css({
                   fontSize: 'xs',
                   fontWeight: 'bold',
@@ -128,11 +130,11 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 // className="text-xs font-bold uppercase tracking-wider text-gray-500"
               >
                 On this Page
-              </span>
+              </h3>
             </div>
             <PageToc headings={article.toc} />
           </div>
-        </aside>
+        </nav>
       ) : null}
     </div>
   )
