@@ -145,9 +145,8 @@ export default function ArticlesAccordion() {
                   >
                     {groupedArticles[articleNum].map((section, sIdx) => (
                       <li key={sIdx}>
-                        <Link
+                        <div
                           className={css({
-                            display: 'block',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap',
@@ -160,10 +159,11 @@ export default function ArticlesAccordion() {
                             transition: 'color ease 0.2s',
                           })}
                           // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
-                          href={`${section.slug}` as Route}
                         >
-                          <div
+                          <Link
+                            href={`${section.slug}` as Route}
                             className={css({
+                              display: 'block',
                               px: '2',
                               transition: 'color ease 0.2s',
                               borderLeftWidth: '2px',
@@ -198,8 +198,8 @@ export default function ArticlesAccordion() {
                               {section.article_number}.{section.section_number}{' '}
                               {section.title}
                             </span>
-                          </div>
-                        </Link>
+                          </Link>
+                        </div>
                       </li>
                     ))}
                   </ul>

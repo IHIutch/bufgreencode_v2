@@ -9,6 +9,7 @@ import FigureImg from '@/components/content/FigureImg'
 import Heading from '@/components/content/Heading'
 import TableResponsive from '@/components/content/TableResponsive'
 import TableSmall from '@/components/content/TableSmall'
+import MobileToc from '@/components/MobileToc'
 import PageToc from '@/components/PageToc'
 
 import { css, cx } from 'styled-system/css'
@@ -36,6 +37,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
     <div
       className={css({
         display: 'flex',
+        position: 'relative',
       })}
       // className="flex"
     >
@@ -54,32 +56,41 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           })}
           // className="max-w-prose xl:mx-auto"
         >
-          <h1
-            className={css({
-              mb: '2',
-              fontSize: { base: '4xl', sm: '5xl' },
-              fontWeight: 'medium',
-              letterSpacing: 'tight',
-              lineHeight: 'tight',
-            })}
-            // className="mb-2 text-5xl font-medium leading-tight"
-          >
-            {article.article_number}.{article.section_number} {article.title}
-          </h1>
-          {article.lead ? (
-            <p
-              className={css({
-                fontSize: 'xl',
-                lineHeight: 'relaxed',
-                color: 'gray.600',
-              })}
-              // className="text-lg text-gray-700"
-            >
-              {article.lead}
-            </p>
-          ) : null}
           <div
-            className={cx(prose(), customProse())}
+            className={css({
+              mb: '8',
+            })}
+          >
+            <h1
+              className={css({
+                mb: '2',
+                fontSize: { base: '4xl', sm: '5xl' },
+                fontWeight: 'medium',
+                letterSpacing: 'tight',
+                lineHeight: 'tight',
+              })}
+              // className="mb-2 text-5xl font-medium leading-tight"
+            >
+              {article.article_number}.{article.section_number} {article.title}
+            </h1>
+            {article.lead ? (
+              <p
+                className={css({
+                  fontSize: 'xl',
+                  lineHeight: 'relaxed',
+                  color: 'gray.600',
+                })}
+                // className="text-lg text-gray-700"
+              >
+                {article.lead}
+              </p>
+            ) : null}
+          </div>
+          <MobileToc>
+            <PageToc headings={article.toc} />
+          </MobileToc>
+          <div
+            className={cx(css({ mt: '12' }), prose(), customProse())}
             // className="page-content prose"
           >
             <MDXContent components={mdxComponents} />
@@ -129,7 +140,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 })}
                 // className="text-xs font-bold uppercase tracking-wider text-gray-500"
               >
-                On this Page
+                Page Contents
               </h3>
             </div>
             <PageToc headings={article.toc} />

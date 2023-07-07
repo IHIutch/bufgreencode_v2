@@ -14,12 +14,14 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default async function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={css({ h: 'full' })}>
       <body
         className={cx(
           inter.className,
           css({
-            fontSmoothing: 'antialiased',
+            // fontSmoothing: 'antialiased',
+            h: 'full',
+            pt: { base: '14', lg: '16' },
           })
         )}
         // className="antialiased"
@@ -40,60 +42,66 @@ export default async function Layout({ children }: { children: ReactNode }) {
         </div>
         <div
           className={css({
-            maxWidth: 'breakpoint-2xl',
-            mx: 'auto',
+            h: 'full',
+            overflowY: 'auto',
           })}
-          // className="mx-auto flex max-w-screen-2xl"
         >
           <div
             className={css({
-              pos: 'fixed',
-              top: '0',
-              display: {
-                base: 'none',
-                lg: 'block',
-              },
-              h: 'full',
-              pt: '16',
-              w: {
-                lg: '72',
-                '2xl': '80',
-              },
+              maxWidth: 'breakpoint-2xl',
+              mx: 'auto',
             })}
-            // className="fixed top-0 hidden h-full shrink-0 pt-16 md:block md:w-72 2xl:w-80"
+            // className="mx-auto flex max-w-screen-2xl"
           >
-            <nav
+            <div
               className={css({
-                pos: 'sticky',
+                pos: 'fixed',
+                top: '0',
+                display: {
+                  base: 'none',
+                  lg: 'block',
+                },
                 h: 'full',
-                overflowY: 'auto',
-                borderRightColor: 'gray.200',
-                borderRightWidth: '1px',
+                pt: '16',
+                w: {
+                  lg: '72',
+                  '2xl': '80',
+                },
               })}
-              // className="sticky h-full overflow-y-auto border-r"
+              // className="fixed top-0 hidden h-full shrink-0 pt-16 md:block md:w-72 2xl:w-80"
             >
-              <div
+              <nav
                 className={css({
-                  py: '8',
+                  pos: 'sticky',
+                  h: 'full',
+                  overflowY: 'auto',
+                  borderRightColor: 'gray.200',
+                  borderRightWidth: '1px',
                 })}
-                // className="py-8"
+                // className="sticky h-full overflow-y-auto border-r"
               >
-                <ArticlesAccordion />
-              </div>
-            </nav>
+                <div
+                  className={css({
+                    py: '8',
+                  })}
+                  // className="py-8"
+                >
+                  <ArticlesAccordion />
+                </div>
+              </nav>
+            </div>
+            <main
+              className={css({
+                // pos: 'fixed',
+                pl: { lg: '72', '2xl': '80' },
+              })}
+              // className="w-full pt-20 md:ml-72 md:pt-16 2xl:ml-80"
+            >
+              {/* <div className={css({ h: 'full',  })}> */}
+              {children}
+              {/* </div> */}
+            </main>
           </div>
-          <main
-            className={css({
-              // pos: 'fixed',
-              overflowY: 'auto',
-              inset: '0',
-              mt: { base: '14', lg: '16' },
-              pl: { lg: '72', '2xl': '80' },
-            })}
-            // className="w-full pt-20 md:ml-72 md:pt-16 2xl:ml-80"
-          >
-            {children}
-          </main>
         </div>
       </body>
     </html>
