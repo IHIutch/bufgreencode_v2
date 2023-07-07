@@ -184,6 +184,7 @@ export default function NavbarComponent() {
                 className={css({
                   display: 'flex',
                   alignItems: 'center',
+                  ml: '2',
                   px: '2',
                   py: '2',
                   color: {
