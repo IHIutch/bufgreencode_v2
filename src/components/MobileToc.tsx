@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useEffect, useState, type ReactNode } from 'react'
+import React, { type ReactNode } from 'react'
 
-import { ChevronDown, ListOrdered, ListTree } from 'lucide-react'
+import { ChevronDown, ListOrdered } from 'lucide-react'
 import { animate, square } from 'styled-system/patterns'
 
 import {

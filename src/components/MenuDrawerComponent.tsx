@@ -12,7 +12,6 @@ import {
   DialogBackdrop,
   DialogContainer,
   DialogContent,
-  DialogDescription,
   DialogTitle,
   DialogTrigger,
   Portal,

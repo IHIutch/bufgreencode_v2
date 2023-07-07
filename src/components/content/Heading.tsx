@@ -1,6 +1,6 @@
 'use client'
 
-import { createElement, useState } from 'react'
+import { createElement } from 'react'
 
 import { Link as LinkIcon } from 'lucide-react'
 import { animate, square } from 'styled-system/patterns'
