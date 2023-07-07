@@ -12,15 +12,31 @@ export default function TableResponsive({ children }: { children: ReactNode }) {
         overflowX: 'auto',
         '& table': {
           w: 'full',
+          fontSize: 'sm',
+          lineHeight: 'relaxed',
           '& th': {
             whiteSpace: 'nowrap',
             borderBottomWidth: '2px',
             borderBottomColor: 'gray.200',
+            p: '2.5',
+            '&:first-of-type': {
+              pl: '0',
+            },
+            '&:last-of-type': {
+              pr: '0',
+            },
           },
           '& td': {
             whiteSpace: 'nowrap',
             borderTopWidth: '1px',
             borderTopColor: 'gray.200',
+            p: '2.5',
+            '&:first-of-type': {
+              pl: '0',
+            },
+            '&:last-of-type': {
+              pr: '0',
+            },
           },
         },
       })}

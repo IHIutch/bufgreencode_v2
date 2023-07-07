@@ -24,7 +24,7 @@ export default function Heading({ slug, level, children }: ContentHeading) {
         mt: '0',
         scrollMarginTop: '28',
         lineHeight: 'tight',
-        fontWeight: 'semibold',
+        fontWeight: 'medium',
       }),
     },
     // { id: slug, className: 'mt-0 scroll-mt-24' },
