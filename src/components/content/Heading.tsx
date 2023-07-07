@@ -22,7 +22,7 @@ export default function Heading({ slug, level, children }: ContentHeading) {
       id: slug,
       className: css({
         mt: '0',
-        scrollMarginTop: '28',
+        scrollMarginTop: '16',
         lineHeight: 'tight',
         fontWeight: 'medium',
       }),

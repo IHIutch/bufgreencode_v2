@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, type MouseEvent } from 'react'
+import Link from 'next/link'
 
 import { type TocHeading } from '@/types'
 
@@ -72,8 +73,9 @@ export default function PageToc({ headings }: { headings?: TocHeading[] }) {
               })}
               // className="text-sm text-gray-600 hover:text-gray-900"
             >
-              <a
-                href={`#${heading.slug}`}
+              <Link
+                replace={true}
+                href={{ hash: heading.slug }}
                 onClick={onLinkClick}
                 className={css({
                   display: 'block',
@@ -128,7 +130,7 @@ export default function PageToc({ headings }: { headings?: TocHeading[] }) {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
           ))
         : null}

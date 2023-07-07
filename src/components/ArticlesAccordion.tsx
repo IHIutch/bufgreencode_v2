@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { type Route } from 'next'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

@@ -56,11 +56,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           })}
           // className="max-w-prose xl:mx-auto"
         >
-          <div
-            className={css({
-              mb: '8',
-            })}
-          >
+          <div>
             <h1
               className={css({
                 mb: '2',
@@ -90,7 +86,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             <PageToc headings={article.toc} />
           </MobileToc>
           <div
-            className={cx(css({ mt: '12' }), prose(), customProse())}
+            className={cx(prose(), customProse())}
             // className="page-content prose"
           >
             <MDXContent components={mdxComponents} />

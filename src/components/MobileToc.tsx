@@ -1,9 +1,9 @@
 'use client'
 
-import React, { type ReactNode } from 'react'
+import React, { useEffect, useState, type ReactNode } from 'react'
 
 import { ChevronDown, ListOrdered, ListTree } from 'lucide-react'
-import { square } from 'styled-system/patterns'
+import { animate, square } from 'styled-system/patterns'
 
 import {
   Accordion,
@@ -18,15 +18,17 @@ export default function MobileToc({ children }: { children: ReactNode }) {
   return (
     <div
       className={css({
-        position: 'sticky',
-        top: '2',
+        // position: 'sticky',
+        // top: '2',
+        // zIndex: '4',
         display: { base: 'block', xl: 'none' },
-        zIndex: '4',
+        mt: '8',
+        mb: '12',
       })}
     >
       <Accordion
         collapsible={true}
-        defaultValue=""
+        defaultValue={null}
         className={css({
           w: 'full',
           rounded: 'lg',
@@ -96,7 +98,16 @@ export default function MobileToc({ children }: { children: ReactNode }) {
               pb: '2',
             })}
           >
-            {children}
+            <div
+              className={animate({
+                direction: 'enter',
+                translateY: 'token(spacing.-2)',
+                opacity: '0.4',
+                duration: 'token(durations.normal)',
+              })}
+            >
+              {children}
+            </div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
