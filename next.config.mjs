@@ -10,6 +10,19 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 's-maxage=604800, stale-while-revalidate',
+          },
+        ],
+      },
+    ]
+  },
 }
 
 const withContentlayer = createContentlayerPlugin({
