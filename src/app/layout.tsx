@@ -17,11 +17,13 @@ const inter = Inter({ subsets: ['latin'] })
 
 export function generateMetadata(): Metadata {
   const siteName = 'Buffalo Green Code'
+  const siteUrl = 'https://bufgreencode.com'
   const description = 'Buffalo Green Code Unified Development Ordinance'
   const imageUrl = '/meta/meta-img.png'
   const imageAlt =
     'The city of buffalo overlayed with a semitransparent green background and the Buffalo Green Code logo in the middle'
   return {
+    metadataBase: new URL(siteUrl),
     title: {
       template: `%s · ${siteName}`,
       default: siteName,
