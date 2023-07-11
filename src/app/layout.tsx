@@ -10,8 +10,8 @@ import { Inter } from 'next/font/google'
 
 import { css, cx } from 'styled-system/css'
 
-export const runtime = 'edge'
-export const preferredRegion = 'home'
+// export const runtime = 'edge'
+// export const preferredRegion = 'home'
 
 const inter = Inter({ subsets: ['latin'] })
 
