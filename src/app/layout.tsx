@@ -5,6 +5,7 @@ import NavbarComponent from '@/components/NavbarComponent'
 
 import '../index.css'
 
+import { type Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import { css, cx } from 'styled-system/css'
@@ -13,6 +14,48 @@ export const runtime = 'edge'
 export const preferredRegion = 'home'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export function generateMetadata(): Metadata {
+  const siteName = 'Buffalo Green Code'
+  const description = 'Buffalo Green Code Unified Development Ordinance'
+  const imageUrl = '/meta/meta-img.png'
+  const imageAlt =
+    'The city of buffalo overlayed with a semitransparent green background and the Buffalo Green Code logo in the middle'
+  return {
+    title: {
+      template: `%s · ${siteName}`,
+      default: siteName,
+    },
+    description: description,
+    openGraph: {
+      siteName: siteName,
+      title: {
+        template: `%s · ${siteName}`,
+        default: siteName,
+      },
+      description: description,
+      url: '/',
+      images: {
+        url: imageUrl,
+        alt: imageAlt,
+      },
+      type: 'website',
+      locale: 'US_en',
+    },
+    twitter: {
+      title: {
+        template: `%s · ${siteName}`,
+        default: siteName,
+      },
+      description: description,
+      images: {
+        url: imageUrl,
+        alt: imageAlt,
+      },
+      card: 'summary_large_image',
+    },
+  }
+}
 
 export default async function Layout({ children }: { children: ReactNode }) {
   return (

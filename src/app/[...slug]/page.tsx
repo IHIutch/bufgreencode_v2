@@ -1,4 +1,5 @@
 import React from 'react'
+import { type Metadata, type ResolvingMetadata } from 'next'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 
@@ -23,6 +24,45 @@ const mdxComponents = {
   TableResponsive,
   FigureImg,
   Sup: (props: any) => <sup {...props} />,
+}
+
+export async function generateMetadata(
+  { params }: { params: { slug: string[] } },
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
+  const article = allArticles.find((article) => {
+    return article._raw.flattenedPath === params.slug.join('/')
+  })
+
+  if (!article)
+    return {
+      title: '',
+    }
+
+  const pageName = `${article.article_number}.${article.section_number} ${article.title}`
+  const parentMeta = await parent
+
+  return {
+    title: pageName,
+    openGraph: {
+      siteName: parentMeta?.openGraph?.siteName,
+      title: {
+        absolute: pageName,
+      },
+      description: parentMeta?.openGraph?.description,
+      images: parentMeta?.openGraph?.images || [],
+      url: article.slug,
+      locale: parentMeta?.openGraph?.locale,
+    },
+    twitter: {
+      title: {
+        absolute: pageName,
+      },
+      description: parentMeta?.twitter?.description || '',
+      images: parentMeta?.twitter?.images || [],
+      card: 'summary_large_image',
+    },
+  }
 }
 
 export default function Post({ params }: { params: { slug: string[] } }) {

@@ -1,6 +1,38 @@
+import { type Metadata, type ResolvingMetadata } from 'next'
+
 import { prose } from 'styled-system/recipes'
 
 import { css } from 'styled-system/css'
+
+export async function generateMetadata(
+  _,
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
+  const pageName = 'Disclaimer'
+  const parentMeta = await parent
+
+  return {
+    title: pageName,
+    openGraph: {
+      siteName: parentMeta?.openGraph?.siteName,
+      title: {
+        absolute: pageName,
+      },
+      description: parentMeta?.openGraph?.description,
+      images: parentMeta?.openGraph?.images || [],
+      url: '/disclaimer',
+      locale: parentMeta?.openGraph?.locale,
+    },
+    twitter: {
+      title: {
+        absolute: pageName,
+      },
+      description: parentMeta?.twitter?.description || '',
+      images: parentMeta?.twitter?.images || [],
+      card: 'summary_large_image',
+    },
+  }
+}
 
 export default function Disclaimer() {
   return (
