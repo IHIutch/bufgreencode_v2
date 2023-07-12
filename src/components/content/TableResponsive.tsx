@@ -6,19 +6,19 @@ export default function TableResponsive({ children }: { children: ReactNode }) {
   return (
     <div
       className={css({
-        mt: '-2',
-        mb: '4',
-        maxWidth: 'full',
-        overflowX: 'auto',
+        'mt': '-2',
+        'mb': '4',
+        'maxWidth': 'full',
+        'overflowX': 'auto',
         '& table': {
-          w: 'full',
-          fontSize: 'sm',
-          lineHeight: 'relaxed',
+          'w': 'full',
+          'fontSize': 'sm',
+          'lineHeight': 'relaxed',
           '& th': {
-            whiteSpace: 'nowrap',
-            borderBottomWidth: '2px',
-            borderBottomColor: 'gray.200',
-            p: '2.5',
+            'whiteSpace': 'nowrap',
+            'borderBottomWidth': '2px',
+            'borderBottomColor': 'gray.200',
+            'p': '2.5',
             '&:first-of-type': {
               pl: '0',
             },
@@ -27,10 +27,10 @@ export default function TableResponsive({ children }: { children: ReactNode }) {
             },
           },
           '& td': {
-            whiteSpace: 'nowrap',
-            borderTopWidth: '1px',
-            borderTopColor: 'gray.200',
-            p: '2.5',
+            'whiteSpace': 'nowrap',
+            'borderTopWidth': '1px',
+            'borderTopColor': 'gray.200',
+            'p': '2.5',
             '&:first-of-type': {
               pl: '0',
             },

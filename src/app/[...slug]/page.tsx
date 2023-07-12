@@ -15,8 +15,9 @@ import PageToc from '@/components/PageToc'
 
 import { css, cx } from 'styled-system/css'
 
-export const generateStaticParams = async () =>
-  allArticles.map((post) => ({ slug: post._raw.flattenedPath.split('/') }))
+export async function generateStaticParams() {
+  return allArticles.map(post => ({ slug: post._raw.flattenedPath.split('/') }))
+}
 
 const mdxComponents = {
   Heading,
@@ -28,16 +29,17 @@ const mdxComponents = {
 
 export async function generateMetadata(
   { params }: { params: { slug: string[] } },
-  parent?: ResolvingMetadata
+  parent?: ResolvingMetadata,
 ): Promise<Metadata> {
   const article = allArticles.find((article) => {
     return article._raw.flattenedPath === params.slug.join('/')
   })
 
-  if (!article)
+  if (!article) {
     return {
       title: '',
     }
+  }
 
   const pageName = `${article.article_number}.${article.section_number} ${article.title}`
   const parentMeta = await parent
@@ -69,7 +71,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
   const article = allArticles.find((article) => {
     return article._raw.flattenedPath === params.slug.join('/')
   })
-  if (!article) notFound()
+  if (!article)
+    notFound()
 
   const MDXContent = useMDXComponent(article.body.code)
 
@@ -109,8 +112,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             >
               {article.article_number}.{article.section_number} {article.title}
             </h1>
-            {article.lead ? (
-              <p
+            {article.lead
+              ? (<p
                 className={css({
                   fontSize: 'xl',
                   lineHeight: 'relaxed',
@@ -119,8 +122,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 // className="text-lg text-gray-700"
               >
                 {article.lead}
-              </p>
-            ) : null}
+              </p>)
+              : null}
           </div>
           <MobileToc>
             <PageToc headings={article.toc} />
@@ -133,8 +136,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           </div>
         </div>
       </div>
-      {article.toc ? (
-        <nav
+      {article.toc
+        ? (<nav
           aria-labelledby="toc-heading"
           className={css({
             pos: 'fixed',
@@ -181,8 +184,8 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             </div>
             <PageToc headings={article.toc} />
           </div>
-        </nav>
-      ) : null}
+        </nav>)
+        : null}
     </div>
   )
 }

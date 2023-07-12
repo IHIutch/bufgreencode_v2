@@ -4,7 +4,7 @@ export default definePreset({
   theme: {
     semanticTokens: {
       animations: {
-        enter: { value: `enter {durations.fast}` },
+        enter: { value: 'enter {durations.fast}' },
         exit: { value: 'exit' },
       },
     },

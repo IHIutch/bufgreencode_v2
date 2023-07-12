@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ExternalLink } from 'lucide-react'
-import { square } from 'styled-system/patterns'
 
 import Icon from '../../public/meta/bufgreencode-icon.svg'
 import Logo from '../../public/meta/bufgreencode-logo.svg'
 import MenuDrawerComponent from './MenuDrawerComponent'
 import SearchComponent from './SearchComponent'
+import { square } from 'styled-system/patterns'
 
 import { css } from 'styled-system/css'
 
@@ -48,9 +48,9 @@ export default function NavbarComponent() {
               h: 'full',
               flexShrink: '0',
               w: {
-                base: '16',
-                md: '40',
-                lg: '72',
+                'base': '16',
+                'md': '40',
+                'lg': '72',
                 '2xl': '80',
               },
               pl: '4',

@@ -12,10 +12,10 @@ export default function FigureImg({
   return (
     <figure
       className={
-        'not-prose ' +
+        `not-prose ${
         css({
           mb: '4',
-        })
+        })}`
       }
       // className="not-prose mb-4"
     >
@@ -33,7 +33,8 @@ export default function FigureImg({
       >
         {children}
       </div>
-      {caption ? (
+      {caption
+        ? (
         <figcaption
           className={css({
             mt: '1',
@@ -44,7 +45,8 @@ export default function FigureImg({
         >
           {caption}
         </figcaption>
-      ) : null}
+          )
+        : null}
     </figure>
   )
 }

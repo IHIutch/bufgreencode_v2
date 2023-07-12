@@ -1,17 +1,17 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { type ReactNode, useState } from 'react'
 import { type Route } from 'next'
 import Link from 'next/link'
 
 import { Search } from 'lucide-react'
-import { square } from 'styled-system/patterns'
 
 import { DocSearchModal } from '@docsearch/react'
 import type {
   InternalDocSearchHit,
   StoredDocSearchHit,
 } from '@docsearch/react/dist/esm/types'
+import { square } from 'styled-system/patterns'
 
 import { css } from 'styled-system/css'
 
@@ -61,7 +61,8 @@ export default function SearchComponent() {
           </span>
         </div>
       </button>
-      {isOpen ? (
+      {isOpen
+        ? (
         <DocSearchModal
           initialScrollY={window.scrollY}
           appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ''}
@@ -75,16 +76,12 @@ export default function SearchComponent() {
               const a = document.createElement('a')
               a.href = item.url
 
-              if (item.hierarchy?.lvl0) {
+              if (item.hierarchy?.lvl0)
                 item.hierarchy.lvl0 = item.hierarchy.lvl0.replace(/&amp;/g, '&')
-              }
 
               if (item._highlightResult?.hierarchy?.lvl0?.value) {
-                item._highlightResult.hierarchy.lvl0.value =
-                  item._highlightResult.hierarchy.lvl0.value.replace(
-                    /&amp;/g,
-                    '&'
-                  )
+                item._highlightResult.hierarchy.lvl0.value
+                  = item._highlightResult.hierarchy.lvl0.value.replace(/&amp;/g, '&')
               }
 
               return {
@@ -104,18 +101,19 @@ export default function SearchComponent() {
             })
           }}
         />
-      ) : null}
+          )
+        : null}
     </>
   )
 }
 
-const Hit = ({
+function Hit({
   hit,
   children,
 }: {
   hit: InternalDocSearchHit | StoredDocSearchHit
   children: ReactNode
-}) => {
+}) {
   return (
     <Link
       href={hit.url as Route}

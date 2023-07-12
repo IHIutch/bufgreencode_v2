@@ -1,7 +1,5 @@
-export const getHeadings = (
-  node: any,
-  sections: { id: string; title: string; level: number }[] = []
-) => {
+export function getHeadings(node: any,
+  sections: { id: string; title: string; level: number }[] = []) {
   if (node?.name) {
     // 'Heading' is defined in markdoc/node/heading.ts
     if (node.name.match('Heading')) {
@@ -16,9 +14,8 @@ export const getHeadings = (
     }
 
     if (node.children) {
-      for (const child of node.children) {
+      for (const child of node.children)
         getHeadings(child, sections)
-      }
     }
   }
 

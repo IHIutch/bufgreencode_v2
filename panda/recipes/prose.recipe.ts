@@ -6,8 +6,8 @@ export const proseRecipe = defineRecipe({
     'A system for making sure your typography looks great when your content in uncontrolled',
   base: {
     '&:not(:where([class~=not-prose] *))': {
-      lineHeight: '7',
-      fontSize: 'md',
+      'lineHeight': '7',
+      'fontSize': 'md',
       ':where(h1)': {
         // fontFamily: 'heading',
         fontWeight: 'bold',
@@ -85,14 +85,14 @@ export const proseRecipe = defineRecipe({
           bg: 'gray.800',
         },
         code: {
-          fontWeight: 'normal',
+          'fontWeight': 'normal',
           '&::before, &::after': {
             content: '""',
           },
         },
       },
       ':where(code)': {
-        fontWeight: 'semibold',
+        'fontWeight': 'semibold',
         '&::before, &::after': {
           content: '"`"',
         },
@@ -156,9 +156,9 @@ export const proseRecipe = defineRecipe({
         },
         tbody: {
           tr: {
-            borderBottomWidth: '1px',
-            borderBottomColor: 'gray.200',
-            _dark: {
+            'borderBottomWidth': '1px',
+            'borderBottomColor': 'gray.200',
+            '_dark': {
               borderBottomColor: 'gray.600',
             },
             ':last-of-type': {

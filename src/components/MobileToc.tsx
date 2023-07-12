@@ -3,14 +3,13 @@
 import React, { type ReactNode } from 'react'
 
 import { ChevronDown, ListOrdered } from 'lucide-react'
-import { animate, square } from 'styled-system/patterns'
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@ark-ui/react'
+import { animate, square } from 'styled-system/patterns'
 
 import { css } from 'styled-system/css'
 

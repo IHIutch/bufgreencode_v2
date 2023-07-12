@@ -3,15 +3,15 @@
 import { createElement } from 'react'
 
 import { Link as LinkIcon } from 'lucide-react'
-import { animate, square } from 'styled-system/patterns'
-
-import { type ContentHeading } from '@/types'
 import {
   Tooltip,
   TooltipContent,
   TooltipPositioner,
   TooltipTrigger,
 } from '@ark-ui/react'
+import { animate, square } from 'styled-system/patterns'
+
+import { type ContentHeading } from '@/types'
 
 import { css, cx } from 'styled-system/css'
 
@@ -28,12 +28,12 @@ export default function Heading({ slug, level, children }: ContentHeading) {
       }),
     },
     // { id: slug, className: 'mt-0 scroll-mt-24' },
-    children
+    children,
   )
   const copyLinkToClipboard = () => {
     // setIsToolTipVisible(true)
     navigator.clipboard.writeText(
-      `${window.location.origin}${window.location.pathname}#${slug}`
+      `${window.location.origin}${window.location.pathname}#${slug}`,
     )
 
     // setTimeout(() => {
@@ -102,7 +102,7 @@ export default function Heading({ slug, level, children }: ContentHeading) {
                 direction: 'enter',
                 translateY: 'token(spacing.1)',
                 opacity: '0',
-              })
+              }),
             )}
             // className="rdx-tooltip inline-flex items-center rounded-md px-2 py-1 bg-gray-800 text-xs text-white"
           >

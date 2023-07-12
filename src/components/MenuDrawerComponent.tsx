@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { ExternalLink } from 'lucide-react'
-import { animate, square } from 'styled-system/patterns'
 
 import {
   Dialog,
@@ -18,6 +17,7 @@ import {
 } from '@ark-ui/react'
 import ArticlesAccordion from './ArticlesAccordion'
 import { HamburgerIcon } from './HamburgerIcon'
+import { animate, square } from 'styled-system/patterns'
 
 import { css, cx } from 'styled-system/css'
 
@@ -57,7 +57,7 @@ export default function MenuDrawerComponent() {
                 justifyContent: 'center',
                 transition: 'background-color ease 0.2s',
                 cursor: 'pointer',
-              })
+              }),
             )}
             aria-label="Menu"
           >
@@ -78,7 +78,7 @@ export default function MenuDrawerComponent() {
                 animate({
                   direction: 'enter',
                   opacity: '0',
-                })
+                }),
               )}
             />
             <DialogContainer
@@ -107,7 +107,7 @@ export default function MenuDrawerComponent() {
                     direction: 'enter',
                     duration: 'token(durations.fast)',
                     translateX: 'token(sizes.full)',
-                  })
+                  }),
                 )}
               >
                 <DialogTitle

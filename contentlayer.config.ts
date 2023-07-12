@@ -6,7 +6,7 @@ import { withTableOfContents } from './remark/withTableOfContents.mjs'
 
 export const Article = defineDocumentType(() => ({
   name: 'Article',
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: '**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -40,7 +40,7 @@ export const Article = defineDocumentType(() => ({
     },
     toc: {
       type: 'json',
-      resolve: (doc) => toc(doc.body.raw, { maxdepth: 3 }).json,
+      resolve: doc => toc(doc.body.raw, { maxdepth: 3 }).json,
     },
   },
 }))

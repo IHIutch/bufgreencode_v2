@@ -6,11 +6,11 @@ export default function TableSmall({ children }: { children: ReactNode }) {
   return (
     <div
       className={css({
-        mt: '-2',
-        mb: '4',
+        'mt': '-2',
+        'mb': '4',
         '& table': {
-          fontSize: 'sm',
-          lineHeight: 'relaxed',
+          'fontSize': 'sm',
+          'lineHeight': 'relaxed',
           '& thead': {
             display: 'none',
           },
@@ -19,9 +19,9 @@ export default function TableSmall({ children }: { children: ReactNode }) {
             borderBottomColor: 'gray.200',
           },
           '& td': {
-            p: '2.5',
-            borderTopWidth: '1px',
-            borderTopColor: 'gray.200',
+            'p': '2.5',
+            'borderTopWidth': '1px',
+            'borderTopColor': 'gray.200',
             '&:first-of-type': {
               pl: '0',
             },

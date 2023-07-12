@@ -1,12 +1,11 @@
 import type { ReactNode } from 'react'
+import { type Metadata } from 'next'
+import { Inter } from 'next/font/google'
 
 import ArticlesAccordion from '@/components/ArticlesAccordion'
 import NavbarComponent from '@/components/NavbarComponent'
 
 import '../index.css'
-
-import { type Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
 import { css, cx } from 'styled-system/css'
 
@@ -20,22 +19,22 @@ export function generateMetadata(): Metadata {
   const siteUrl = 'https://bufgreencode.com'
   const description = 'Buffalo Green Code Unified Development Ordinance'
   const imageUrl = '/meta/meta-img.png'
-  const imageAlt =
-    'The city of buffalo overlayed with a semitransparent green background and the Buffalo Green Code logo in the middle'
+  const imageAlt
+    = 'The city of buffalo overlayed with a semitransparent green background and the Buffalo Green Code logo in the middle'
   return {
     metadataBase: new URL(siteUrl),
     title: {
       template: `%s · ${siteName}`,
       default: siteName,
     },
-    description: description,
+    description,
     openGraph: {
-      siteName: siteName,
+      siteName,
       title: {
         template: `%s · ${siteName}`,
         default: siteName,
       },
-      description: description,
+      description,
       url: '/',
       images: {
         url: imageUrl,
@@ -49,7 +48,7 @@ export function generateMetadata(): Metadata {
         template: `%s · ${siteName}`,
         default: siteName,
       },
-      description: description,
+      description,
       images: {
         url: imageUrl,
         alt: imageAlt,
@@ -69,7 +68,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
             // fontSmoothing: 'antialiased',
             h: 'full',
             pt: { base: '14', lg: '16' },
-          })
+          }),
         )}
         // className="antialiased"
       >
@@ -111,7 +110,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
                 h: 'full',
                 pt: '16',
                 w: {
-                  lg: '72',
+                  'lg': '72',
                   '2xl': '80',
                 },
               })}
@@ -140,7 +139,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
             <main
               className={css({
                 // pos: 'fixed',
-                pl: { lg: '72', '2xl': '80' },
+                pl: { 'lg': '72', '2xl': '80' },
               })}
               // className="w-full pt-20 md:ml-72 md:pt-16 2xl:ml-80"
             >

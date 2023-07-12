@@ -4,17 +4,17 @@ import { type Route } from 'next'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { allArticles } from 'contentlayer/generated'
 import groupBy from 'lodash/groupBy'
 import { ChevronDown } from 'lucide-react'
-import { animate, square } from 'styled-system/patterns'
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@ark-ui/react'
+import { animate, square } from 'styled-system/patterns'
+
+import { allArticles } from 'contentlayer/generated'
 
 import { css, cx } from 'styled-system/css'
 
@@ -23,14 +23,14 @@ export default function ArticlesAccordion() {
   const groupedArticles = groupBy(
     allArticles.sort(
       (a, b) =>
-        a.article_number +
-        a.section_number -
-        (b.article_number + b.section_number)
+        a.article_number
+        + a.section_number
+        - (b.article_number + b.section_number),
     ),
-    'article_number'
+    'article_number',
   )
 
-  const activeArticle = allArticles.find((a) => a.slug === activeSlug)
+  const activeArticle = allArticles.find(a => a.slug === activeSlug)
 
   return (
     <Accordion
@@ -132,7 +132,7 @@ export default function ArticlesAccordion() {
                         translateY: 'token(spacing.-2)',
                         opacity: '0.4',
                         duration: 'token(durations.normal)',
-                      })
+                      }),
                     )}
                     // className={clsx(
                     //   'border-l border-gray-300 pb-1',

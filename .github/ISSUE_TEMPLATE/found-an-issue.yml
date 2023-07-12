@@ -1,21 +1,21 @@
 name: Found an Issue
 description: This template is for bugs or content issues
 body:
-  - type: "input"
-    id: "type"
+  - type: input
+    id: type
     attributes:
-      label: "Is this a bug or a content issue?"
-      description: "A clear and concise description of the issue"
+      label: Is this a bug or a content issue?
+      description: A clear and concise description of the issue
     validations:
       required: true
-  - type: "input"
-    id: "url"
+  - type: input
+    id: url
     attributes:
-      label: "On what page did you find the issue?"
-      description: "Paste the page URL here"
+      label: On what page did you find the issue?
+      description: Paste the page URL here
     validations:
       required: true
-  - type: "textarea"
+  - type: textarea
     attributes:
-      label: "Additional information"
-      description: "Anything else you want to add?"
+      label: Additional information
+      description: Anything else you want to add?

@@ -1,9 +1,9 @@
-export type TocHeading = {
+export interface TocHeading {
   slug: string
   content: string
 }
 
-export type ContentHeading = {
+export interface ContentHeading {
   level: number
   slug: string
   children: React.ReactNode

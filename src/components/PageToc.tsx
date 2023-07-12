@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, type MouseEvent } from 'react'
+import { type MouseEvent, useEffect, useState } from 'react'
 import Link from 'next/link'
 
 import { type TocHeading } from '@/types'
@@ -37,13 +37,13 @@ export default function PageToc({ headings }: { headings?: TocHeading[] }) {
 
     const headingsObserver = new IntersectionObserver(
       setCurrent,
-      observerOptions
+      observerOptions,
     )
 
     // Observe all the headings in the main page content.
     document
       .querySelectorAll('.prose :is(h2,h3,h4,h5,h6)')
-      .forEach((h) => headingsObserver.observe(h))
+      .forEach(h => headingsObserver.observe(h))
 
     // Stop observing when the component is unmounted.
     return () => headingsObserver.disconnect()
@@ -132,7 +132,7 @@ export default function PageToc({ headings }: { headings?: TocHeading[] }) {
                 </div>
               </Link>
             </li>
-          ))
+        ))
         : null}
     </ul>
   )
