@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react'
 import { type Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
+
 import { Inter } from 'next/font/google'
 
 import ArticlesAccordion from '@/components/ArticlesAccordion'
@@ -150,6 +152,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
           </div>
         </div>
       </body>
+      <Analytics />
     </html>
   )
 }
