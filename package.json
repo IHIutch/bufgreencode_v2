@@ -7,9 +7,9 @@
     "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint '**/*.{js,jsx,mjs,ts,tsx}'",
     "lint:next": "next lint",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
     "@ark-ui/react": "^0.7.2",

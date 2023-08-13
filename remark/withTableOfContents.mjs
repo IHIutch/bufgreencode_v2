@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit'
 import { toString } from 'hast-util-to-string'
 import Slugger from 'github-slugger'
 
-export const withTableOfContents = () => {
+export function withTableOfContents() {
   const slugs = new Slugger()
   return (tree) => {
     visit(tree, 'heading', (node) => {
