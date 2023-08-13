@@ -21,6 +21,7 @@
     "@types/react-dom": "18.2.6",
     "@vercel/analytics": "^1.0.1",
     "contentlayer": "^0.3.3",
+    "fathom-client": "^3.5.0",
     "github-slugger": "^2.0.0",
     "hast-util-to-string": "^2.0.0",
     "lodash": "^4.17.21",

@@ -10,6 +10,7 @@ import NavbarComponent from '@/components/NavbarComponent'
 import '../index.css'
 
 import { css, cx } from 'styled-system/css'
+import Fathom from '@/components/fathom'
 
 // export const runtime = 'edge'
 // export const preferredRegion = 'home'
@@ -74,6 +75,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
         )}
         // className="antialiased"
       >
+        <Fathom />
         <div
           className={css({
             pos: 'fixed',
