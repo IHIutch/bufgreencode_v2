@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'hhttps://bufgreencode.com/sitemap.xml',
+    sitemap: 'https://bufgreencode.com/sitemap.xml',
   }
 }
