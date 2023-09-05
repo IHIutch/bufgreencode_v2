@@ -1,5 +1,3 @@
-/* eslint n/prefer-global/process: [error] */
-
 'use client'
 
 import { type ReactNode, useState } from 'react'
@@ -16,6 +14,7 @@ import type {
 import { square } from 'styled-system/patterns'
 
 import { css } from 'styled-system/css'
+import { env } from 'utils/env.mjs'
 
 export default function SearchComponent() {
   const [isOpen, setIsOpen] = useState(false)
@@ -67,9 +66,9 @@ export default function SearchComponent() {
         ? (
         <DocSearchModal
           initialScrollY={window.scrollY}
-          appId={process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ''}
-          indexName={process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME || ''}
-          apiKey={process.env.NEXT_PUBLIC_ALGOLIA_API_KEY || ''}
+          appId={env.NEXT_PUBLIC_ALGOLIA_APP_ID}
+          indexName={env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME}
+          apiKey={env.NEXT_PUBLIC_ALGOLIA_API_KEY}
           onClose={() => setIsOpen(false)}
           placeholder="Search the Green Code..."
           hitComponent={Hit}

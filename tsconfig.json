@@ -39,7 +39,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "styled-system"
+    "styled-system",
+    "utils/env.mjs"
   ],
   "exclude": [
     "node_modules"

@@ -1,5 +1,6 @@
 import { withSentryConfig } from '@sentry/nextjs'
 import { createContentlayerPlugin } from 'next-contentlayer'
+import './utils/env.mjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
