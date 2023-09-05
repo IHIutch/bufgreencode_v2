@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
-    "@pandacss/dev": "^0.13.1",
+    "@pandacss/dev": "^0.5.1",
     "@types/lodash": "^4.14.197",
     "eslint": "8.48.0",
     "eslint-config-next": "^13.4.19",
