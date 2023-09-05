@@ -41,8 +41,7 @@ export const Article = defineDocumentType(() => ({
     },
     toc: {
       type: 'json',
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      resolve: doc => toc(doc.body.raw, { maxdepth: 3 }) as Array<TocItemProps>,
+      resolve: doc => toc(doc.body.raw, { maxdepth: 3 }).json,
     },
   },
 }))
