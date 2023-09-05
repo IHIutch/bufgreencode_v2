@@ -14,8 +14,9 @@ import MobileToc from '@/components/MobileToc'
 import PageToc from '@/components/PageToc'
 
 import { css, cx } from 'styled-system/css'
+import type { TocItemProps } from '@/types'
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return allArticles.map(post => ({ slug: post._raw.flattenedPath.split('/') }))
 }
 
@@ -126,7 +127,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
               : null}
           </div>
           <MobileToc>
-            <PageToc headings={article.toc} />
+            <PageToc headings={article.toc as Array<TocItemProps>} />
           </MobileToc>
           <div
             className={cx(prose(), customProse())}
@@ -182,7 +183,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 Page Contents
               </h3>
             </div>
-            <PageToc headings={article.toc} />
+            <PageToc headings={article.toc as Array<TocItemProps>} />
           </div>
         </nav>)
         : null}

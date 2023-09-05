@@ -61,7 +61,7 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default async function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={css({ h: 'full' })}>
       <body

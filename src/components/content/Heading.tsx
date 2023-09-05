@@ -32,9 +32,16 @@ export default function Heading({ slug, level, children }: ContentHeading) {
   )
   const copyLinkToClipboard = () => {
     // setIsToolTipVisible(true)
-    navigator.clipboard.writeText(
-      `${window.location.origin}${window.location.pathname}#${slug}`,
-    )
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(
+        `${window.location.origin}${window.location.pathname}#${slug}`,
+      ).catch((error) => {
+        console.error('Error copying text to clipboard:', error)
+      })
+    }
+    else {
+      console.error('Clipboard API is not available in this browser')
+    }
 
     // setTimeout(() => {
     //   setIsToolTipVisible(false)

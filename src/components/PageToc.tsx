@@ -3,11 +3,11 @@
 import { type MouseEvent, useEffect, useState } from 'react'
 import Link from 'next/link'
 
-import { type TocHeading } from '@/types'
+import { type TocItemProps } from '@/types'
 
 import { css } from 'styled-system/css'
 
-export default function PageToc({ headings }: { headings?: TocHeading[] }) {
+export default function PageToc({ headings }: { headings?: Array<TocItemProps> }) {
   const [currentHeading, setCurrentHeading] = useState({
     slug: headings?.[0]?.slug || '',
     text: headings?.[0]?.content || '',

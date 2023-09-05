@@ -3,6 +3,7 @@ import toc from 'markdown-toc'
 import remarkGfm from 'remark-gfm'
 
 import { withTableOfContents } from './remark/withTableOfContents.mjs'
+import type { TocItemProps } from '@/types.js'
 
 export const Article = defineDocumentType(() => ({
   name: 'Article',
@@ -40,7 +41,8 @@ export const Article = defineDocumentType(() => ({
     },
     toc: {
       type: 'json',
-      resolve: doc => toc(doc.body.raw, { maxdepth: 3 }).json,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
+      resolve: doc => toc(doc.body.raw, { maxdepth: 3 }) as Array<TocItemProps>,
     },
   },
 }))

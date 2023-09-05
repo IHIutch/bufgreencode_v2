@@ -3,8 +3,6 @@ import Link from 'next/link'
 
 import { ExternalLink } from 'lucide-react'
 
-import Icon from '../../public/meta/bufgreencode-icon.svg'
-import Logo from '../../public/meta/bufgreencode-logo.svg'
 import MenuDrawerComponent from './MenuDrawerComponent'
 import SearchComponent from './SearchComponent'
 import { square } from 'styled-system/patterns'
@@ -80,8 +78,10 @@ export default function NavbarComponent() {
                 // className="block h-full w-full py-2 lg:mr-4"
               >
                 <Image
-                  src={Icon}
+                  src="/meta/bufgreencode-icon.svg"
                   alt="Buffalo Green Code"
+                  height={47}
+                  width={47}
                   className={css({
                     h: 'full',
                     w: 'auto',
@@ -92,8 +92,10 @@ export default function NavbarComponent() {
                   // className="h-full w-auto md:hidden"
                 />
                 <Image
-                  src={Logo}
+                  src="/meta/bufgreencode-logo.svg"
                   alt="Buffalo Green Code"
+                  height={47}
+                  width={115}
                   className={css({
                     display: {
                       base: 'none',
