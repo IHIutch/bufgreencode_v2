@@ -1,3 +1,5 @@
+/* eslint n/prefer-global/process: [error] */
+
 'use client'
 
 import { type ReactNode, useState } from 'react'
