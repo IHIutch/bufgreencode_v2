@@ -27,7 +27,6 @@ export default function MobileToc({ children }: { children: ReactNode }) {
     >
       <Accordion
         collapsible={true}
-        defaultValue={null}
         className={css({
           w: 'full',
           rounded: 'lg',
