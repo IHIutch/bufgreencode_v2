@@ -16,6 +16,7 @@
     "@docsearch/css": "^3.5.1",
     "@docsearch/react": "^3.5.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
+    "@sentry/nextjs": "^7.67.0",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
