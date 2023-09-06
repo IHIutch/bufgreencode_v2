@@ -171,12 +171,12 @@ export default function ArticlesAccordion() {
                               whiteSpace: 'nowrap',
                               ...(activeSlug === section.slug
                                 ? {
-                                  borderColor: 'green.700',
-                                  color: 'green.700',
-                                }
+                                    borderColor: 'green.700',
+                                    color: 'green.700',
+                                  }
                                 : {
-                                  borderColor: 'transparent',
-                                }),
+                                    borderColor: 'transparent',
+                                  }),
                             })}
                           // className={clsx(
                           //   'border-l-2 px-2',

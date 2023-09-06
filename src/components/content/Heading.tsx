@@ -10,7 +10,7 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@ark-ui/react'
-import { animate, square } from 'styled-system/patterns'
+import { square } from 'styled-system/patterns'
 
 import { type ContentHeading } from '@/types'
 
