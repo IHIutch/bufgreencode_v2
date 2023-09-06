@@ -4,6 +4,7 @@ import { createElement } from 'react'
 
 import { Link as LinkIcon } from 'lucide-react'
 import {
+  Portal,
   Tooltip,
   TooltipContent,
   TooltipPositioner,
@@ -58,7 +59,6 @@ export default function Heading({ slug, level, children }: ContentHeading) {
       >
         <TooltipTrigger
           className={css({
-            mb: '1',
             display: 'flex',
             alignItems: 'center',
             fontSize: 'sm',
@@ -77,45 +77,45 @@ export default function Heading({ slug, level, children }: ContentHeading) {
           <LinkIcon
             strokeWidth="3"
             className={square({ size: '3.5' })}
-            // className="h-[0.875rem] w-[0.875rem]"
+          // className="h-[0.875rem] w-[0.875rem]"
           />
           <div>
             <span
               className={css({ ml: '1' })}
-              // className="ml-1"
+            // className="ml-1"
             >
               Share Section
             </span>
           </div>
         </TooltipTrigger>
-        <TooltipPositioner>
-          <TooltipContent
-            className={cx(
-              css({
-                display: 'inline-flex',
-                alignItems: 'center',
-                rounded: 'md',
-
-                px: '2',
-                bg: 'gray.800',
-                fontSize: 'xs',
-                fontWeight: 'medium',
-                color: 'white',
-                zIndex: '10',
-                position: 'relative',
-                lineHeight: 'loose',
-              }),
-              animate({
-                direction: 'enter',
-                translateY: 'token(spacing.1)',
-                opacity: '0',
-              }),
-            )}
+        <Portal>
+          <TooltipPositioner>
+            <TooltipContent
+              className={cx(
+                css({
+                  alignItems: 'center',
+                  rounded: 'md',
+                  px: '2',
+                  bg: 'gray.800',
+                  fontSize: 'xs',
+                  fontWeight: 'medium',
+                  color: 'white',
+                  zIndex: '10',
+                  position: 'relative',
+                  lineHeight: 'loose',
+                }),
+                animate({
+                  direction: 'enter',
+                  translateY: 'token(spacing.1)',
+                  opacity: '0',
+                }),
+              )}
             // className="rdx-tooltip inline-flex items-center rounded-md px-2 py-1 bg-gray-800 text-xs text-white"
-          >
-            Copy to clipboard
-          </TooltipContent>
-        </TooltipPositioner>
+            >
+              Copy to clipboard
+            </TooltipContent>
+          </TooltipPositioner>
+        </Portal>
       </Tooltip>
       {headingEl}
     </div>
