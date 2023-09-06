@@ -3,7 +3,6 @@ import toc from 'markdown-toc'
 import remarkGfm from 'remark-gfm'
 
 import { withTableOfContents } from './remark/withTableOfContents.mjs'
-import type { TocItemProps } from '@/types.js'
 
 export const Article = defineDocumentType(() => ({
   name: 'Article',

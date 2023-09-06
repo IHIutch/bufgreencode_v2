@@ -1,5 +1,3 @@
-const process = require('node:process')
-
 process.env.ESLINT_TSCONFIG = 'tsconfig.json'
 
 module.exports = {
@@ -7,4 +5,7 @@ module.exports = {
     'next',
     '@antfu',
   ],
+  rules: {
+    'n/prefer-global/process': ['error', 'always'],
+  },
 }
