@@ -41,7 +41,7 @@ export default function ArticlesAccordion() {
     >
       <ul
         className={css({ px: '2', py: '1', fontSize: 'sm' })}
-        // className="px-2 py-1 text-sm"
+      // className="px-2 py-1 text-sm"
       >
         {Object.keys(groupedArticles).map((articleNum, idx) => (
           <AccordionItem key={idx} value={articleNum} className="group">
@@ -51,7 +51,7 @@ export default function ArticlesAccordion() {
                   px: '2',
                   pb: '1',
                 })}
-                // className="px-2 pb-1"
+              // className="px-2 pb-1"
               >
                 <AccordionTrigger
                   className={css({
@@ -59,7 +59,7 @@ export default function ArticlesAccordion() {
                     textAlign: 'left',
                     cursor: 'pointer',
                   })}
-                  // className="w-full text-left"
+                // className="w-full text-left"
                 >
                   <div
                     className={css({
@@ -68,7 +68,7 @@ export default function ArticlesAccordion() {
                       alignItems: 'center',
                       color: { base: 'gray.600', _hover: 'gray.900' },
                     })}
-                    // className="flex w-full items-center text-gray-600 hover:text-gray-900"
+                  // className="flex w-full items-center text-gray-600 hover:text-gray-900"
                   >
                     <div
                       className={css({
@@ -76,13 +76,13 @@ export default function ArticlesAccordion() {
                         px: '2',
                         py: '1',
                       })}
-                      // className="grow px-2 py-1"
+                    // className="grow px-2 py-1"
                     >
                       <span
                         className={css({
                           fontWeight: 'medium',
                         })}
-                        // className="font-medium"
+                      // className="font-medium"
                       >
                         {groupedArticles[articleNum][0].article_number}.{' '}
                         {groupedArticles[articleNum][0].article}
@@ -97,14 +97,14 @@ export default function ArticlesAccordion() {
                             transform: 'rotate(180deg)',
                           },
                         })}
-                        // className={clsx(
-                        //   'duration-200',
-                        //   isOpen ? 'rotate-180' : 'rotate-0'
-                        // )}
+                      // className={clsx(
+                      //   'duration-200',
+                      //   isOpen ? 'rotate-180' : 'rotate-0'
+                      // )}
                       >
                         <ChevronDown
                           className={square({ size: '4' })}
-                          // className="h-4 w-4"
+                        // className="h-4 w-4"
                         />
                       </div>
                     </div>
@@ -117,9 +117,9 @@ export default function ArticlesAccordion() {
                     pb: '2',
                     pl: '3',
                   })}
-                  // className={
-                  //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
-                  // }
+                // className={
+                //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
+                // }
                 >
                   <ul
                     className={cx(
@@ -128,19 +128,19 @@ export default function ArticlesAccordion() {
                         borderLeftColor: 'gray.300',
                       }),
                       animate({
-                        direction: 'enter',
+                        animationName: 'enter',
                         translateY: 'token(spacing.-2)',
                         opacity: '0.4',
-                        duration: 'token(durations.normal)',
+                        animationDuration: 'token(durations.normal)',
                       }),
                     )}
-                    // className={clsx(
-                    //   'border-l border-gray-300 pb-1',
-                    //   'transition-all duration-200',
-                    //   isOpen
-                    //     ? 'translate-y-0 opacity-100'
-                    //     : '-translate-y-4 opacity-0'
-                    // )}
+                  // className={clsx(
+                  //   'border-l border-gray-300 pb-1',
+                  //   'transition-all duration-200',
+                  //   isOpen
+                  //     ? 'translate-y-0 opacity-100'
+                  //     : '-translate-y-4 opacity-0'
+                  // )}
                   >
                     {groupedArticles[articleNum].map((section, sIdx) => (
                       <li key={sIdx}>
@@ -157,7 +157,7 @@ export default function ArticlesAccordion() {
                             ml: '-1px',
                             transition: 'color ease 0.2s',
                           })}
-                          // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
+                        // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
                         >
                           <Link
                             href={`${section.slug}` as Route}
@@ -171,20 +171,20 @@ export default function ArticlesAccordion() {
                               whiteSpace: 'nowrap',
                               ...(activeSlug === section.slug
                                 ? {
-                                    borderColor: 'green.700',
-                                    color: 'green.700',
-                                  }
+                                  borderColor: 'green.700',
+                                  color: 'green.700',
+                                }
                                 : {
-                                    borderColor: 'transparent',
-                                  }),
+                                  borderColor: 'transparent',
+                                }),
                             })}
-                            // className={clsx(
-                            //   'border-l-2 px-2',
-                            //   'transition-all duration-200',
-                            //   activeSlug === section.slug
-                            //     ? 'border-green-700'
-                            //     : 'border-transparent'
-                            // )}
+                          // className={clsx(
+                          //   'border-l-2 px-2',
+                          //   'transition-all duration-200',
+                          //   activeSlug === section.slug
+                          //     ? 'border-green-700'
+                          //     : 'border-transparent'
+                          // )}
                           >
                             <span
                             // className={clsx(

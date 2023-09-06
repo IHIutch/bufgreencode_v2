@@ -98,10 +98,10 @@ export default function MobileToc({ children }: { children: ReactNode }) {
           >
             <div
               className={animate({
-                direction: 'enter',
+                animationName: 'enter',
                 translateY: 'token(spacing.-2)',
                 opacity: '0.4',
-                duration: 'token(durations.normal)',
+                animationDuration: 'token(durations.normal)',
               })}
             >
               {children}

@@ -76,7 +76,7 @@ export default function MenuDrawerComponent() {
                   zIndex: '3',
                 }),
                 animate({
-                  direction: 'enter',
+                  animationName: 'enter',
                   opacity: '0',
                 }),
               )}
@@ -104,8 +104,8 @@ export default function MenuDrawerComponent() {
                     flexDirection: 'column',
                   }),
                   animate({
-                    direction: 'enter',
-                    duration: 'token(durations.fast)',
+                    animationName: 'enter',
+                    animationDuration: 'token(durations.fast)',
                     translateX: 'token(sizes.full)',
                   }),
                 )}
@@ -160,7 +160,7 @@ export default function MenuDrawerComponent() {
                           fontWeight: 'medium',
                           fontSize: 'sm',
                         })}
-                        // className="px-2 py-1 text-gray-700 hover:text-gray-900"
+                      // className="px-2 py-1 text-gray-700 hover:text-gray-900"
                       >
                         Disclaimer
                       </Link>
@@ -189,14 +189,14 @@ export default function MenuDrawerComponent() {
                           className={css({
                             mr: '1',
                           })}
-                          // className="mr-1"
+                        // className="mr-1"
                         >
                           Report an Issue
                         </span>
                         <span>
                           <ExternalLink
                             className={square({ size: '3' })}
-                            // className="h-4 w-4"
+                          // className="h-4 w-4"
                           />
                         </span>
                       </a>

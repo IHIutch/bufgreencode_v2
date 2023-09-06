@@ -32,11 +32,29 @@ export default defineConfig({
           10: { value: '2.5rem' },
         },
       },
+      keyframes: {
+        tooltipFadeIn: {
+          '0%': { opacity: '0', scale: '0.8' },
+          '100%': { opacity: '1', scale: '1' },
+        },
+        tooltipFadeOut: {
+          '0%': { opacity: '1', scale: '1' },
+          '100%': { opacity: '0', scale: '0.8' },
+        },
+        tooltipSlideIn: {
+          '0%': { transform: 'translateY(4px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        tooltipSlideOut: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(4px)' },
+        },
+      },
     },
   },
 
   presets: ['@pandacss/preset-base', '@pandacss/preset-panda', animationPreset],
   // The output directory for your css system
   outdir: 'styled-system',
-  strictTokens: true,
+  strictTokens: false,
 })

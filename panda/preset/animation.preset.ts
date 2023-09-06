@@ -33,7 +33,7 @@ export default definePreset({
       animate: {
         description: 'Handles various enter/exit animations',
         properties: {
-          direction: { type: 'enum', value: ['enter', 'exit'] },
+          animationName: { type: 'enum', value: ['enter', 'exit'] },
           opacity: { type: 'token', property: 'opacity', value: 'opacity' },
           scale: { type: 'token', property: 'scale' },
           rotate: { type: 'token', property: 'rotate' },
@@ -47,31 +47,37 @@ export default definePreset({
             property: 'translate',
             value: 'spacing',
           },
-          duration: {
+          animationDuration: {
             type: 'token',
             property: 'animationDuration',
             value: 'durations',
           },
+          direction: {
+            type: 'token',
+            property: 'animationDirection',
+          },
         },
         transform(props: any) {
           const {
-            direction,
+            animationName,
             opacity,
             scale,
             rotate,
             translateX,
             translateY,
-            duration,
+            animationDuration,
+            direction,
           } = props
 
           return {
-            animationName: direction,
-            animationDuration: duration || 'token(durations.faster)',
-            [`--${direction}-opacity`]: opacity || 'initial',
-            [`--${direction}-scale`]: scale || 'initial',
-            [`--${direction}-rotate`]: rotate || 'initial',
-            [`--${direction}-translate-x`]: translateX || 'initial',
-            [`--${direction}-translate-y`]: translateY || 'initial',
+            animationName,
+            animationDuration: animationDuration || 'token(durations.faster)',
+            animationDirection: direction || 'normal',
+            [`--${animationName}-opacity`]: opacity || 'initial',
+            [`--${animationName}-scale`]: scale || 'initial',
+            [`--${animationName}-rotate`]: rotate || 'initial',
+            [`--${animationName}-translate-x`]: translateX || 'initial',
+            [`--${animationName}-translate-y`]: translateY || 'initial',
           }
         },
       },

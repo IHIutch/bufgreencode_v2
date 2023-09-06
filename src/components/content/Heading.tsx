@@ -93,21 +93,18 @@ export default function Heading({ slug, level, children }: ContentHeading) {
             <TooltipContent
               className={cx(
                 css({
-                  alignItems: 'center',
-                  rounded: 'md',
-                  px: '2',
-                  bg: 'gray.800',
-                  fontSize: 'xs',
-                  fontWeight: 'medium',
-                  color: 'white',
-                  zIndex: '10',
-                  position: 'relative',
-                  lineHeight: 'loose',
-                }),
-                animate({
-                  direction: 'enter',
-                  translateY: 'token(spacing.1)',
-                  opacity: '0',
+                  'alignItems': 'center',
+                  'rounded': 'md',
+                  'px': '2',
+                  'bg': 'gray.800',
+                  'fontSize': 'xs',
+                  'fontWeight': 'medium',
+                  'color': 'white',
+                  'zIndex': '10',
+                  'position': 'relative',
+                  'lineHeight': 'loose',
+                  '&[data-state=open]': { animation: 'tooltipFadeIn 0.1s ease-out, tooltipSlideIn 0.15s ease-out' },
+                  '&[data-state=closed]': { animation: 'tooltipFadeOut 0.1s ease-in, tooltipSlideOut 0.1s ease-in' },
                 }),
               )}
             // className="rdx-tooltip inline-flex items-center rounded-md px-2 py-1 bg-gray-800 text-xs text-white"
