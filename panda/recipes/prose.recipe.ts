@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const proseRecipe = defineRecipe({
-  name: 'prose',
+  className: 'prose',
   description:
     'A system for making sure your typography looks great when your content in uncontrolled',
   base: {
@@ -178,9 +178,9 @@ export const proseRecipe = defineRecipe({
         },
       },
       ':where(h1 + *), :where(h2 + *), :where(h3 + *), :where(h4 + *), :where(hr + *)':
-        {
-          mt: '0',
-        },
+      {
+        mt: '0',
+      },
     },
   },
 })

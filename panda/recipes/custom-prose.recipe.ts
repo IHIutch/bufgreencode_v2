@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const customProseRecipe = defineRecipe({
-  name: 'customProse',
+  className: 'customProse',
   description: 'A custom extension of the prose recipe',
   base: {
     'h1': {
