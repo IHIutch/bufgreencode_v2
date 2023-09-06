@@ -15,7 +15,7 @@
     "@ark-ui/react": "^0.14.0",
     "@docsearch/css": "^3.5.2",
     "@docsearch/react": "^3.5.2",
-    "@sentry/nextjs": "^7.67.0",
+    "@sentry/nextjs": "^7.68.0",
     "@t3-oss/env-nextjs": "^0.6.1",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
@@ -40,7 +40,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.41.0",
     "@pandacss/dev": "^0.5.1",
-    "@types/lodash": "^4.14.197",
+    "@types/lodash": "^4.14.198",
     "eslint": "8.48.0",
     "eslint-config-next": "^13.4.19",
     "postcss": "^8.4.29",
