@@ -1,6 +1,6 @@
 import React from 'react'
 import { type Metadata, type ResolvingMetadata } from 'next'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { getMDXComponent } from 'next-contentlayer/hooks'
 import { notFound } from 'next/navigation'
 
 import { allArticles } from 'contentlayer/generated'
@@ -75,7 +75,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
   if (!article)
     notFound()
 
-  const MDXContent = useMDXComponent(article.body.code)
+  const MDXContent = getMDXComponent(article.body.code)
 
   return (
     <div
@@ -83,7 +83,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
         display: 'flex',
         position: 'relative',
       })}
-      // className="flex"
+    // className="flex"
     >
       <div
         className={css({
@@ -91,14 +91,14 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
           px: { base: '4', md: '8' },
         })}
-        // className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]"
+      // className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]"
       >
         <div
           className={css({
             maxW: 'prose',
             mx: { base: 'auto', lg: '0', xl: 'auto' },
           })}
-          // className="max-w-prose xl:mx-auto"
+        // className="max-w-prose xl:mx-auto"
         >
           <div>
             <h1
@@ -109,7 +109,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                 letterSpacing: 'tight',
                 lineHeight: 'tight',
               })}
-              // className="mb-2 text-5xl font-medium leading-tight"
+            // className="mb-2 text-5xl font-medium leading-tight"
             >
               {article.article_number}.{article.section_number} {article.title}
             </h1>
@@ -120,7 +120,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                   lineHeight: 'relaxed',
                   color: 'gray.600',
                 })}
-                // className="text-lg text-gray-700"
+              // className="text-lg text-gray-700"
               >
                 {article.lead}
               </p>)
@@ -131,7 +131,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
           </MobileToc>
           <div
             className={cx(prose(), customProse())}
-            // className="page-content prose"
+          // className="page-content prose"
           >
             <MDXContent components={mdxComponents} />
           </div>
@@ -152,7 +152,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
             flexShrink: '0',
             w: '80',
           })}
-          // className="hidden shrink-0 lg:w-80 xl:block"
+        // className="hidden shrink-0 lg:w-80 xl:block"
         >
           <div
             className={css({
@@ -161,13 +161,13 @@ export default function Post({ params }: { params: { slug: string[] } }) {
               py: '12',
               pr: '4',
             })}
-            // className="fixed top-0 h-screen pt-16"
+          // className="fixed top-0 h-screen pt-16"
           >
             <div
               className={css({
                 mb: '2',
               })}
-              // className="mb-2"
+            // className="mb-2"
             >
               <h3
                 id="toc-heading"
@@ -178,7 +178,7 @@ export default function Post({ params }: { params: { slug: string[] } }) {
                   color: 'gray.500',
                   textTransform: 'uppercase',
                 })}
-                // className="text-xs font-bold uppercase tracking-wider text-gray-500"
+              // className="text-xs font-bold uppercase tracking-wider text-gray-500"
               >
                 Page Contents
               </h3>
