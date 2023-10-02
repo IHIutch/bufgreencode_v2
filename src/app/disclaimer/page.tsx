@@ -31,6 +31,9 @@ export async function generateMetadata(
       images: parentMeta?.twitter?.images || [],
       card: 'summary_large_image',
     },
+    alternates: {
+      canonical: '/disclaimer',
+    },
   }
 }
 
