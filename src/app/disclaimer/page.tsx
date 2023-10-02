@@ -5,7 +5,7 @@ import { prose } from 'styled-system/recipes'
 import { css } from 'styled-system/css'
 
 export async function generateMetadata(
-  _,
+  _: any,
   parent?: ResolvingMetadata,
 ): Promise<Metadata> {
   const pageName = 'Disclaimer'
