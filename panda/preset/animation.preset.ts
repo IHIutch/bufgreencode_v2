@@ -35,8 +35,8 @@ export default definePreset({
         properties: {
           animationName: { type: 'enum', value: ['enter', 'exit'] },
           opacity: { type: 'token', property: 'opacity', value: 'opacity' },
-          scale: { type: 'token', property: 'scale' },
-          rotate: { type: 'token', property: 'rotate' },
+          scale: { type: 'number' },
+          rotate: { type: 'number' },
           translateX: {
             type: 'token',
             property: 'translate',
@@ -53,8 +53,8 @@ export default definePreset({
             value: 'durations',
           },
           direction: {
-            type: 'token',
-            property: 'animationDirection',
+            type: 'property',
+            value: 'animationDirection',
           },
         },
         transform(props: any) {

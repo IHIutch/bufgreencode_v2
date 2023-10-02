@@ -30,7 +30,7 @@ const mdxComponents = {
 
 export async function generateMetadata(
   { params }: { params: { slug: string[] } },
-  parent?: ResolvingMetadata,
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const article = allArticles.find((article) => {
     return article._raw.flattenedPath === params.slug.join('/')

@@ -7,7 +7,7 @@
     "dev": "rm -rf .next && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint '**/*.{js,jsx,mjs,ts,tsx}'",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --ignore-path .gitignore .",
     "lint:next": "next lint",
     "lint:fix": "pnpm run lint --fix"
   },

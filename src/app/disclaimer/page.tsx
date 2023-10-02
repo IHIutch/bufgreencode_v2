@@ -6,7 +6,7 @@ import { css } from 'styled-system/css'
 
 export async function generateMetadata(
   _: any,
-  parent?: ResolvingMetadata,
+  parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const pageName = 'Disclaimer'
   const parentMeta = await parent
