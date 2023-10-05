@@ -11,7 +11,7 @@ import {
 } from '@ark-ui/react'
 import { animate, square } from 'styled-system/patterns'
 
-import { css } from 'styled-system/css'
+import { css, cx } from 'styled-system/css'
 
 export default function MobileToc({ children }: { children: ReactNode }) {
   return (
@@ -35,9 +35,9 @@ export default function MobileToc({ children }: { children: ReactNode }) {
           bg: 'gray.50',
         })}
       >
-        <AccordionItem value="one" className="group">
+        <AccordionItem value="one">
           <AccordionTrigger
-            className={css({
+            className={cx('group', css({
               display: 'flex',
               w: 'full',
               alignItems: 'center',
@@ -52,7 +52,7 @@ export default function MobileToc({ children }: { children: ReactNode }) {
                 _hover: 'gray.100',
               },
               transition: 'background-color ease 0.2s',
-            })}
+            }))}
           >
             <div
               className={css({
@@ -91,18 +91,30 @@ export default function MobileToc({ children }: { children: ReactNode }) {
           </AccordionTrigger>
           <AccordionContent
             className={css({
-              px: '4',
-              pt: '1',
-              pb: '2',
+              'display': 'grid',
+              'px': '4',
+              'gridTemplateRows': '0fr',
+              'transition': 'ease 0.2s',
+              'transitionProperty': 'grid-template-rows, padding-top, padding-bottom',
+              'transform': 'rotate(0)',
+              '&[data-state="open"]': {
+                gridTemplateRows: '1fr',
+                pt: '1',
+                pb: '2',
+              },
             })}
           >
             <div
-              className={animate({
-                animationName: 'enter',
-                translateY: 'token(spacing.-2)',
-                opacity: '0.4',
-                animationDuration: 'token(durations.normal)',
-              })}
+              className={cx(
+                css({
+                  overflow: 'hidden',
+                }),
+                animate({
+                  animationName: 'enter',
+                  translateY: 'token(spacing.-2)',
+                  opacity: '0.4',
+                  animationDuration: 'token(durations.normal)',
+                }))}
             >
               {children}
             </div>

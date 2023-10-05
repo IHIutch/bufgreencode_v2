@@ -44,7 +44,7 @@ export default function ArticlesAccordion() {
       // className="px-2 py-1 text-sm"
       >
         {Object.keys(groupedArticles).map((articleNum, idx) => (
-          <AccordionItem key={idx} value={articleNum} className="group">
+          <AccordionItem key={idx} value={articleNum} >
             {({ isOpen: _ }) => (
               <li
                 className={css({
@@ -54,11 +54,11 @@ export default function ArticlesAccordion() {
               // className="px-2 pb-1"
               >
                 <AccordionTrigger
-                  className={css({
+                  className={cx('group', css({
                     w: 'full',
                     textAlign: 'left',
                     cursor: 'pointer',
-                  })}
+                  }))}
                 // className="w-full text-left"
                 >
                   <div
@@ -112,10 +112,19 @@ export default function ArticlesAccordion() {
                 </AccordionTrigger>
                 <AccordionContent
                   className={css({
-                    overflow: 'hidden',
-                    pt: '1',
-                    pb: '2',
-                    pl: '3',
+                    'display': 'grid',
+                    'pl': '3',
+                    'transitionProperty': 'grid-template-rows, padding-top, padding-bottom',
+                    'transitionTimingFunction': 'ease',
+                    '_motionSafe': {
+                      transitionDuration: '0.2s',
+                    },
+                    'gridTemplateRows': '0fr',
+                    '&[data-state="open"]': {
+                      gridTemplateRows: '1fr',
+                      pt: '1',
+                      pb: '2',
+                    },
                   })}
                 // className={
                 //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
@@ -124,6 +133,7 @@ export default function ArticlesAccordion() {
                   <ul
                     className={cx(
                       css({
+                        overflow: 'hidden',
                         borderLeftWidth: '1px',
                         borderLeftColor: 'gray.300',
                       }),

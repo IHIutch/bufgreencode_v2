@@ -10,14 +10,11 @@ export default function Home() {
         w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
         px: { base: '4', md: '8' },
       })}
-      // className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]"
+    // className="my-12 w-full px-4 md:px-8 xl:w-[calc(100%-20rem)]"
     >
       <div
-        className={css({
-          maxW: 'prose',
-          mx: { base: 'auto', md: '0', xl: 'auto' },
-        })}
-        // className="max-w-prose xl:mx-auto"
+        className={css({ maxW: 'prose', mx: { base: 'auto', md: '0', xl: 'auto' } })}
+      // className="max-w-prose xl:mx-auto"
       >
         <h1
           className={css({
@@ -26,13 +23,13 @@ export default function Home() {
             fontWeight: 'medium',
             letterSpacing: 'tight',
           })}
-          // className="mb-6 text-5xl font-medium leading-tight"
+        // className="mb-6 text-5xl font-medium leading-tight"
         >
           Welcome
         </h1>
         <div
           className={prose()}
-          // className="prose"
+        // className="prose"
         >
           <p
             className={css({
@@ -40,7 +37,7 @@ export default function Home() {
               lineHeight: 'relaxed',
               color: 'gray.600',
             })}
-            // className="lead"
+          // className="lead"
           >
             The Buffalo Green Code Unified Development Ordinance Becomes
             Effective Citywide.
