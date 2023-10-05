@@ -45,179 +45,181 @@ export default function ArticlesAccordion() {
       >
         {Object.keys(groupedArticles).map((articleNum, idx) => (
           <AccordionItem key={idx} value={articleNum} >
-            {({ isOpen: _ }) => (
-              <li
-                className={css({
-                  px: '2',
-                  pb: '1',
-                })}
-              // className="px-2 pb-1"
+            <li
+              className={css({
+                px: '2',
+                pb: '1',
+              })}
+            // className="px-2 pb-1"
+            >
+              <AccordionTrigger
+                className={cx('group', css({
+                  w: 'full',
+                  textAlign: 'left',
+                  cursor: 'pointer',
+                }))}
+              // className="w-full text-left"
               >
-                <AccordionTrigger
-                  className={cx('group', css({
+                <div
+                  className={css({
+                    display: 'flex',
                     w: 'full',
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                  }))}
-                // className="w-full text-left"
+                    alignItems: 'center',
+                    color: { base: 'gray.600', _hover: 'gray.900' },
+                  })}
+                // className="flex w-full items-center text-gray-600 hover:text-gray-900"
                 >
                   <div
                     className={css({
-                      display: 'flex',
-                      w: 'full',
-                      alignItems: 'center',
-                      color: { base: 'gray.600', _hover: 'gray.900' },
+                      flexGrow: '1',
+                      px: '2',
+                      py: '1',
                     })}
-                  // className="flex w-full items-center text-gray-600 hover:text-gray-900"
+                  // className="grow px-2 py-1"
                   >
+                    <span
+                      className={css({
+                        fontWeight: 'medium',
+                      })}
+                    // className="font-medium"
+                    >
+                      {groupedArticles[articleNum][0].article_number}.{' '}
+                      {groupedArticles[articleNum][0].article}
+                    </span>
+                  </div>
+                  <div>
                     <div
                       className={css({
-                        flexGrow: '1',
-                        px: '2',
-                        py: '1',
+                        transition: 'transform ease 0.2s',
+                        transform: 'rotate(0)',
+                        _groupExpanded: {
+                          transform: 'rotate(180deg)',
+                        },
                       })}
-                    // className="grow px-2 py-1"
+                    // className={clsx(
+                    //   'duration-200',
+                    //   isOpen ? 'rotate-180' : 'rotate-0'
+                    // )}
                     >
-                      <span
-                        className={css({
-                          fontWeight: 'medium',
-                        })}
-                      // className="font-medium"
-                      >
-                        {groupedArticles[articleNum][0].article_number}.{' '}
-                        {groupedArticles[articleNum][0].article}
-                      </span>
-                    </div>
-                    <div>
-                      <div
-                        className={css({
-                          transition: 'transform ease 0.2s',
-                          transform: 'rotate(0)',
-                          _groupExpanded: {
-                            transform: 'rotate(180deg)',
-                          },
-                        })}
-                      // className={clsx(
-                      //   'duration-200',
-                      //   isOpen ? 'rotate-180' : 'rotate-0'
-                      // )}
-                      >
-                        <ChevronDown
-                          className={square({ size: '4' })}
-                        // className="h-4 w-4"
-                        />
-                      </div>
+                      <ChevronDown
+                        className={square({ size: '4' })}
+                      // className="h-4 w-4"
+                      />
                     </div>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent
-                  className={css({
-                    'display': 'grid',
-                    'pl': '3',
-                    'transitionProperty': 'grid-template-rows, padding-top, padding-bottom',
-                    'transitionTimingFunction': 'ease',
-                    '_motionSafe': {
-                      transitionDuration: '0.2s',
-                    },
-                    'gridTemplateRows': '0fr',
-                    '&[data-state="open"]': {
-                      gridTemplateRows: '1fr',
-                      pt: '1',
-                      pb: '2',
-                    },
-                  })}
-                // className={
-                //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
-                // }
+                </div>
+              </AccordionTrigger>
+              <AccordionContent
+                className={css({
+                  'display': 'grid',
+                  'pl': '3',
+                  'transitionProperty': 'grid-template-rows, padding-top, padding-bottom',
+                  'transitionTimingFunction': 'ease',
+                  '_motionSafe': {
+                    transitionDuration: '0.2s',
+                  },
+                  'gridTemplateRows': '0fr',
+                  '&[data-state="open"]': {
+                    gridTemplateRows: '1fr',
+                    pt: '1',
+                    pb: '2',
+                  },
+                  '&[data-state="closed"]': {
+                    visibility: 'hidden',
+                  },
+                })}
+              // className={
+              //   'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down py-1 pl-3'
+              // }
+              >
+
+                <ul
+                  className={cx(
+                    css({
+                      overflow: 'hidden',
+                    }),
+                    animate({
+                      animationName: 'enter',
+                      translateY: 'token(spacing.-2)',
+                      opacity: '0.4',
+                      animationDuration: 'token(durations.normal)',
+                    }),
+                  )}
+                // className={clsx(
+                //   'border-l border-gray-300 pb-1',
+                //   'transition-all duration-200',
+                //   isOpen
+                //     ? 'translate-y-0 opacity-100'
+                //     : '-translate-y-4 opacity-0'
+                // )}
                 >
-                  <ul
-                    className={cx(
+                  {groupedArticles[articleNum].map((section, sIdx) => (
+                    <li key={sIdx} className={
                       css({
-                        overflow: 'hidden',
                         borderLeftWidth: '1px',
                         borderLeftColor: 'gray.300',
-                      }),
-                      animate({
-                        animationName: 'enter',
-                        translateY: 'token(spacing.-2)',
-                        opacity: '0.4',
-                        animationDuration: 'token(durations.normal)',
-                      }),
-                    )}
-                  // className={clsx(
-                  //   'border-l border-gray-300 pb-1',
-                  //   'transition-all duration-200',
-                  //   isOpen
-                  //     ? 'translate-y-0 opacity-100'
-                  //     : '-translate-y-4 opacity-0'
-                  // )}
-                  >
-                    {groupedArticles[articleNum].map((section, sIdx) => (
-                      <li key={sIdx}>
-                        <div
+                      })}>
+                      <div
+                        className={css({
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                          py: '1.5',
+                          color: {
+                            base: 'gray.600',
+                            _hover: 'gray.900',
+                          },
+                          ml: '-1px',
+                          transition: 'color ease 0.2s',
+                        })}
+                      // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
+                      >
+                        <Link
+                          href={`${section.slug}` as Route}
+                          aria-current={activeSlug === section.slug ? 'page' : 'false'}
                           className={css({
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                            py: '1.5',
-                            color: {
-                              base: 'gray.600',
-                              _hover: 'gray.900',
+                            'display': 'block',
+                            'px': '2',
+                            'transition': 'color ease 0.2s',
+                            'borderLeftWidth': '2px',
+                            'overflow': 'hidden',
+                            'textOverflow': 'ellipsis',
+                            'whiteSpace': 'nowrap',
+                            'borderColor': 'transparent',
+                            '&[aria-current=page]': {
+                              borderColor: 'green.700',
+                              color: 'green.700',
                             },
-                            ml: '-1px',
-                            transition: 'color ease 0.2s',
                           })}
-                        // className="block w-full truncate py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-all duration-200"
+                        // className={clsx(
+                        //   'border-l-2 px-2',
+                        //   'transition-all duration-200',
+                        //   activeSlug === section.slug
+                        //     ? 'border-green-700'
+                        //     : 'border-transparent'
+                        // )}
                         >
-                          <Link
-                            href={`${section.slug}` as Route}
-                            className={css({
-                              display: 'block',
-                              px: '2',
-                              transition: 'color ease 0.2s',
-                              borderLeftWidth: '2px',
-                              overflow: 'hidden',
-                              textOverflow: 'ellipsis',
-                              whiteSpace: 'nowrap',
-                              ...(activeSlug === section.slug
-                                ? {
-                                    borderColor: 'green.700',
-                                    color: 'green.700',
-                                  }
-                                : {
-                                    borderColor: 'transparent',
-                                  }),
-                            })}
+                          <span
                           // className={clsx(
-                          //   'border-l-2 px-2',
-                          //   'transition-all duration-200',
+                          //   'truncate',
                           //   activeSlug === section.slug
-                          //     ? 'border-green-700'
-                          //     : 'border-transparent'
+                          //     ? 'text-green-700'
+                          //     : ''
                           // )}
                           >
-                            <span
-                            // className={clsx(
-                            //   'truncate',
-                            //   activeSlug === section.slug
-                            //     ? 'text-green-700'
-                            //     : ''
-                            // )}
-                            >
-                              {section.article_number}.{section.section_number}{' '}
-                              {section.title}
-                            </span>
-                          </Link>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </li>
-            )}
+                            {section.article_number}.{section.section_number}{' '}
+                            {section.title}
+                          </span>
+                        </Link>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </li>
           </AccordionItem>
         ))}
       </ul>
-    </Accordion>
+    </Accordion >
   )
 }

@@ -27,6 +27,7 @@ export default function MobileToc({ children }: { children: ReactNode }) {
     >
       <Accordion
         collapsible={true}
+        defaultValue={['one']}
         className={css({
           w: 'full',
           rounded: 'lg',
@@ -93,14 +94,19 @@ export default function MobileToc({ children }: { children: ReactNode }) {
             className={css({
               'display': 'grid',
               'px': '4',
-              'gridTemplateRows': '0fr',
-              'transition': 'ease 0.2s',
               'transitionProperty': 'grid-template-rows, padding-top, padding-bottom',
-              'transform': 'rotate(0)',
+              'transitionTimingFunction': 'ease',
+              '_motionSafe': {
+                transitionDuration: '0.2s',
+              },
+              'gridTemplateRows': '0fr',
               '&[data-state="open"]': {
                 gridTemplateRows: '1fr',
                 pt: '1',
                 pb: '2',
+              },
+              '&[data-state="closed"]': {
+                visibility: 'hidden',
               },
             })}
           >
