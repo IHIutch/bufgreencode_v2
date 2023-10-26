@@ -16,5 +16,6 @@ module.exports = {
         destructuredArrayIgnorePattern: '^_',
       },
     ],
+    'ts-ignore': 'allow-with-description',
   },
 }
