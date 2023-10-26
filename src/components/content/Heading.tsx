@@ -1,8 +1,8 @@
 'use client'
 
-import { createElement } from 'react'
+import { createElement, useEffect, useState } from 'react'
 
-import { Link as LinkIcon } from 'lucide-react'
+import { CheckIcon, Link as LinkIcon } from 'lucide-react'
 import {
   Portal,
   Tooltip,
@@ -18,6 +18,8 @@ import { type ContentHeading } from '@/types'
 import { css, cx } from 'styled-system/css'
 
 export default function Heading({ slug, level, children }: ContentHeading) {
+  const [isLinkCopied, setIsLinkCopied] = useState(false)
+
   const headingEl = createElement(
     `h${level}`,
     {
@@ -42,17 +44,30 @@ export default function Heading({ slug, level, children }: ContentHeading) {
       })
 
       trackEvent(`#${slug}`)
+
+      setIsLinkCopied(true)
+      setTimeout(() => {
+        setIsLinkCopied(false)
+      }, 1000)
     }
     else {
       console.error('Clipboard API is not available in this browser')
 
       trackEvent(`(fail) #${slug} `)
     }
-
-    // setTimeout(() => {
-    //   setIsToolTipVisible(false)
-    // }, 800)
   }
+
+  useEffect(() => {
+    if (isLinkCopied) {
+      const timer = setTimeout(() => {
+        setIsLinkCopied(false)
+      }, 1000)
+
+      return () => {
+        clearTimeout(timer)
+      }
+    }
+  }, [isLinkCopied])
 
   return (
     <div className={css({ mt: '2em' })}>
@@ -79,19 +94,37 @@ export default function Heading({ slug, level, children }: ContentHeading) {
           // className="mb-1 flex items-center text-sm font-semibold text-green-600 underline transition-colors hover:text-green-700"
           onClick={copyLinkToClipboard}
         >
-          <LinkIcon
-            strokeWidth="3"
-            className={square({ size: '3.5' })}
-          // className="h-[0.875rem] w-[0.875rem]"
-          />
-          <div>
-            <span
-              className={css({ ml: '1' })}
-            // className="ml-1"
-            >
-              Share Section
-            </span>
-          </div>
+          {
+            isLinkCopied
+              ? (
+                <>
+                  <CheckIcon
+                    strokeWidth="3"
+                    className={square({ size: '3.5' })}
+                  />
+                  <span
+                    className={css({ ml: '1' })}
+                  >
+                    Link Copied
+                  </span>
+                </>
+                )
+              : (
+                <>
+                  <LinkIcon
+                    strokeWidth="3"
+                    className={square({ size: '3.5' })}
+                  // className="h-[0.875rem] w-[0.875rem]"
+                  />
+                  <span
+                    className={css({ ml: '1' })}
+                  // className="ml-1"
+                  >
+                    Share Section
+                  </span>
+                </>
+                )
+          }
         </TooltipTrigger>
         <Portal>
           <TooltipPositioner>

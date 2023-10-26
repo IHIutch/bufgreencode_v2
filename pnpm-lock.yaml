@@ -1719,7 +1719,7 @@ packages:
   /@internationalized/date@3.5.0:
     resolution: {integrity: sha512-nw0Q+oRkizBWMioseI8+2TeUPEyopJVz5YxoYVzR0W1v+2YytiYah7s/ot35F149q/xAg4F1gT/6eTd+tsUpFQ==}
     dependencies:
-      '@swc/helpers': 0.5.2
+      '@swc/helpers': 0.5.3
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -2612,6 +2612,12 @@ packages:
 
   /@swc/helpers@0.5.2:
     resolution: {integrity: sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+
+  /@swc/helpers@0.5.3:
+    resolution: {integrity: sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==}
     dependencies:
       tslib: 2.6.2
 
