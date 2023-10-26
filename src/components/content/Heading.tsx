@@ -10,12 +10,12 @@ import {
   TooltipPositioner,
   TooltipTrigger,
 } from '@ark-ui/react'
-import { trackGoal } from 'fathom-client'
 import { square } from 'styled-system/patterns'
 
 import { type ContentHeading } from '@/types'
 
 import { css, cx } from 'styled-system/css'
+import { trackEvent } from 'fathom-client'
 
 export default function Heading({ slug, level, children }: ContentHeading) {
   const headingEl = createElement(
@@ -41,14 +41,12 @@ export default function Heading({ slug, level, children }: ContentHeading) {
         console.error('Error copying text to clipboard:', error)
       })
 
-      // @ts-ignore: Temporary until fathom-client is updated
-      window?.fathom?.trackEvent(`#${slug}`)
+      trackEvent(`#${slug}`)
     }
     else {
       console.error('Clipboard API is not available in this browser')
 
-      // @ts-ignore: Temporary until fathom-client is updated
-      window?.fathom?.trackEvent(`(fail) #${slug} `)
+      trackEvent(`(fail) #${slug} `)
     }
 
     // setTimeout(() => {
