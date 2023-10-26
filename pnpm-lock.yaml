@@ -559,7 +559,7 @@ packages:
       '@babel/helpers': 7.23.1
       '@babel/parser': 7.23.0
       '@babel/template': 7.22.15
-      '@babel/traverse': 7.23.0
+      '@babel/traverse': 7.23.2
       '@babel/types': 7.23.0
       convert-source-map: 2.0.0
       debug: 4.3.4
@@ -665,7 +665,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/template': 7.22.15
-      '@babel/traverse': 7.23.0
+      '@babel/traverse': 7.23.2
       '@babel/types': 7.23.0
     transitivePeerDependencies:
       - supports-color
@@ -723,8 +723,8 @@ packages:
       '@babel/parser': 7.23.0
       '@babel/types': 7.23.0
 
-  /@babel/traverse@7.23.0:
-    resolution: {integrity: sha512-t/QaEvyIoIkwzpiZ7aoSKK8kObQYeF7T2v+dazAYCb8SXtp58zEVkWW7zAnju8FNKNdr4ScAOEDmMItbyOmEYw==}
+  /@babel/traverse@7.23.2:
+    resolution: {integrity: sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.22.13
@@ -1011,7 +1011,7 @@ packages:
       debug: 4.3.4
       esbuild: 0.19.5
       escape-string-regexp: 4.0.0
-      resolve: 1.22.6
+      resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4376,7 +4376,7 @@ packages:
       '@babel/generator': 7.23.0
       '@babel/parser': 7.23.0
       '@babel/plugin-transform-react-jsx': 7.22.15(@babel/core@7.23.0)
-      '@babel/traverse': 7.23.0
+      '@babel/traverse': 7.23.2
       '@babel/types': 7.23.0
       '@types/babel__core': 7.20.2
       '@types/dom-view-transitions': 1.0.2
@@ -4610,7 +4610,7 @@ packages:
   /call-bind@1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
-      function-bind: 1.1.1
+      function-bind: 1.1.2
       get-intrinsic: 1.2.1
     dev: true
 
@@ -5173,7 +5173,7 @@ packages:
       define-properties: 1.2.1
       es-abstract: 1.22.2
       es-set-tostringtag: 2.0.1
-      function-bind: 1.1.1
+      function-bind: 1.1.2
       get-intrinsic: 1.2.1
       globalthis: 1.0.3
       has-property-descriptors: 1.0.0
@@ -5347,8 +5347,8 @@ packages:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
     dependencies:
       debug: 3.2.7
-      is-core-module: 2.13.0
-      resolve: 1.22.6
+      is-core-module: 2.13.1
+      resolve: 1.22.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -5367,7 +5367,7 @@ packages:
       eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.7.3)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
       fast-glob: 3.3.1
       get-tsconfig: 4.7.2
-      is-core-module: 2.13.0
+      is-core-module: 2.13.1
       is-glob: 4.0.3
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -5488,7 +5488,7 @@ packages:
       eslint-import-resolver-node: 0.3.9
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.7.3)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.50.0)
       has: 1.0.3
-      is-core-module: 2.13.0
+      is-core-module: 2.13.1
       is-glob: 4.0.3
       minimatch: 3.1.2
       object.fromentries: 2.0.7
@@ -6137,12 +6137,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /function-bind@1.1.1:
-    resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
-
   /function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
-    dev: true
 
   /function.prototype.name@1.1.6:
     resolution: {integrity: sha512-Z5kx79swU5P27WEayXM1tBi5Ze/lbIyiNgU3qyXUOf9b2rgXYyF9Dy9Cx+IQv/Lc8WCG6L82zwUPpSS9hGehIg==}
@@ -6170,7 +6166,7 @@ packages:
   /get-intrinsic@1.2.1:
     resolution: {integrity: sha512-2DcsyfABl+gVHEfCOaTrWgyt+tb6MSEGmKq+kI5HwLbIYgjgmMcV8KQ41uaKz1xxUcn9tJtgFbQUEVcEbd0FYw==}
     dependencies:
-      function-bind: 1.1.1
+      function-bind: 1.1.2
       has: 1.0.3
       has-proto: 1.0.1
       has-symbols: 1.0.3
@@ -6368,7 +6364,8 @@ packages:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
     engines: {node: '>= 0.4.0'}
     dependencies:
-      function-bind: 1.1.1
+      function-bind: 1.1.2
+    dev: true
 
   /hash-wasm@4.9.0:
     resolution: {integrity: sha512-7SW7ejyfnRxuOc7ptQHSf4LDoZaWOivfzqw+5rpcQku0nHfmicPKE51ra9BiRLAmT8+gGLestr1XroUkqdjL6w==}
@@ -6379,7 +6376,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
-    dev: true
 
   /hast-util-from-parse5@7.1.2:
     resolution: {integrity: sha512-Nz7FfPBuljzsN3tCQ4kCBKqdNhQE2l0Tn+X1ubgKBPRoiDIu1mL08Cfw4k7q71+Duyaw7DXDN+VTAp4Vh3oCOw==}
@@ -6684,12 +6680,12 @@ packages:
     resolution: {integrity: sha512-Z7dk6Qo8pOCp3l4tsX2C5ZVas4V+UxwQodwZhLopL91TX8UyyHEXafPcyoeeWuLrwzHcr3igO78wNLwHJHsMCQ==}
     dependencies:
       has: 1.0.3
+    dev: true
 
   /is-core-module@2.13.1:
     resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==}
     dependencies:
       hasown: 2.0.0
-    dev: true
 
   /is-date-object@1.0.5:
     resolution: {integrity: sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==}
@@ -8331,7 +8327,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.6
+      resolve: 1.22.8
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
@@ -9163,9 +9159,10 @@ packages:
     resolution: {integrity: sha512-njhxM7mV12JfufShqGy3Rz8j11RPdLy4xi15UurGJeoHLfJpVXKdh3ueuOqbYUcDZnffr6X739JBo5LzyahEsw==}
     hasBin: true
     dependencies:
-      is-core-module: 2.13.0
+      is-core-module: 2.13.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: true
 
   /resolve@1.22.8:
     resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==}
@@ -9174,13 +9171,12 @@ packages:
       is-core-module: 2.13.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
-    dev: true
 
   /resolve@2.0.0-next.4:
     resolution: {integrity: sha512-iMDbmAWtfU+MHpxt/I5iWI7cY6YVEZUQ3MBgPQ++XD1PELuJHIl82xBmObyP2KyQmkNB2dsqF7seoQQiAn5yDQ==}
     hasBin: true
     dependencies:
-      is-core-module: 2.13.0
+      is-core-module: 2.13.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
@@ -9780,7 +9776,7 @@ packages:
       '@types/json5': 0.0.30
       '@types/resolve': 1.20.3
       json5: 2.2.3
-      resolve: 1.22.6
+      resolve: 1.22.8
       strip-bom: 4.0.0
       type-fest: 0.13.1
     dev: true
