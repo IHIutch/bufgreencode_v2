@@ -8,6 +8,10 @@ export default defineConfig({
   site: 'https://bufgreencode.com',
   integrations: [mdx(), react(), sitemap()],
 
+  experimental: {
+    contentIntellisense: true,
+  },
+
   env: {
     schema: {
       PUBLIC_ALGOLIA_API_KEY: envField.string({
