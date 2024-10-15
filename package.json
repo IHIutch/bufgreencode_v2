@@ -31,11 +31,12 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.33.5",
+    "typescript": "^5.5.3",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.27.3",
-    "@pandacss/dev": "^0.46.1",
+    "@pandacss/dev": "^0.40.1",
     "@types/lodash": "^4.17.10",
     "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
