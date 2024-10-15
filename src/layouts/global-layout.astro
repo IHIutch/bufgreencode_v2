@@ -69,6 +69,13 @@ const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle
         ],
       }}
     />
+    <!-- Fathom - beautiful, simple website analytics -->
+    {
+      import.meta.env.PROD ? (
+        <script is:inline src="https://cdn.usefathom.com/script.js" data-site="HWWXLVYL" data-spa="auto" defer />
+      ) : null
+    }
+    <!-- / Fathom -->
     <ClientRouter />
   </head>
   <body
