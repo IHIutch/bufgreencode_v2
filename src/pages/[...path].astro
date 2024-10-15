@@ -1,14 +1,14 @@
 ---
-import PageToc from '@components/page-toc'
-import SidebarLayout from '@layouts/global-layout.astro'
-import { getCollection } from 'astro:content'
+import PageToc from '#components/page-toc'
+import SidebarLayout from '#layouts/global-layout.astro'
+import { getCollection, render } from 'astro:content'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
-import H2 from '@components/content/h2.astro'
-import H3 from '@components/content/h3.astro'
-import H4 from '@components/content/h4.astro'
-import H5 from '@components/content/h5.astro'
-import H6 from '@components/content/h6.astro'
-import MobileToc from '@components/mobile-toc'
+import H2 from '#components/content/h2.astro'
+import H3 from '#components/content/h3.astro'
+import H4 from '#components/content/h4.astro'
+import H5 from '#components/content/h5.astro'
+import H6 from '#components/content/h6.astro'
+import MobileToc from '#components/mobile-toc'
 import { css, cx } from '../../styled-system/css'
 import { customProse, prose } from '../../styled-system/recipes'
 
@@ -16,7 +16,7 @@ export const getStaticPaths = (async () => {
   const allArticles = await getCollection('articles')
 
   return allArticles.map((entry) => ({
-    params: { path: entry.slug },
+    params: { path: entry.id },
     props: { entry },
   }))
 }) satisfies GetStaticPaths
@@ -24,7 +24,7 @@ export const getStaticPaths = (async () => {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { entry } = Astro.props
-const { Content, headings } = await entry.render()
+const { Content, headings } = await render(entry)
 ---
 
 <SidebarLayout pageTitle={entry.data.title}>

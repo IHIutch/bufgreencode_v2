@@ -7,7 +7,7 @@ import type { TransitionBeforeSwapEvent } from 'astro:transitions/client'
 import { css, cx } from '../../styled-system/css'
 import { square } from '../../styled-system/patterns'
 
-type ArticlesType = Pick<CollectionEntry<'articles'>, 'data' | 'slug'>
+type ArticlesType = Pick<CollectionEntry<'articles'>, 'data' | 'id'>
 
 export default function ArticlesAccordion({
   articles,
@@ -27,7 +27,7 @@ export default function ArticlesAccordion({
     'data.article_number',
   )
 
-  const activeArticle = articles.find(a => `/${a.slug}` === localActivePath)
+  const activeArticle = articles.find(a => `/${a.id}` === localActivePath)
   const activeArticleNum = activeArticle?.data.article_number.toString()
 
   React.useEffect(() => {
@@ -161,9 +161,9 @@ export default function ArticlesAccordion({
                           })}
                         >
                           <a
-                            href={`/${section.slug}`}
+                            href={`/${section.id}`}
                             aria-current={
-                              localActivePath === `/${section.slug}`
+                              localActivePath === `/${section.id}`
                                 ? 'page'
                                 : undefined
                             }

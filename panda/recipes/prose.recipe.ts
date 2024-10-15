@@ -8,7 +8,7 @@ export const proseRecipe = defineRecipe({
     '&': {
       'lineHeight': '7',
       'fontSize': 'md',
-  
+
       '& :where(h1):not(:where([class~=not-prose],[class~=not-prose] *))': {
         fontWeight: 'bold',
         fontSize: { base: '4xl', md: '5xl' },
@@ -73,12 +73,12 @@ export const proseRecipe = defineRecipe({
         },
       },
       '& :where(pre):not(:where([class~=not-prose],[class~=not-prose] *))': {
-        p: '4',
-        rounded: 'md',
-        bg: 'gray.600',
-        color: 'gray.50',
-        overflow: 'auto',
-        _dark: {
+        'p': '4',
+        'rounded': 'md',
+        'bg': 'gray.600',
+        'color': 'gray.50',
+        'overflow': 'auto',
+        '_dark': {
           bg: 'gray.800',
         },
         '& code': {
@@ -95,7 +95,7 @@ export const proseRecipe = defineRecipe({
         },
       },
       '& :where(figure):not(:where([class~=not-prose],[class~=not-prose] *))': {
-        my: '8',
+        'my': '8',
         '& figcaption': {
           color: 'gray.400',
           mt: '3',
@@ -132,9 +132,9 @@ export const proseRecipe = defineRecipe({
         },
       },
       '& :where(table):not(:where([class~=not-prose],[class~=not-prose] *))': {
-        width: 'full',
-        my: '8',
-        textAlign: 'start',
+        'width': 'full',
+        'my': '8',
+        'textAlign': 'start',
         '& thead': {
           borderBottomWidth: '1px',
           borderBottomColor: 'gray.300',
@@ -146,13 +146,15 @@ export const proseRecipe = defineRecipe({
           textAlign: 'inherit',
           fontWeight: 'semibold',
           p: {
-            base: '2', md: '3'
+            base: '2',
+            md: '3',
           },
         },
         '& td:not(:where([class~=not-prose],[class~=not-prose] *))': {
           verticalAlign: 'baseline',
           p: {
-            base: '2', md: '3'
+            base: '2',
+            md: '3',
           },
         },
         '& tbody:not(:where([class~=not-prose],[class~=not-prose] *))': {
@@ -182,6 +184,6 @@ export const proseRecipe = defineRecipe({
       {
         mt: '0',
       },
-    }
+    },
   },
 })

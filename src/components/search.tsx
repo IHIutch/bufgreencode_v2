@@ -1,8 +1,7 @@
+import { PUBLIC_ALGOLIA_API_KEY, PUBLIC_ALGOLIA_APP_ID, PUBLIC_ALGOLIA_INDEX_NAME } from 'astro:env/client'
 import { useState } from 'react'
-
 import * as DocSearch from '@docsearch/react' // https://github.com/algolia/docsearch/pull/2117#issuecomment-1793855627
 import { Search } from 'lucide-react'
-import { env } from 'env-vars'
 import { css } from '../../styled-system/css'
 import { square } from '../../styled-system/patterns'
 import '@docsearch/css/dist/style.css'
@@ -76,9 +75,9 @@ export default function SearchComponent() {
         ? (
             <DocSearch.DocSearchModal
               initialScrollY={window.scrollY}
-              appId={env.PUBLIC_ALGOLIA_APP_ID}
-              indexName={env.PUBLIC_ALGOLIA_INDEX_NAME}
-              apiKey={env.PUBLIC_ALGOLIA_API_KEY}
+              appId={PUBLIC_ALGOLIA_APP_ID}
+              indexName={PUBLIC_ALGOLIA_INDEX_NAME}
+              apiKey={PUBLIC_ALGOLIA_API_KEY}
               onClose={() => setIsOpen(false)}
               placeholder="Search the Green Code..."
               hitComponent={Hit}

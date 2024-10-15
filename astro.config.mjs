@@ -1,18 +1,35 @@
-import { defineConfig } from 'astro/config'
+import { defineConfig, envField } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
+
+import vercel from '@astrojs/vercel/static'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bufgreencode.com',
   integrations: [mdx(), react(), sitemap()],
-  vite: {
-    optimizeDeps: {
-      exclude: ['@napi-rs/image'],
+
+  env: {
+    schema: {
+      PUBLIC_ALGOLIA_API_KEY: envField.string({
+        context: 'client',
+        access: 'public',
+        default: '7925494f60a828f6fc5c4bf370b7649f',
+      }),
+      PUBLIC_ALGOLIA_APP_ID: envField.string({
+        context: 'client',
+        access: 'public',
+        default: 'SJLG109BKU',
+      }),
+      PUBLIC_ALGOLIA_INDEX_NAME: envField.string({
+        context: 'client',
+        access: 'public',
+        default: 'bufgreencode',
+      }),
     },
   },
-  prefetch: true,
+
   redirects: {
     '/article/1': '/introductory-provisions/title-purpose-and-applicability',
     '/article/1/1-1':
@@ -85,4 +102,7 @@ export default defineConfig({
     '/article/14/14-1':
       '/planned-unit-developments/planned-unit-developments-number-1-gates-circle-redevelopment',
   },
+
+  output: 'static',
+  adapter: vercel(),
 })
