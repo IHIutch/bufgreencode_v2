@@ -1,0 +1,210 @@
+---
+import { getCollection } from 'astro:content'
+import logo from '@assets/images/bufgreencode-logo.svg'
+import icon from '@assets/images/bufgreencode-icon.svg'
+import { Image } from 'astro:assets'
+import { css } from '../../styled-system/css'
+import SearchComponent from './search'
+import MenuDrawer from './menu-drawer'
+import ArticlesAccordion from './articles-accordion'
+
+const allArticles = await getCollection('articles')
+const pathname = Astro.url.pathname
+---
+
+<nav
+  class={css({
+    pos: 'relative',
+    insetX: '0',
+    display: 'flex',
+    h: { base: '14', lg: '16' },
+    flexShrink: '0',
+    borderBottomWidth: '1px',
+    borderBottomColor: 'gray.200',
+    bg: 'white',
+  })}
+>
+  <div
+    class={css({
+      pos: 'relative',
+      mx: 'auto',
+      w: 'full',
+      maxW: 'breakpoint-2xl',
+    })}
+  >
+    <div
+      class={css({
+        display: 'flex',
+        h: 'full',
+        alignItems: 'center',
+      })}
+    >
+      <div
+        class={css({
+          h: 'full',
+          flexShrink: '0',
+          w: {
+            base: '16',
+            md: '40',
+            lg: '72',
+            '2xl': '80',
+          },
+          pl: '4',
+        })}
+      >
+        <div
+          class={css({
+            display: 'flex',
+            h: 'full',
+            alignItems: 'center',
+          })}
+        >
+          <a
+            href="/"
+            class={css({
+              display: 'block',
+              h: 'full',
+              w: 'full',
+              py: '1',
+              lg: {
+                mr: '4',
+                py: '2',
+              },
+            })}
+          >
+            <Image
+              transition:persist
+              src={icon}
+              alt="Buffalo Green Code"
+              class={css({
+                h: 'full',
+                w: 'auto',
+                md: {
+                  display: 'none',
+                },
+              })}
+            />
+            <Image
+              transition:persist
+              src={logo}
+              alt="Buffalo Green Code"
+              class={css({
+                display: {
+                  base: 'none',
+                  md: 'block',
+                },
+                h: 'full',
+                w: 'auto',
+              })}
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        class={css({
+          h: 'full',
+          flex: '1',
+          px: '4',
+          md: {
+            display: 'block',
+            px: '8',
+          },
+          w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
+        })}
+      >
+        <div
+          class={css({
+            display: 'flex',
+            h: 'full',
+            alignItems: 'center',
+            mx: 'auto',
+            maxW: 'prose',
+            w: 'full',
+          })}
+        >
+          <SearchComponent client:load />
+        </div>
+      </div>
+      <!-- Mobile -->
+      <div
+        class={css({
+          h: 'full',
+          alignItems: 'center',
+          pr: '4',
+          display: {
+            base: 'flex',
+            lg: 'none',
+          },
+        })}
+      >
+        <MenuDrawer client:load>
+          <ArticlesAccordion
+            activePath={pathname}
+            articles={allArticles.map((a) => ({
+              slug: a.slug,
+              data: a.data,
+            }))}
+            client:load
+            transition:persist
+          />
+        </MenuDrawer>
+      </div>
+      <!-- Desktop -->
+      <div
+        class={css({
+          display: {
+            base: 'none',
+            lg: 'flex',
+          },
+          h: 'full',
+          flexShrink: '0',
+          alignItems: 'center',
+          pr: '4',
+          fontSize: 'sm',
+          lineHeight: 'sm',
+          fontWeight: 'medium',
+          w: {
+            xl: '80',
+          },
+        })}
+      >
+        <a
+          href="/disclaimer"
+          class={css({
+            ml: '-2',
+            px: '2',
+            py: '2',
+            color: {
+              base: 'gray.600',
+              _hover: 'gray.900',
+            },
+            fontWeight: 'medium',
+          })}
+        >
+          Disclaimer
+        </a>
+        <a
+          class={css({
+            display: 'flex',
+            alignItems: 'center',
+            ml: '2',
+            px: '2',
+            py: '2',
+            color: {
+              base: 'gray.600',
+              _hover: 'gray.900',
+            },
+            fontWeight: 'medium',
+          })}
+          href="/report-an-issue"
+        >
+          <span
+            class={css({
+              mr: '1',
+            })}>Report an Issue</span
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
