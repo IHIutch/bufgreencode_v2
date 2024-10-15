@@ -6,7 +6,9 @@ import { SEO } from 'astro-seo'
 import { css } from '../../styled-system/css'
 
 import '@fontsource-variable/inter'
-import '#assets/styles/main.css'
+
+import interUrl from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url'
+import stylesUrl from '#assets/styles/main.css?url'
 import { ClientRouter } from 'astro:transitions'
 
 interface Props {
@@ -65,6 +67,23 @@ const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle
           {
             name: 'google-site-verification',
             content: '2uJ6hXsUDukLmTfNK7Y7jCmnaqyiLptsVDmZ2Ct7Zzk',
+          },
+        ],
+        link: [
+          {
+            rel: 'preload',
+            href: interUrl,
+            type: 'font/woff2',
+            crossOrigin: 'anonymous',
+          },
+          {
+            rel: 'preload',
+            href: stylesUrl,
+            as: 'style',
+          },
+          {
+            rel: 'stylesheet',
+            href: stylesUrl,
           },
         ],
       }}
