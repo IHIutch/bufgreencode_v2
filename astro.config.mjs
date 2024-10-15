@@ -3,8 +3,6 @@ import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 
-import vercel from '@astrojs/vercel/static'
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://bufgreencode.com',
@@ -102,7 +100,4 @@ export default defineConfig({
     '/article/14/14-1':
       '/planned-unit-developments/planned-unit-developments-number-1-gates-circle-redevelopment',
   },
-
-  output: 'static',
-  adapter: vercel(),
 })

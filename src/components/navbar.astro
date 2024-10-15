@@ -141,7 +141,7 @@ const pathname = Astro.url.pathname
           <ArticlesAccordion
             activePath={pathname}
             articles={allArticles.map((a) => ({
-              slug: a.slug,
+              id: a.id,
               data: a.data,
             }))}
             client:load
