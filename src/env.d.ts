@@ -3,4 +3,5 @@
 
 interface Window {
   Reform: any
+  fathom: any
 }

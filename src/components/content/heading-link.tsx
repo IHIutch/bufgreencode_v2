@@ -14,6 +14,8 @@ export function HeadingLink({ id }: { id: string }) {
           console.error('Error copying text to clipboard:', error)
         })
 
+      window?.fathom.trackEvent(`#${id}`)
+
       setTimeout(() => {
         // setIsToolTipVisible(false)
       }, 1000)
