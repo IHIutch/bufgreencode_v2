@@ -1,66 +1,25 @@
 ---
 import SidebarLayout from '#layouts/global-layout.astro'
-import { css } from '../../styled-system/css'
-import { prose } from '../../styled-system/recipes'
 ---
 
 <SidebarLayout>
-  <div
-    class={css({
-      my: '12',
-      w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
-      px: { base: '4', md: '8' },
-    })}
-  >
-    <div
-      class={css({
-        maxW: 'prose',
-        mx: { base: 'auto', md: '0', xl: 'auto' },
-      })}
-    >
-      <h1
-        class={css({
-          mb: '6',
-          fontSize: '5xl',
-          fontWeight: 'medium',
-          letterSpacing: 'tight',
-        })}
-      >
-        404
-      </h1>
-      <div class={prose()}>
-        <p
-          class={css({
-            mb: '8',
-            fontSize: 'lg',
-            color: 'gray.600',
-          })}
-        >
-          Looks like you found a page that doesn&apos;t exist.
-        </p>
+  <div class="my-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+    <div class="max-w-prose mx-auto md:mx-0 xl:mx-auto">
+      <h1 class="mb-6 text-5xl font-medium tracking-tight">404</h1>
+      <div class="prose">
+        <p class="mb-8 text-lg text-gray-600">Looks like you found a page that doesn&apos;t exist.</p>
         <p>
           If you think this is a bug, please{' '}
           <a
             href="https://github.com/IHIutch/bufgreencode_v2/issues/new?assignees=&labels=&projects=&template=found-an-issue.yml"
             target="_blank"
             rel="noreferrer"
-            class={css({
-              color: 'green.700',
-              textDecoration: 'underline',
-            })}
+            class="text-green-700 underline"
           >
             report it
           </a>
           . Otherwise, return to the{' '}
-          <a
-            href="/"
-            class={css({
-              color: 'green.700',
-              textDecoration: 'underline',
-            })}
-          >
-            home page
-          </a>
+          <a href="/" class="text-green-700 underline"> home page </a>
           .
         </p>
       </div>

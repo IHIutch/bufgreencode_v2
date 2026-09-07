@@ -1,127 +1,30 @@
 import type { ReactNode } from 'react'
 import { Accordion } from '@ark-ui/react'
-import { ChevronDown, ListOrdered } from 'lucide-react'
-import { css, cx } from '../../styled-system/css'
-import { square } from '../../styled-system/patterns'
 
 export default function MobileToc({ children }: { children: ReactNode }) {
   return (
-    <div
-      className={css({
-        display: { base: 'block', xl: 'none' },
-        mt: '8',
-        mb: '12',
-      })}
-    >
+    <div className="block xl:hidden mt-8 mb-12">
       <Accordion.Root
         collapsible={true}
         defaultValue={['one']}
-        className={css({
-          w: 'full',
-          rounded: 'lg',
-          borderWidth: '1px',
-          borderColor: 'gray.200',
-          bg: 'gray.50',
-        })}
+        className="w-full rounded-lg border border-gray-200 bg-gray-50"
       >
-        <Accordion.Item value="one">
-          <Accordion.ItemTrigger
-            className={cx(
-              'group',
-              css({
-                display: 'flex',
-                w: 'full',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                cursor: 'pointer',
-                h: '10',
-                px: '4',
-                textAlign: 'left',
-                rounded: 'lg',
-                bg: {
-                  base: 'gray.50',
-                  _hover: 'gray.100',
-                },
-                transition: 'background-color ease 0.2s',
-              }),
-            )}
-          >
-            <div
-              className={css({
-                display: 'flex',
-                alignItems: 'center',
-              })}
-            >
-              <ListOrdered className={square({ size: '6' })} />
-              <div
-                className={css({
-                  ml: '2',
-                })}
-              >
-                <span
-                  className={css({
-                    color: 'gray.700',
-                    fontWeight: 'semibold',
-                    fontSize: 'sm',
-                  })}
-                >
+        <Accordion.Item value="one" className="group">
+          <Accordion.ItemTrigger className="flex w-full items-center justify-between cursor-pointer h-10 px-4 text-left rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors ease-in-out duration-200">
+            <div className="flex items-center">
+              <span className="icon-[lucide--list-ordered] size-6" />
+              <div className="ml-2">
+                <span className="text-gray-700 font-semibold text-sm">
                   Page Contents
                 </span>
               </div>
             </div>
-            <div
-              className={css({
-                transition: 'transform ease 0.2s',
-                transform: 'rotate(0)',
-                _groupExpanded: {
-                  transform: 'rotate(180deg)',
-                },
-              })}
-            >
-              <ChevronDown className={square({ size: '5' })} />
+            <div className="transition-transform ease-in-out duration-200 rotate-0 group-data-[state=open]:rotate-180">
+              <span className="icon-[lucide--chevron-down] size-5" />
             </div>
           </Accordion.ItemTrigger>
-          <Accordion.ItemContent
-            className={cx(
-              'group',
-              css({
-                display: 'grid',
-                px: '4',
-                _motionSafe: {
-                  transitionProperty:
-                    'grid-template-rows, padding-top, padding-bottom',
-                  transitionTimingFunction: 'ease',
-                  transitionDuration: '0.2s',
-                },
-                _open: {
-                  gridTemplateRows: '1fr',
-                  pt: '1',
-                  pb: '2',
-                },
-                _closed: {
-                  gridTemplateRows: '0fr',
-                  // visibility: 'hidden',
-                },
-              }),
-            )}
-          >
-            <div
-              className={css({
-                overflow: 'hidden',
-                // _motionSafe: {
-                //   '.group:is(data-state=open):&': {
-                //     animationName: 'enter',
-                //     '--enter-opacity': '0.4',
-                //     '--enter-translate-y': 'token(spacing.-2)',
-                //   },
-                //   '.group:is(data-state=closed):&': {
-                //     animationName: 'exit',
-                //     '--exit-opacity': '0.4',
-                //     '--exit-translate-y': 'token(spacing.-2)',
-                //   },
-                // },
-              })}
-            >
+          <Accordion.ItemContent className="grid px-4 motion-safe:transition-[grid-template-rows,padding-top,padding-bottom] motion-safe:ease-in-out motion-safe:duration-200 grid-rows-[0fr] group-data-[state=open]:grid-rows-[1fr] group-data-[state=open]:pt-1 group-data-[state=open]:pb-2">
+            <div className="overflow-hidden">
               {children}
             </div>
           </Accordion.ItemContent>

@@ -2,10 +2,7 @@ import type { CollectionEntry } from 'astro:content'
 import type { TransitionBeforeSwapEvent } from 'astro:transitions/client'
 import { Accordion } from '@ark-ui/react'
 import groupBy from 'lodash/groupBy'
-import { ChevronDown } from 'lucide-react'
 import * as React from 'react'
-import { css, cx } from '../../styled-system/css'
-import { square } from '../../styled-system/patterns'
 
 type ArticlesType = Pick<CollectionEntry<'articles'>, 'data' | 'id'>
 
@@ -43,51 +40,14 @@ export default function ArticlesAccordion({
         multiple
         defaultValue={activeArticleNum ? [activeArticleNum] : []}
       >
-        <ul
-          className={css({
-            px: '2',
-            py: '1',
-            fontSize: 'sm',
-          })}
-        >
+        <ul className="px-2 py-1 text-sm">
           {Object.keys(groupedArticles).map((articleNum, idx) => (
-            <Accordion.Item key={idx} value={articleNum}>
-              <li
-                className={css({
-                  px: '2',
-                  pb: '1',
-                })}
-              >
-                <Accordion.ItemTrigger
-                  className={cx(
-                    'group',
-                    css({
-                      w: 'full',
-                      textAlign: 'left',
-                      cursor: 'pointer',
-                    }),
-                  )}
-                >
-                  <div
-                    className={css({
-                      display: 'flex',
-                      w: 'full',
-                      alignItems: 'center',
-                      color: { base: 'gray.600', _hover: 'gray.900' },
-                    })}
-                  >
-                    <div
-                      className={css({
-                        flexGrow: '1',
-                        px: '2',
-                        py: '1',
-                      })}
-                    >
-                      <span
-                        className={css({
-                          fontWeight: 'medium',
-                        })}
-                      >
+            <Accordion.Item key={idx} value={articleNum} className="group">
+              <li className="px-2 pb-1">
+                <Accordion.ItemTrigger className="w-full text-left cursor-pointer">
+                  <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
+                    <div className="flex-grow px-2 py-1">
+                      <span className="font-medium">
                         {groupedArticles[articleNum][0].data.article_number}
                         .
                         {' '}
@@ -95,71 +55,20 @@ export default function ArticlesAccordion({
                       </span>
                     </div>
                     <div>
-                      <div
-                        className={css({
-                          transition: 'transform ease 0.2s',
-                          transform: 'rotate(0)',
-                          _groupExpanded: {
-                            transform: 'rotate(180deg)',
-                          },
-                        })}
-                      >
-                        <ChevronDown className={square({ size: '4' })} />
+                      <div className="transition-transform ease-in-out duration-200 rotate-0 group-data-[state=open]:rotate-180">
+                        <span className="icon-[lucide--chevron-down] size-4" />
                       </div>
                     </div>
                   </div>
                 </Accordion.ItemTrigger>
-                <Accordion.ItemContent
-                  className={cx(
-                    'group',
-                    css({
-                      display: 'grid',
-                      pl: '3',
-                      _motionSafe: {
-                        transitionProperty:
-                          'grid-template-rows, padding-top, padding-bottom',
-                        transitionDuration: '0.2s',
-                        transitionTimingFunction: 'ease',
-                      },
-                      _open: {
-                        gridTemplateRows: '1fr',
-                        pt: '1',
-                        pb: '2',
-                      },
-                      _closed: {
-                        gridTemplateRows: '0fr',
-                        // visibility: 'hidden',
-                      },
-                    }),
-                  )}
-                >
-                  <ul
-                    className={css({
-                      overflow: 'hidden',
-                    })}
-                  >
+                <Accordion.ItemContent className="grid pl-3 motion-safe:transition-[grid-template-rows,padding-top,padding-bottom] motion-safe:duration-200 motion-safe:ease-in-out grid-rows-[0fr] group-data-[state=open]:grid-rows-[1fr] group-data-[state=open]:pt-1 group-data-[state=open]:pb-2">
+                  <ul className="overflow-hidden">
                     {groupedArticles[articleNum].map((section, sIdx) => (
                       <li
                         key={sIdx}
-                        className={css({
-                          borderLeftWidth: '1px',
-                          borderLeftColor: 'gray.300',
-                        })}
+                        className="border-l border-l-gray-300"
                       >
-                        <div
-                          className={css({
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                            py: '1.5',
-                            color: {
-                              base: 'gray.600',
-                              _hover: 'gray.900',
-                            },
-                            ml: '-1px',
-                            transition: 'color ease 0.2s',
-                          })}
-                        >
+                        <div className="overflow-hidden text-ellipsis whitespace-nowrap py-1.5 text-gray-600 hover:text-gray-900 -ml-px transition-colors ease-in-out duration-200">
                           <a
                             href={`/${section.id}`}
                             aria-current={
@@ -167,20 +76,7 @@ export default function ArticlesAccordion({
                                 ? 'page'
                                 : undefined
                             }
-                            className={css({
-                              'display': 'block',
-                              'px': '2',
-                              'transition': 'color ease 0.2s',
-                              'borderLeftWidth': '2px',
-                              'overflow': 'hidden',
-                              'textOverflow': 'ellipsis',
-                              'whiteSpace': 'nowrap',
-                              'borderColor': 'transparent',
-                              '&[aria-current=page]': {
-                                borderColor: 'green.700',
-                                color: 'green.700',
-                              },
-                            })}
+                            className="block px-2 transition-colors ease-in-out duration-200 border-l-2 overflow-hidden text-ellipsis whitespace-nowrap border-transparent aria-[current=page]:border-green-700 aria-[current=page]:text-green-700"
                           >
                             <span>
                               {section.data.article_number}

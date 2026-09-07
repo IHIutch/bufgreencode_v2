@@ -3,7 +3,6 @@ import NavbarComponent from '#components/navbar.astro'
 import { getCollection } from 'astro:content'
 import ArticlesAccordion from '#components/articles-accordion.tsx'
 import { SEO } from 'astro-seo'
-import { css } from '../../styled-system/css'
 
 import '@fontsource-variable/inter'
 
@@ -29,7 +28,7 @@ const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle
 ---
 
 <!doctype html>
-<html lang="en" class={css({ h: 'full' })}>
+<html lang="en" class="h-full">
   <head>
     <SEO
       charset="utf-8"
@@ -98,70 +97,15 @@ const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle
     <!-- / Fathom -->
     <ClientRouter />
   </head>
-  <body
-    class={css({
-      // fontSmoothing: 'antialiased',
-      h: 'full',
-      pt: {
-        base: '14',
-        lg: '16',
-      },
-      fontFamily: 'inter',
-    })}
-  >
-    <div
-      class={css({
-        pos: 'fixed',
-        top: '0',
-        zIndex: '4',
-        w: 'full',
-      })}
-    >
+  <body class="h-full pt-14 lg:pt-16 font-inter">
+    <div class="fixed top-0 z-[4] w-full">
       <NavbarComponent />
     </div>
-    <div
-      class={css({
-        h: 'full',
-        overflowY: 'auto',
-      })}
-    >
-      <div
-        class={css({
-          maxWidth: 'breakpoint-2xl',
-          mx: 'auto',
-        })}
-      >
-        <div
-          class={css({
-            pos: 'fixed',
-            top: '0',
-            display: {
-              base: 'none',
-              lg: 'block',
-            },
-            h: 'full',
-            pt: '16',
-            w: {
-              lg: '72',
-              '2xl': '80',
-            },
-          })}
-        >
-          <nav
-            id="sidenav"
-            class={css({
-              pos: 'sticky',
-              h: 'full',
-              overflowY: 'auto',
-              borderRightColor: 'gray.200',
-              borderRightWidth: '1px',
-            })}
-          >
-            <div
-              class={css({
-                py: '8',
-              })}
-            >
+    <div class="h-full overflow-y-auto">
+      <div class="max-w-[1536px] mx-auto">
+        <div class="fixed top-0 hidden lg:block h-full pt-16 lg:w-72 2xl:w-80">
+          <nav id="sidenav" class="sticky h-full overflow-y-auto border-r border-r-gray-200">
+            <div class="py-8">
               <ArticlesAccordion
                 activePath={pathname}
                 articles={allArticles.map((a) => ({
@@ -174,7 +118,7 @@ const title = pageTitle ? `${pageTitle} · ${siteTitle}` : siteTitle
             </div>
           </nav>
         </div>
-        <main class={css({ pl: { lg: '72', '2xl': '80' } })}>
+        <main class="lg:pl-72 2xl:pl-80">
           <slot />
         </main>
       </div>

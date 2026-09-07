@@ -1,17 +1,10 @@
 ---
 import SidebarLayout from '#layouts/global-layout.astro'
-import { css } from '../../styled-system/css'
 ---
 
 <SidebarLayout>
-  <div
-    class={css({
-      mb: '12',
-      w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
-      px: { base: '4', md: '8' },
-    })}
-  >
-    <div class={css({ maxW: 'prose', mx: { base: 'auto', md: '0', xl: 'auto' } })}>
+  <div class="mb-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+    <div class="max-w-prose mx-auto md:mx-0 xl:mx-auto">
       <div id="my-reform"></div>
 
       <script is:inline>

@@ -9,8 +9,6 @@ import H4 from '#components/content/h4.astro'
 import H5 from '#components/content/h5.astro'
 import H6 from '#components/content/h6.astro'
 import MobileToc from '#components/mobile-toc.tsx'
-import { css, cx } from '../../styled-system/css'
-import { customProse, prose } from '../../styled-system/recipes'
 
 export const getStaticPaths = (async () => {
   const allArticles = await getCollection('articles')
@@ -29,53 +27,17 @@ const articleTitle = `${entry.data.article_number}.${entry.data.section_number} 
 ---
 
 <SidebarLayout pageTitle={articleTitle}>
-  <div
-    class={css({
-      display: 'flex',
-      position: 'relative',
-    })}
-  >
-    <div
-      class={css({
-        my: '12',
-        w: { base: 'full', xl: 'calc(100% - token(sizes.80))' },
-        px: { base: '4', md: '8' },
-      })}
-    >
-      <div
-        class={css({
-          maxW: 'prose',
-          mx: { base: 'auto', lg: '0', xl: 'auto' },
-        })}
-      >
-        <h1
-          class={css({
-            mb: '2',
-            fontSize: { base: '4xl', sm: '5xl' },
-            fontWeight: 'medium',
-            letterSpacing: 'tight',
-            lineHeight: 'tight',
-          })}
-        >
+  <div class="flex relative">
+    <div class="my-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+      <div class="max-w-prose mx-auto lg:mx-0 xl:mx-auto">
+        <h1 class="mb-2 text-4xl sm:text-5xl font-medium tracking-tight leading-tight">
           {articleTitle}
         </h1>
-        {
-          entry.data.lead ? (
-            <p
-              class={css({
-                fontSize: 'xl',
-                lineHeight: 'relaxed',
-                color: 'gray.700',
-              })}
-            >
-              {entry.data.lead}
-            </p>
-          ) : null
-        }
+        {entry.data.lead ? <p class="text-xl leading-relaxed text-gray-700">{entry.data.lead}</p> : null}
         <MobileToc client:load>
           <PageToc headings={headings} client:load />
         </MobileToc>
-        <div class={cx(prose(), customProse())}>
+        <div class="prose custom-prose">
           <Content
             components={{
               h2: H2,
@@ -90,34 +52,12 @@ const articleTitle = `${entry.data.article_number}.${entry.data.section_number} 
     </div>
     {
       headings?.length > 0 ? (
-        <aside
-          class={css({
-            pos: 'fixed',
-            top: '16',
-            bottom: '0',
-            right: '0',
-            display: {
-              base: 'none',
-              xl: 'block',
-            },
-            flexShrink: '0',
-            w: '80',
-          })}
-        >
-          <div class={css({ pos: 'fixed', top: '0', h: 'screen', pt: '16' })}>
-            <div class={css({ h: 'full', overflowY: 'auto' })}>
-              <div class={css({ mt: '12', mb: '12', pr: '4' })}>
-                <div class={css({ mb: '2' })}>
-                  <h3
-                    id="toc-heading"
-                    class={css({
-                      fontSize: 'xs',
-                      fontWeight: 'bold',
-                      letterSpacing: 'wider',
-                      color: 'gray.600',
-                      textTransform: 'uppercase',
-                    })}
-                  >
+        <aside class="fixed top-16 bottom-0 right-0 hidden xl:block flex-shrink-0 w-80">
+          <div class="fixed top-0 h-screen pt-16">
+            <div class="h-full overflow-y-auto">
+              <div class="mt-12 mb-12 pr-4">
+                <div class="mb-2">
+                  <h3 id="toc-heading" class="text-xs font-bold tracking-wider text-gray-600 uppercase">
                     Page Contents
                   </h3>
                 </div>

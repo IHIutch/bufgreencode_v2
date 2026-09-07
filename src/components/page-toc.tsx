@@ -1,7 +1,6 @@
 import type { MarkdownHeading } from 'astro'
 import type { MouseEvent } from 'react'
 import { useEffect, useState } from 'react'
-import { css, cx } from '../../styled-system/css'
 
 export default function PageToc({ headings }: { headings: MarkdownHeading[] }) {
   const [currentHeading, setCurrentHeading] = useState({
@@ -60,50 +59,17 @@ export default function PageToc({ headings }: { headings: MarkdownHeading[] }) {
       {headings.map((heading, idx) => (
         <li
           key={idx}
-          className={css({
-            fontSize: 'sm',
-            color: {
-              base: 'gray.600',
-              _hover: 'gray.900',
-            },
-          })}
+          className="text-sm text-gray-600 hover:text-gray-900"
         >
           <a
             href={`#${heading.slug}`}
             onClick={onLinkClick}
-            className={cx('group', css({
-              display: 'block',
-              py: '1.5',
-            }))}
+            className="group block py-1.5"
             data-active={isObservedSection(heading.slug)}
           >
-            <div
-              className={css({
-                borderLeftWidth: '2px',
-                borderLeftColor: 'transparent',
-                transition: 'border-color ease 0.2s',
-                _groupActive: {
-                  borderLeftColor: 'green.700',
-                },
-              })}
-            >
-              <div
-                className={css({
-                  transition: 'transform ease 0.2s',
-                  transform: 'translateX(0)',
-                  _groupActive: {
-                    transform: 'translateX(token(sizes.2))',
-                  },
-                })}
-              >
-                <span
-                  className={css({
-                    fontWeight: 'medium',
-                    _groupActive: {
-                      color: 'green.700',
-                    },
-                  })}
-                >
+            <div className="border-l-2 border-transparent transition-colors ease-in-out duration-200 group-data-[active]:border-green-700">
+              <div className="transition-transform ease-in-out duration-200 translate-x-0 group-data-[active]:translate-x-2">
+                <span className="font-medium group-data-[active]:text-green-700">
                   {heading.text}
                 </span>
               </div>

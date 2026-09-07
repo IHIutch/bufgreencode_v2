@@ -1,9 +1,6 @@
 import * as DocSearch from '@docsearch/react' // https://github.com/algolia/docsearch/pull/2117#issuecomment-1793855627
 import { PUBLIC_ALGOLIA_API_KEY, PUBLIC_ALGOLIA_APP_ID, PUBLIC_ALGOLIA_INDEX_NAME } from 'astro:env/client'
-import { Search } from 'lucide-react'
 import { useState } from 'react'
-import { css } from '../../styled-system/css'
-import { square } from '../../styled-system/patterns'
 import '@docsearch/css/dist/style.css'
 
 const Hit: DocSearch.DocSearchProps['hitComponent'] = ({ hit, children }) => {
@@ -28,45 +25,15 @@ export default function SearchComponent() {
   return (
     <>
       <button
-        className={css({
-          h: { base: '10', lg: '12' },
-          flexGrow: '1',
-          rounded: 'lg',
-          borderWidth: '1px',
-          borderColor: 'gray.200',
-          bg: {
-            base: 'gray.50',
-            _hover: 'gray.100',
-          },
-          px: '4',
-          textAlign: 'left',
-          color: 'gray.500',
-          transition: 'background-color ease 0.2s',
-          cursor: 'pointer',
-        })}
+        className="h-10 lg:h-12 flex-grow rounded-lg border border-gray-200 bg-gray-50 hover:bg-gray-100 px-4 text-left text-gray-500 transition-colors ease-in-out duration-200 cursor-pointer"
         onClick={() => setIsOpen(true)}
       >
-        <div
-          className={css({
-            display: 'flex',
-            alignItems: 'center',
-          })}
-        >
-          <Search className={square({ size: '4' })} />
-          <span
-            className={css({
-              ml: '2',
-              display: { sm: 'none' },
-            })}
-          >
+        <div className="flex items-center">
+          <span className="icon-[lucide--search] size-4" />
+          <span className="ml-2 sm:hidden">
             Search...
           </span>
-          <span
-            className={css({
-              ml: '2',
-              display: { base: 'none', sm: 'inline' },
-            })}
-          >
+          <span className="ml-2 hidden sm:inline">
             Search the Green Code...
           </span>
         </div>
