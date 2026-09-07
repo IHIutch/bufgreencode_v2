@@ -6,6 +6,8 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "strictNullChecks": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
     "esModuleInterop": true,
     "verbatimModuleSyntax": true
   },

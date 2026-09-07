@@ -41,17 +41,17 @@ export default function ArticlesAccordion({
         defaultValue={activeArticleNum ? [activeArticleNum] : []}
       >
         <ul className="px-2 py-1 text-sm">
-          {Object.keys(groupedArticles).map((articleNum, idx) => (
+          {Object.entries(groupedArticles).map(([articleNum, sections], idx) => (
             <Accordion.Item key={idx} value={articleNum} className="group">
               <li className="px-2 pb-1">
                 <Accordion.ItemTrigger className="w-full text-left cursor-pointer">
                   <div className="flex w-full items-center text-gray-600 hover:text-gray-900">
                     <div className="flex-grow px-2 py-1">
                       <span className="font-medium">
-                        {groupedArticles[articleNum][0].data.article_number}
+                        {sections[0]?.data.article_number}
                         .
                         {' '}
-                        {groupedArticles[articleNum][0].data.article}
+                        {sections[0]?.data.article}
                       </span>
                     </div>
                     <div>
@@ -63,7 +63,7 @@ export default function ArticlesAccordion({
                 </Accordion.ItemTrigger>
                 <Accordion.ItemContent className="grid pl-3 motion-safe:transition-[grid-template-rows,padding-top,padding-bottom] motion-safe:duration-200 motion-safe:ease-in-out grid-rows-[0fr] group-data-[state=open]:grid-rows-[1fr] group-data-[state=open]:pt-1 group-data-[state=open]:pb-2">
                   <ul className="overflow-hidden">
-                    {groupedArticles[articleNum].map((section, sIdx) => (
+                    {sections.map((section, sIdx) => (
                       <li
                         key={sIdx}
                         className="border-l border-l-gray-300"
