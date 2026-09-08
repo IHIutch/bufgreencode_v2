@@ -1,34 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# bufgreencode.com
 
-## Getting Started
+A readable, searchable version of the Buffalo Green Code (the City of Buffalo's
+Unified Development Ordinance), built with [Astro](https://astro.build) and
+deployed to [Cloudflare Workers](https://developers.cloudflare.com/workers/).
 
-First, run the development server:
+## Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Node.js 22+
+- [pnpm](https://pnpm.io) (via Corepack: `corepack enable`)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commands
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command        | Action                                                         |
+| :------------- | :------------------------------------------------------------- |
+| `pnpm install` | Install dependencies                                           |
+| `pnpm dev`     | Astro dev server at `localhost:4321`                           |
+| `pnpm build`   | Type-check and build the static site to `./dist/`              |
+| `pnpm preview` | Build, then serve `./dist/` through Workers via `wrangler dev` |
+| `pnpm deploy`  | Build and deploy to Cloudflare Workers                         |
+| `pnpm lint`    | Lint with ESLint                                               |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Use `pnpm dev` for day-to-day work. Use `pnpm preview` when you want to verify
+behavior that comes from the Workers runtime rather than Astro — 404 handling,
+trailing slashes, redirects, and asset headers.
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+The site is fully static (`output: 'static'` in `astro.config.mjs`); there are no
+SSR routes, API endpoints, or server islands. It is therefore served by
+[Workers Static Assets](https://developers.cloudflare.com/workers/static-assets/)
+with **no Worker script and no Astro adapter** — `wrangler.jsonc` simply points
+`assets.directory` at `./dist`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If SSR is ever needed, add `@astrojs/cloudflare` back as the adapter, set
+`output: 'server'`, and add a `main` entry to `wrangler.jsonc`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Search is powered by Algolia DocSearch. The public Algolia credentials are
+declared in the `env.schema` block of `astro.config.mjs` and are inlined into the
+client bundle at build time, so no runtime secrets or bindings are required.
 
-## Deploy on Vercel
+### URL shape
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`trailingSlash: 'never'` (Astro) is paired with `html_handling:
+"drop-trailing-slash"` (Wrangler). Together they keep the non-trailing-slash URLs
+the site has always used: `/uses/principal-uses` serves 200, the trailing-slash
+form redirects to it, and canonical tags and the sitemap emit the same form. Both
+settings must change together.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Redirects and headers
+
+Legacy `/article/N/N-M` URLs live in `src/redirects.mjs`. That map feeds two
+consumers, so they cannot drift:
+
+- Astro's `redirects` config, used by `astro dev` and the static build.
+- `scripts/write-redirects.mjs`, a build integration that emits `dist/_redirects`
+  so Cloudflare serves real 301s rather than Astro's meta-refresh fallback pages.
+
+`public/_headers` marks content-hashed `/_astro/*` files immutable; Workers
+static assets otherwise defaults everything to `max-age=0, must-revalidate`.
+
+`public/.assetsignore` keeps Wrangler-reserved filenames (`_worker.js`,
+`_routes.json`) from being uploaded as static assets.
+
+## Deployment
+
+Deploys run through **Cloudflare Workers Builds**: pushes to `main` are built and
+deployed by Cloudflare automatically.
+
+One-time dashboard setup (Workers & Pages → the `bufgreencode` Worker → Settings
+→ Build):
+
+1. Connect this GitHub repository.
+2. Build command: `pnpm run build`
+3. Deploy command: `npx wrangler deploy`
+4. Root directory: `/`
+5. Production branch: `main`
+
+Non-production branches produce preview deployments.
+
+To deploy from your machine instead, run `pnpm deploy` after
+`npx wrangler login`.
