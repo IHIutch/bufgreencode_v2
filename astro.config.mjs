@@ -40,6 +40,10 @@ export default defineConfig({
 
   redirects,
 
+  build: {
+    format: 'file',
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },
