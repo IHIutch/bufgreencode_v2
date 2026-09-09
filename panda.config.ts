@@ -12,6 +12,13 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
+  conditions: {
+    extend: {
+      open: '&[data-state=open]',
+      closed: '&[data-state=closed]',
+    },
+  },
+
   // Useful for theme customization
   theme: {
     semanticTokens: {

@@ -1,5 +1,5 @@
 ---
-import PageToc from '#components/page-toc'
+import PageToc from '#components/page-toc.tsx'
 import SidebarLayout from '#layouts/global-layout.astro'
 import { getCollection, render } from 'astro:content'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
@@ -8,7 +8,7 @@ import H3 from '#components/content/h3.astro'
 import H4 from '#components/content/h4.astro'
 import H5 from '#components/content/h5.astro'
 import H6 from '#components/content/h6.astro'
-import MobileToc from '#components/mobile-toc'
+import MobileToc from '#components/mobile-toc.tsx'
 import { css, cx } from '../../styled-system/css'
 import { customProse, prose } from '../../styled-system/recipes'
 
@@ -25,9 +25,10 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { entry } = Astro.props
 const { Content, headings } = await render(entry)
+const articleTitle = `${entry.data.article_number}.${entry.data.section_number} ${entry.data.title}`
 ---
 
-<SidebarLayout pageTitle={entry.data.title}>
+<SidebarLayout pageTitle={articleTitle}>
   <div
     class={css({
       display: 'flex',
@@ -56,7 +57,7 @@ const { Content, headings } = await render(entry)
             lineHeight: 'tight',
           })}
         >
-          {entry.data.title}
+          {articleTitle}
         </h1>
         {
           entry.data.lead ? (
