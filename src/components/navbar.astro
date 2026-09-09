@@ -24,7 +24,7 @@ const pathname = Astro.url.pathname
       </div>
       <div class="h-full flex-1 px-4 md:block md:px-8 w-full xl:w-[calc(100%-20rem)]">
         <div class="flex h-full items-center mx-auto max-w-prose w-full">
-          <SearchComponent client:load />
+          <SearchComponent client:only="react" />
         </div>
       </div>
       <!-- Mobile -->

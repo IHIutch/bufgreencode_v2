@@ -41,7 +41,6 @@ export default function SearchComponent() {
       {isOpen
         ? (
             <DocSearch.DocSearchModal
-              onAskAiToggle={() => false}
               initialScrollY={window.scrollY}
               appId={PUBLIC_ALGOLIA_APP_ID}
               indices={[PUBLIC_ALGOLIA_INDEX_NAME]}
