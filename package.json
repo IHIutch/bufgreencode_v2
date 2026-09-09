@@ -51,7 +51,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.80.0"
+    "wrangler": "^4.128.0"
   },
   "lint-staged": {
     "*.{astro,js,jsx,ts,tsx,md,mdx,json}": "eslint --fix"
