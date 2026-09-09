@@ -12,8 +12,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "preview": "pnpm run build && wrangler dev",
-    "deploy": "pnpm run build && wrangler deploy",
+    "preview": "pnpm run build && npx --yes wrangler@4 dev",
+    "deploy": "pnpm run build && npx --yes wrangler@4 deploy",
     "astro": "astro",
     "lint": "eslint 'src/**/*.{astro,js,jsx,ts,tsx,md,mdx,json}'",
     "prepare": "node .husky/install.mjs"
@@ -53,8 +53,7 @@
     "eslint-plugin-format": "^2.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.0",
-    "prettier-plugin-astro": "^0.14.1",
-    "wrangler": "^4.129.1"
+    "prettier-plugin-astro": "^0.14.1"
   },
   "lint-staged": {
     "*.{astro,js,jsx,ts,tsx,md,mdx,json}": "eslint --fix"
