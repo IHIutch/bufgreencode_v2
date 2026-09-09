@@ -40,7 +40,7 @@ importers:
         version: 1.2.3(tailwindcss@4.2.2)
       '@t3-oss/env-core':
         specifier: ^0.13.11
-        version: 0.13.11(typescript@5.9.3)(zod@4.3.6)
+        version: 0.13.11(typescript@5.9.3)(zod@4.5.4)
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.2.2)
@@ -78,8 +78,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       zod:
-        specifier: ^4.3.6
-        version: 4.3.6
+        specifier: ^4.5.4
+        version: 4.5.4
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^8.0.0
@@ -1783,30 +1783,15 @@ packages:
 
   '@volar/language-server@2.4.28':
     resolution: {integrity: sha512-NqcLnE5gERKuS4PUFwlhMxf6vqYo7hXtbMFbViXcbVkbZ905AIVWhnSo0ZNBC2V127H1/2zP7RvVOVnyITFfBw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@volar/language-service@2.4.28':
     resolution: {integrity: sha512-Rh/wYCZJrI5vCwMk9xyw/Z+MsWxlJY1rmMZPsxUoJKfzIRjS/NF1NmnuEcrMbEVGja00aVpCsInJfixQTMdvLw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@volar/source-map@2.4.28':
     resolution: {integrity: sha512-yX2BDBqJkRXfKw8my8VarTyjv48QwxdJtvRgUpNE5erCsgEUdI2DsLbpa+rOQVAJYshY99szEcRDmyHbF10ggQ==}
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@vscode/emmet-helper@2.11.0':
     resolution: {integrity: sha512-QLxjQR3imPZPQltfbWRnHU6JecWTF1QSWhx3GAKQpslx7y3Dp6sIIXhKjiUJ/BR9FX8PVthjr9PD6pNwOJfAzw==}
@@ -4226,22 +4211,16 @@ packages:
     resolution: {integrity: sha512-IdD13Z9N2Bu8EM6CM0fDV1E69olEYGHDU25X51YXmq8Y0CmJ2LNj6gOiBJgpS5JGUqFzECVhMNBW7R0sPdRTMQ==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
-      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
-        optional: true
-      typescript:
         optional: true
 
   volar-service-typescript@0.0.70:
     resolution: {integrity: sha512-l46Bx4cokkUedTd74ojO5H/zqHZJ8SUuyZ0IB8JN4jfRqUM3bQFBHoOwlZCyZmOeO0A3RQNkMnFclxO4c++gsg==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
-      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
-        optional: true
-      typescript:
         optional: true
 
   volar-service-yaml@0.0.70:
@@ -4400,8 +4379,8 @@ packages:
   youch@4.1.0-beta.10:
     resolution: {integrity: sha512-rLfVLB4FgQneDr0dv1oddCVZmKjcJ6yX6mS4pU82Mq/Dt9a3cLZQ62pDBL4AUO+uVrCvtWz3ZFUL2HFAFJ/BXQ==}
 
-  zod@4.3.6:
-    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+  zod@4.5.4:
+    resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -4671,17 +4650,17 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@volar/kit': 2.4.28(typescript@5.9.3)
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28(typescript@5.9.3)
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-server': 2.4.28
+      '@volar/language-service': 2.4.28
       muggle-string: 0.4.1
       tinyglobby: 0.2.15
-      volar-service-css: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-html: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.1)
-      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
-      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
-      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-css: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-html: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.8.1)
+      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28)
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
     optionalDependencies:
@@ -4768,7 +4747,7 @@ snapshots:
     dependencies:
       sitemap: 9.0.1
       stream-replace-string: 2.0.0
-      zod: 4.3.6
+      zod: 4.5.4
 
   '@astrojs/telemetry@3.3.0(supports-color@10.2.2)':
     dependencies:
@@ -5688,10 +5667,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@t3-oss/env-core@0.13.11(typescript@5.9.3)(zod@4.3.6)':
+  '@t3-oss/env-core@0.13.11(typescript@5.9.3)(zod@4.5.4)':
     optionalDependencies:
       typescript: 5.9.3
-      zod: 4.3.6
+      zod: 4.5.4
 
   '@tailwindcss/node@4.2.2':
     dependencies:
@@ -5988,8 +5967,8 @@ snapshots:
 
   '@volar/kit@2.4.28(typescript@5.9.3)':
     dependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      '@volar/typescript': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
+      '@volar/typescript': 2.4.28
       typesafe-path: 0.2.2
       typescript: 5.9.3
       vscode-languageserver-textdocument: 1.0.12
@@ -5999,38 +5978,32 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.4.28
 
-  '@volar/language-server@2.4.28(typescript@5.9.3)':
+  '@volar/language-server@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      '@volar/typescript': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
+      '@volar/typescript': 2.4.28
       path-browserify: 1.0.1
       request-light: 0.7.0
       vscode-languageserver: 9.0.1
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
-  '@volar/language-service@2.4.28(typescript@5.9.3)':
+  '@volar/language-service@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/typescript@2.4.28(typescript@5.9.3)':
+  '@volar/typescript@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
   '@vscode/emmet-helper@2.11.0':
     dependencies:
@@ -6786,7 +6759,7 @@ snapshots:
       vitefu: 1.1.3(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 22.0.0
-      zod: 4.3.6
+      zod: 4.5.4
     optionalDependencies:
       sharp: 0.34.5
     transitivePeerDependencies:
@@ -9349,46 +9322,45 @@ snapshots:
     optionalDependencies:
       vite: 7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3)
 
-  volar-service-css@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-css@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-css-languageservice: 6.3.10
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-emmet@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-emmet@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       '@emmetio/css-parser': 0.4.1
       '@emmetio/html-matcher': 1.3.0
       '@vscode/emmet-helper': 2.11.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-html@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-html@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-html-languageservice: 5.6.2
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-prettier@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.1):
+  volar-service-prettier@0.0.70(@volar/language-service@2.4.28)(prettier@3.8.1):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
       prettier: 3.8.1
 
-  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
+  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      typescript: 5.9.3
+      '@volar/language-service': 2.4.28
 
-  volar-service-typescript@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
+  volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       path-browserify: 1.0.1
       semver: 7.7.4
@@ -9397,15 +9369,14 @@ snapshots:
       vscode-nls: 5.2.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      typescript: 5.9.3
+      '@volar/language-service': 2.4.28
 
-  volar-service-yaml@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-yaml@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-uri: 3.1.0
       yaml-language-server: 1.20.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
   vscode-css-languageservice@6.3.10:
     dependencies:
@@ -9570,6 +9541,6 @@ snapshots:
       cookie: 1.1.1
       youch-core: 0.3.3
 
-  zod@4.3.6: {}
+  zod@4.5.4: {}
 
   zwitch@2.0.4: {}
