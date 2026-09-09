@@ -1,0 +1,72 @@
+---
+import PageToc from '#components/page-toc.tsx'
+import SidebarLayout from '#layouts/global-layout.astro'
+import { getCollection, render } from 'astro:content'
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
+import H2 from '#components/content/h2.astro'
+import H3 from '#components/content/h3.astro'
+import H4 from '#components/content/h4.astro'
+import H5 from '#components/content/h5.astro'
+import H6 from '#components/content/h6.astro'
+import MobileToc from '#components/mobile-toc.tsx'
+
+export const getStaticPaths = (async () => {
+  const allArticles = await getCollection('articles')
+
+  return allArticles.map((entry) => ({
+    params: { path: entry.id },
+    props: { entry },
+  }))
+}) satisfies GetStaticPaths
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+const { entry } = Astro.props
+const { Content, headings } = await render(entry)
+const articleTitle = `${entry.data.article_number}.${entry.data.section_number} ${entry.data.title}`
+---
+
+<SidebarLayout pageTitle={articleTitle}>
+  <div class="flex relative">
+    <div class="my-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+      <div class="max-w-prose mx-auto lg:mx-0 xl:mx-auto">
+        <h1 class="mb-2 text-4xl sm:text-5xl font-medium tracking-tight leading-tight">
+          {articleTitle}
+        </h1>
+        {entry.data.lead ? <p class="text-xl leading-relaxed text-gray-700">{entry.data.lead}</p> : null}
+        <MobileToc client:load>
+          <PageToc headings={headings} client:load />
+        </MobileToc>
+        <div class="prose custom-prose">
+          <Content
+            components={{
+              h2: H2,
+              h3: H3,
+              h4: H4,
+              h5: H5,
+              h6: H6,
+            }}
+          />
+        </div>
+      </div>
+    </div>
+    {
+      headings?.length > 0 ? (
+        <aside class="fixed top-16 bottom-0 right-0 hidden xl:block flex-shrink-0 w-80">
+          <div class="fixed top-0 h-screen pt-16">
+            <div class="h-full overflow-y-auto">
+              <div class="mt-12 mb-12 pr-4">
+                <div class="mb-2">
+                  <h3 id="toc-heading" class="text-xs font-bold tracking-wider text-gray-600 uppercase">
+                    Page Contents
+                  </h3>
+                </div>
+                <PageToc headings={headings} client:load />
+              </div>
+            </div>
+          </div>
+        </aside>
+      ) : null
+    }
+  </div>
+</SidebarLayout>

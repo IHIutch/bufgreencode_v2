@@ -1,0 +1,29 @@
+---
+import SidebarLayout from '#layouts/global-layout.astro'
+---
+
+<SidebarLayout>
+  <div class="mb-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+    <div class="max-w-prose mx-auto md:mx-0 xl:mx-auto">
+      <div id="my-reform"></div>
+
+      <script is:inline>
+        window.Reform = window.Reform || []
+        function reform(...args) {
+          ;(Reform.q = Reform.q || []).push(args)
+        }
+        reform()
+      </script>
+      <script is:inline id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+      <script>
+        document.addEventListener('astro:page-load', () => {
+          window.Reform('init', {
+            url: 'https://forms.reform.app/szenkB/buffalo-green-code/sxml6n',
+            target: '#my-reform',
+            background: 'default',
+          })
+        })
+      </script>
+    </div>
+  </div>
+</SidebarLayout>

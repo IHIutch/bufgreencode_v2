@@ -1,0 +1,45 @@
+---
+import SidebarLayout from '#layouts/global-layout.astro'
+---
+
+<SidebarLayout pageTitle="Disclaimer">
+  <div class="my-12 w-full xl:w-[calc(100%-20rem)] px-4 md:px-8">
+    <div class="max-w-prose mx-auto md:mx-0 xl:mx-auto">
+      <h1 class="mb-6 text-5xl font-medium tracking-tight">Disclaimer</h1>
+      <div class="prose">
+        <p class="text-xl leading-relaxed text-gray-600">
+          This site is an{' '}
+          <span class="font-semibold"> unofficial</span>{' '}
+          digitisation for the Buffalo Green Code. This is an open source project and is not affiliated with the City of Buffalo.
+        </p>
+        <p>
+          The official Green Code can be found on the{' '}
+          <a
+            href="https://www.buffalony.gov/1224/Using-the-Unified-Development-Ordinance"
+            target="_blank"
+            rel="noreferrer"
+            class="text-green-700 underline"
+          >
+            City of Buffalo&apos;s website.
+          </a>
+        </p>
+        <p>
+          We&apos;ve done our best to make this site as accurate as possible in order to make it easier to search and
+          find important information. Any inaccurate or or out of date information is completely unintentional.
+        </p>
+        <p>
+          If you find any errors or inaccuracies,{' '}
+          <a
+            href="https://github.com/IHIutch/bufgreencode_v2/issues/new?assignees=&labels=&projects=&template=found-an-issue.yml"
+            target="_blank"
+            rel="noreferrer"
+            class="text-green-700 underline"
+          >
+            please let us know
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </div>
+</SidebarLayout>
