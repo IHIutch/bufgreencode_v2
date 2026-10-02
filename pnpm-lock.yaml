@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@ark-ui/react':
         specifier: ^5.35.0
-        version: 5.35.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 5.35.0(react-dom@19.2.4(react@19.2.8))(react@19.2.8)
       '@astrojs/check':
         specifier: ^0.9.8
         version: 0.9.8(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)
@@ -19,7 +19,7 @@ importers:
         version: 5.0.3(astro@6.1.3(@types/node@24.12.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(typescript@5.9.3)(yaml@2.8.3))(supports-color@10.2.2)
       '@astrojs/react':
         specifier: ^5.0.2
-        version: 5.0.2(@types/node@24.12.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)(yaml@2.8.3)
+        version: 5.0.2(@types/node@24.12.0)(@types/react-dom@19.2.3(@types/react@19.2.18))(@types/react@19.2.18)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)(supports-color@10.2.2)(yaml@2.8.3)
       '@astrojs/sitemap':
         specifier: ^3.7.2
         version: 3.7.2
@@ -28,7 +28,7 @@ importers:
         version: 4.6.2
       '@docsearch/react':
         specifier: ^4.6.2
-        version: 4.6.2(@algolia/client-search@5.40.0)(@types/react@19.2.14)(algoliasearch@5.40.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.2)
+        version: 4.6.2(@algolia/client-search@5.40.0)(@types/react@19.2.18)(algoliasearch@5.40.0)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)(search-insights@2.17.2)
       '@fontsource-variable/inter':
         specifier: ^5.2.8
         version: 5.2.8
@@ -48,11 +48,11 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
       '@types/react':
-        specifier: ^19.2.14
-        version: 19.2.14
+        specifier: ^19.2.18
+        version: 19.2.18
       '@types/react-dom':
         specifier: ^19.2.3
-        version: 19.2.3(@types/react@19.2.14)
+        version: 19.2.3(@types/react@19.2.18)
       astro:
         specifier: 6.1.3
         version: 6.1.3(@types/node@24.12.0)(@vercel/functions@2.2.13)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.1)(supports-color@10.2.2)(typescript@5.9.3)(yaml@2.8.3)
@@ -63,11 +63,11 @@ importers:
         specifier: ^4.18.1
         version: 4.18.1
       react:
-        specifier: ^19.2.4
-        version: 19.2.4
+        specifier: ^19.2.8
+        version: 19.2.8
       react-dom:
         specifier: ^19.2.4
-        version: 19.2.4(react@19.2.4)
+        version: 19.2.4(react@19.2.8)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -1657,8 +1657,8 @@ packages:
     peerDependencies:
       '@types/react': ^19.2.0
 
-  '@types/react@19.2.14':
-    resolution: {integrity: sha512-ilcTH/UniCkMdtexkoCN0bI7pMcJDvmQFPvuPvmEaYA/NSfFTAgdUSLAoVjaRJm7+6PvcM+q1zYOwS4wTYMF9w==}
+  '@types/react@19.2.18':
+    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -1783,30 +1783,15 @@ packages:
 
   '@volar/language-server@2.4.28':
     resolution: {integrity: sha512-NqcLnE5gERKuS4PUFwlhMxf6vqYo7hXtbMFbViXcbVkbZ905AIVWhnSo0ZNBC2V127H1/2zP7RvVOVnyITFfBw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@volar/language-service@2.4.28':
     resolution: {integrity: sha512-Rh/wYCZJrI5vCwMk9xyw/Z+MsWxlJY1rmMZPsxUoJKfzIRjS/NF1NmnuEcrMbEVGja00aVpCsInJfixQTMdvLw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@volar/source-map@2.4.28':
     resolution: {integrity: sha512-yX2BDBqJkRXfKw8my8VarTyjv48QwxdJtvRgUpNE5erCsgEUdI2DsLbpa+rOQVAJYshY99szEcRDmyHbF10ggQ==}
 
   '@volar/typescript@2.4.28':
     resolution: {integrity: sha512-Ja6yvWrbis2QtN4ClAKreeUZPVYMARDYZl9LMEv1iQ1QdepB6wn0jTRxA9MftYmYa4DQ4k/DaSZpFPUfxl8giw==}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
 
   '@vscode/emmet-helper@2.11.0':
     resolution: {integrity: sha512-QLxjQR3imPZPQltfbWRnHU6JecWTF1QSWhx3GAKQpslx7y3Dp6sIIXhKjiUJ/BR9FX8PVthjr9PD6pNwOJfAzw==}
@@ -3629,8 +3614,8 @@ packages:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react@19.2.4:
-    resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
+  react@19.2.8:
+    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
     engines: {node: '>=0.10.0'}
 
   readdirp@4.1.2:
@@ -4226,22 +4211,16 @@ packages:
     resolution: {integrity: sha512-IdD13Z9N2Bu8EM6CM0fDV1E69olEYGHDU25X51YXmq8Y0CmJ2LNj6gOiBJgpS5JGUqFzECVhMNBW7R0sPdRTMQ==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
-      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
-        optional: true
-      typescript:
         optional: true
 
   volar-service-typescript@0.0.70:
     resolution: {integrity: sha512-l46Bx4cokkUedTd74ojO5H/zqHZJ8SUuyZ0IB8JN4jfRqUM3bQFBHoOwlZCyZmOeO0A3RQNkMnFclxO4c++gsg==}
     peerDependencies:
       '@volar/language-service': ~2.4.0
-      typescript: '*'
     peerDependenciesMeta:
       '@volar/language-service':
-        optional: true
-      typescript:
         optional: true
 
   volar-service-yaml@0.0.70:
@@ -4574,7 +4553,7 @@ snapshots:
       package-manager-detector: 1.6.0
       tinyexec: 1.0.4
 
-  '@ark-ui/react@5.35.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@ark-ui/react@5.35.0(react-dom@19.2.4(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@internationalized/date': 3.12.0
       '@zag-js/accordion': 1.38.2
@@ -4623,7 +4602,7 @@ snapshots:
       '@zag-js/qr-code': 1.38.2
       '@zag-js/radio-group': 1.38.2
       '@zag-js/rating-group': 1.38.2
-      '@zag-js/react': 1.38.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@zag-js/react': 1.38.2(react-dom@19.2.4(react@19.2.8))(react@19.2.8)
       '@zag-js/scroll-area': 1.38.2
       '@zag-js/select': 1.38.2
       '@zag-js/signature-pad': 1.38.2
@@ -4642,8 +4621,8 @@ snapshots:
       '@zag-js/tree-view': 1.38.2
       '@zag-js/types': 1.38.2
       '@zag-js/utils': 1.38.2
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      react: 19.2.8
+      react-dom: 19.2.4(react@19.2.8)
 
   '@astrojs/check@0.9.8(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)':
     dependencies:
@@ -4671,17 +4650,17 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@volar/kit': 2.4.28(typescript@5.9.3)
       '@volar/language-core': 2.4.28
-      '@volar/language-server': 2.4.28(typescript@5.9.3)
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-server': 2.4.28
+      '@volar/language-service': 2.4.28
       muggle-string: 0.4.1
       tinyglobby: 0.2.15
-      volar-service-css: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-html: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
-      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.1)
-      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
-      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3)
-      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))
+      volar-service-css: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-emmet: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-html: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.8.1)
+      volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)
+      volar-service-yaml: 0.0.70(@volar/language-service@2.4.28)
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
     optionalDependencies:
@@ -4739,15 +4718,15 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@5.0.2(@types/node@24.12.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)(yaml@2.8.3)':
+  '@astrojs/react@5.0.2(@types/node@24.12.0)(@types/react-dom@19.2.3(@types/react@19.2.18))(@types/react@19.2.18)(jiti@2.6.1)(lightningcss@1.32.0)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)(supports-color@10.2.2)(yaml@2.8.3)':
     dependencies:
       '@astrojs/internal-helpers': 0.8.0
-      '@types/react': 19.2.14
-      '@types/react-dom': 19.2.3(@types/react@19.2.14)
+      '@types/react': 19.2.18
+      '@types/react-dom': 19.2.3(@types/react@19.2.18)
       '@vitejs/plugin-react': 5.2.0(supports-color@10.2.2)(vite@7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
       devalue: 5.6.4
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      react: 19.2.8
+      react-dom: 19.2.4(react@19.2.8)
       ultrahtml: 1.6.0
       vite: 7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3)
     transitivePeerDependencies:
@@ -4945,23 +4924,23 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@docsearch/core@4.6.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@docsearch/core@4.6.2(@types/react@19.2.18)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)':
     optionalDependencies:
-      '@types/react': 19.2.14
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      '@types/react': 19.2.18
+      react: 19.2.8
+      react-dom: 19.2.4(react@19.2.8)
 
   '@docsearch/css@4.6.2': {}
 
-  '@docsearch/react@4.6.2(@algolia/client-search@5.40.0)(@types/react@19.2.14)(algoliasearch@5.40.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(search-insights@2.17.2)':
+  '@docsearch/react@4.6.2(@algolia/client-search@5.40.0)(@types/react@19.2.18)(algoliasearch@5.40.0)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)(search-insights@2.17.2)':
     dependencies:
       '@algolia/autocomplete-core': 1.19.2(@algolia/client-search@5.40.0)(algoliasearch@5.40.0)(search-insights@2.17.2)
-      '@docsearch/core': 4.6.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@docsearch/core': 4.6.2(@types/react@19.2.18)(react-dom@19.2.4(react@19.2.8))(react@19.2.8)
       '@docsearch/css': 4.6.2
     optionalDependencies:
-      '@types/react': 19.2.14
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      '@types/react': 19.2.18
+      react: 19.2.8
+      react-dom: 19.2.4(react@19.2.8)
       search-insights: 2.17.2
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -5829,11 +5808,11 @@ snapshots:
     dependencies:
       undici-types: 7.18.2
 
-  '@types/react-dom@19.2.3(@types/react@19.2.14)':
+  '@types/react-dom@19.2.3(@types/react@19.2.18)':
     dependencies:
-      '@types/react': 19.2.14
+      '@types/react': 19.2.18
 
-  '@types/react@19.2.14':
+  '@types/react@19.2.18':
     dependencies:
       csstype: 3.2.3
 
@@ -5988,8 +5967,8 @@ snapshots:
 
   '@volar/kit@2.4.28(typescript@5.9.3)':
     dependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      '@volar/typescript': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
+      '@volar/typescript': 2.4.28
       typesafe-path: 0.2.2
       typescript: 5.9.3
       vscode-languageserver-textdocument: 1.0.12
@@ -5999,38 +5978,32 @@ snapshots:
     dependencies:
       '@volar/source-map': 2.4.28
 
-  '@volar/language-server@2.4.28(typescript@5.9.3)':
+  '@volar/language-server@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      '@volar/typescript': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
+      '@volar/typescript': 2.4.28
       path-browserify: 1.0.1
       request-light: 0.7.0
       vscode-languageserver: 9.0.1
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
-  '@volar/language-service@2.4.28(typescript@5.9.3)':
+  '@volar/language-service@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
   '@volar/source-map@2.4.28': {}
 
-  '@volar/typescript@2.4.28(typescript@5.9.3)':
+  '@volar/typescript@2.4.28':
     dependencies:
       '@volar/language-core': 2.4.28
       path-browserify: 1.0.1
       vscode-uri: 3.1.0
-    optionalDependencies:
-      typescript: 5.9.3
 
   '@vscode/emmet-helper@2.11.0':
     dependencies:
@@ -6456,14 +6429,14 @@ snapshots:
       '@zag-js/types': 1.38.2
       '@zag-js/utils': 1.38.2
 
-  '@zag-js/react@1.38.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@zag-js/react@1.38.2(react-dom@19.2.4(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@zag-js/core': 1.38.2
       '@zag-js/store': 1.38.2
       '@zag-js/types': 1.38.2
       '@zag-js/utils': 1.38.2
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
+      react: 19.2.8
+      react-dom: 19.2.4(react@19.2.8)
 
   '@zag-js/rect-utils@1.38.2': {}
 
@@ -8744,14 +8717,14 @@ snapshots:
 
   radix3@1.1.2: {}
 
-  react-dom@19.2.4(react@19.2.4):
+  react-dom@19.2.4(react@19.2.8):
     dependencies:
-      react: 19.2.4
+      react: 19.2.8
       scheduler: 0.27.0
 
   react-refresh@0.18.0: {}
 
-  react@19.2.4: {}
+  react@19.2.8: {}
 
   readdirp@4.1.2: {}
 
@@ -9349,46 +9322,45 @@ snapshots:
     optionalDependencies:
       vite: 7.3.1(@types/node@24.12.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3)
 
-  volar-service-css@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-css@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-css-languageservice: 6.3.10
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-emmet@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-emmet@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       '@emmetio/css-parser': 0.4.1
       '@emmetio/html-matcher': 1.3.0
       '@vscode/emmet-helper': 2.11.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-html@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-html@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-html-languageservice: 5.6.2
       vscode-languageserver-textdocument: 1.0.12
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
-  volar-service-prettier@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(prettier@3.8.1):
+  volar-service-prettier@0.0.70(@volar/language-service@2.4.28)(prettier@3.8.1):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
       prettier: 3.8.1
 
-  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
+  volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      typescript: 5.9.3
+      '@volar/language-service': 2.4.28
 
-  volar-service-typescript@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3))(typescript@5.9.3):
+  volar-service-typescript@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       path-browserify: 1.0.1
       semver: 7.7.4
@@ -9397,15 +9369,14 @@ snapshots:
       vscode-nls: 5.2.0
       vscode-uri: 3.1.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
-      typescript: 5.9.3
+      '@volar/language-service': 2.4.28
 
-  volar-service-yaml@0.0.70(@volar/language-service@2.4.28(typescript@5.9.3)):
+  volar-service-yaml@0.0.70(@volar/language-service@2.4.28):
     dependencies:
       vscode-uri: 3.1.0
       yaml-language-server: 1.20.0
     optionalDependencies:
-      '@volar/language-service': 2.4.28(typescript@5.9.3)
+      '@volar/language-service': 2.4.28
 
   vscode-css-languageservice@6.3.10:
     dependencies:
