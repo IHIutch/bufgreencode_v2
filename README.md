@@ -41,6 +41,13 @@ client bundle at build time, so no runtime secrets or bindings are required.
 
 ### URL shape
 
+Use `[Section 8.4](§8.4)` to link to a section page, or
+`[Section 7.1.5](§7.1.5)` to link to a numbered heading. Link text remains exactly
+as written. The Sätteri HTML-tree plugin in `src/plugins/section-links.mjs`
+resolves destinations beginning with `§`. Unknown targets, including lettered
+subsections without headings, fail the build. Restart `pnpm dev` after adding or
+renaming destination pages or headings, since the index loads at startup.
+
 `trailingSlash: 'never'` (Astro) is paired with `html_handling:
 "drop-trailing-slash"` (Wrangler). Together they keep the non-trailing-slash URLs
 the site has always used: `/uses/principal-uses` serves 200, the trailing-slash

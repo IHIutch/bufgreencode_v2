@@ -1,3 +1,4 @@
+import { satteri } from '@astrojs/markdown-satteri'
 import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
@@ -5,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig, envField } from 'astro/config'
 import { cloudflareRedirects } from './scripts/write-redirects.mjs'
 import { redirects } from './src/redirects.mjs'
+import { createSectionLinks } from './src/plugins/section-links.mjs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +15,10 @@ export default defineConfig({
   // pair with `html_handling: 'drop-trailing-slash'` in wrangler.jsonc.
   trailingSlash: 'never',
   integrations: [mdx(), react(), sitemap(), cloudflareRedirects()],
+
+  markdown: {
+    processor: satteri({ hastPlugins: [await createSectionLinks()] }),
+  },
 
   experimental: {
     contentIntellisense: true,
